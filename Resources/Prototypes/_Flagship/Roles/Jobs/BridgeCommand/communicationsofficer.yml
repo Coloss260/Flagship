@@ -4,7 +4,6 @@
   description: job-description-communicationsofficer
   playTimeTracker: JobCommunicationsOfficer
   setPreference: true
-  canBeAntag: false
   supervisors: job-supervisors-coxo
   requireAdminNotify: true
   requirements:

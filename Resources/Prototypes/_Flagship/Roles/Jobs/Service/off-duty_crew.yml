@@ -8,7 +8,6 @@
   supervisors: job-supervisors-oo
   icon: "JobIconPassenger"
   displayWeight: 10
-  canBeAntag: true
   accessGroups:
   - Command
 

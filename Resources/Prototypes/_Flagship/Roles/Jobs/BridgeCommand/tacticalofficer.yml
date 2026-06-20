@@ -5,7 +5,6 @@
   playTimeTracker: JobTacticalOfficer
   setPreference: true # Frontier
   supervisors: job-supervisors-coxo
-  canBeAntag: false
   requireAdminNotify: true
   requirements:
     - !type:DepartmentTimeRequirement

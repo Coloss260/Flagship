@@ -14,7 +14,6 @@
   startingGear: MaintenanceInternGear
   icon: "JobIconTechnicalAssistant"
   supervisors: job-supervisors-com
-  canBeAntag: false
   accessGroups:
   - Command
   setPreference: true

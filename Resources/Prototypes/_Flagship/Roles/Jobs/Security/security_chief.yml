@@ -12,7 +12,6 @@
       department: Security
       time: 54000 # 15 hours
   displayWeight: 100
-  canBeAntag: false
   accessGroups:
   - Command
 

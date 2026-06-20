@@ -5,7 +5,6 @@
   playTimeTracker: JobOperationsOfficer
   setPreference: true
   supervisors: job-supervisors-coxo
-  canBeAntag: false
   requireAdminNotify: true
   requirements:
     - !type:DepartmentTimeRequirement

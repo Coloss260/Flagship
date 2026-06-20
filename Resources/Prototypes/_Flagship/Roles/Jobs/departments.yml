@@ -30,7 +30,7 @@
 - type: department
   id: Security
   name: department-Security
-  description: department-FlagshipSecurity-description
+  description: department-Security-description
   color: "#2b72ee"
   weight: 180
   primary: false
@@ -43,7 +43,7 @@
 - type: department
   id: Service
   name: department-Service
-  description: department-FlagshipService-description
+  description: department-Service-description
   color: "#c1ff72"
   weight: 0
   primary: true

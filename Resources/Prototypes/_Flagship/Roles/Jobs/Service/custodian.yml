@@ -8,7 +8,6 @@
   icon: "JobIconCustodian"
   supervisors: job-supervisors-oo
   displayWeight: 100
-  canBeAntag: true
   accessGroups:
   - Command
   special:
