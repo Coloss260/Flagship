@@ -25,3 +25,31 @@
     - HighRiskItem
   - type: StealTarget
     stealGroup: CaptainIDCard
+
+- type: entity
+  parent: [IDCardStandard, BaseGrandTheftContraband]
+  id: ExecutiveOfficerIDCard
+  name: Executive Officer's ID Card
+  components:
+  - type: Sprite
+    layers:
+    - state: gold
+    - state: stripe_top
+      color: "#1b67a5"
+    - state: stripe_bottom
+      color: "#0e4069"
+    - sprite: /Textures/_Flagship/Interface/Misc/job_icons.rsi
+      offset: -0.09375, 0.0625
+      state: ExecutiveOfficer
+  - type: Item
+    heldPrefix: gold
+  - type: PresetIdCard
+    job: ExecutiveOfficer
+  - type: Tag
+    tags:
+    - DoorBumpOpener
+    - WhitelistChameleon
+    - WhitelistChameleonIdCard
+    - HighRiskItem
+  - type: StealTarget
+    stealGroup: CaptainIDCard

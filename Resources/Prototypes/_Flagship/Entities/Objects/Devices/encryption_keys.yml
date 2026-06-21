@@ -1,3 +1,4 @@
+# Departments Keys
 - type: entity
   parent: EncryptionKey
   id: EncryptionKeyMaintenance
@@ -168,3 +169,56 @@
     layers:
     - state: crypt_gray
     - state: med_label
+
+# Bridge Command keys
+- type: entity
+  parent: EncryptionKey
+  id: EncryptionKeyCommandingOfficer
+  name: Commanding Officer's encryption key
+  description: An encryption key used only by the Commanding Officer of the ship.
+  components:
+  - type: EncryptionKey
+    channels:
+    - BridgeCommand
+    - Maintenance
+    - Medical
+    - Tactical
+    - Operations
+    - Service
+    - Science
+    - Supply
+    - Common
+    defaultChannel: BridgeCommand
+  - type: Item
+    sprite: Objects/Devices/encryption_keys.rsi
+  - type: Sprite
+    sprite: Objects/Devices/encryption_keys.rsi
+    layers:
+    - state: crypt_gold
+    - state: nano_label
+
+- type: entity
+  parent: EncryptionKey
+  id: EncryptionKeyExecutiveOfficer
+  name: Executive Officer's encryption key
+  description: An encryption key used only by the Executive Officer of the ship.
+  components:
+  - type: EncryptionKey
+    channels:
+    - BridgeCommand
+    - Maintenance
+    - Medical
+    - Tactical
+    - Operations
+    - Service
+    - Science
+    - Supply
+    - Common
+    defaultChannel: BridgeCommand
+  - type: Item
+    sprite: Objects/Devices/encryption_keys.rsi
+  - type: Sprite
+    sprite: Objects/Devices/encryption_keys.rsi
+    layers:
+    - state: crypt_gold
+    - state: nano_label

@@ -42,5 +42,5 @@
     gloves: ClothingHandsGlovesCaptain
     back: ClothingBackpackSatchelLeather
     id: CommandingOfficerPDA
-    ears: ClothingHeadsetCommandingOfficer
+    ears: ClothingHeadsetAltCommandingOfficer
     belt: ClothingBeltHolster

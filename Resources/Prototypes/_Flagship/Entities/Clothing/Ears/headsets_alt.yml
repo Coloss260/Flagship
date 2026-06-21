@@ -1,37 +1,20 @@
 - type: entity
   abstract: true
-  parent: Clothing
-  id: ClothingHeadsetFlag
+  parent: ClothingHeadsetFlag
+  id: ClothingHeadsetAltFlag
   name: headset
   description: An updated, modular intercom that fits over the head. Takes encryption keys.
   components:
-  - type: ContainerContainer
-    containers:
-      key_slots: !type:Container
-  - type: ContainerFill
-    containers:
-      key_slots:
-      - EncryptionKeyCommon
-  - type: Headset
-  - type: EncryptionKeyHolder
-    keySlots: 4
   - type: Sprite
-    state: icon
-  - type: Item
-    size: Small
+    state: icon_alt
   - type: Clothing
-    slots:
-    - ears
-    sprite: Clothing/Ears/Headsets/base.rsi
-  - type: GuideHelp
-    guides:
-    - Radio
+    equippedPrefix: alt
 
 # Bridge Command
 - type: entity
-  parent: ClothingHeadsetFlag
-  id: ClothingHeadsetCommandingOfficer
-  name: Commanding Officer's Headset
+  parent: ClothingHeadsetAltFlag
+  id: ClothingHeadsetAltCommandingOfficer
+  name: Commanding Officer's over-ear Headset
   description: Headset used by Commanding Officers.
   components:
   - type: ContainerFill
@@ -44,9 +27,9 @@
     sprite: _Flagship/Clothing/Ears/Headsets/bridgecommand.rsi
 
 - type: entity
-  parent: ClothingHeadsetFlag
-  id: ClothingHeadsetExecutiveOfficer
-  name: Executive Officer's Headset
+  parent: ClothingHeadsetAltFlag
+  id: ClothingHeadsetAltExecutiveOfficer
+  name: Executive Officer's over-ear Headset
   description: Headset used by Executive Officers.
   components:
   - type: ContainerFill

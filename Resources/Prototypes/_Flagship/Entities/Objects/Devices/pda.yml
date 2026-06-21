@@ -1,3 +1,4 @@
+# Bridge Command
 - type: entity
   parent: BasePDA
   id: CommandingOfficerPDA
@@ -6,6 +7,30 @@
   components:
   - type: Pda
     id: CommandingOfficerIDCard
+    penSlot:
+      startingItem: PenCap
+      priority: -1
+      whitelist:
+        tags:
+        - Write
+  - type: Appearance
+    appearanceDataInit:
+     enum.PdaVisuals.PdaType:
+       !type:String
+       pda-captain
+  - type: PdaBorderColor
+    borderColor: "#7C5D00"
+  - type: Icon
+    state: pda-captain
+
+- type: entity
+  parent: BasePDA
+  id: ExecutiveOfficerPDA
+  name: Executive Officer's PDA
+  description: Surprisingly no different from your PDA.
+  components:
+  - type: Pda
+    id: ExecutiveOfficerIDCard
     penSlot:
       startingItem: PenCap
       priority: -1
