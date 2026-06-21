@@ -112,8 +112,8 @@
 - type: playTimeTracker
   id: JobReporter
 
-- type: playTimeTracker
-  id: JobResearchAssistant
+# - type: playTimeTracker
+#   id: JobResearchAssistant
 
 - type: playTimeTracker
   id: JobResearchDirector
@@ -121,8 +121,8 @@
 - type: playTimeTracker
   id: JobSalvageSpecialist
 
-- type: playTimeTracker
-  id: JobScientist
+# - type: playTimeTracker
+#   id: JobScientist
 
 - type: playTimeTracker
   id: JobSecurityCadet

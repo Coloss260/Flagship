@@ -47,7 +47,17 @@
   id: JobSecurityTrainee
 
 # Science
+- type: playTimeTracker
+  id: JobScienceSupervisor
 
+- type: playTimeTracker
+  id: JobRoboticist
+
+- type: playTimeTracker
+  id: JobScientist
+
+- type: playTimeTracker
+  id: JobResearchAssistant
 
 # Supply
 

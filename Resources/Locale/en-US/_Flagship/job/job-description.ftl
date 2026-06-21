@@ -20,6 +20,10 @@ job-description-security-officer = Patrol the tight corridors of the ship and pr
 job-description-security-trainee = Learn the ropes and tactics of the Security Team while accompanying an Officer on patrol.
 
 # Science
+job-description-science-supervisor = Oversee the Science department, and make sure that progress is made. Planify salvage expeditions for ancient technology.
+job-description-roboticist = Create an army of robots that work for the Flagship. Create powerful mechs for the glory of war.
+job-description-scientist = Be the embodiment of the pinnacle of progress in scientific research. Research powerful upgrades and tools for the Flagship.
+job-description-research-assistant = Be an academic student and learn the ropes of science in the worst place imaginable.
 
 # Supply
 

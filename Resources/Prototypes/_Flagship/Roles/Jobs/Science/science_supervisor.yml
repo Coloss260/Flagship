@@ -1,0 +1,25 @@
+- type: job
+  id: ScienceSupervisor
+  name: job-name-science-supervisor
+  description: job-description-science-supervisor
+  playTimeTracker: JobScienceSupervisor
+  setPreference: true
+  startingGear: ScienceSupervisorGear
+  icon: "JobIconScienceSupervisor"
+  supervisors: job-supervisors-oo
+  requirements:
+    - !type:DepartmentTimeRequirement
+      department: Security
+      time: 54000 # 15 hours
+  displayWeight: 100
+  accessGroups:
+  - Science
+
+- type: startingGear
+  id: ScienceSupervisorGear
+  equipment:
+    shoes: ClothingShoesBootsJack
+    id: HoSPDA
+    ears: ClothingHeadsetCommandingOfficer
+    belt: ClothingBeltSecurity
+    uniform: ClothingUniformJumpsuitHoS

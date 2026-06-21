@@ -89,7 +89,40 @@
     sprite: /Textures/Interface/Misc/job_icons.rsi
     state: SecurityCadet
   jobName: job-name-security-trainee
+
 # Science
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconScienceSupervisor
+  icon:
+    sprite: *icon-rsi
+    state: ResearchDirector
+  jobName: job-name-science-supervisor
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconRoboticist
+  icon:
+    sprite: *icon-rsi
+    state: Roboticist
+  jobName: job-name-roboticist
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconScientist
+  icon:
+    sprite: *icon-rsi
+    state: Scientist
+  jobName: job-name-scientist
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconResearchAssistant
+  icon:
+    sprite: *icon-rsi
+    state: ResearchAssistant
+  jobName: job-name-research-assistant
+
 
 # Supply
 

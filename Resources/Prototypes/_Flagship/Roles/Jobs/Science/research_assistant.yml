@@ -1,0 +1,24 @@
+- type: job
+  id: ResearchAssistant
+  name: job-name-research-assistant
+  description: job-description-research-assistant
+  playTimeTracker: JobResearchAssistant
+  setPreference: true
+  startingGear: ResearchAssistantGear
+  icon: "JobIconResearchAssistant"
+  supervisors: job-supervisors-ss
+  requirements:
+    - !type:DepartmentTimeRequirement
+      department: Security
+      time: 54000 # 15 hours
+  displayWeight: 40
+  accessGroups:
+  - Science
+
+- type: startingGear
+  id: ResearchAssistantGear
+  equipment:
+    shoes: ClothingShoesColorWhite
+    id: ResearchAssistantPDA
+    ears: ClothingHeadsetScience
+    pocket2: BookScientistsGuidebook

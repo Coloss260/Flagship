@@ -20,6 +20,10 @@ job-name-security-officer = Security Officer
 job-name-security-trainee = Security Trainee
 
 # Science
+job-name-science-supervisor = Science Supervisor
+job-name-roboticist = Roboticist
+job-name-scientist = Scientist
+job-name-research-assistant = Research Assistant
 
 # Supply
 
@@ -49,4 +53,12 @@ JobMaintenanceTechnician = Maintenance Technician
 JobMessChef = Mess Chef
 JobOffDutyCrew = Off-Duty Crew
 JobOperationsOfficer = Operations Officer
+JobResearchAssistant = Research Assistant
+JobRoboticist = Roboticist
+JobScientist = Scientist
+JobScienceSupervisor = Science Supervisor
+JobSecurityChief = Security Chief
+JobSecurityMedic = Security Medic
+JobSecurityOfficer = Security Officer
+JobSecurityTrainee = Security Trainee
 JobTacticalOfficer = Tactical Officer

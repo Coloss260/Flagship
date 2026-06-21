@@ -1,0 +1,35 @@
+- type: job
+  id: Scientist
+  name: job-name-scientist
+  description: job-description-scientist
+  playTimeTracker: JobScientist
+  setPreference: true
+  startingGear: ScientistGear
+  icon: "JobIconScientist"
+  supervisors: job-supervisors-ss
+  requirements:
+    - !type:DepartmentTimeRequirement
+      department: Security
+      time: 54000 # 15 hours
+  displayWeight: 80
+  accessGroups:
+  - Science
+
+- type: startingGear
+  id: ScientistGear
+  equipment:
+    ears: ClothingHeadsetScience
+  #storage:
+    #back:
+    #- Stuff
+
+- type: chameleonOutfit
+  id: ScientistChameleonOutfit
+  job: Scientist
+  equipment:
+    head: ClothingHeadBandSkull
+    eyes: ClothingEyesGlassesCheapSunglasses
+    mask: ClothingMaskGas
+    neck: ClothingNeckTieSci
+    outerClothing: ClothingOuterCoatRnd
+    gloves: ClothingHandsGlovesLatex

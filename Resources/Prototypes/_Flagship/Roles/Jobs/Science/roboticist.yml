@@ -1,0 +1,25 @@
+- type: job
+  id: Roboticist
+  name: job-name-roboticist
+  description: job-description-roboticist
+  playTimeTracker: JobRoboticist
+  setPreference: true
+  startingGear: RoboticistGear
+  icon: "JobIconRoboticist"
+  supervisors: job-supervisors-ss
+  requirements:
+    - !type:DepartmentTimeRequirement
+      department: Security
+      time: 54000 # 15 hours
+  displayWeight: 60
+  accessGroups:
+  - Science
+
+- type: startingGear
+  id: RoboticistGear
+  equipment:
+    shoes: ClothingShoesBootsJack
+    id: HoSPDA
+    ears: ClothingHeadsetCommandingOfficer
+    belt: ClothingBeltSecurity
+    uniform: ClothingUniformJumpsuitSec
