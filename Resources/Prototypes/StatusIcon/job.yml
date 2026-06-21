@@ -109,13 +109,13 @@
 
 # Medical
 
-- type: jobIcon
-  parent: JobIcon
-  id: JobIconChemist
-  icon:
-    sprite: *icon-rsi
-    state: Chemist
-  jobName: job-name-chemist
+# - type: jobIcon
+#   parent: JobIcon
+#   id: JobIconChemist
+#   icon:
+#     sprite: *icon-rsi
+#     state: Chemist
+#   jobName: job-name-chemist
 
 - type: jobIcon
   parent: JobIcon
@@ -125,21 +125,21 @@
     state: Geneticist
   jobName: job-name-geneticist
 
-- type: jobIcon
-  parent: JobIcon
-  id: JobIconMedicalDoctor
-  icon:
-    sprite: *icon-rsi
-    state: MedicalDoctor
-  jobName: job-name-doctor
+# - type: jobIcon
+#   parent: JobIcon
+#   id: JobIconMedicalDoctor
+#   icon:
+#     sprite: *icon-rsi
+#     state: MedicalDoctor
+#   jobName: job-name-doctor
 
-- type: jobIcon
-  parent: JobIcon
-  id: JobIconMedicalIntern
-  icon:
-    sprite: *icon-rsi
-    state: MedicalIntern
-  jobName: job-name-intern
+# - type: jobIcon
+#   parent: JobIcon
+#   id: JobIconMedicalIntern
+#   icon:
+#     sprite: *icon-rsi
+#     state: MedicalIntern
+#   jobName: job-name-intern
 
 - type: jobIcon
   parent: JobIcon

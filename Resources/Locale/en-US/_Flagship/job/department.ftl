@@ -3,5 +3,5 @@ department-Maintenance = Maintenance
 department-Security = Security
 department-Science = Science
 department-Medical = Medical
-department-Supply = Supply
+department-Supply = Supplies
 department-Service = Service

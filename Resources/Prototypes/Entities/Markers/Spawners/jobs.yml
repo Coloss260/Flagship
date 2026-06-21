@@ -112,17 +112,17 @@
       - state: green
       - state: technicalassistant
 
-- type: entity
-  id: SpawnPointMedicalIntern
-  parent: SpawnPointJobBase
-  name: medical intern
-  components:
-  - type: SpawnPoint
-    job_id: MedicalIntern
-  - type: Sprite
-    layers:
-      - state: green
-      - state: medicalintern
+# - type: entity
+#   id: SpawnPointMedicalIntern
+#   parent: SpawnPointJobBase
+#   name: medical intern
+#   components:
+#   - type: SpawnPoint
+#     job_id: MedicalIntern
+#   - type: Sprite
+#     layers:
+#       - state: green
+#       - state: medicalintern
 
 - type: entity
   id: SpawnPointSecurityCadet
@@ -136,17 +136,17 @@
       - state: green
       - state: security_cadet
 
-- type: entity
-  id: SpawnPointResearchAssistant
-  parent: SpawnPointJobBase
-  name: research assistant
-  components:
-  - type: SpawnPoint
-    job_id: ResearchAssistant
-  - type: Sprite
-    layers:
-      - state: green
-      - state: researchassistant
+#- type: entity
+#  id: SpawnPointResearchAssistant
+#  parent: SpawnPointJobBase
+#  name: research assistant
+#  components:
+#  - type: SpawnPoint
+#    job_id: ResearchAssistant
+#  - type: Sprite
+#    layers:
+#      - state: green
+#      - state: researchassistant
 
 - type: entity
   id: SpawnPointServiceWorker
@@ -373,17 +373,17 @@
       - state: green
       - state: cmo
 
-- type: entity
-  id: SpawnPointMedicalDoctor
-  parent: SpawnPointJobBase
-  name: medicaldoctor
-  components:
-  - type: SpawnPoint
-    job_id: MedicalDoctor
-  - type: Sprite
-    layers:
-      - state: green
-      - state: doctor
+# - type: entity
+#   id: SpawnPointMedicalDoctor
+#   parent: SpawnPointJobBase
+#   name: medicaldoctor
+#   components:
+#   - type: SpawnPoint
+#     job_id: MedicalDoctor
+#   - type: Sprite
+#     layers:
+#       - state: green
+#       - state: doctor
 
 - type: entity
   id: SpawnPointParamedic
@@ -397,17 +397,17 @@
       - state: green
       - state: paramedic
 
-- type: entity
-  id: SpawnPointChemist
-  parent: SpawnPointJobBase
-  name: chemist
-  components:
-  - type: SpawnPoint
-    job_id: Chemist
-  - type: Sprite
-    layers:
-      - state: green
-      - state: chemist
+# - type: entity
+#   id: SpawnPointChemist
+#   parent: SpawnPointJobBase
+#   name: chemist
+#   components:
+#   - type: SpawnPoint
+#     job_id: Chemist
+#   - type: Sprite
+#     layers:
+#       - state: green
+#       - state: chemist
 
 # Science
 
@@ -423,17 +423,17 @@
       - state: green
       - state: rd
 
-- type: entity
-  id: SpawnPointScientist
-  parent: SpawnPointJobBase
-  name: scientist
-  components:
-  - type: SpawnPoint
-    job_id: Scientist
-  - type: Sprite
-    layers:
-      - state: green
-      - state: scientist
+# - type: entity
+#   id: SpawnPointScientist
+#  parent: SpawnPointJobBase
+#  name: scientist
+#  components:
+#  - type: SpawnPoint
+#    job_id: Scientist
+#  - type: Sprite
+#    layers:
+#      - state: green
+#      - state: scientist
 
 # Security
 

@@ -125,8 +125,71 @@
 
 
 # Supply
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconSuppliesQuartermaster
+  icon:
+    sprite: /Textures/Interface/Misc/job_icons.rsi
+    state: QuarterMaster
+  jobName: job-name-suppliesquartermaster
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconArtillerySpecialist
+  icon:
+    sprite: /Textures/Interface/Misc/job_icons.rsi
+    state: SecurityOfficer
+  jobName: job-name-artilleryspecialist
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconSuppliesCrewman
+  icon:
+    sprite: /Textures/Interface/Misc/job_icons.rsi
+    state: CargoTechnician
+  jobName: job-name-suppliescrewman
+
 
 # Medical
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconChiefOfMedical
+  icon:
+    sprite: /Textures/Interface/Misc/job_icons.rsi
+    state: ChiefMedicalOfficer
+  jobName: job-name-chiefofmedical
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconMedicalDoctor
+  icon:
+    sprite: /Textures/Interface/Misc/job_icons.rsi
+    state: MedicalDoctor
+  jobName: job-name-medicaldoctor
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconChemist
+  icon:
+    sprite: /Textures/Interface/Misc/job_icons.rsi
+    state: Chemist
+  jobName: job-name-chemist
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconParamedicalSpecialist
+  icon:
+    sprite: /Textures/Interface/Misc/job_icons.rsi
+    state: Paramedic
+  jobName: job-name-paramedicalspecialist
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconMedicalIntern
+  icon:
+    sprite: /Textures/Interface/Misc/job_icons.rsi
+    state: MedicalIntern
+  jobName: job-name-medicalintern
 
 # Service
 - type: jobIcon

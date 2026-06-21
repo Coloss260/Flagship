@@ -34,10 +34,23 @@
             SecurityTrainee: [ -1, -1 ]
 
             # Science
+            ScienceSupervisor: [ -1, -1 ]
+            Roboticist: [ -1, -1 ]
+            Scientist: [ -1, -1 ]
+            ResearchAssistant: [ -1, -1 ]
+
 
             # Supply
+            SuppliesQuartermaster: [ -1, -1 ]
+            ArtillerySpecialist: [ -1, -1 ]
+            SuppliesCrewman: [ -1, -1 ]
 
             # Medical
+            ChiefOfMedical: [ -1, -1 ]
+            MedicalDoctor: [ -1, -1 ]
+            Chemist: [ -1, -1 ]
+            ParamedicalSpecialist: [ -1, -1 ]
+            MedicalIntern: [ -1, -1 ]
 
             # Service
             OffDutyCrew: [ -1, -1 ]

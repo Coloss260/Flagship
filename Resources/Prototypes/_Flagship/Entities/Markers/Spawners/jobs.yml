@@ -123,11 +123,104 @@
     job_id: SecurityTrainee
 
 # Science
+- type: entity
+  id: SpawnPointScienceSupervisor
+  parent: SpawnPointJobBase
+  name: Science Supervisor
+  components:
+  - type: SpawnPoint
+    job_id: ScienceSupervisor
+
+- type: entity
+  id: SpawnPointRoboticist
+  parent: SpawnPointJobBase
+  name: Roboticist
+  components:
+  - type: SpawnPoint
+    job_id: Roboticist
+
+- type: entity
+  id: SpawnPointScientist
+  parent: SpawnPointJobBase
+  name: Scientist
+  components:
+  - type: SpawnPoint
+    job_id: Scientist
+
+- type: entity
+  id: SpawnPointResearchAssistant
+  parent: SpawnPointJobBase
+  name: Research assistant
+  components:
+  - type: SpawnPoint
+    job_id: ResearchAssistant
+
 
 # Supply
+- type: entity
+  id: SpawnPointSuppliesQuartermaster
+  parent: SpawnPointJobBase
+  name: Supplies QuarterMaster
+  components:
+  - type: SpawnPoint
+    job_id: SuppliesQuartermaster
+
+- type: entity
+  id: SpawnPointArtillerySpecialist
+  parent: SpawnPointJobBase
+  name: Artillery Specialist
+  components:
+  - type: SpawnPoint
+    job_id: ArtillerySpecialist
+
+- type: entity
+  id: SpawnPointSuppliesCrewman
+  parent: SpawnPointJobBase
+  name: Supplies Crewman
+  components:
+  - type: SpawnPoint
+    job_id: SuppliesCrewman
 
 # Medical
+- type: entity
+  id: SpawnPointChiefOfMedical
+  parent: SpawnPointJobBase
+  name: Chief Of Medical
+  components:
+  - type: SpawnPoint
+    job_id: ChiefOfMedical
 
+- type: entity
+  id: SpawnPointMedicalDoctor
+  parent: SpawnPointJobBase
+  name: Medical Doctor
+  components:
+  - type: SpawnPoint
+    job_id: MedicalDoctor
+
+- type: entity
+  id: SpawnPointChemist
+  parent: SpawnPointJobBase
+  name: Chemist
+  components:
+  - type: SpawnPoint
+    job_id: Chemist
+
+- type: entity
+  id: SpawnPointParamedicalSpecialist
+  parent: SpawnPointJobBase
+  name: Paramedical Specialist
+  components:
+  - type: SpawnPoint
+    job_id: ParamedicalSpecialist
+
+- type: entity
+  id: SpawnPointMedicalIntern
+  parent: SpawnPointJobBase
+  name: Medical Intern
+  components:
+  - type: SpawnPoint
+    job_id: MedicalIntern
 
 # Service
 - type: entity

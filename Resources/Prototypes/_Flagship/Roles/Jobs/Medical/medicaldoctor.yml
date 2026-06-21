@@ -1,15 +1,17 @@
 - type: job
   id: MedicalDoctor
-  name: job-name-doctor
-  description: job-description-doctor
+  name: job-name-medicaldoctor
+  description: job-description-medicaldoctor
   playTimeTracker: JobMedicalDoctor
+  setPreference: true
   requirements:
     - !type:DepartmentTimeRequirement
       department: Medical
-      time: 2.5h
-  startingGear: DoctorGear
+      time: 36000 #10 hrs
+  displayWeight: 80
+  startingGear: MedicalDoctorGear
   icon: "JobIconMedicalDoctor"
-  supervisors: job-supervisors-cmo
+  supervisors: job-supervisors-chom
   access:
   - Medical
   - Maintenance
@@ -21,9 +23,9 @@
     prototype: WehMedipen
 
 - type: startingGear
-  id: DoctorGear
+  id: MedicalDoctorGear
   equipment:
-    ears: ClothingHeadsetMedical
+    ears: ClothingHeadsetCommandingOfficer
 
 - type: chameleonOutfit
   id: MedicalDoctorChameleonOutfit

@@ -60,10 +60,30 @@
   id: JobResearchAssistant
 
 # Supply
+- type: playTimeTracker
+  id: JobSuppliesQuartermaster
 
+- type: playTimeTracker
+  id: JobArtillerySpecialist
+
+- type: playTimeTracker
+  id: JobSuppliesCrewman
 
 # Medical
+- type: playTimeTracker
+  id: JobChiefOfMedical
 
+- type: playTimeTracker
+  id: JobMedicalDoctor
+
+- type: playTimeTracker
+  id: JobChemist
+
+- type: playTimeTracker
+  id: JobParamedicalSpecialist
+
+- type: playTimeTracker
+  id: JobMedicalIntern
 
 # Service
 - type: playTimeTracker

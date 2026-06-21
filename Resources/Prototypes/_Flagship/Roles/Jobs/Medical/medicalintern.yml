@@ -1,16 +1,13 @@
-﻿- type: job
+- type: job
   id: MedicalIntern
-  name: job-name-intern
-  description: job-description-intern
+  name: job-name-medicalintern
+  description: job-description-medicalintern
   playTimeTracker: JobMedicalIntern
-  requirements:
-    - !type:DepartmentTimeRequirement
-      department: Medical
-      time: 10h
-      inverted: true # stop playing intern if you're good at med!
+  setPreference: true
+  displayWeight: 20
   startingGear: MedicalInternGear
   icon: "JobIconMedicalIntern"
-  supervisors: job-supervisors-medicine
+  supervisors: job-supervisors-chom
   access:
   - Medical
   - Maintenance
@@ -20,7 +17,7 @@
   equipment:
     shoes: ClothingShoesColorWhite
     id: MedicalInternPDA
-    ears: ClothingHeadsetMedical
+    ears: ClothingHeadsetCommandingOfficer
     pocket2: BookMedicalReferenceBook
 
 - type: chameleonOutfit

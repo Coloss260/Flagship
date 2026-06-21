@@ -3,23 +3,26 @@
   name: job-name-chemist
   description: job-description-chemist
   playTimeTracker: JobChemist
+  setPreference: true
   requirements:
     - !type:DepartmentTimeRequirement
       department: Medical
-      time: 5h
+      time: 36000 #10 hrs
+  displayWeight: 60
   startingGear: ChemistGear
   icon: "JobIconChemist"
-  supervisors: job-supervisors-cmo
+  supervisors: job-supervisors-chom
   access:
-  - Medical
-  - Chemistry
-  - Maintenance
+  - Captain
+  accessGroups:
+  - Command
+  - AllAccess
 
 - type: startingGear
   id: ChemistGear
   equipment:
     id: ChemistryPDA
-    ears: ClothingHeadsetMedical
+    ears: ClothingHeadsetCommandingOfficer
 
 - type: chameleonOutfit
   id: ChemistChameleonOutfit

@@ -1,24 +1,17 @@
-# Best job.
-
 - type: job
-  id: ChiefMedicalOfficer
-  name: job-name-cmo
-  description: job-description-cmo
-  playTimeTracker: JobChiefMedicalOfficer
+  id: ChiefOfMedical
+  name: job-name-chiefofmedical
+  description: job-description-chiefofmedical
+  playTimeTracker: JobChiefOfMedical
+  setPreference: true
   requirements:
-    - !type:RoleTimeRequirement
-      role: JobChemist
-      time: 2.5h
-    - !type:RoleTimeRequirement
-      role: JobMedicalDoctor
-      time: 5h
     - !type:DepartmentTimeRequirement
       department: Medical
-      time: 10h
-  weight: 10
-  startingGear: CMOGear
-  icon: "JobIconChiefMedicalOfficer"
-  supervisors: job-supervisors-captain
+      time: 54000 #15 hrs
+  displayWeight: 100
+  startingGear: ChiefOfMedicalGear
+  icon: "JobIconChiefOfMedical"
+  supervisors: job-supervisors-oo
   access:
   - Medical
   - Command
@@ -35,17 +28,17 @@
       - type: CommandStaff
 
 - type: startingGear
-  id: CMOGear
+  id: ChiefOfMedicalGear
   equipment:
     id: CMOPDA
-    ears: ClothingHeadsetCMO
+    ears: ClothingHeadsetCommandingOfficer
   storage:
     back:
     - Flash
 
 - type: chameleonOutfit
-  id: ChiefMedicalOfficerChameleonOutfit
-  job: ChiefMedicalOfficer
+  id: ChiefOfMedicalChameleonOutfit
+  job: ChiefOfMedical
   hasMindShield: true
   equipment:
     head: ClothingHeadHatBeretCmo

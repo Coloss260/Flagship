@@ -15739,10 +15739,104 @@ entities:
       parent: 1
 
 # Science
+- proto: SpawnPointScienceSupervisor
+  entities:
+  - uid: 3178
+    components:
+    - type: Transform
+      pos: 33.5,18.5
+      parent: 1
+
+- proto: SpawnPointRoboticist
+  entities:
+  - uid: 3179
+    components:
+    - type: Transform
+      pos: 33.5,18.5
+      parent: 1
+
+- proto: SpawnPointScientist
+  entities:
+  - uid: 3180
+    components:
+    - type: Transform
+      pos: 33.5,18.5
+      parent: 1
+
+- proto: SpawnPointResearchAssistant
+  entities:
+  - uid: 3181
+    components:
+    - type: Transform
+      pos: 33.5,18.5
+      parent: 1
+
 
 # Supply
+- proto: SpawnPointSuppliesQuartermaster
+  entities:
+  - uid: 3182
+    components:
+    - type: Transform
+      pos: 33.5,18.5
+      parent: 1
+
+- proto: SpawnPointArtillerySpecialist
+  entities:
+  - uid: 3183
+    components:
+    - type: Transform
+      pos: 33.5,18.5
+      parent: 1
+
+- proto: SpawnPointSuppliesCrewman
+  entities:
+  - uid: 3184
+    components:
+    - type: Transform
+      pos: 33.5,18.5
+      parent: 1
 
 # Medical
+- proto: SpawnPointChiefOfMedical
+  entities:
+  - uid: 3185
+    components:
+    - type: Transform
+      pos: 33.5,18.5
+      parent: 1
+
+- proto: SpawnPointMedicalDoctor
+  entities:
+  - uid: 3186
+    components:
+    - type: Transform
+      pos: 33.5,18.5
+      parent: 1
+
+- proto: SpawnPointChemist
+  entities:
+  - uid: 3187
+    components:
+    - type: Transform
+      pos: 33.5,18.5
+      parent: 1
+
+- proto: SpawnPointParamedicalSpecialist
+  entities:
+  - uid: 3188
+    components:
+    - type: Transform
+      pos: 33.5,18.5
+      parent: 1
+
+- proto: SpawnPointMedicalIntern
+  entities:
+  - uid: 3189
+    components:
+    - type: Transform
+      pos: 33.5,18.5
+      parent: 1
 
 # End of Job Spawnpoints
 - proto: SpawnPointLatejoin

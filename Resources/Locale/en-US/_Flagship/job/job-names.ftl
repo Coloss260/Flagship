@@ -26,8 +26,16 @@ job-name-scientist = Scientist
 job-name-research-assistant = Research Assistant
 
 # Supply
+job-name-suppliesquartermaster = Supplies Quartermaster
+job-name-artilleryspecialist = Artillery Specialist
+job-name-suppliescrewman = Supplies Crewman
 
 # Medical
+job-name-chiefofmedical = Chief Of Medical
+job-name-medicaldoctor = Medical Doctor
+job-name-chemist = Chemist
+job-name-paramedicalspecialist = Paramedical Specialist
+job-name-medicalintern = Medical Intern
 
 # Service
 job-name-custodian = Custodian

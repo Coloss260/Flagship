@@ -1,0 +1,32 @@
+- type: job
+  id: ArtillerySpecialist
+  name: job-name-artilleryspecialist
+  description: job-description-artilleryspecialist
+  playTimeTracker: JobArtillerySpecialist
+  setPreference: true
+  supervisors: job-supervisors-sq
+  requirements:
+    - !type:DepartmentTimeRequirement
+      department: Supply
+      time: 36000 # 10 hours
+  displayWeight: 80
+  startingGear: ArtillerySpecialistGear
+  icon: "JobIconArtillerySpecialist"
+  access:
+  - Captain
+  accessGroups:
+  - Command
+  - AllAccess
+
+- type: startingGear
+  id: ArtillerySpecialistGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitCaptain
+    shoes: ClothingShoesBootsCombatFilled
+    head: ClothingHeadHatBeretCommand
+    eyes: ClothingEyesGlassesCommand
+    gloves: ClothingHandsGlovesCaptain
+    back: ClothingBackpackSatchelLeather
+    id: CommandingOfficerPDA
+    ears: ClothingHeadsetCommandingOfficer
+    belt: ClothingBeltHolster

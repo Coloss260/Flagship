@@ -26,8 +26,16 @@ job-description-scientist = Be the embodiment of the pinnacle of progress in sci
 job-description-research-assistant = Be an academic student and learn the ropes of science in the worst place imaginable.
 
 # Supply
+job-description-suppliesquartermaster = Lead the supplies department, make sure guns are loaded, and that every department is stocked. Order your Artillery Specialists to their battle stations on Red Alert.
+job-description-artilleryspecialist = Produce or buy ammunations for the ship guns and PDCs, maintain and reload, then man when the enemy is here.
+job-description-suppliescrewman = Move materials around, buy them from the shop, and set up a manufacturing facility for extra firepower.
 
 # Medical
+job-description-chiefofmedical = WIP
+job-description-medicaldoctor = WIP
+job-description-chemist = WIP
+job-description-paramedicalspecialist = WIP
+job-description-medicalintern = WIP
 
 # Service
 job-description-hydroponics-biologist = Grow food for the chef, drugs for medbay, and other plants to keep yourself entertained.

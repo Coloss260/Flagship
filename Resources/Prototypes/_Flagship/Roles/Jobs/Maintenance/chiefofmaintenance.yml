@@ -4,6 +4,7 @@
   description: job-description-com
   playTimeTracker: JobChiefOfMaintenance
   setPreference: true
+  requireAdminNotify: true
   requirements:
     - !type:OverallPlaytimeRequirement
       time: 144000 #40 hrs

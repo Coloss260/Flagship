@@ -15,19 +15,6 @@
   - BridgeEnsign
 
 - type: department
-  id: Maintenance
-  name: department-Maintenance
-  description: department-Maintenance-description
-  color: "#EFB341"
-  weight: 120
-  primary: false
-  roles:
-  - ChiefOfMaintenance
-  - MaintenanceTechnician
-  - LifeSupportSpecialist
-  - MaintenanceIntern
-
-- type: department
   id: Security
   name: department-Security
   description: department-Security-description
@@ -41,17 +28,56 @@
   - SecurityTrainee
 
 - type: department
+  id: Supply
+  name: department-Supply
+  description: department-Supply-description
+  color: "#6aa84f"
+  weight: 160
+  primary: false
+  roles:
+  - SuppliesQuartermaster
+  - ArtillerySpecialist
+  - SuppliesCrewman
+
+- type: department
+  id: Maintenance
+  name: department-Maintenance
+  description: department-Maintenance-description
+  color: "#EFB341"
+  weight: 140
+  primary: false
+  roles:
+  - ChiefOfMaintenance
+  - MaintenanceTechnician
+  - LifeSupportSpecialist
+  - MaintenanceIntern
+
+- type: department
   id: Science
   name: department-Science
   description: department-Science-description
   color: "#cd7ccd"
-  weight: 160
+  weight: 120
   primary: false
   roles:
   - ScienceSupervisor
   - Roboticist
   - Scientist
   - ResearchAssistant
+
+- type: department
+  id: Medical
+  name: department-Medical
+  description: department-Medical-description
+  color: "#a4d8ef"
+  weight: 100
+  primary: false
+  roles:
+  - ChiefOfMedical
+  - MedicalDoctor
+  - Chemist
+  - ParamedicalSpecialist
+  - MedicalIntern
 
 - type: department
   id: Service
