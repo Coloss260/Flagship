@@ -33,7 +33,7 @@
 - type: startingGear
   id: OperationsOfficerGear
   equipment:
-    jumpsuit: ClothingUniformJumpsuitCaptain
+    jumpsuit: ClothingUniformJumpsuitOperationsOfficer
     shoes: ClothingShoesBootsCombatFilled
     head: ClothingHeadHatBeretCommand
     eyes: ClothingEyesGlassesCommand

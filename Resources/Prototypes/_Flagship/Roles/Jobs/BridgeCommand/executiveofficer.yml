@@ -34,7 +34,7 @@
 - type: startingGear
   id: ExecutiveOfficerGear
   equipment:
-    jumpsuit: ClothingUniformJumpsuitCaptain
+    jumpsuit: ClothingUniformJumpsuitExecutiveOfficer
     shoes: ClothingShoesBootsCombatFilled
     head: ClothingHeadHatBeretCommand
     eyes: ClothingEyesGlassesCommand

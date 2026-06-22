@@ -34,7 +34,7 @@
 - type: startingGear
   id: TacticalOfficerGear
   equipment:
-    jumpsuit: ClothingUniformJumpsuitCaptain
+    jumpsuit: ClothingUniformJumpsuitTacticalOfficer
     shoes: ClothingShoesBootsCombatFilled
     head: ClothingHeadHatBeretCommand
     eyes: ClothingEyesGlassesCommand
