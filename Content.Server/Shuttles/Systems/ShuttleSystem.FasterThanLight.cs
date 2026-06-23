@@ -37,12 +37,12 @@ public sealed partial class ShuttleSystem
     [Dependency] private EntityQuery<MapGridComponent> _mapGridQuery = default!;
     [Dependency] private EntityQuery<MapComponent> _mapQuery = default!;
 
-    private readonly SoundSpecifier _startupSound = new SoundPathSpecifier("/Audio/Effects/Shuttle/hyperspace_begin.ogg")
+    private readonly SoundSpecifier _startupSound = new SoundPathSpecifier("/Audio/_FlagShip/Effects/Shuttle/FTL_Jump.ogg") // - FlagShip
     {
         Params = AudioParams.Default.WithVolume(-5f),
     };
 
-    private readonly SoundSpecifier _arrivalSound = new SoundPathSpecifier("/Audio/Effects/Shuttle/hyperspace_end.ogg")
+    private readonly SoundSpecifier _arrivalSound = new SoundPathSpecifier("/Audio/_FlagShip/Effects/Shuttle/FTL_stop.ogg") // - FlagShip
     {
         Params = AudioParams.Default.WithVolume(-5f),
     };
