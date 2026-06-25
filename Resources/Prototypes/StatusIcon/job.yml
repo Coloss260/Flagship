@@ -109,13 +109,13 @@
 
 # Medical
 
-# - type: jobIcon
-#   parent: JobIcon
-#   id: JobIconChemist
-#   icon:
-#     sprite: *icon-rsi
-#     state: Chemist
-#   jobName: job-name-chemist
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconChemist
+  icon:
+    sprite: *icon-rsi
+    state: Chemist
+  jobName: job-name-chemist
 
 - type: jobIcon
   parent: JobIcon
@@ -125,21 +125,20 @@
     state: Geneticist
   jobName: job-name-geneticist
 
-# - type: jobIcon
-#   parent: JobIcon
-#   id: JobIconMedicalDoctor
-#   icon:
-#     sprite: *icon-rsi
-#     state: MedicalDoctor
-#   jobName: job-name-doctor
-
-# - type: jobIcon
-#   parent: JobIcon
-#   id: JobIconMedicalIntern
-#   icon:
-#     sprite: *icon-rsi
-#     state: MedicalIntern
-#   jobName: job-name-intern
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconMedicalDoctor
+  icon:
+    sprite: *icon-rsi
+    state: MedicalDoctor
+  jobName: job-name-doctor
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconMedicalIntern
+  icon:
+    sprite: *icon-rsi
+    state: MedicalIntern
+  jobName: job-name-intern
 
 - type: jobIcon
   parent: JobIcon
@@ -166,30 +165,27 @@
   jobName: job-name-virologist
 
 # Research
-
-# - type: jobIcon
-#   parent: JobIcon
-#   id: JobIconResearchAssistant
-#   icon:
-#     sprite: *icon-rsi
-#     state: ResearchAssistant
-#   jobName: job-name-research-assistant
-
-# - type: jobIcon
-#   parent: JobIcon
-#   id: JobIconRoboticist
-#   icon:
-#     sprite: *icon-rsi
-#     state: Roboticist
-#   jobName: job-name-roboticist
-
-# - type: jobIcon
-#   parent: JobIcon
-#   id: JobIconScientist
-#   icon:
-#     sprite: *icon-rsi
-#     state: Scientist
-#   jobName: job-name-scientist
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconResearchAssistant
+  icon:
+    sprite: *icon-rsi
+    state: ResearchAssistant
+  jobName: job-name-research-assistant
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconRoboticist
+  icon:
+    sprite: *icon-rsi
+    state: Roboticist
+  jobName: job-name-roboticist
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconScientist
+  icon:
+    sprite: *icon-rsi
+    state: Scientist
+  jobName: job-name-scientist
 
 # Security
 
@@ -227,6 +223,14 @@
 
 - type: jobIcon
   parent: JobIcon
+  id: JobIconSecurityOfficer
+  icon:
+    sprite: *icon-rsi
+    state: SecurityOfficer
+  jobName: job-name-security
+
+- type: jobIcon
+  parent: JobIcon
   id: JobIconWarden
   icon:
     sprite: *icon-rsi
@@ -235,13 +239,13 @@
 
 # Service
 
-# - type: jobIcon
-#   parent: JobIcon
-#   id: JobIconBartender
-#   icon:
-#     sprite: *icon-rsi
-#     state: Bartender
-#   jobName: job-name-bartender
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconBartender
+  icon:
+    sprite: *icon-rsi
+    state: Bartender
+  jobName: job-name-bartender
 
 - type: jobIcon
   parent: JobIcon

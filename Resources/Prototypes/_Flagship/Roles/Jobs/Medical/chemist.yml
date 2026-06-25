@@ -1,16 +1,16 @@
 - type: job
-  id: Chemist
-  name: job-name-chemist
-  description: job-description-chemist
-  playTimeTracker: JobChemist
+  id: FlagChemist
+  name: job-name-flag-chemist
+  description: job-description-flag-chemist
+  playTimeTracker: JobFlagChemist
   setPreference: true
   requirements:
     - !type:DepartmentTimeRequirement
-      department: Medical
+      department: FlagMedical
       time: 36000 #10 hrs
   displayWeight: 60
-  startingGear: ChemistGear
-  icon: "JobIconChemist"
+  startingGear: FlagChemistGear
+  icon: "JobIconFlagChemist"
   supervisors: job-supervisors-chom
   access:
   - Captain
@@ -19,14 +19,14 @@
   - AllAccess
 
 - type: startingGear
-  id: ChemistGear
+  id: FlagChemistGear
   equipment:
     id: ChemistryPDA
     ears: ClothingHeadsetCommandingOfficer
 
 - type: chameleonOutfit
-  id: ChemistChameleonOutfit
-  job: Chemist
+  id: FlagChemistChameleonOutfit
+  job: FlagChemist
   equipment:
     head: ClothingHeadHatBeretMedic
     mask: ClothingMaskSterile

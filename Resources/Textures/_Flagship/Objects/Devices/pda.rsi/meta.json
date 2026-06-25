@@ -1,27 +1,12 @@
 {
     "version": 1,
     "license": "CC-BY-SA-3.0",
-    "copyright": "Taken from tgstation at https://github.com/tgstation/tgstation/commit/59f2a4e10e5ba36033c9734ddebfbbdc6157472d, pda-cluwne made by brainfood1183 (github) ss14 | pda-brigmedic and pda-centcom made by PuroSlavKing (Github) | pda-brigemdic resprited by Hülle#2562 (Discord), pda-pirate made by brainfood1183 (Github), pda-syndi-agent drawn by Ubaser, pda-wizard recolour by Velken, pda-syndi-commander/operative by Archee1 (Github), pda-ninja by ThatGuyUSA (github)",
+    "copyright": "aPDA retexture by ZweiHawke @ zweihawke.net, added Hygiene Technician, modified interntech, added admin assistant and added the cargo assistant by Radezolid, added Psychiatrist, Therapist, and Social Worker versions by alterae <chell@alterae.online>, surgeon by Janet Blackquill <uhhadd@gmail.com> 2024. Security PDAs modified by TJohnson. Cryogenics Specialist PDA by willow_de_luna.",
     "size": {
         "x": 32,
         "y": 32
     },
     "states": [
-        {
-            "name": "pda-commandingofficer"
-        },
-        {
-            "name": "pda-bridgecommand"
-        },
-        {
-            "name": "pda"
-        },
-        {
-            "name": "light_overlay"
-        },
-        {
-            "name": "id_overlay"
-        },
         {
             "name": "inhand-left",
             "directions": 4
@@ -32,6 +17,21 @@
         },
         {
             "name": "insert_overlay"
+        },
+        {
+            "name": "id_overlay"
+        },
+        {
+            "name": "light_overlay"
+        },
+        {
+            "name": "pda-bridgecommand"
+        },
+        {
+            "name": "pda-commandingofficer"
+        },
+        {
+            "name": "pda"
         }
     ]
 }

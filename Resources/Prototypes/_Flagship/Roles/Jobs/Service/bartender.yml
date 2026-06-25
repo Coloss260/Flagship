@@ -1,14 +1,14 @@
 - type: job
-  id: Bartender
-  name: job-name-bartender
-  description: job-description-bartender
-  playTimeTracker: JobBartender
+  id: FlagBartender
+  name: job-name-flag-bartender
+  description: job-description-flag-bartender
+  playTimeTracker: JobFlagBartender
   requirements:
     - !type:DepartmentTimeRequirement
       department: Service
       time: 0.5h
-  startingGear: BartenderGear
-  icon: "JobIconBartender"
+  startingGear: FlagBartenderGear
+  icon: "JobIconFlagBartender"
   supervisors: job-supervisors-oo
   access:
   - Service
@@ -19,7 +19,7 @@
   - Hydroponics
 
 - type: startingGear
-  id: BartenderGear
+  id: FlagBartenderGear
   equipment:
     shoes: ClothingShoesColorBlack
     id: BartenderPDA
@@ -29,8 +29,8 @@
     #- Stuff
 
 - type: chameleonOutfit
-  id: BartenderChameleonOutfit
-  job: Bartender
+  id: FlagBartenderChameleonOutfit
+  job: FlagBartender
   equipment:
     head: ClothingHeadHatTophat
     eyes: ClothingEyesGlassesSunglasses

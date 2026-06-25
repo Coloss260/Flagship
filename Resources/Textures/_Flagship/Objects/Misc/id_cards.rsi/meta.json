@@ -1,39 +1,50 @@
 {
-    "version": 1,
-    "license": "CC-BY-SA-3.0",
-	"copyright": "Taken and modified from /tg/station 13 at commit https://github.com/tgstation/tgstation/commit/d917f4c, edited by AJCM-git, CrudeWax, and DinnerCalzone (github) | inhands taken and modified from /vg/station13 at https://github.com/vgstation-coders/vgstation13/blob/2c2b9966ea0d03b10e6e9c59626f72bbe8475d9d/icons/mob/in-hand/left/items_lefthand.dmi | pirate made by brainfood1183 (github) | wizard by ScarkKy0 (github) | stripe_cluwne by brainfood1183 (github) | black-inhands by DinnerCalzone (github), ninja made by ThatGuyUSA (github)",
-    "size": {
-        "x": 32,
-        "y": 32
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Taken from tgstation at commit https://github.com/tgstation/tgstation/commit/d917f4c2a088419d5c3aec7656b7ff8cebd1822e | Resprited for mercenary, pilot and ert_mailcarrier by erhardsteinhauer (discord) and edited by Whatstone (discord), nfsd by GhostPrince and GentleButter(discord).  pirate cards and icons, idnfsddetective, idcontractor by Whatstone (Discord)",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "blue-inhand-left",
+      "directions": 4
     },
-    "states": [
-        {
-            "name": "black"
-        },
-        {
-            "name": "black-inhand-left",
-            "directions": 4
-        },
-        {
-            "name": "black-inhand-right",
-            "directions": 4
-        },
-        {
-            "name": "blue-inhand-left",
-            "directions": 4
-        },
-        {
-            "name": "blue-inhand-right",
-            "directions": 4
-        },
-        {
-            "name": "blue"
-        },
-        {
-            "name": "stripe_bottom"
-        },
-        {
-            "name": "stripe_top"
-        }
-    ]
+    {
+      "name": "blue-inhand-right",
+      "directions": 4
+    },
+    {
+      "name": "blue"
+    },
+    {
+      "name": "default-inhand-left",
+      "directions": 4
+    },
+    {
+      "name": "default-inhand-right",
+      "directions": 4
+    },
+    {
+      "name": "default"
+    },
+    {
+      "name": "black-inhand-left",
+      "directions": 4
+    },
+    {
+      "name": "black-inhand-right",
+      "directions": 4
+    },
+    {
+      "name": "black"
+    },
+    {
+      "name": "stripe_bottom"
+    },
+    {
+      "name": "stripe_top"
+    }
+  ]
 }

@@ -1,7 +1,7 @@
 - type: job
   id: ChiefOfMaintenance
-  name: job-name-com
-  description: job-description-com
+  name: job-name-chiefofmaintenance
+  description: job-description-chiefofmaintenance
   playTimeTracker: JobChiefOfMaintenance
   setPreference: true
   requireAdminNotify: true

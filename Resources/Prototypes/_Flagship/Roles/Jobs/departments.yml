@@ -15,17 +15,17 @@
   - BridgeEnsign
 
 - type: department
-  id: Security
-  name: department-Security
-  description: department-Security-description
+  id: MilitaryPolice
+  name: department-MilitaryPolice
+  description: department-MilitaryPolice-description
   color: "#2b72ee"
   weight: 180
   primary: false
   roles:
-  - SecurityChief
-  - SecurityMedic
-  - SecurityOfficer
-  - SecurityTrainee
+  - MPChief
+  - MPMedic
+  - MPOfficer
+  - MPTrainee
 
 - type: department
   id: Supply
@@ -53,31 +53,31 @@
   - MaintenanceIntern
 
 - type: department
-  id: Science
-  name: department-Science
-  description: department-Science-description
+  id: FlagScience
+  name: department-FlagScience
+  description: department-FlagScience-description
   color: "#cd7ccd"
   weight: 120
   primary: false
   roles:
   - ScienceSupervisor
-  - Roboticist
-  - Scientist
-  - ResearchAssistant
+  - FlagRoboticist
+  - FlagScientist
+  - FlagResearchAssistant
 
 - type: department
-  id: Medical
-  name: department-Medical
-  description: department-Medical-description
+  id: FlagMedical
+  name: department-FlagMedical
+  description: department-FlagMedical-description
   color: "#a4d8ef"
   weight: 100
   primary: false
   roles:
   - ChiefOfMedical
-  - MedicalDoctor
-  - Chemist
+  - FlagMedicalDoctor
+  - FlagChemist
   - ParamedicalSpecialist
-  - MedicalIntern
+  - FlagMedicalIntern
 
 - type: department
   id: Service
@@ -87,7 +87,7 @@
   weight: 0
   primary: true
   roles:
-  - Bartender
+  - FlagBartender
   - HydroponicsBiologist
   - MessChef
   - Custodian

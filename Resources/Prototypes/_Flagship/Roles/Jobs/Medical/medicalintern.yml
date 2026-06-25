@@ -1,19 +1,19 @@
 - type: job
-  id: MedicalIntern
-  name: job-name-medicalintern
-  description: job-description-medicalintern
-  playTimeTracker: JobMedicalIntern
+  id: FlagMedicalIntern
+  name: job-name-flag-medicalintern
+  description: job-description-flag-medicalintern
+  playTimeTracker: JobFlagMedicalIntern
   setPreference: true
   displayWeight: 20
-  startingGear: MedicalInternGear
-  icon: "JobIconMedicalIntern"
+  startingGear: FlagMedicalInternGear
+  icon: "JobIconFlagMedicalIntern"
   supervisors: job-supervisors-chom
   access:
   - Medical
   - Maintenance
 
 - type: startingGear
-  id: MedicalInternGear
+  id: FlagMedicalInternGear
   equipment:
     shoes: ClothingShoesColorWhite
     id: MedicalInternPDA
@@ -21,8 +21,8 @@
     pocket2: BookMedicalReferenceBook
 
 - type: chameleonOutfit
-  id: MedicalInternChameleonOutfit
-  job: MedicalIntern
+  id: FlagMedicalInternChameleonOutfit
+  job: FlagMedicalIntern
   equipment:
     head: ClothingHeadHatBeretMedic
     eyes: ClothingEyesHudMedical

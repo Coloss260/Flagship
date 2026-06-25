@@ -20,8 +20,6 @@
   startingGear: CommandingOfficerGear
   icon: "JobIconCommandingOfficer"
   joinNotifyCrew: true
-  access:
-  - Captain
   accessGroups:
   - Command
   - AllAccess

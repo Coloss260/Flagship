@@ -6,7 +6,7 @@
   setPreference: true
   requirements:
     - !type:DepartmentTimeRequirement
-      department: Medical
+      department: FlagMedical
       time: 18000 #5 hrs
   displayWeight: 40
   startingGear: ParamedicalSpecialistGear

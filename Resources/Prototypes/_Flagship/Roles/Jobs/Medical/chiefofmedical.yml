@@ -6,7 +6,7 @@
   setPreference: true
   requirements:
     - !type:DepartmentTimeRequirement
-      department: Medical
+      department: FlagMedical
       time: 54000 #15 hrs
   displayWeight: 100
   startingGear: ChiefOfMedicalGear

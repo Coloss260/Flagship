@@ -27,17 +27,17 @@
             MaintenanceTechnician: [ -1, -1 ]
             MaintenanceIntern: [ -1, -1 ]
 
-            # Security
-            SecurityChief: [ -1, -1 ]
-            SecurityMedic: [ -1, -1 ]
-            SecurityOfficer: [ -1, -1 ]
-            SecurityTrainee: [ -1, -1 ]
+            # Military Police
+            MPChief: [ -1, -1 ]
+            MPMedic: [ -1, -1 ]
+            MPOfficer: [ -1, -1 ]
+            MPTrainee: [ -1, -1 ]
 
             # Science
             ScienceSupervisor: [ -1, -1 ]
-            Roboticist: [ -1, -1 ]
-            Scientist: [ -1, -1 ]
-            ResearchAssistant: [ -1, -1 ]
+            FlagRoboticist: [ -1, -1 ]
+            FlagScientist: [ -1, -1 ]
+            FlagResearchAssistant: [ -1, -1 ]
 
 
             # Supply
@@ -47,14 +47,14 @@
 
             # Medical
             ChiefOfMedical: [ -1, -1 ]
-            MedicalDoctor: [ -1, -1 ]
-            Chemist: [ -1, -1 ]
+            FlagMedicalDoctor: [ -1, -1 ]
+            FlagChemist: [ -1, -1 ]
             ParamedicalSpecialist: [ -1, -1 ]
-            MedicalIntern: [ -1, -1 ]
+            FlagMedicalIntern: [ -1, -1 ]
 
             # Service
             OffDutyCrew: [ -1, -1 ]
-            Bartender: [ -1, -1 ]
+            FlagBartender: [ -1, -1 ]
             MessChef: [ -1, -1 ]
             HydroponicsBiologist: [ -1, -1 ]
             Custodian: [ -1, -1 ]

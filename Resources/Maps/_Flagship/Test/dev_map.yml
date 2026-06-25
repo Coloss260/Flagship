@@ -15589,7 +15589,7 @@ entities:
       pos: 31.5,19.5
       parent: 1
 
-# Jobs Spawn Points
+# Jobs Spawn Points Flagship
 # Bridge Command
 - proto: SpawnPointCommandingOfficer
   entities:
@@ -15672,28 +15672,28 @@ entities:
       parent: 1
 
 # Security
-- proto: SpawnPointSecurityChief
+- proto: SpawnPointMPChief
   entities:
   - uid: 3166
     components:
     - type: Transform
       pos: 33.5,18.5
       parent: 1
-- proto: SpawnPointSecurityMedic
+- proto: SpawnPointMPMedic
   entities:
   - uid: 3167
     components:
     - type: Transform
       pos: 33.5,18.5
       parent: 1
-- proto: SpawnPointSecurityOfficer
+- proto: SpawnPointMPOfficer
   entities:
   - uid: 3168
     components:
     - type: Transform
       pos: 33.5,18.5
       parent: 1
-- proto: SpawnPointSecurityTrainee
+- proto: SpawnPointMPTrainee
   entities:
   - uid: 3169
     components:
@@ -15747,7 +15747,7 @@ entities:
       pos: 33.5,18.5
       parent: 1
 
-- proto: SpawnPointRoboticist
+- proto: SpawnPointFlagRoboticist
   entities:
   - uid: 3179
     components:
@@ -15755,7 +15755,7 @@ entities:
       pos: 33.5,18.5
       parent: 1
 
-- proto: SpawnPointScientist
+- proto: SpawnPointFlagScientist
   entities:
   - uid: 3180
     components:
@@ -15763,7 +15763,7 @@ entities:
       pos: 33.5,18.5
       parent: 1
 
-- proto: SpawnPointResearchAssistant
+- proto: SpawnPointFlagResearchAssistant
   entities:
   - uid: 3181
     components:
@@ -15806,7 +15806,7 @@ entities:
       pos: 33.5,18.5
       parent: 1
 
-- proto: SpawnPointMedicalDoctor
+- proto: SpawnPointFlagMedicalDoctor
   entities:
   - uid: 3186
     components:
@@ -15814,7 +15814,7 @@ entities:
       pos: 33.5,18.5
       parent: 1
 
-- proto: SpawnPointChemist
+- proto: SpawnPointFlagChemist
   entities:
   - uid: 3187
     components:
@@ -15830,7 +15830,7 @@ entities:
       pos: 33.5,18.5
       parent: 1
 
-- proto: SpawnPointMedicalIntern
+- proto: SpawnPointFlagMedicalIntern
   entities:
   - uid: 3189
     components:
@@ -15839,6 +15839,7 @@ entities:
       parent: 1
 
 # End of Job Spawnpoints
+
 - proto: SpawnPointLatejoin
   entities:
   - uid: 2669

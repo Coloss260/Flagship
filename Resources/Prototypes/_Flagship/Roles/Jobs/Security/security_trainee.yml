@@ -1,22 +1,22 @@
 - type: job
-  id: SecurityTrainee
-  name: job-name-security-trainee
-  description: job-description-security-trainee
-  playTimeTracker: JobSecurityTrainee
+  id: MPTrainee
+  name: job-name-mptrainee
+  description: job-description-mptrainee
+  playTimeTracker: JobMPTrainee
   setPreference: true
-  startingGear: SecurityTraineeGear
-  icon: "JobIconSecurityTrainee"
+  startingGear: MPTraineeGear
+  icon: "JobIconMPTrainee"
   supervisors: job-supervisors-sc
   requirements:
     - !type:DepartmentTimeRequirement
-      department: Security
+      department: MilitaryPolice
       time: 54000 # 15 hours
   displayWeight: 40
   accessGroups:
   - Command
 
 - type: startingGear
-  id: SecurityTraineeGear
+  id: MPTraineeGear
   equipment:
     shoes: ClothingShoesBootsJack
     id: HoSPDA

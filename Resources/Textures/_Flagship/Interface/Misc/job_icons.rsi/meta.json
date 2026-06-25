@@ -1,7 +1,7 @@
 {
     "version": 1,
     "license": "CC-BY-SA-3.0",
-    "copyright": "Color swapped from existing sprites content by the original Space Station 14 developpers at https://github.com/space-wizards/space-station-14",
+    "copyright": "Taken from https://github.com/vgstation-coders/vgstation13/blob/e71d6c4fba5a51f99b81c295dcaec4fc2f58fb19/icons/mob/screen1.dmi | Mercenary and Pilot icons made by erhardsteinhauer (discord). Pirate icons by _starch_ (discord).",
 
     "size": {
         "x": 8,
@@ -9,100 +9,100 @@
     },
     "states": [
         {
-            "name": "CommandingOfficer"
-        },
-        {
-            "name": "ExecutiveOfficer"
-        },
-        {
-            "name": "TacticalOfficer"
-        },
-        {
-            "name": "OperationsOfficer"
-        },
-        {
-            "name": "CommunicationsOfficer"
-        },
-        {
-            "name": "FlightControlOfficer"
-        },
-        {
-            "name": "BridgeEnsign"
-        },
-        {
-            "name": "ChiefOfMaintenance"
-        },
-        {
-            "name": "LifeSupportSpecialist"
-        },
-        {
-            "name": "MaintenanceTechnician"
-        },
-        {
-            "name": "MaintenanceIntern"
-        },
-        {
-            "name": "SecurityChief"
-        },
-        {
-            "name": "SecurityOfficer"
-        },
-        {
-            "name": "SecurityMedic"
-        },
-        {
-            "name": "SecurityTrainee"
-        },
-        {
-            "name": "ScienceSupervisor"
-        },
-        {
-            "name": "Roboticist"
-        },
-        {
-            "name": "Scientist"
-        },
-        {
-            "name": "ResearchAssistant"
-        },
-        {
-            "name": "SuppliesQuartermaster"
-        },
-        {
             "name": "ArtillerySpecialist"
-        },
-        {
-            "name": "SuppliesCrewman"
-        },
-        {
-            "name": "ChiefOfMedical"
-        },
-        {
-            "name": "MedicalDoctor"
-        },
-        {
-            "name": "Chemist"
-        },
-        {
-            "name": "ParamedicalSpecialist"
-        },
-        {
-            "name": "MedicalIntern"
         },
         {
             "name": "Bartender"
         },
         {
-            "name": "MessChef"
+            "name": "BridgeEnsign"
+        },
+        {
+            "name": "Chemist"
+        },
+        {
+            "name": "ChiefOfMaintenance"
+        },
+        {
+            "name": "ChiefOfMedical"
+        },
+        {
+            "name": "CommandingOfficer"
+        },
+        {
+            "name": "CommunicationsOfficer"
         },
         {
             "name": "Custodian"
         },
         {
+            "name": "ExecutiveOfficer"
+        },
+        {
+            "name": "FlightControlOfficer"
+        },
+        {
             "name": "HydroponicsBiologist"
         },
         {
+            "name": "LifeSupportSpecialist"
+        },
+        {
+            "name": "MaintenanceIntern"
+        },
+        {
+            "name": "MaintenanceTechnician"
+        },
+        {
+            "name": "MedicalDoctor"
+        },
+        {
+            "name": "MedicalIntern"
+        },
+        {
+            "name": "MessChef"
+        },
+        {
+            "name": "MPChief"
+        },
+        {
+            "name": "MPMedic"
+        },
+        {
+            "name": "MPOfficer"
+        },
+        {
+            "name": "MPTrainee"
+        },
+        {
             "name": "OffDutyCrew"
+        },
+        {
+            "name": "OperationsOfficer"
+        },
+        {
+            "name": "ParamedicalSpecialist"
+        },
+        {
+            "name": "ResearchAssistant"
+        },
+        {
+            "name": "Roboticist"
+        },
+        {
+            "name": "ScienceSupervisor"
+        },
+        {
+            "name": "Scientist"
+        },
+        {
+            "name": "SuppliesCrewman"
+        },
+        {
+            "name": "SuppliesQuartermaster"
+        },
+        {
+            "name": "TacticalOfficer"
         }
     ]
 }

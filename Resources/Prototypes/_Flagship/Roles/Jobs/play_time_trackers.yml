@@ -33,31 +33,31 @@
 - type: playTimeTracker
   id: JobMaintenanceIntern
 
-# Security
+# Military Police
 - type: playTimeTracker
-  id: JobSecurityChief
+  id: JobMPChief
 
 - type: playTimeTracker
-  id: JobSecurityMedic
+  id: JobMPMedic
 
 - type: playTimeTracker
-  id: JobSecurityOfficer
+  id: JobMPOfficer
 
 - type: playTimeTracker
-  id: JobSecurityTrainee
+  id: JobMPTrainee
 
 # Science
 - type: playTimeTracker
   id: JobScienceSupervisor
 
 - type: playTimeTracker
-  id: JobRoboticist
+  id: JobFlagRoboticist
 
 - type: playTimeTracker
-  id: JobScientist
+  id: JobFlagScientist
 
 - type: playTimeTracker
-  id: JobResearchAssistant
+  id: JobFlagResearchAssistant
 
 # Supply
 - type: playTimeTracker
@@ -74,16 +74,16 @@
   id: JobChiefOfMedical
 
 - type: playTimeTracker
-  id: JobMedicalDoctor
+  id: JobFlagMedicalDoctor
 
 - type: playTimeTracker
-  id: JobChemist
+  id: JobFlagChemist
 
 - type: playTimeTracker
   id: JobParamedicalSpecialist
 
 - type: playTimeTracker
-  id: JobMedicalIntern
+  id: JobFlagMedicalIntern
 
 # Service
 - type: playTimeTracker

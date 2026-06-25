@@ -1,16 +1,16 @@
 - type: job
-  id: MedicalDoctor
-  name: job-name-medicaldoctor
-  description: job-description-medicaldoctor
-  playTimeTracker: JobMedicalDoctor
+  id: FlagMedicalDoctor
+  name: job-name-flag-medicaldoctor
+  description: job-description-flag-medicaldoctor
+  playTimeTracker: JobFlagMedicalDoctor
   setPreference: true
   requirements:
     - !type:DepartmentTimeRequirement
-      department: Medical
+      department: FlagMedical
       time: 36000 #10 hrs
   displayWeight: 80
-  startingGear: MedicalDoctorGear
-  icon: "JobIconMedicalDoctor"
+  startingGear: FlagMedicalDoctorGear
+  icon: "JobIconFlagMedicalDoctor"
   supervisors: job-supervisors-chom
   access:
   - Medical
@@ -23,13 +23,13 @@
     prototype: WehMedipen
 
 - type: startingGear
-  id: MedicalDoctorGear
+  id: FlagMedicalDoctorGear
   equipment:
     ears: ClothingHeadsetCommandingOfficer
 
 - type: chameleonOutfit
-  id: MedicalDoctorChameleonOutfit
-  job: MedicalDoctor
+  id: FlagMedicalDoctorChameleonOutfit
+  job: FlagMedicalDoctor
   equipment:
     head: ClothingHeadNurseHat
     eyes: ClothingEyesHudMedical

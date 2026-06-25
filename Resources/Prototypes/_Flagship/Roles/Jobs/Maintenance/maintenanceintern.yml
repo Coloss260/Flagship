@@ -1,7 +1,7 @@
 - type: job
   id: MaintenanceIntern
-  name: job-name-maintintern
-  description: job-description-maintintern
+  name: job-name-maintenanceintern
+  description: job-description-maintenanceintern
   playTimeTracker: JobMaintenanceIntern
   requirements:
 #    - !type:DepartmentTimeRequirement

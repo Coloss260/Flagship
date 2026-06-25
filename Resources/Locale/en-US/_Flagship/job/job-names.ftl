@@ -8,22 +8,22 @@ job-name-flightcontrolofficer = Flight Control Officer
 job-name-bridgeensign = Bridge Ensign
 
 # Maintenance
-job-name-com = Chief of Maintenance
-job-name-mainttech = Maintenance Technician
-job-name-lifesupportspec = Life Support Specialist
-job-name-maintintern = Maintenance Intern
+job-name-chiefofmaintenance = Chief of Maintenance
+job-name-maintenancetechnician = Maintenance Technician
+job-name-lifesupportspecialist = Life Support Specialist
+job-name-maintenanceintern = Maintenance Intern
 
-# Security
-job-name-security-chief = Security Chief
-job-name-security-medic = Security Medic
-job-name-security-officer = Security Officer
-job-name-security-trainee = Security Trainee
+# Military Police
+job-name-mpchief = Military Police Chief
+job-name-mpmedic = Military Police Medic
+job-name-mpofficer = Military Police Officer
+job-name-mptrainee = Military Police Trainee
 
 # Science
 job-name-science-supervisor = Science Supervisor
-job-name-roboticist = Roboticist
-job-name-scientist = Scientist
-job-name-research-assistant = Research Assistant
+job-name-flag-roboticist = Roboticist
+job-name-flag-scientist = Scientist
+job-name-flag-research-assistant = Research Assistant
 
 # Supply
 job-name-suppliesquartermaster = Supplies Quartermaster
@@ -32,12 +32,13 @@ job-name-suppliescrewman = Supplies Crewman
 
 # Medical
 job-name-chiefofmedical = Chief Of Medical
-job-name-medicaldoctor = Medical Doctor
-job-name-chemist = Chemist
+job-name-flag-medicaldoctor = Medical Doctor
+job-name-flag-chemist = Chemist
 job-name-paramedicalspecialist = Paramedical Specialist
-job-name-medicalintern = Medical Intern
+job-name-flag-medicalintern = Medical Intern
 
 # Service
+job-name-flag-bartender = Bartender
 job-name-custodian = Custodian
 job-name-hydroponics-biologist = Hydroponics Biologist
 job-name-offduty-crew = Off-Duty Crew
@@ -53,20 +54,20 @@ JobCommandingOfficer = Commanding Officer
 JobCommunicationsOfficer = Communications Officer
 JobCustodian = Custodian
 JobExecutiveOfficer = Executive Officer
+JobFlagResearchAssistant = Research Assistant
+JobFlagRoboticist = Roboticist
+JobFlagScientist = Scientist
 JobFlightControlOfficer = Flight Control Officer
 JobHydroponicsBiologist = Hydroponics Biologist
 JobLifeSupportSpecialist = Life Support Specialist
 JobMaintenanceIntern = Maintenance Intern
 JobMaintenanceTechnician = Maintenance Technician
 JobMessChef = Mess Chef
+JobMPChief = Military Police Chief
+JobMPMedic = Military Police Medic
+JobMPOfficer = Military Police Officer
+JobMPTrainee = Military Police Trainee
 JobOffDutyCrew = Off-Duty Crew
 JobOperationsOfficer = Operations Officer
-JobResearchAssistant = Research Assistant
-JobRoboticist = Roboticist
-JobScientist = Scientist
 JobScienceSupervisor = Science Supervisor
-JobSecurityChief = Security Chief
-JobSecurityMedic = Security Medic
-JobSecurityOfficer = Security Officer
-JobSecurityTrainee = Security Trainee
 JobTacticalOfficer = Tactical Officer

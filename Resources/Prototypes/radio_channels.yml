@@ -1,9 +1,9 @@
-# - type: radioChannel
-#   id: Common
-#   name: chat-radio-common
-#   keycode: ";"
-#   frequency: 1459
-#   color: "#2cdb2c"
+- type: radioChannel
+  id: Common
+  name: chat-radio-common
+  keycode: ";"
+  frequency: 1459
+  color: "#999999" # Flagship
 
 - type: radioChannel
   id: CentCom
@@ -13,19 +13,19 @@
   color: "#2681a5"
   longRange: true
 
-# - type: radioChannel
-#   id: Command
-#   name: chat-radio-command
-#   keycode: 'c'
-#   frequency: 1353
-#   color: "#fcdf03"
+- type: radioChannel
+  id: Command
+  name: chat-radio-command
+  keycode: 'c'
+  frequency: 1353
+  color: "#2b72ee" # Flagship
 
-# - type: radioChannel
-#   id: Engineering
-#   name: chat-radio-engineering
-#   keycode: 'e'
-#   frequency: 1357
-#   color: "#ff733c"
+- type: radioChannel
+  id: Engineering
+  name: chat-radio-engineering
+  keycode: 'e'
+  frequency: 1357
+  color: "#fc9700" # Flagship
 
 - type: radioChannel
   id: Medical
@@ -41,12 +41,12 @@
   frequency: 1351
   color: "#cd7ccd"
 
-# - type: radioChannel
-#   id: Security
-#   name: chat-radio-security
-#   keycode: 's'
-#   frequency: 1359
-#   color: "#ff4242"
+- type: radioChannel
+  id: Security
+  name: chat-radio-security
+  keycode: 's'
+  frequency: 1359
+  color: "#d10000" # Flagship
 
 - type: radioChannel
   id: Service
@@ -55,12 +55,12 @@
   frequency: 1349
   color: "#539c00"
 
-# - type: radioChannel
-#   id: Supply
-#   name: chat-radio-supply
-#  keycode: 'u'
-#   frequency: 1347
-#   color: "#b48b57"
+- type: radioChannel
+  id: Supply
+  name: chat-radio-supply
+  keycode: 'u'
+  frequency: 1347
+  color: "#6aa84f" # Flagship
 
 - type: radioChannel
   id: Syndicate

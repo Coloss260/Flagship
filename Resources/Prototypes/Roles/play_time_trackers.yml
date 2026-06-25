@@ -31,8 +31,8 @@
 - type: playTimeTracker
   id: JobChef
 
-# - type: playTimeTracker
-#   id: JobChemist
+- type: playTimeTracker
+  id: JobChemist
 
 - type: playTimeTracker
   id: JobChiefEngineer
@@ -85,11 +85,11 @@
 - type: playTimeTracker
   id: JobLibrarian
 
-# - type: playTimeTracker
-#   id: JobMedicalDoctor
+- type: playTimeTracker
+  id: JobMedicalDoctor
 
-# - type: playTimeTracker
-#   id: JobMedicalIntern
+- type: playTimeTracker
+  id: JobMedicalIntern
 
 - type: playTimeTracker
   id: JobMime
@@ -112,8 +112,8 @@
 - type: playTimeTracker
   id: JobReporter
 
-# - type: playTimeTracker
-#   id: JobResearchAssistant
+- type: playTimeTracker
+  id: JobResearchAssistant
 
 - type: playTimeTracker
   id: JobResearchDirector
@@ -121,14 +121,14 @@
 - type: playTimeTracker
   id: JobSalvageSpecialist
 
-# - type: playTimeTracker
-#   id: JobScientist
+- type: playTimeTracker
+  id: JobScientist
 
 - type: playTimeTracker
   id: JobSecurityCadet
 
 - type: playTimeTracker
-  id: JobSecurityOfficerOld
+  id: JobSecurityOfficer
 
 - type: playTimeTracker
   id: JobServiceWorker

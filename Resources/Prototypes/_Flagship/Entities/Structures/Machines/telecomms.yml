@@ -6,13 +6,13 @@
   - type: ContainerFill
     containers:
       key_slots:
-      - EncryptionKeyCommon
-      - EncryptionKeyMaintenance
-      - EncryptionKeyService
-      - EncryptionKeyBridgeCommand
+      - EncryptionKeyShip
       - EncryptionKeyTactical
       - EncryptionKeyOperations
-      - EncryptionKeySecurity
-      - EncryptionKeyScience
-      - EncryptionKeyMedical
-      - EncryptionKeySupply
+      - EncryptionKeySupplies
+      - EncryptionKeyMaintenance
+      - EncryptionKeyFlagMedical
+      - EncryptionKeyFlagScience
+      - EncryptionKeyMilitaryPolice
+      - EncryptionKeyFlagService
+      - EncryptionKeyBridgeCommand

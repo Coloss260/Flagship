@@ -1,22 +1,22 @@
 - type: job
-  id: SecurityMedic
-  name: job-name-security-medic
-  description: job-description-security-medic
-  playTimeTracker: JobSecurityMedic
+  id: MPMedic
+  name: job-name-mpmedic
+  description: job-description-mpmedic
+  playTimeTracker: JobMPMedic
   setPreference: true
-  startingGear: SecurityMedicGear
-  icon: "JobIconSecurityMedic"
+  startingGear: MPMedicGear
+  icon: "JobIconMPMedic"
   supervisors: job-supervisors-sc
   requirements:
     - !type:DepartmentTimeRequirement
-      department: Security
+      department: MilitaryPolice
       time: 54000 # 15 hours
   displayWeight: 80
   accessGroups:
   - Command
 
 - type: startingGear
-  id: SecurityMedicGear
+  id: MPMedicGear
   equipment:
     shoes: ClothingShoesBootsJack
     id: HoSPDA

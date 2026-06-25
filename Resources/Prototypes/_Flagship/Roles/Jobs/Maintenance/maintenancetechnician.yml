@@ -1,7 +1,7 @@
 - type: job
   id: MaintenanceTechnician
-  name: job-name-mainttech
-  description: job-description-mainttech
+  name: job-name-maintenancetechnician
+  description: job-description-maintenancetechnician
   playTimeTracker: JobMaintenanceTechnician
   setPreference: true
   requirements:

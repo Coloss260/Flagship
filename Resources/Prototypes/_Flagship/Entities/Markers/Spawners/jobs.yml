@@ -89,38 +89,38 @@
   - type: SpawnPoint
     job_id: MaintenanceIntern
 
-# Security
+# Military Police
 - type: entity
-  id: SpawnPointSecurityChief
+  id: SpawnPointMPChief
   parent: SpawnPointJobBase
-  name: Security Chief
+  name: Military Police Chief
   components:
   - type: SpawnPoint
-    job_id: SecurityChief
+    job_id: MPChief
 
 - type: entity
-  id: SpawnPointSecurityMedic
+  id: SpawnPointMPMedic
   parent: SpawnPointJobBase
-  name: Security Medic
+  name: Military Police Medic
   components:
   - type: SpawnPoint
-    job_id: SecurityMedic
+    job_id: MPMedic
 
 - type: entity
-  id: SpawnPointSecurityOfficer
+  id: SpawnPointMPOfficer
   parent: SpawnPointJobBase
-  name: Security Officer
+  name: Military Police Officer
   components:
   - type: SpawnPoint
-    job_id: SecurityOfficer
+    job_id: MPOfficer
 
 - type: entity
-  id: SpawnPointSecurityTrainee
+  id: SpawnPointMPTrainee
   parent: SpawnPointJobBase
-  name: Security Trainee
+  name: Military Police Trainee
   components:
   - type: SpawnPoint
-    job_id: SecurityTrainee
+    job_id: MPTrainee
 
 # Science
 - type: entity
@@ -132,28 +132,28 @@
     job_id: ScienceSupervisor
 
 - type: entity
-  id: SpawnPointRoboticist
+  id: SpawnPointFlagRoboticist
   parent: SpawnPointJobBase
   name: Roboticist
   components:
   - type: SpawnPoint
-    job_id: Roboticist
+    job_id: FlagRoboticist
 
 - type: entity
-  id: SpawnPointScientist
+  id: SpawnPointFlagScientist
   parent: SpawnPointJobBase
   name: Scientist
   components:
   - type: SpawnPoint
-    job_id: Scientist
+    job_id: FlagScientist
 
 - type: entity
-  id: SpawnPointResearchAssistant
+  id: SpawnPointFlagResearchAssistant
   parent: SpawnPointJobBase
   name: Research assistant
   components:
   - type: SpawnPoint
-    job_id: ResearchAssistant
+    job_id: FlagResearchAssistant
 
 
 # Supply
@@ -191,20 +191,20 @@
     job_id: ChiefOfMedical
 
 - type: entity
-  id: SpawnPointMedicalDoctor
+  id: SpawnPointFlagMedicalDoctor
   parent: SpawnPointJobBase
   name: Medical Doctor
   components:
   - type: SpawnPoint
-    job_id: MedicalDoctor
+    job_id: FlagMedicalDoctor
 
 - type: entity
-  id: SpawnPointChemist
+  id: SpawnPointFlagChemist
   parent: SpawnPointJobBase
   name: Chemist
   components:
   - type: SpawnPoint
-    job_id: Chemist
+    job_id: FlagChemist
 
 - type: entity
   id: SpawnPointParamedicalSpecialist
@@ -215,14 +215,21 @@
     job_id: ParamedicalSpecialist
 
 - type: entity
-  id: SpawnPointMedicalIntern
+  id: SpawnPointFlagMedicalIntern
   parent: SpawnPointJobBase
   name: Medical Intern
   components:
   - type: SpawnPoint
-    job_id: MedicalIntern
+    job_id: FlagMedicalIntern
 
 # Service
+- type: entity
+  id: SpawnPointFlagBartender
+  parent: SpawnPointPassenger
+  components:
+  - type: SpawnPoint
+    job_id: FlagBartender
+
 - type: entity
   id: SpawnPointCustodian
   parent: SpawnPointJanitor

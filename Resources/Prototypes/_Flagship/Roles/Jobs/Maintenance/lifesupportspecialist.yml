@@ -1,7 +1,7 @@
 - type: job
   id: LifeSupportSpecialist
-  name: job-name-lifesupportspec
-  description: job-description-lifesupportspec
+  name: job-name-lifesupportspecialist
+  description: job-description-lifesupportspecialist
   playTimeTracker: JobLifeSupportSpecialist
   setPreference: true
   requirements:
