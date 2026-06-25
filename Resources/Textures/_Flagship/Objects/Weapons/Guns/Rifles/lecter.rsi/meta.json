@@ -43,27 +43,6 @@
         {
             "name": "equipped-SUITSTORAGE",
             "directions": 4
-        },
-        {
-            "name": "suppressed"
-        },
-        {
-            "name": "optic2x"
-        },
-        {
-            "name": "optic8x"
-        },
-        {
-            "name": "lam"
-        },
-        {
-            "name": "grip"
-        },
-        {
-            "name": "light"
-        },
-        {
-            "name": "optic4x"
         }
     ]
 }
