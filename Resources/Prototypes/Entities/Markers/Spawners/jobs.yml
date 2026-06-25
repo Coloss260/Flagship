@@ -461,6 +461,18 @@
       - state: warden
 
 - type: entity
+  id: SpawnPointSecurityOfficer
+  parent: SpawnPointJobBase
+  name: securityofficer
+  components:
+  - type: SpawnPoint
+    job_id: SecurityOfficer
+  - type: Sprite
+    layers:
+      - state: green
+      - state: security_officer
+
+- type: entity
   id: SpawnPointSecurityOfficerOld
   parent: SpawnPointJobBase
   name: securityofficer
