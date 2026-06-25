@@ -94,7 +94,7 @@
   id: JobIconMPChief
   icon:
     sprite: /Textures/_Flagship/Interface/Misc/job_icons.rsi
-    state: MPMedic
+    state: MPChief
   jobName: job-name-mpchief
 
 - type: jobIcon
