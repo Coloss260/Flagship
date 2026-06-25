@@ -12,15 +12,37 @@ permissions:
 
 jobs:
   diff:
+    name: Diff
     runs-on: ubuntu-latest
     steps:
-      # ... existing steps ...
+      - name: Checkout
+        uses: actions/checkout@v4.2.2
+
+      - name: Get changed files
+        id: files
+        uses: Ana06/get-changed-files@v2.3.0
+        with:
+          format: 'space-delimited'
+          filter: |
+            **.rsi
+            **.png
+
+      - name: Diff changed RSIs
+        id: diff
+        uses: space-wizards/RSIDiffBot@v1.1
+        with:
+          modified: ${{ steps.files.outputs.modified }}
+          removed: ${{ steps.files.outputs.removed }}
+          added: ${{ steps.files.outputs.added }}
+          basename: ${{ github.event.pull_request.base.repo.full_name }}
+          basesha: ${{ github.event.pull_request.base.sha }}
+          headname: ${{ github.event.pull_request.head.repo.full_name }}
+          headsha: ${{ github.event.pull_request.head.sha }}
 
       - name: Potentially find comment
         uses: peter-evans/find-comment@v1
         id: fc
         with:
-          token: ${{ github.token }}
           issue-number: ${{ github.event.number }}
           comment-author: 'github-actions[bot]'
           body-includes: RSI Diff Bot
@@ -29,7 +51,6 @@ jobs:
         if: steps.fc.outputs.comment-id == ''
         uses: peter-evans/create-or-update-comment@v1
         with:
-          token: ${{ github.token }}
           issue-number: ${{ github.event.number }}
           body: |
             ${{ steps.diff.outputs.summary-details }}
@@ -38,7 +59,6 @@ jobs:
         if: steps.fc.outputs.comment-id != ''
         uses: peter-evans/create-or-update-comment@v1
         with:
-          token: ${{ github.token }}
           comment-id: ${{ steps.fc.outputs.comment-id }}
           edit-mode: replace
           body: |
@@ -48,7 +68,6 @@ jobs:
         if: steps.fc.outputs.comment-id != ''
         uses: peter-evans/create-or-update-comment@v1
         with:
-          token: ${{ github.token }}
           comment-id: ${{ steps.fc.outputs.comment-id }}
           edit-mode: append
           body: |
