@@ -132,7 +132,6 @@
     sprite: *icon-rsi
     state: MedicalDoctor
   jobName: job-name-doctor
-
 - type: jobIcon
   parent: JobIcon
   id: JobIconMedicalIntern
@@ -166,7 +165,6 @@
   jobName: job-name-virologist
 
 # Research
-
 - type: jobIcon
   parent: JobIcon
   id: JobIconResearchAssistant
@@ -174,7 +172,6 @@
     sprite: *icon-rsi
     state: ResearchAssistant
   jobName: job-name-research-assistant
-
 - type: jobIcon
   parent: JobIcon
   id: JobIconRoboticist
@@ -182,7 +179,6 @@
     sprite: *icon-rsi
     state: Roboticist
   jobName: job-name-roboticist
-
 - type: jobIcon
   parent: JobIcon
   id: JobIconScientist
@@ -216,6 +212,14 @@
     sprite: *icon-rsi
     state: SecurityCadet
   jobName: job-name-cadet
+
+#- type: jobIcon
+#  parent: JobIcon
+#  id: JobIconSecurityOfficerOld
+#  icon:
+#    sprite: *icon-rsi
+#    state: SecurityOfficer
+#  jobName: job-name-security
 
 - type: jobIcon
   parent: JobIcon

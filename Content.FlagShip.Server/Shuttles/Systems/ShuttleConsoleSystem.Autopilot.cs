@@ -1,0 +1,39 @@
+using Content.FlagShip.Shared.Shuttles;
+using Content.FlagShip.Server.NPC.HTN.Operators;
+using Content.Server.NPC.HTN;
+using Content.Server.Shuttles.Components;
+using Content.Shared.Popups;
+using Robust.Shared.Audio.Systems;
+
+namespace Content.FlagShip.Server.Shuttles.Systems;
+
+public sealed partial class ShuttleConsoleAutopilotSystem : EntitySystem
+{
+    [Dependency] private SharedAudioSystem _audio = default!;
+    [Dependency] private SharedPopupSystem _popup = default!;
+    [Dependency] private SharedTransformSystem _transform = default!;
+
+    public override void Initialize()
+    {
+        base.Initialize();
+
+        SubscribeLocalEvent<ShuttleConsoleComponent, ShuttleConsoleAutopilotPositionMessage>(OnAutopilotMessage);
+        SubscribeLocalEvent<ShuttleConsoleComponent, SteeringDoneEvent>(OnSteeringDone);
+    }
+
+    private void OnAutopilotMessage(Entity<ShuttleConsoleComponent> ent, ref ShuttleConsoleAutopilotPositionMessage args)
+    {
+        if (!TryComp<HTNComponent>(ent, out var htn))
+            return;
+
+        var blackboard = htn.Blackboard;
+        blackboard.SetValue(ent.Comp.AutopilotTargetKey, _transform.ToCoordinates(args.Coordinates));
+        blackboard.SetValue(ent.Comp.AutopilotRotationKey, args.Angle + MathF.PI);
+    }
+
+    private void OnSteeringDone(Entity<ShuttleConsoleComponent> ent, ref SteeringDoneEvent args)
+    {
+        _audio.PlayPvs(ent.Comp.AutopilotDoneSound, ent);
+        _popup.PopupEntity(Loc.GetString("shuttle-console-autopilot-popup-done"), ent, PopupType.Medium);
+    }
+}

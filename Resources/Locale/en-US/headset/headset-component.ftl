@@ -4,15 +4,28 @@ chat-radio-message-wrap-bold = [color={$color}]{$channel} [bold]{$name}[/bold] {
 
 examine-headset-default-channel = Use {$prefix} for the default channel ([color={$color}]{$channel}[/color]).
 
-chat-radio-common = Common
+chat-radio-common = Ship
+# Flagship
+
 chat-radio-centcom = CentComm
-chat-radio-command = Command
-chat-radio-engineering = Engineering
+
+chat-radio-command = Bridge Command
+# Flagship
+
+chat-radio-engineering = Maintenance
+# Flagship
+
 chat-radio-medical = Medical
 chat-radio-science = Science
-chat-radio-security = Security
+
+chat-radio-security = Military Police
+# Flagship
+
 chat-radio-service = Service
-chat-radio-supply = Supply
+
+chat-radio-supply = Supplies
+# Flagship
+
 chat-radio-syndicate = Syndicate
 chat-radio-freelance = Freelance
 

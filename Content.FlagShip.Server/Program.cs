@@ -1,6 +1,6 @@
 using Robust.Server;
 
-namespace Content.FlagShip.Client;
+namespace Content.FlagShip.Server;
 
 internal static class Program
 {

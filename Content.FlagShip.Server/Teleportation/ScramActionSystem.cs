@@ -1,0 +1,53 @@
+using Content.FlagShip.Shared.Teleportation;
+using Content.Server.Actions;
+using Content.Shared.Item.ItemToggle.Components;
+using Content.Shared.Popups;
+
+namespace Content.FlagShip.Server.Teleportation;
+
+public sealed partial class ScramActionSystem : EntitySystem
+{
+    [Dependency] private ActionsSystem _action = default!;
+    [Dependency] private SharedPopupSystem _popup = default!;
+    [Dependency] private TeleportSystem _teleportSys = default!;
+
+    public override void Initialize()
+    {
+        base.Initialize();
+
+        SubscribeLocalEvent<ScrammerComponent, MapInitEvent>(OnInit);
+        SubscribeLocalEvent<ScrammerComponent, ComponentRemove>(OnRemove);
+        SubscribeLocalEvent<ScrammerComponent, ScrammerScramEvent>(OnScram);
+
+        SubscribeLocalEvent<ScrammerComponent, ItemToggledEvent>(OnToggled);
+    }
+
+    private void OnInit(Entity<ScrammerComponent> ent, ref MapInitEvent args)
+    {
+        ent.Comp.ActionUid =_action.AddAction(ent, ent.Comp.ActionProto);
+    }
+
+    private void OnRemove(Entity<ScrammerComponent> ent, ref ComponentRemove args)
+    {
+        _action.RemoveAction(ent, ent.Comp.ActionUid);
+    }
+
+    private void OnScram(Entity<ScrammerComponent> ent, ref ScrammerScramEvent args)
+    {
+        if (!ent.Comp.Enabled)
+        {
+            _popup.PopupEntity(Loc.GetString("action-scram-popup-disabled"), ent, ent);
+            return;
+        }
+
+        _teleportSys.RandomTeleport(ent, ent.Comp.Specifier);
+        args.Handled = true;
+    }
+
+    // if we're something capable of being turned on/off, respect it
+    private void OnToggled(Entity<ScrammerComponent> ent, ref ItemToggledEvent args)
+    {
+        if (ent.Comp.ItemToggleToggle)
+            ent.Comp.Enabled = args.Activated;
+    }
+}

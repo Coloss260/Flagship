@@ -123,7 +123,6 @@
     layers:
       - state: green
       - state: medicalintern
-
 - type: entity
   id: SpawnPointSecurityCadet
   parent: SpawnPointJobBase
@@ -432,8 +431,8 @@
     job_id: Scientist
   - type: Sprite
     layers:
-      - state: green
-      - state: scientist
+     - state: green
+     - state: scientist
 
 # Security
 
@@ -472,6 +471,18 @@
     layers:
       - state: green
       - state: security_officer
+
+#- type: entity
+#  id: SpawnPointSecurityOfficerOld
+#  parent: SpawnPointJobBase
+#  name: securityofficer
+#  components:
+#  - type: SpawnPoint
+#    job_id: SecurityOfficerOld
+#  - type: Sprite
+#    layers:
+#      - state: green
+#      - state: security_officer
 
 - type: entity
   id: SpawnPointDetective

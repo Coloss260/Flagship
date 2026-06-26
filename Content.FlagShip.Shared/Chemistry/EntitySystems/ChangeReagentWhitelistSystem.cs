@@ -1,0 +1,79 @@
+using Content.FlagShip.Shared.Chemistry.Events;
+using Content.Shared.Chemistry.Components;
+using Content.Shared.Verbs;
+using Robust.Shared.Prototypes;
+using Robust.Shared.Serialization;
+
+namespace Content.FlagShip.Shared.Chemistry.EntitySystems;
+
+/// <summary>
+///     Allows an entity to change an injector component's whitelist via a UI box
+/// </summary>
+public sealed partial class ReagentWhitelistChangeSystem : EntitySystem
+{
+    [Dependency] private SharedUserInterfaceSystem _ui = default!;
+    [Dependency] private IPrototypeManager _prototypeManager = default!;
+
+    [NetSerializable, Serializable]
+    public enum ReagentWhitelistChangeUIKey : byte
+    {
+        Key
+    }
+    public override void Initialize()
+    {
+        base.Initialize();
+
+        SubscribeLocalEvent<FlagShip.Shared.Chemistry.Components.ReagentWhitelistChangeComponent, GetVerbsEvent<InteractionVerb>>(AddChangeFilterVerb);
+        SubscribeLocalEvent<FlagShip.Shared.Chemistry.Components.ReagentWhitelistChangeComponent, ReagentWhitelistChangeMessage>(OnReagentWhitelistChange);
+        SubscribeLocalEvent<FlagShip.Shared.Chemistry.Components.ReagentWhitelistChangeComponent, ReagentWhitelistResetMessage>(OnReagentWhitelistReset);
+    }
+
+    private void AddChangeFilterVerb(Entity<FlagShip.Shared.Chemistry.Components.ReagentWhitelistChangeComponent> ent, ref GetVerbsEvent<InteractionVerb> args)
+    {
+        var (uid, comp) = ent;
+
+        if (!args.CanAccess || !args.CanInteract || args.Hands == null)
+            return;
+        var @event = args;
+        args.Verbs.Add(new InteractionVerb()
+        {
+            Text = Loc.GetString("comp-change-reagent-whitelist-verb-filter"),
+            //Icon = new SpriteSpecifier(),
+            Act = () =>
+            {
+                _ui.OpenUi(uid, ReagentWhitelistChangeUIKey.Key, @event.User);
+            },
+            Priority = 1
+        });
+    }
+
+    private void OnReagentWhitelistChange(Entity<FlagShip.Shared.Chemistry.Components.ReagentWhitelistChangeComponent> ent, ref ReagentWhitelistChangeMessage args)
+    {
+        if (!TryComp<InjectorComponent>(ent.Owner, out var injectorComp))
+        {
+            return;
+        }
+
+        if (!_prototypeManager.TryIndex(args.NewReagentProto, out var protoComp))
+        {
+            return;
+        }
+
+        if (!ent.Comp.AllowedReagentGroups.Contains(protoComp.Group))
+        {
+            return;
+        }
+
+        injectorComp.ReagentWhitelist = new() { args.NewReagentProto };
+    }
+
+    private void OnReagentWhitelistReset(Entity<FlagShip.Shared.Chemistry.Components.ReagentWhitelistChangeComponent> ent, ref ReagentWhitelistResetMessage args)
+    {
+        if (!TryComp<InjectorComponent>(ent.Owner, out var injectorComp))
+        {
+            return;
+        }
+
+        injectorComp.ReagentWhitelist = null;
+    }
+}

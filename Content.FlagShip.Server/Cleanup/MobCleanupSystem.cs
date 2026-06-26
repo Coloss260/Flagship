@@ -1,0 +1,43 @@
+using Content.FlagShip.Shared.CCVar;
+using Content.Server.Ghost.Roles.Components;
+using Content.Server.NPC.HTN;
+using Robust.Shared.Configuration;
+
+namespace Content.FlagShip.Server.Cleanup;
+
+/// <summary>
+///     Deletes mobs too far from players.
+/// </summary>
+public sealed partial class MobCleanupSystem : BaseCleanupSystem<HTNComponent>
+{
+    [Dependency] private CleanupHelperSystem _cleanup = default!;
+    [Dependency] private IConfigurationManager _cfg = default!;
+
+    private float _maxDistance;
+    private float _maxGridDistance;
+
+    private EntityQuery<GhostRoleComponent> _ghostQuery;
+    private EntityQuery<CleanupImmuneComponent> _immuneQuery;
+
+    public override void Initialize()
+    {
+        base.Initialize();
+
+        _ghostQuery = GetEntityQuery<GhostRoleComponent>();
+        _immuneQuery = GetEntityQuery<CleanupImmuneComponent>();
+
+        Subs.CVar(_cfg, MonoCVars.MobCleanupDistance, val => _maxDistance = val, true);
+        Subs.CVar(_cfg, MonoCVars.CleanupMaxGridDistance, val => _maxGridDistance = val, true);
+    }
+
+    protected override bool ShouldEntityCleanup(EntityUid uid)
+    {
+        var xform = Transform(uid);
+
+        return xform.GridUid == null
+            && !_immuneQuery.HasComp(uid)
+            && !_ghostQuery.HasComp(uid)
+            && !_cleanup.HasNearbyPlayers(xform.Coordinates, _maxDistance)
+            && !_cleanup.HasNearbyGrids(xform.Coordinates, _maxGridDistance);
+    }
+}

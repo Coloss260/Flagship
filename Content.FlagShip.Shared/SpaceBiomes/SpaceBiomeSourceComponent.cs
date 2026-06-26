@@ -1,0 +1,28 @@
+using Robust.Shared.GameStates;
+using Robust.Shared.Prototypes;
+
+namespace Content.FlagShip.Shared.SpaceBiomes;
+
+[RegisterComponent, NetworkedComponent, AutoGenerateComponentState]
+public sealed partial class SpaceBiomeSourceComponent : Component
+{
+    [AutoNetworkedField]
+    [DataField(required: true)]
+    public ProtoId<SpaceBiomePrototype> Id;
+
+    /// <summary>
+    /// Distance at which swap should begin
+    /// null = infinite distance
+    /// </summary>
+    [AutoNetworkedField]
+    [DataField(required: true)]
+    public float? SwapDistance;
+
+
+    /// <summary>
+    /// If multiple biomes are overlapping, biome with the highest priority is applied
+    /// </summary>
+    [AutoNetworkedField]
+    [DataField]
+    public float Priority;
+}

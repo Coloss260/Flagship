@@ -1,0 +1,9 @@
+<!--  Bounty Contracts Cartridge UI -->
+<ui1:BountyContractUiFragment xmlns:ui="clr-namespace:Content.FlagShip.Client.BountyContracts.UI"
+                             xmlns="https://spacestation14.io"
+                             xmlns:ui1="clr-namespace:Content.FlagShip.Client.BountyContracts.UI"
+                             VerticalExpand="True" HorizontalExpand="True">
+
+    <!-- All submenus are added by code -->
+
+</ui1:BountyContractUiFragment>

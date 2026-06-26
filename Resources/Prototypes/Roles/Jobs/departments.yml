@@ -7,6 +7,7 @@
   - CargoTechnician
   - Quartermaster
   - SalvageSpecialist
+  editorHidden: true # Flagship
 
 - type: department
   id: Civilian
@@ -30,6 +31,7 @@
   - Reporter
   - Visitor
   - ServiceWorker
+  editorHidden: true # Flagship
 
 - type: department
   id: CentralCommand
@@ -71,6 +73,7 @@
   - ERTSecurity
   - ERTEngineer
   - DeathSquad
+  editorHidden: true # Flagship
   primary: false
   weight: 100
 
@@ -84,6 +87,7 @@
   - ChiefEngineer
   - StationEngineer
   - TechnicalAssistant
+  editorHidden: true # Flagship
 
 - type: department
   id: Medical
@@ -97,6 +101,7 @@
   - MedicalIntern
   - Psychologist
   - Paramedic
+  editorHidden: true # Flagship
 
 - type: department
   id: Security
@@ -110,6 +115,7 @@
   - SecurityOfficer
   - Detective
   - Warden
+  editorHidden: true # Flagship
 
 - type: department
   id: Science
@@ -120,6 +126,7 @@
   - ResearchDirector
   - Scientist
   - ResearchAssistant
+  editorHidden: true # Flagship
 
 - type: department
   id: Silicon
@@ -129,6 +136,7 @@
   roles:
   - Borg
   - StationAi
+  editorHidden: true # Flagship
 
 - type: department
   id: Specific
@@ -140,3 +148,4 @@
   - Reporter
   - Psychologist
   primary: false
+  editorHidden: true # Flagship

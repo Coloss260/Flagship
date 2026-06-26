@@ -204,7 +204,6 @@
   - type: Tag
     tags:
     - EncryptionSecurity
-
 - type: entity
   parent: [ EncryptionKey, BaseCivilianContraband ]
   id: EncryptionKeyService
