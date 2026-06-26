@@ -1,5 +1,0 @@
-<surgery:SurgeryStepButton
-    xmlns="https://spacestation14.io"
-    xmlns:controls="clr-namespace:Content.FlagShip.Client.Medical.Surgery"
-    xmlns:surgery="clr-namespace:Content.FlagShip.Client.Medical.Surgery">
-</surgery:SurgeryStepButton>
