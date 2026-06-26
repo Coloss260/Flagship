@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="../Content.Shared/Content.Shared.csproj" />
+    <PackageReference Include="JetBrains.Annotations"/>
   </ItemGroup>
 
   <Import Project="../RobustToolbox/Imports/Shared.props" />

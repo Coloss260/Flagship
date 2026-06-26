@@ -1,5 +1,5 @@
 using Robust.Shared.ContentPack;
 
-namespace Content.FlagShip.Client.Entry;
+namespace Content.FlagShip.Server.Entry;
 
 public sealed class EntryPoint : GameServer;
