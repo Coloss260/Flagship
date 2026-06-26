@@ -1,0 +1,14 @@
+- files: ["FTL_Jump.ogg"]
+  license: "CC-BY-SA-4.0"
+  copyright: "Taken from NSV13"
+  source: "https://github.com/BeeStation/NSV13/tree/ff23bf114d6c3675661add8d0e4904d6ac0002c8/nsv13/sound/effects/ship"
+
+- files: ["FTL_loop.ogg"]
+  license: "CC-BY-SA-4.0"
+  copyright: "Taken from NSV13"
+  source: "https://github.com/BeeStation/NSV13/tree/ff23bf114d6c3675661add8d0e4904d6ac0002c8/nsv13/sound/effects/ship"
+
+- files: ["FTL_stop.ogg"]
+  license: "CC-BY-SA-4.0"
+  copyright: "Taken from NSV13"
+  source: "https://github.com/BeeStation/NSV13/tree/ff23bf114d6c3675661add8d0e4904d6ac0002c8/nsv13/sound/effects/ship"
