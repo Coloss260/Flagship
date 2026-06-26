@@ -10,14 +10,14 @@
       graph: ComputerWallmount
       node: wallmount computer
     - type: Sprite
-      sprite: _NF/Structures/Machines/computer_wallmount.rsi
+      sprite: _Flagship/Structures/Machines/computer_wallmount.rsi
       drawdepth: WallMountedItems
       layers:
         - map: [ "computerLayerBody" ]
-          sprite: _NF/Structures/Machines/computer_wallmount.rsi
+          sprite: _Flagship/Structures/Machines/computer_wallmount.rsi
           state: computer_wallmount
         - map: [ "computerLayerScreen" ]
-          sprite: _NF/Structures/Machines/computer_wallmount.rsi
+          sprite: _Flagship/Structures/Machines/computer_wallmount.rsi
           state: screen_generic
     - type: Damageable
       damageContainer: Inorganic
@@ -50,7 +50,7 @@
       - board
   - type: Sprite
     drawdepth: WallMountedItems
-    sprite: _NF/Structures/Machines/computer_wallmount.rsi
+    sprite: _Flagship/Structures/Machines/computer_wallmount.rsi
     layers:
     - state: computer_wallmount_frame
       map: [ "enum.ConstructionVisuals.Layer" ]
@@ -72,5 +72,5 @@
   components:
   - type: Sprite
     drawdepth: WallMountedItems
-    sprite: _NF/Structures/Machines/computer_wallmount.rsi
+    sprite: _Flagship/Structures/Machines/computer_wallmount.rsi
     state: broken_wallmount

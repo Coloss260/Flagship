@@ -7,10 +7,10 @@
     drawdepth: SmallObjects
     layers:
     - map: ["computerLayerBody"]
-      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+      sprite: _Flagship/Structures/Machines/computer_tabletop.rsi
       state: computer_tabletop
     - map: ["computerLayerKeyboard"]
-      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+      sprite: _Flagship/Structures/Machines/computer_tabletop.rsi
       state: generic_keyboard_tabletop
     - map: ["computerLayerScreen"]
       sprite: Structures/Machines/computers.rsi
@@ -27,10 +27,10 @@
     drawdepth: SmallObjects
     layers: &NFTabletopShuttleConsoleVisuals
     - map: ["computerLayerBody"]
-      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+      sprite: _Flagship/Structures/Machines/computer_tabletop.rsi
       state: computer_tabletop
     - map: ["computerLayerKeyboard"]
-      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+      sprite: _Flagship/Structures/Machines/computer_tabletop.rsi
       state: generic_keyboard_tabletop
     - map: ["computerLayerScreen"]
       sprite: Structures/Machines/computers.rsi
@@ -47,10 +47,10 @@
     drawdepth: SmallObjects
     layers:
     - map: ["computerLayerBody"]
-      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+      sprite: _Flagship/Structures/Machines/computer_tabletop.rsi
       state: computer_tabletop
     - map: ["computerLayerKeyboard"]
-      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+      sprite: _Flagship/Structures/Machines/computer_tabletop.rsi
       state: generic_keyboard_tabletop
     - map: ["computerLayerScreen"]
       sprite: Structures/Machines/computers.rsi
@@ -67,10 +67,10 @@
     drawdepth: SmallObjects
     layers:
     - map: ["computerLayerBody"]
-      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+      sprite: _Flagship/Structures/Machines/computer_tabletop.rsi
       state: computer_tabletop
     - map: ["computerLayerKeyboard"]
-      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+      sprite: _Flagship/Structures/Machines/computer_tabletop.rsi
       state: generic_keyboard_tabletop
     - map: ["computerLayerScreen"]
       sprite: Structures/Shuttles/iff.rsi
@@ -88,10 +88,10 @@
     drawdepth: SmallObjects
     layers:
     - map: ["computerLayerBody"]
-      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+      sprite: _Flagship/Structures/Machines/computer_tabletop.rsi
       state: computer_tabletop
     - map: ["computerLayerKeyboard"]
-      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+      sprite: _Flagship/Structures/Machines/computer_tabletop.rsi
       state: generic_keyboard_tabletop
     - map: ["computerLayerScreen"]
       sprite: Structures/Shuttles/iff.rsi
@@ -108,10 +108,10 @@
     drawdepth: SmallObjects
     layers:
     - map: ["computerLayerBody"]
-      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+      sprite: _Flagship/Structures/Machines/computer_tabletop.rsi
       state: computer_tabletop
     - map: ["computerLayerKeyboard"]
-      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+      sprite: _Flagship/Structures/Machines/computer_tabletop.rsi
       state: generic_keyboard_tabletop
     - map: ["computerLayerScreen"]
       sprite: Structures/Machines/computers.rsi
@@ -128,10 +128,10 @@
     drawdepth: SmallObjects
     layers:
     - map: ["computerLayerBody"]
-      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+      sprite: _Flagship/Structures/Machines/computer_tabletop.rsi
       state: computer_tabletop
     - map: ["computerLayerKeyboard"]
-      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+      sprite: _Flagship/Structures/Machines/computer_tabletop.rsi
       state: generic_keyboard_tabletop
     - map: ["computerLayerScreen"]
       sprite: Structures/Machines/computers.rsi
@@ -148,10 +148,10 @@
     drawdepth: SmallObjects
     layers:
     - map: ["computerLayerBody"]
-      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+      sprite: _Flagship/Structures/Machines/computer_tabletop.rsi
       state: computer_tabletop
     - map: ["computerLayerKeyboard"]
-      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+      sprite: _Flagship/Structures/Machines/computer_tabletop.rsi
       state: generic_keyboard_tabletop
     - map: ["computerLayerScreen"]
       sprite: Structures/Machines/computers.rsi
@@ -168,10 +168,10 @@
     drawdepth: SmallObjects
     layers:
     - map: ["computerLayerBody"]
-      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+      sprite: _Flagship/Structures/Machines/computer_tabletop.rsi
       state: computer_tabletop
     - map: ["computerLayerKeyboard"]
-      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+      sprite: _Flagship/Structures/Machines/computer_tabletop.rsi
       state: generic_keyboard_tabletop
     - map: ["computerLayerScreen"]
       sprite: Structures/Machines/computers.rsi
@@ -188,10 +188,10 @@
     drawdepth: SmallObjects
     layers:
     - map: ["computerLayerBody"]
-      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+      sprite: _Flagship/Structures/Machines/computer_tabletop.rsi
       state: computer_tabletop
     - map: ["computerLayerKeyboard"]
-      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+      sprite: _Flagship/Structures/Machines/computer_tabletop.rsi
       state: generic_keyboard_tabletop
     - map: ["computerLayerScreen"]
       sprite: Structures/Machines/computers.rsi
@@ -208,10 +208,10 @@
     drawdepth: SmallObjects
     layers:
     - map: ["computerLayerBody"]
-      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+      sprite: _Flagship/Structures/Machines/computer_tabletop.rsi
       state: computer_tabletop
     - map: ["computerLayerKeyboard"]
-      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+      sprite: _Flagship/Structures/Machines/computer_tabletop.rsi
       state: generic_keyboard_tabletop
     - map: ["computerLayerScreen"]
       sprite: Structures/Machines/computers.rsi
@@ -228,10 +228,10 @@
     drawdepth: SmallObjects
     layers:
     - map: ["computerLayerBody"]
-      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+      sprite: _Flagship/Structures/Machines/computer_tabletop.rsi
       state: computer_tabletop
     - map: ["computerLayerKeyboard"]
-      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+      sprite: _Flagship/Structures/Machines/computer_tabletop.rsi
       state: generic_keyboard_tabletop
     - map: ["computerLayerScreen"]
       sprite: Structures/Machines/computers.rsi
@@ -248,10 +248,10 @@
     drawdepth: SmallObjects
     layers:
     - map: ["computerLayerBody"]
-      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+      sprite: _Flagship/Structures/Machines/computer_tabletop.rsi
       state: computer_tabletop
     - map: ["computerLayerKeyboard"]
-      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+      sprite: _Flagship/Structures/Machines/computer_tabletop.rsi
       state: generic_keyboard_tabletop
     - map: ["computerLayerScreen"]
       sprite: Structures/Machines/computers.rsi
@@ -265,7 +265,7 @@
   id: ComputerTabletopBodyScanner
   components:
   - type: Sprite
-    sprite: _NF/Structures/Machines/computer_tabletop.rsi
+    sprite: _Flagship/Structures/Machines/computer_tabletop.rsi
     drawdepth: SmallObjects
     layers:
     - map: ["computerLayerBody"]
@@ -287,10 +287,10 @@
     drawdepth: SmallObjects
     layers:
     - map: ["computerLayerBody"]
-      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+      sprite: _Flagship/Structures/Machines/computer_tabletop.rsi
       state: computer_tabletop
     - map: ["computerLayerKeyboard"]
-      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+      sprite: _Flagship/Structures/Machines/computer_tabletop.rsi
       state: generic_keyboard_tabletop
     - map: ["computerLayerScreen"]
       sprite: Structures/Machines/computers.rsi
@@ -307,10 +307,10 @@
     drawdepth: SmallObjects
     layers:
     - map: ["computerLayerBody"]
-      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+      sprite: _Flagship/Structures/Machines/computer_tabletop.rsi
       state: computer_tabletop
     - map: ["computerLayerKeyboard"]
-      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+      sprite: _Flagship/Structures/Machines/computer_tabletop.rsi
       state: generic_keyboard_tabletop
     - map: ["computerLayerScreen"]
       sprite: Structures/Machines/computers.rsi
@@ -327,10 +327,10 @@
     drawdepth: SmallObjects
     layers:
     - map: ["computerLayerBody"]
-      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+      sprite: _Flagship/Structures/Machines/computer_tabletop.rsi
       state: computer_tabletop
     - map: ["computerLayerKeyboard"]
-      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+      sprite: _Flagship/Structures/Machines/computer_tabletop.rsi
       state: generic_keyboard_tabletop
     - map: ["computerLayerScreen"]
       sprite: Structures/Machines/computers.rsi
@@ -347,10 +347,10 @@
     drawdepth: SmallObjects
     layers:
     - map: ["computerLayerBody"]
-      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+      sprite: _Flagship/Structures/Machines/computer_tabletop.rsi
       state: computer_tabletop
     - map: ["computerLayerKeyboard"]
-      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+      sprite: _Flagship/Structures/Machines/computer_tabletop.rsi
       state: generic_keyboard_tabletop
     - map: ["computerLayerScreen"]
       sprite: Structures/Machines/computers.rsi
@@ -367,10 +367,10 @@
     drawdepth: SmallObjects
     layers:
     - map: ["computerLayerBody"]
-      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+      sprite: _Flagship/Structures/Machines/computer_tabletop.rsi
       state: computer_tabletop
     - map: ["computerLayerKeyboard"]
-      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+      sprite: _Flagship/Structures/Machines/computer_tabletop.rsi
       state: generic_keyboard_tabletop
     - map: ["computerLayerScreen"]
       sprite: Structures/Machines/computers.rsi
@@ -387,10 +387,10 @@
     drawdepth: SmallObjects
     layers:
     - map: ["computerLayerBody"]
-      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+      sprite: _Flagship/Structures/Machines/computer_tabletop.rsi
       state: computer_tabletop
     - map: ["computerLayerKeyboard"]
-      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+      sprite: _Flagship/Structures/Machines/computer_tabletop.rsi
       state: generic_keyboard_tabletop
     - map: ["computerLayerScreen"]
       sprite: Structures/Machines/computers.rsi
@@ -407,10 +407,10 @@
     drawdepth: SmallObjects
     layers:
     - map: ["computerLayerBody"]
-      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+      sprite: _Flagship/Structures/Machines/computer_tabletop.rsi
       state: computer_tabletop
     - map: ["computerLayerKeyboard"]
-      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+      sprite: _Flagship/Structures/Machines/computer_tabletop.rsi
       state: generic_keyboard_tabletop
     - map: ["computerLayerScreen"]
       sprite: Structures/Machines/computers.rsi
@@ -427,10 +427,10 @@
     drawdepth: SmallObjects
     layers:
     - map: ["computerLayerBody"]
-      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+      sprite: _Flagship/Structures/Machines/computer_tabletop.rsi
       state: computer_tabletop
     - map: ["computerLayerKeyboard"]
-      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+      sprite: _Flagship/Structures/Machines/computer_tabletop.rsi
       state: generic_keyboard_tabletop
     - map: ["computerLayerScreen"]
       sprite: Structures/Machines/computers.rsi
@@ -447,10 +447,10 @@
     drawdepth: SmallObjects
     layers:
     - map: ["computerLayerBody"]
-      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+      sprite: _Flagship/Structures/Machines/computer_tabletop.rsi
       state: computer_tabletop
     - map: ["computerLayerKeyboard"]
-      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+      sprite: _Flagship/Structures/Machines/computer_tabletop.rsi
       state: generic_keyboard_tabletop
     - map: ["computerLayerScreen"]
       sprite: Structures/Machines/computers.rsi
@@ -467,10 +467,10 @@
     drawdepth: SmallObjects
     layers:
     - map: ["computerLayerBody"]
-      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+      sprite: _Flagship/Structures/Machines/computer_tabletop.rsi
       state: computer_tabletop
     - map: ["computerLayerKeyboard"]
-      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+      sprite: _Flagship/Structures/Machines/computer_tabletop.rsi
       state: generic_keyboard_tabletop
     - map: ["computerLayerScreen"]
       sprite: Structures/Machines/computers.rsi
@@ -487,10 +487,10 @@
     drawdepth: SmallObjects
     layers:
     - map: ["computerLayerBody"]
-      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+      sprite: _Flagship/Structures/Machines/computer_tabletop.rsi
       state: computer_tabletop
     - map: ["computerLayerKeyboard"]
-      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+      sprite: _Flagship/Structures/Machines/computer_tabletop.rsi
       state: generic_keyboard_tabletop
     - map: ["computerLayerScreen"]
       sprite: Structures/Machines/computers.rsi
@@ -507,10 +507,10 @@
     drawdepth: SmallObjects
     layers:
     - map: ["computerLayerBody"]
-      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+      sprite: _Flagship/Structures/Machines/computer_tabletop.rsi
       state: computer_tabletop
     - map: ["computerLayerKeyboard"]
-      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+      sprite: _Flagship/Structures/Machines/computer_tabletop.rsi
       state: generic_keyboard_tabletop
     - map: ["computerLayerScreen"]
       sprite: Structures/Machines/computers.rsi
@@ -530,13 +530,13 @@
     drawdepth: SmallObjects
     layers: &cargoMarketSprite
     - map: ["computerLayerBody"]
-      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+      sprite: _Flagship/Structures/Machines/computer_tabletop.rsi
       state: computer_tabletop
     - map: ["computerLayerKeyboard"]
-      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+      sprite: _Flagship/Structures/Machines/computer_tabletop.rsi
       state: generic_keyboard_tabletop
     - map: ["computerLayerScreen"]
-      sprite: _NF/Structures/Machines/computers.rsi
+      sprite: _Flagship/Structures/Machines/computers.rsi
       state: cargo_market
     - map: ["computerLayerKeys"]
       sprite: Structures/Machines/computers.rsi
@@ -569,13 +569,13 @@
     drawdepth: SmallObjects
     layers: &cargoPalletSprite
     - map: ["computerLayerBody"]
-      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+      sprite: _Flagship/Structures/Machines/computer_tabletop.rsi
       state: computer_tabletop
     - map: ["computerLayerKeyboard"]
-      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+      sprite: _Flagship/Structures/Machines/computer_tabletop.rsi
       state: generic_keyboard_tabletop
     - map: ["computerLayerScreen"]
-      sprite: _NF/Structures/Machines/computers.rsi
+      sprite: _Flagship/Structures/Machines/computers.rsi
       state: cargo_sale
     - map: ["computerLayerKeys"]
       sprite: Structures/Machines/computers.rsi
@@ -618,13 +618,13 @@
     drawdepth: SmallObjects
     layers:
     - map: ["computerLayerBody"]
-      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+      sprite: _Flagship/Structures/Machines/computer_tabletop.rsi
       state: computer_tabletop
     - map: ["computerLayerKeyboard"]
-      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+      sprite: _Flagship/Structures/Machines/computer_tabletop.rsi
       state: generic_keyboard_tabletop
     - map: ["computerLayerScreen"]
-      sprite: _NF/Structures/Machines/computers.rsi
+      sprite: _Flagship/Structures/Machines/computers.rsi
       state: station_atm
     - map: ["computerLayerKeys"]
       sprite: Structures/Machines/computers.rsi
@@ -677,16 +677,16 @@
     drawdepth: SmallObjects
     layers:
     - map: ["computerLayerBody"]
-      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+      sprite: _Flagship/Structures/Machines/computer_tabletop.rsi
       state: computer_tabletop
     - map: ["computerLayerKeyboard"]
-      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+      sprite: _Flagship/Structures/Machines/computer_tabletop.rsi
       state: generic_keyboard_tabletop
     - map: ["computerLayerScreen"]
-      sprite: _NF/Structures/Machines/computers.rsi
+      sprite: _Flagship/Structures/Machines/computers.rsi
       state: contraband
     - map: ["computerLayerKeys"]
-      sprite: _NF/Structures/Machines/computers.rsi
+      sprite: _Flagship/Structures/Machines/computers.rsi
       state: telesci_key
 
 - type: entity
@@ -698,10 +698,10 @@
     drawdepth: SmallObjects
     layers:
     - map: ["computerLayerBody"]
-      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+      sprite: _Flagship/Structures/Machines/computer_tabletop.rsi
       state: computer_tabletop
     - map: ["computerLayerKeyboard"]
-      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+      sprite: _Flagship/Structures/Machines/computer_tabletop.rsi
       state: generic_keyboard_tabletop
     - map: ["computerLayerScreen"]
       sprite: Structures/Shuttles/iff.rsi
@@ -719,16 +719,16 @@
     drawdepth: SmallObjects
     layers:
     - map: ["computerLayerBody"]
-      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+      sprite: _Flagship/Structures/Machines/computer_tabletop.rsi
       state: computer_tabletop
     - map: ["computerLayerKeyboard"]
-      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+      sprite: _Flagship/Structures/Machines/computer_tabletop.rsi
       state: generic_keyboard_tabletop
     - map: ["computerLayerScreen"]
-      sprite: _NF/Structures/Machines/computers.rsi
+      sprite: _Flagship/Structures/Machines/computers.rsi
       state: piratebounty
     - map: ["computerLayerKeys"]
-      sprite: _NF/Structures/Machines/computers.rsi
+      sprite: _Flagship/Structures/Machines/computers.rsi
       state: blackmarket_key
 
 - type: entity
@@ -740,16 +740,16 @@
     drawdepth: SmallObjects
     layers:
     - map: ["computerLayerBody"]
-      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+      sprite: _Flagship/Structures/Machines/computer_tabletop.rsi
       state: computer_tabletop
     - map: ["computerLayerKeyboard"]
-      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+      sprite: _Flagship/Structures/Machines/computer_tabletop.rsi
       state: generic_keyboard_tabletop
     - map: ["computerLayerScreen"]
-      sprite: _NF/Structures/Machines/computers.rsi
+      sprite: _Flagship/Structures/Machines/computers.rsi
       state: contraband # TODO: replace this
     - map: ["computerLayerKeys"]
-      sprite: _NF/Structures/Machines/computers.rsi
+      sprite: _Flagship/Structures/Machines/computers.rsi
       state: blackmarket_key
 
 - type: entity
@@ -761,16 +761,16 @@
     drawdepth: SmallObjects
     layers:
     - map: ["computerLayerBody"]
-      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+      sprite: _Flagship/Structures/Machines/computer_tabletop.rsi
       state: computer_tabletop
     - map: ["computerLayerKeyboard"]
-      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+      sprite: _Flagship/Structures/Machines/computer_tabletop.rsi
       state: generic_keyboard_tabletop
     - map: ["computerLayerScreen"]
-      sprite: _NF/Structures/Machines/computers.rsi
+      sprite: _Flagship/Structures/Machines/computers.rsi
       state: piratebounty_pad # TODO: replace this
     - map: ["computerLayerKeys"]
-      sprite: _NF/Structures/Machines/computers.rsi
+      sprite: _Flagship/Structures/Machines/computers.rsi
       state: blackmarket_key
 
 - type: entity

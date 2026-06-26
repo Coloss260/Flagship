@@ -11,7 +11,7 @@
     - type: Physics
       bodyType: Static
     - type: Sprite
-      sprite: _Mono/Structures/ShuttleComponents/drive.rsi
+      sprite: _Flagship/Structures/ShuttleComponents/drive.rsi
       snapCardinals: true
       layers:
       - state: control
@@ -106,7 +106,7 @@
   description: A FTL drive that extends a ship's FTL range to ~10 kilometers. Does not stack.
   components:
   - type: Sprite
-    sprite: _Mono/Structures/ShuttleComponents/drive.rsi
+    sprite: _Flagship/Structures/ShuttleComponents/drive.rsi
     snapCardinals: true
     layers:
     - state: control
@@ -143,7 +143,7 @@
   description: An advanced FTL drive that extends a ship's FTL range to ~5 kilometers, but with upgrades to allow for faster recharge and flight times. Does not stack.
   components:
   - type: Sprite
-    sprite: _Mono/Structures/ShuttleComponents/drive.rsi
+    sprite: _Flagship/Structures/ShuttleComponents/drive.rsi
     snapCardinals: true
     layers:
     - state: control

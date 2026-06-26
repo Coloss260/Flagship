@@ -98,7 +98,7 @@
   id: ShipRepairDeviceAmmo
   description: Ammo cartridge for a ship repair device.
   components:
-  - type: LimitedChargesAmmo
+  - type: LimitedCharges
     charges: 100
     whitelist:
       tags:

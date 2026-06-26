@@ -6,16 +6,16 @@
     drawdepth: SmallObjects
     layers:
     - map: ["computerLayerBody"]
-      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+      sprite: _Flagship/Structures/Machines/computer_tabletop.rsi
       state: computer_tabletop
     - map: ["computerLayerKeyboard"]
-      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+      sprite: _Flagship/Structures/Machines/computer_tabletop.rsi
       state: generic_keyboard_tabletop
     - map: ["computerLayerScreen"]
-      sprite: _NF/Structures/Machines/computers.rsi
+      sprite: _Flagship/Structures/Machines/computers.rsi
       state: shipyard
     - map: ["computerLayerKeys"]
-      sprite: _NF/Structures/Machines/computers.rsi
+      sprite: _Flagship/Structures/Machines/computers.rsi
       state: telesci_key
 
 - type: entity
@@ -26,16 +26,16 @@
     drawdepth: SmallObjects
     layers:
     - map: ["computerLayerBody"]
-      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+      sprite: _Flagship/Structures/Machines/computer_tabletop.rsi
       state: computer_tabletop
     - map: ["computerLayerKeyboard"]
-      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+      sprite: _Flagship/Structures/Machines/computer_tabletop.rsi
       state: generic_keyboard_tabletop
     - map: ["computerLayerScreen"]
-      sprite: _NF/Structures/Machines/computers.rsi
+      sprite: _Flagship/Structures/Machines/computers.rsi
       state: shipyard_security
     - map: ["computerLayerKeys"]
-      sprite: _NF/Structures/Machines/computers.rsi
+      sprite: _Flagship/Structures/Machines/computers.rsi
       state: telesci_key
 
 - type: entity
@@ -46,16 +46,16 @@
     drawdepth: SmallObjects
     layers:
     - map: ["computerLayerBody"]
-      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+      sprite: _Flagship/Structures/Machines/computer_tabletop.rsi
       state: computer_tabletop
     - map: ["computerLayerKeyboard"]
-      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+      sprite: _Flagship/Structures/Machines/computer_tabletop.rsi
       state: generic_keyboard_tabletop
     - map: ["computerLayerScreen"]
-      sprite: _NF/Structures/Machines/computers.rsi
-      state: shipyard_nfsd
+      sprite: _Flagship/Structures/Machines/computers.rsi
+      state: shipyard_Flagshipsd
     - map: ["computerLayerKeys"]
-      sprite: _NF/Structures/Machines/computers.rsi
+      sprite: _Flagship/Structures/Machines/computers.rsi
       state: telesci_key
 
 - type: entity
@@ -66,16 +66,16 @@
     drawdepth: SmallObjects
     layers:
     - map: ["computerLayerBody"]
-      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+      sprite: _Flagship/Structures/Machines/computer_tabletop.rsi
       state: computer_tabletop
     - map: ["computerLayerKeyboard"]
-      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+      sprite: _Flagship/Structures/Machines/computer_tabletop.rsi
       state: generic_keyboard_tabletop
     - map: ["computerLayerScreen"]
-      sprite: _NF/Structures/Machines/computers.rsi
+      sprite: _Flagship/Structures/Machines/computers.rsi
       state: shipyard_pdv # Mono
     - map: ["computerLayerKeys"]
-      sprite: _NF/Structures/Machines/computers.rsi
+      sprite: _Flagship/Structures/Machines/computers.rsi
       state: telesci_key # Mono
 
 - type: entity
@@ -86,16 +86,16 @@
     drawdepth: SmallObjects
     layers:
     - map: ["computerLayerBody"]
-      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+      sprite: _Flagship/Structures/Machines/computer_tabletop.rsi
       state: computer_tabletop
     - map: ["computerLayerKeyboard"]
-      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+      sprite: _Flagship/Structures/Machines/computer_tabletop.rsi
       state: generic_keyboard_tabletop
     - map: ["computerLayerScreen"]
-      sprite: _NF/Structures/Machines/computers.rsi
+      sprite: _Flagship/Structures/Machines/computers.rsi
       state: shipyard_expedition # Mono
     - map: ["computerLayerKeys"]
-      sprite: _NF/Structures/Machines/computers.rsi
+      sprite: _Flagship/Structures/Machines/computers.rsi
       state: telesci_key # Mono
 
 - type: entity
@@ -106,14 +106,14 @@
     drawdepth: SmallObjects
     layers:
     - map: ["computerLayerBody"]
-      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+      sprite: _Flagship/Structures/Machines/computer_tabletop.rsi
       state: computer_tabletop
     - map: ["computerLayerKeyboard"]
-      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+      sprite: _Flagship/Structures/Machines/computer_tabletop.rsi
       state: generic_keyboard_tabletop
     - map: ["computerLayerScreen"]
-      sprite: _NF/Structures/Machines/computers.rsi
+      sprite: _Flagship/Structures/Machines/computers.rsi
       state: shipyard_scrapyard # Mono
     - map: ["computerLayerKeys"]
-      sprite: _NF/Structures/Machines/computers.rsi
+      sprite: _Flagship/Structures/Machines/computers.rsi
       state: telesci_key # Mono

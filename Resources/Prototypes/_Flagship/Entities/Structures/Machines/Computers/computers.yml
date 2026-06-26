@@ -37,7 +37,7 @@
     - map: ["computerLayerKeyboard"]
       state: generic_keyboard
     - map: ["computerLayerScreen"]
-      sprite: _NF/Structures/Machines/computers.rsi
+      sprite: _Flagship/Structures/Machines/computers.rsi
       state: cargo_sale
     - map: ["computerLayerKeys"]
       state: tech_key
@@ -106,7 +106,7 @@
   description: Sends off faction gear in exchange for FMC.
   components:
   - type: Sprite
-    sprite: _NF/Structures/Machines/computers.rsi
+    sprite: _Flagship/Structures/Machines/computers.rsi
     layers:
     - map: ["computerLayerBody"]
       state: computer
@@ -185,7 +185,7 @@
     - map: ["computerLayerKeyboard"]
       state: generic_keyboard
     - map: ["computerLayerScreen"]
-      sprite: _NF/Structures/Machines/computers.rsi
+      sprite: _Flagship/Structures/Machines/computers.rsi
       state: cargo_market
     - map: ["computerLayerKeys"]
       state: tech_key
@@ -237,7 +237,7 @@
   description: Pull up active contracts, track targets, and get paid in chits.
   components:
   - type: Sprite
-    sprite: _NF/Structures/Machines/computers.rsi
+    sprite: _Flagship/Structures/Machines/computers.rsi
     layers:
     - map: ["computerLayerBody"]
       state: computer_blackmarket
@@ -278,7 +278,7 @@
   description: Takes faction tech to be sent off to research and grants DC in exchange.
   components:
   - type: Sprite
-    sprite: _NF/Structures/Machines/computers.rsi
+    sprite: _Flagship/Structures/Machines/computers.rsi
     layers:
     - map: ["computerLayerBody"]
       state: computer_blackmarket
@@ -302,7 +302,7 @@
   description: Contract completed? Redeem your chit and claim your payout.
   components:
   - type: Sprite
-    sprite: _NF/Structures/Machines/computers.rsi
+    sprite: _Flagship/Structures/Machines/computers.rsi
     layers:
     - map: ["computerLayerBody"]
       state: computer_blackmarket
@@ -343,7 +343,7 @@
   description: Sells gas pumped into a linked gas sale port/point.
   components:
   - type: Sprite
-    sprite: _NF/Structures/Machines/computers.rsi
+    sprite: _Flagship/Structures/Machines/computers.rsi
     layers:
     - map: ["computerLayerBody"]
       state: computer

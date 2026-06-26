@@ -23,14 +23,14 @@
       graph: ComputerTabletop
       node: tabletop computer
     - type: Sprite
-      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+      sprite: _Flagship/Structures/Machines/computer_tabletop.rsi
       drawdepth: SmallObjects
       layers:
         - map: [ "computerLayerBody" ]
-          sprite: _NF/Structures/Machines/computer_tabletop.rsi
+          sprite: _Flagship/Structures/Machines/computer_tabletop.rsi
           state: computer_tabletop
         - map: [ "computerLayerKeyboard" ]
-          sprite: _NF/Structures/Machines/computer_tabletop.rsi
+          sprite: _Flagship/Structures/Machines/computer_tabletop.rsi
           state: generic_keyboard_tabletop
         - map: [ "computerLayerScreen" ]
           sprite: Structures/Machines/computers.rsi
@@ -69,7 +69,7 @@
       - board
   - type: Sprite
     drawdepth: SmallObjects
-    sprite: _NF/Structures/Machines/computer_tabletop.rsi
+    sprite: _Flagship/Structures/Machines/computer_tabletop.rsi
     layers:
     - state: computer_tabletop_frame
       map: [ "enum.ConstructionVisuals.Layer" ]
@@ -101,7 +101,7 @@
   components:
   - type: Sprite
     drawdepth: SmallObjects
-    sprite: _NF/Structures/Machines/computer_tabletop.rsi
+    sprite: _Flagship/Structures/Machines/computer_tabletop.rsi
     state: broken_tabletop
   - type: Fixtures
     fixtures:
