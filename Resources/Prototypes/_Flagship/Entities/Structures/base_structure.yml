@@ -17,7 +17,8 @@
     sawing: true
     honking: true
     rolling: true
-    digging: true
+    brushing: true
+    shearing: true
 
 - type: entity
   id: BaseStructureDisableAnchoring
