@@ -82,7 +82,7 @@ namespace Content.IntegrationTests.Tests
         {
             "/Maps/centcomm.yml",
             "/Maps/Shuttles/AdminSpawn/**", // admin gaming
-            "/Maps/Flagship/Test/dev_map.yml"
+            "/Maps/_Flagship/Test/dev_map.yml"
         };
 
         /// <summary>
