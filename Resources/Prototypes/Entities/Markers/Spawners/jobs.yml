@@ -472,6 +472,7 @@
       - state: green
       - state: security_officer
 
+# Flagship
 #- type: entity
 #  id: SpawnPointSecurityOfficerOld
 #  parent: SpawnPointJobBase
