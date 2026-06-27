@@ -1,0 +1,58 @@
+
+- type: gameMap
+  id: Harmonic
+  mapName: 'Harmonic'
+  mapPath: /Maps/harmonic.yml
+  minPlayers: 7
+  maxPlayers: 35
+  stations:
+    Harmonic:
+      stationProto: StandardNanotrasenStation
+      components:
+      - type: StationNameSetup
+        mapNameTemplate: '{0} Harmonic {1}'
+        nameGenerator:
+          !type:NanotrasenNameGenerator
+          prefixCreator: '14'
+      - type: StationEmergencyShuttle
+        emergencyShuttlePath: /Maps/Shuttles/emergency_crimson.yml
+      - type: StationJobs
+        availableJobs:
+          #command (7)
+          Captain: [ 1, 1 ]
+          HeadOfPersonnel: [ 1, 1 ]
+          HeadOfSecurity: [ 1, 1 ]
+          ChiefMedicalOfficer: [ 1, 1 ]
+          ChiefEngineer: [ 1, 1 ]
+          ResearchDirector: [ 1, 1 ]
+          Quartermaster: [ 1, 1 ]
+          #service (4-5)
+          ServiceWorker: [ 3, 5 ]
+          Janitor: [1, 2]
+          Botanist: [1,2]
+          #engineering (3-5)
+          AtmosphericTechnician: [ 1, 1 ]
+          StationEngineer: [ 2, 2 ]
+          TechnicalAssistant: [ 1, 2 ] #intern, not counted
+          #medical (3-6)
+          Chemist: [ 1, 1 ]
+          MedicalDoctor: [ 1, 2 ]
+          MedicalIntern: [ 1, 2 ] #intern, not counted
+          Paramedic: [ 1, 1 ]
+          #science (2-6)
+          Scientist: [ 2, 4 ]
+          Roboticist: [1, 1]
+          ResearchAssistant: [ 2, 2 ] #intern, not counted
+          #security (6)
+          Warden: [ 1, 1 ]
+          SecurityOfficer: [ 3, 4 ]
+          Brigmedic: [ 1, 1 ]
+          SecurityCadet: [ 1, 2 ] #intern, not counted
+          #supply (4)
+          SalvageSpecialist: [ 2, 2 ]
+          CargoTechnician: [ 1, 2 ]
+          #civilian (3+)
+          Passenger: [ -1, -1 ] #infinite, not counted
+          Musician: [ 1, 1 ]
+          #silicon (3)
+          StationAi: [ 1, 1 ]
