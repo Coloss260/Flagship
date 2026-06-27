@@ -34,3 +34,20 @@
     - WhitelistChameleon
     - PetWearable
     - CorgiWearable
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatCapNavy
+  name: Navy Officer cap
+  description: A cap worn by high-ranking officers of the Nanotrasen Navy Corps.
+  components:
+  - type: Sprite
+    sprite: _Flagship/Clothing/Head/Hats/navycap.rsi
+  - type: Clothing
+    sprite: _Flagship/Clothing/Head/Hats/navycap.rsi
+  - type: Tag
+    tags:
+    - ClothMade
+    - WhitelistChameleon
+    - PetWearable
+    - CorgiWearable
