@@ -1,0 +1,36 @@
+- type: job
+  id: ParamedicalSpecialist
+  name: job-name-paramedicalspecialist
+  description: job-description-paramedicalspecialist
+  playTimeTracker: JobParamedicalSpecialist
+  setPreference: true
+  requirements:
+    - !type:DepartmentTimeRequirement
+      department: FlagMedical
+      time: 18000 #5 hrs
+  displayWeight: 40
+  startingGear: ParamedicalSpecialistGear
+  icon: "JobIconParamedicalSpecialist"
+  supervisors: job-supervisors-chom
+  access:
+  - Medical
+  - Maintenance
+  extendedAccess:
+  - Chemistry
+
+- type: startingGear
+  id: ParamedicalSpecialistGear
+  equipment:
+    id: ParamedicPDA
+    ears: ClothingHeadsetCommandingOfficer
+
+- type: chameleonOutfit
+  id: ParamedicalSpecialistChameleonOutfit
+  job: ParamedicalSpecialist
+  equipment:
+    head: ClothingHeadHatParamedicsoft
+    eyes: ClothingEyesHudMedical
+    mask: ClothingMaskSterile
+    neck: ClothingNeckStethoscope
+    outerClothing: ClothingOuterCoatParamedicWB
+    gloves: ClothingHandsGlovesLatex

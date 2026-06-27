@@ -1,7 +1,7 @@
 - type: gameMap
   id: FlagDev
   mapName: FlagDev
-  mapPath: /Maps/_Flagship/Test/dev_map.yml
+  mapPath: /Maps/_Flagship/Dev/dev_map.yml
   minPlayers: 0
   stations:
     FlagDev:
@@ -27,21 +27,34 @@
             MaintenanceTechnician: [ -1, -1 ]
             MaintenanceIntern: [ -1, -1 ]
 
-            # Security
-            SecurityChief: [ -1, -1 ]
-            SecurityMedic: [ -1, -1 ]
-            SecurityOfficer: [ -1, -1 ]
-            SecurityTrainee: [ -1, -1 ]
+            # Military Police
+            MPChief: [ -1, -1 ]
+            MPMedic: [ -1, -1 ]
+            MPOfficer: [ -1, -1 ]
+            MPTrainee: [ -1, -1 ]
 
             # Science
+            ScienceSupervisor: [ -1, -1 ]
+            FlagRoboticist: [ -1, -1 ]
+            FlagScientist: [ -1, -1 ]
+            FlagResearchAssistant: [ -1, -1 ]
+
 
             # Supply
+            SuppliesQuartermaster: [ -1, -1 ]
+            ArtillerySpecialist: [ -1, -1 ]
+            SuppliesCrewman: [ -1, -1 ]
 
             # Medical
+            ChiefOfMedical: [ -1, -1 ]
+            FlagMedicalDoctor: [ -1, -1 ]
+            FlagChemist: [ -1, -1 ]
+            ParamedicalSpecialist: [ -1, -1 ]
+            FlagMedicalIntern: [ -1, -1 ]
 
             # Service
             OffDutyCrew: [ -1, -1 ]
-            Bartender: [ -1, -1 ]
+            FlagBartender: [ -1, -1 ]
             MessChef: [ -1, -1 ]
             HydroponicsBiologist: [ -1, -1 ]
             Custodian: [ -1, -1 ]

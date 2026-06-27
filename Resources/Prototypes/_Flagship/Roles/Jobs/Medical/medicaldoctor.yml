@@ -1,0 +1,39 @@
+- type: job
+  id: FlagMedicalDoctor
+  name: job-name-flag-medicaldoctor
+  description: job-description-flag-medicaldoctor
+  playTimeTracker: JobFlagMedicalDoctor
+  setPreference: true
+  requirements:
+    - !type:DepartmentTimeRequirement
+      department: FlagMedical
+      time: 36000 #10 hrs
+  displayWeight: 80
+  startingGear: FlagMedicalDoctorGear
+  icon: "JobIconFlagMedicalDoctor"
+  supervisors: job-supervisors-chom
+  access:
+  - Medical
+  - Maintenance
+  extendedAccess:
+  - Chemistry
+  special:
+  - !type:GiveItemOnHolidaySpecial
+    holiday: DoctorDay
+    prototype: WehMedipen
+
+- type: startingGear
+  id: FlagMedicalDoctorGear
+  equipment:
+    ears: ClothingHeadsetCommandingOfficer
+
+- type: chameleonOutfit
+  id: FlagMedicalDoctorChameleonOutfit
+  job: FlagMedicalDoctor
+  equipment:
+    head: ClothingHeadNurseHat
+    eyes: ClothingEyesHudMedical
+    mask: ClothingMaskSterile
+    neck: ClothingNeckStethoscope
+    outerClothing: ClothingOuterCoatLab
+    gloves: ClothingHandsGlovesLatex

@@ -14,14 +14,12 @@
       department: Medical
       time: 54000 # 15 hours
     - !type:DepartmentTimeRequirement
-      department: Security
+      department: MilitaryPolice
       time: 54000 # 15 hours
   displayWeight: 100
   startingGear: CommandingOfficerGear
   icon: "JobIconCommandingOfficer"
   joinNotifyCrew: true
-  access:
-  - Captain
   accessGroups:
   - Command
   - AllAccess
@@ -35,12 +33,11 @@
 - type: startingGear
   id: CommandingOfficerGear
   equipment:
-    jumpsuit: ClothingUniformJumpsuitCaptain
-    shoes: ClothingShoesBootsCombatFilled
-    head: ClothingHeadHatBeretCommand
+    jumpsuit: ClothingUniformJumpsuitCommandingOfficer
+    shoes: ClothingShoesBootsJack
+    head: ClothingHeadHatCommandingOfficer
     eyes: ClothingEyesGlassesCommand
-    gloves: ClothingHandsGlovesCaptain
-    back: ClothingBackpackSatchelLeather
-    id: CaptainPDA
-    ears: ClothingHeadsetCommandingOfficer
-    belt: ClothingBeltHolster
+    gloves: ClothingHandsGlovesNavyOfficer
+    back: ClothingBackpackSatchelBridgeCommand
+    id: CommandingOfficerPDA
+    ears: ClothingHeadsetAltCommandingOfficer

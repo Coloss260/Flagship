@@ -1,0 +1,127 @@
+- type: entity
+  abstract: true
+  parent: ClothingHeadsetFlag
+  id: ClothingHeadsetAltFlag
+  name: headset
+  description: An updated, modular intercom that fits over the head. Takes encryption keys.
+  components:
+  - type: Sprite
+    state: icon_alt
+  - type: Clothing
+    equippedPrefix: alt
+
+# Bridge Command
+- type: entity
+  parent: ClothingHeadsetAltFlag
+  id: ClothingHeadsetAltCommandingOfficer
+  name: Commanding Officer's over-ear Headset
+  description: Headset used by Commanding Officers.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyCommandingOfficer
+  - type: Sprite
+    sprite: _Flagship/Clothing/Ears/Headsets/bridgecommand.rsi
+  - type: Clothing
+    sprite: _Flagship/Clothing/Ears/Headsets/bridgecommand.rsi
+
+- type: entity
+  parent: ClothingHeadsetAltFlag
+  id: ClothingHeadsetAltExecutiveOfficer
+  name: Executive Officer's over-ear Headset
+  description: Headset used by Executive Officers.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyExecutiveOfficer
+  - type: Sprite
+    sprite: _Flagship/Clothing/Ears/Headsets/bridgecommand.rsi
+  - type: Clothing
+    sprite: _Flagship/Clothing/Ears/Headsets/bridgecommand.rsi
+
+- type: entity
+  parent: ClothingHeadsetAltFlag
+  id: ClothingHeadsetAltTacticalOfficer
+  name: Tactical Officer's over-ear Headset
+  description: Headset used by Tactical Officers.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyTacticalOfficer
+  - type: Sprite
+    sprite: _Flagship/Clothing/Ears/Headsets/bridgecommand.rsi
+  - type: Clothing
+    sprite: _Flagship/Clothing/Ears/Headsets/bridgecommand.rsi
+
+- type: entity
+  parent: ClothingHeadsetAltFlag
+  id: ClothingHeadsetAltOperationsOfficer
+  name: Operations Officer's over-ear Headset
+  description: Headset used by Operations Officers.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyOperationsOfficer
+  - type: Sprite
+    sprite: _Flagship/Clothing/Ears/Headsets/bridgecommand.rsi
+  - type: Clothing
+    sprite: _Flagship/Clothing/Ears/Headsets/bridgecommand.rsi
+
+- type: entity
+  parent: ClothingHeadsetAltFlag
+  id: ClothingHeadsetAltCommunicationsOfficer
+  name: Communications Officer's over-ear Headset
+  description: Headset used by Communications Officers.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyCommunicationsOfficer
+  - type: Sprite
+    sprite: _Flagship/Clothing/Ears/Headsets/bridgecommand.rsi
+  - type: Clothing
+    sprite: _Flagship/Clothing/Ears/Headsets/bridgecommand.rsi
+
+- type: entity
+  parent: ClothingHeadsetAltFlag
+  id: ClothingHeadsetAltFlightControlOfficer
+  name: Flight Control Officer's over-ear Headset
+  description: Headset used by Flight Control Officers.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyBridgeCommand
+  - type: Sprite
+    sprite: _Flagship/Clothing/Ears/Headsets/bridgecommand.rsi
+  - type: Clothing
+    sprite: _Flagship/Clothing/Ears/Headsets/bridgecommand.rsi
+
+- type: entity
+  parent: ClothingHeadsetAltFlag
+  id: ClothingHeadsetAltBridgeEnsign
+  name: Bridge Ensign's Headset
+  description: Headset used by Bridge Ensigns.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyBridgeCommand
+  - type: Sprite
+    sprite: _Flagship/Clothing/Ears/Headsets/bridgecommand.rsi
+  - type: Clothing
+    sprite: _Flagship/Clothing/Ears/Headsets/bridgecommand.rsi
+
+# Military Police
+
+# Science
+
+# Supply
+
+# Medical
+
+# Service

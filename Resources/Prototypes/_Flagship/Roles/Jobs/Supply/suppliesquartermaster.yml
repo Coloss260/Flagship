@@ -1,0 +1,33 @@
+- type: job
+  id: SuppliesQuartermaster
+  name: job-name-suppliesquartermaster
+  description: job-description-suppliesquartermaster
+  playTimeTracker: JobSuppliesQuartermaster
+  setPreference: true
+  supervisors: job-supervisors-to
+  requireAdminNotify: true
+  requirements:
+    - !type:DepartmentTimeRequirement
+      department: Supply
+      time: 54000 # 15 hours
+  displayWeight: 100
+  startingGear: SuppliesQuartermasterGear
+  icon: "JobIconSuppliesQuartermaster"
+  access:
+  - Captain
+  accessGroups:
+  - Command
+  - AllAccess
+
+- type: startingGear
+  id: SuppliesQuartermasterGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitCaptain
+    shoes: ClothingShoesBootsCombatFilled
+    head: ClothingHeadHatBeretCommand
+    eyes: ClothingEyesGlassesCommand
+    gloves: ClothingHandsGlovesCaptain
+    back: ClothingBackpackSatchelLeather
+    id: CommandingOfficerPDA
+    ears: ClothingHeadsetCommandingOfficer
+    belt: ClothingBeltHolster

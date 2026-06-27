@@ -1,0 +1,32 @@
+- type: job
+  id: SuppliesCrewman
+  name: job-name-suppliescrewman
+  description: job-description-suppliescrewman
+  playTimeTracker: JobSuppliesCrewman
+  setPreference: true
+  supervisors: job-supervisors-sq
+  requirements:
+  - !type:DepartmentTimeRequirement
+    department: Supply
+    time: 54000 # 15 hours
+  displayWeight: 60
+  startingGear: SuppliesCrewmanGear
+  icon: "JobIconSuppliesCrewman"
+  access:
+  - Captain
+  accessGroups:
+  - Command
+  - AllAccess
+
+- type: startingGear
+  id: SuppliesCrewmanGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitCaptain
+    shoes: ClothingShoesBootsCombatFilled
+    head: ClothingHeadHatBeretCommand
+    eyes: ClothingEyesGlassesCommand
+    gloves: ClothingHandsGlovesCaptain
+    back: ClothingBackpackSatchelLeather
+    id: CommandingOfficerPDA
+    ears: ClothingHeadsetCommandingOfficer
+    belt: ClothingBeltHolster

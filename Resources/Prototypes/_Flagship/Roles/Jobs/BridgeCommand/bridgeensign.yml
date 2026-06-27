@@ -13,7 +13,7 @@
       department: Medical
       time: 54000 # 15 hours
     - !type:DepartmentTimeRequirement
-      department: Security
+      department: MilitaryPolice
       time: 54000 # 15 hours
 
   displayWeight: 40
@@ -33,11 +33,14 @@
 - type: startingGear
   id: BridgeEnsignGear
   equipment:
-    shoes: ClothingShoesBootsLaceup
-    eyes: ClothingEyesGlassesSunglasses
-    gloves: ClothingHandsGlovesCaptain
-    id: CaptainPDA
-    ears: ClothingHeadsetCommandingOfficer
+    jumpsuit: ClothingUniformJumpsuitBridgeCommand
+    shoes: ClothingShoesBootsJack
+    head: ClothingHeadHatBridgeEnsignSoft
+    eyes: ClothingEyesGlassesCommand
+    gloves: ClothingHandsGlovesColorWhite
+    back: ClothingBackpackSatchelBridgeCommand
+    id: BridgeEnsignPDA
+    ears: ClothingHeadsetAltBridgeEnsign
   storage:
     back:
     - Flash

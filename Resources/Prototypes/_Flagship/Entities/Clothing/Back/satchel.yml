@@ -1,0 +1,8 @@
+- type: entity
+  parent: ClothingBackpackSatchel
+  id: ClothingBackpackSatchelBridgeCommand
+  name: Bridge Command Satchel
+  description: A trend-setting satchel from a bygone era.
+  components:
+  - type: Sprite
+    sprite: _Flagship/Clothing/Back/Satchels/bridgecommand.rsi

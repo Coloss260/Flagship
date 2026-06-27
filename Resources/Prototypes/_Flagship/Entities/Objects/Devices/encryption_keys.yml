@@ -1,3 +1,22 @@
+# Departments Keys
+- type: entity
+  parent: EncryptionKey
+  id: EncryptionKeyShip
+  name: Ship encryption key
+  description: An encryption key for the ship communications channel.
+  components:
+  - type: EncryptionKey
+    channels:
+    - Common
+    defaultChannel: Common
+  - type: Item
+    sprite: Objects/Devices/encryption_keys.rsi
+  - type: Sprite
+    sprite: Objects/Devices/encryption_keys.rsi
+    layers:
+    - state: crypt_gray
+    - state: common_label
+
 - type: entity
   parent: EncryptionKey
   id: EncryptionKeyMaintenance
@@ -7,8 +26,8 @@
   - type: EncryptionKey
     channels:
     - Common
-    - Maintenance
-    defaultChannel: Maintenance
+    - Engineering
+    defaultChannel: Engineering
   - type: Item
     sprite: Objects/Devices/encryption_keys.rsi
   - type: Sprite
@@ -19,7 +38,7 @@
 
 - type: entity
   parent: EncryptionKey
-  id: EncryptionKeyService
+  id: EncryptionKeyFlagService
   name: Service encryption key
   description: An encryption key for the service communications channel.
   components:
@@ -44,16 +63,16 @@
   components:
   - type: EncryptionKey
     channels:
-    - BridgeCommand
+    - Command
     - Common
-    defaultChannel: BridgeCommand
+    defaultChannel: Command
   - type: Item
-    sprite: Objects/Devices/encryption_keys.rsi
+    sprite: _Flagship/Objects/Devices/encryption_keys.rsi
   - type: Sprite
-    sprite: Objects/Devices/encryption_keys.rsi
+    sprite: _Flagship/Objects/Devices/encryption_keys.rsi
     layers:
-    - state: crypt_gold
-    - state: nano_label
+    - state: crypt_darkblue
+    - state: bridgecommand_label
 
 - type: entity
   parent: EncryptionKey
@@ -95,9 +114,15 @@
 
 - type: entity
   parent: EncryptionKey
+<<<<<<< HEAD
   id: EncryptionKeySecurity
   name: Security encryption key
   description: An encryption key for the security communications channel.
+=======
+  id: EncryptionKeyMilitaryPolice
+  name: Military Police encryption key
+  description: An encryption key for the Military Police communications channel.
+>>>>>>> 45de18a59757f707840a024e2c0fcd1bc192e4c9
   components:
   - type: EncryptionKey
     channels:
@@ -114,7 +139,7 @@
 
 - type: entity
   parent: EncryptionKey
-  id: EncryptionKeyScience
+  id: EncryptionKeyFlagScience
   name: Science encryption key
   description: An encryption key for the science communications channel.
   components:
@@ -133,8 +158,8 @@
 
 - type: entity
   parent: EncryptionKey
-  id: EncryptionKeySupply
-  name: Supply encryption key
+  id: EncryptionKeySupplies
+  name: Supplies encryption key
   description: An encryption key for the supplies communications channel.
   components:
   - type: EncryptionKey
@@ -152,7 +177,7 @@
 
 - type: entity
   parent: EncryptionKey
-  id: EncryptionKeyMedical
+  id: EncryptionKeyFlagMedical
   name: Medical encryption key
   description: An encryption key for the medical communications channel.
   components:
@@ -168,3 +193,131 @@
     layers:
     - state: crypt_gray
     - state: med_label
+
+# Bridge Command keys
+- type: entity
+  parent: EncryptionKey
+  id: EncryptionKeyCommandingOfficer
+  name: Commanding Officer's encryption key
+  description: An encryption key used only by the Commanding Officer of the ship.
+  components:
+  - type: EncryptionKey
+    channels:
+    - Command
+    - Tactical
+    - Operations
+    - Security
+    - Supply
+    - Engineering
+    - Medical
+    - Science
+    - Service
+    - Common
+    defaultChannel: Command
+  - type: Item
+    sprite: _Flagship/Objects/Devices/encryption_keys.rsi
+  - type: Sprite
+    sprite: _Flagship/Objects/Devices/encryption_keys.rsi
+    layers:
+    - state: crypt_darkblue
+    - state: commandingofficer_label
+
+- type: entity
+  parent: EncryptionKey
+  id: EncryptionKeyExecutiveOfficer
+  name: Executive Officer's encryption key
+  description: An encryption key used only by the Executive Officer of the ship.
+  components:
+  - type: EncryptionKey
+    channels:
+    - Command
+    - Tactical
+    - Operations
+    - Security
+    - Supply
+    - Engineering
+    - Medical
+    - Science
+    - Service
+    - Common
+    defaultChannel: Command
+  - type: Item
+    sprite: _Flagship/Objects/Devices/encryption_keys.rsi
+  - type: Sprite
+    sprite: _Flagship/Objects/Devices/encryption_keys.rsi
+    layers:
+    - state: crypt_darkblue
+    - state: executiveofficer_label
+
+- type: entity
+  parent: EncryptionKey
+  id: EncryptionKeyTacticalOfficer
+  name: Tactical Officer's encryption key
+  description: An encryption key used only by the Tactical Officer of the ship.
+  components:
+  - type: EncryptionKey
+    channels:
+    - Command
+    - Tactical
+    - Security
+    - Supply
+    - Engineering
+    - Common
+    defaultChannel: Command
+  - type: Item
+    sprite: _Flagship/Objects/Devices/encryption_keys.rsi
+  - type: Sprite
+    sprite: _Flagship/Objects/Devices/encryption_keys.rsi
+    layers:
+    - state: crypt_darkblue
+    - state: tacticalofficer_label
+
+- type: entity
+  parent: EncryptionKey
+  id: EncryptionKeyOperationsOfficer
+  name: Operations Officer's encryption key
+  description: An encryption key used only by the Operations Officer of the ship.
+  components:
+  - type: EncryptionKey
+    channels:
+    - Command
+    - Operations
+    - Medical
+    - Science
+    - Service
+    - Common
+    defaultChannel: Command
+  - type: Item
+    sprite: _Flagship/Objects/Devices/encryption_keys.rsi
+  - type: Sprite
+    sprite: _Flagship/Objects/Devices/encryption_keys.rsi
+    layers:
+    - state: crypt_darkblue
+    - state: operationsofficer_label
+
+- type: entity
+  parent: EncryptionKey
+  id: EncryptionKeyCommunicationsOfficer
+  name: Communications Officer's encryption key
+  description: An encryption key used only by the Communications Officer of the ship.
+  components:
+  - type: EncryptionKey
+    channels:
+    - Command
+    - Tactical
+    - Operations
+    - Security
+    - Supply
+    - Engineering
+    - Medical
+    - Science
+    - Service
+    - Common
+    defaultChannel: Command
+  - type: Item
+    sprite: _Flagship/Objects/Devices/encryption_keys.rsi
+  - type: Sprite
+    sprite: _Flagship/Objects/Devices/encryption_keys.rsi
+    layers:
+    - state: crypt_darkblue
+    - state: communicationsofficer_label

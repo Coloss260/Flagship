@@ -1,0 +1,224 @@
+- type: entity
+  parent: Clothing
+  id: IDCardFlagship
+  name: identification card
+  description: A card necessary to access various areas aboard the station.
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: _Flagship/Objects/Misc/id_cards.rsi
+  - type: Clothing
+    slots:
+    - idcard
+    sprite: _Flagship/Objects/Misc/id_cards.rsi
+  - type: Item
+    size: Small
+    heldPrefix: default
+    storedRotation: -90
+  - type: Access
+  - type: IdCard
+  - type: StationRecordKeyStorage
+  - type: Tag
+    tags:
+    - DoorBumpOpener
+    - WhitelistChameleon
+    - WhitelistChameleonIdCard
+  - type: StealTarget
+    stealGroup: IDCard
+
+- type: entity
+  parent: [IDCardFlagship, BaseGrandTheftContraband]
+  id: CommandingOfficerIDCard
+  name: Commanding Officer's ID Card
+  components:
+  - type: Sprite
+    layers:
+    - state: black
+    - state: stripe_top
+      color: "#155182"
+    - state: stripe_bottom
+      color: "#144167"
+    - sprite: _Flagship/Interface/Misc/job_icons.rsi
+      offset: -0.09375, 0.0625
+      state: CommandingOfficer
+  - type: Item
+    heldPrefix: black
+  - type: PresetIdCard
+    job: CommandingOfficer
+  - type: Tag
+    tags:
+    - DoorBumpOpener
+    - WhitelistChameleon
+    - WhitelistChameleonIdCard
+    - HighRiskItem
+  - type: StealTarget
+    stealGroup: CaptainIDCard
+
+- type: entity
+  parent: [IDCardFlagship, BaseGrandTheftContraband]
+  id: ExecutiveOfficerIDCard
+  name: Executive Officer's ID Card
+  components:
+  - type: Sprite
+    layers:
+    - state: blue
+    - state: stripe_top
+      color: "#1b67a5"
+    - state: stripe_bottom
+      color: "#0e4069"
+    - sprite: /Textures/_Flagship/Interface/Misc/job_icons.rsi
+      offset: -0.09375, 0.0625
+      state: ExecutiveOfficer
+  - type: Item
+    heldPrefix: blue
+  - type: PresetIdCard
+    job: ExecutiveOfficer
+  - type: Tag
+    tags:
+    - DoorBumpOpener
+    - WhitelistChameleon
+    - WhitelistChameleonIdCard
+    - HighRiskItem
+  - type: StealTarget
+    stealGroup: CaptainIDCard
+
+- type: entity
+  parent: [IDCardFlagship, BaseGrandTheftContraband]
+  id: TacticalOfficerIDCard
+  name: Tactical Officer's ID Card
+  components:
+  - type: Sprite
+    layers:
+    - state: blue
+    - state: stripe_top
+      color: "#1b67a5"
+    - state: stripe_bottom
+      color: "#0e4069"
+    - sprite: /Textures/_Flagship/Interface/Misc/job_icons.rsi
+      offset: -0.09375, 0.0625
+      state: TacticalOfficer
+  - type: Item
+    heldPrefix: blue
+  - type: PresetIdCard
+    job: TacticalOfficer
+  - type: Tag
+    tags:
+    - DoorBumpOpener
+    - WhitelistChameleon
+    - WhitelistChameleonIdCard
+    - HighRiskItem
+  - type: StealTarget
+    stealGroup: CaptainIDCard
+
+- type: entity
+  parent: [IDCardFlagship, BaseGrandTheftContraband]
+  id: OperationsOfficerIDCard
+  name: Operations Officer's ID Card
+  components:
+  - type: Sprite
+    layers:
+    - state: blue
+    - state: stripe_top
+      color: "#1b67a5"
+    - state: stripe_bottom
+      color: "#0e4069"
+    - sprite: /Textures/_Flagship/Interface/Misc/job_icons.rsi
+      offset: -0.09375, 0.0625
+      state: OperationsOfficer
+  - type: Item
+    heldPrefix: blue
+  - type: PresetIdCard
+    job: OperationsOfficer
+  - type: Tag
+    tags:
+    - DoorBumpOpener
+    - WhitelistChameleon
+    - WhitelistChameleonIdCard
+    - HighRiskItem
+  - type: StealTarget
+    stealGroup: CaptainIDCard
+
+- type: entity
+  parent: [IDCardFlagship, BaseGrandTheftContraband]
+  id: CommunicationsOfficerIDCard
+  name: Communications Officer's ID Card
+  components:
+  - type: Sprite
+    layers:
+    - state: blue
+    - state: stripe_top
+      color: "#1b67a5"
+    - state: stripe_bottom
+      color: "#0e4069"
+    - sprite: /Textures/_Flagship/Interface/Misc/job_icons.rsi
+      offset: -0.09375, 0.0625
+      state: CommunicationsOfficer
+  - type: Item
+    heldPrefix: blue
+  - type: PresetIdCard
+    job: CommunicationsOfficer
+  - type: Tag
+    tags:
+    - DoorBumpOpener
+    - WhitelistChameleon
+    - WhitelistChameleonIdCard
+    - HighRiskItem
+  - type: StealTarget
+    stealGroup: CaptainIDCard
+
+- type: entity
+  parent: [IDCardFlagship, BaseGrandTheftContraband]
+  id: FlightControlOfficerIDCard
+  name: Flight Control Officer's ID Card
+  components:
+  - type: Sprite
+    layers:
+    - state: blue
+    - state: stripe_top
+      color: "#1b67a5"
+    - state: stripe_bottom
+      color: "#0e4069"
+    - sprite: /Textures/_Flagship/Interface/Misc/job_icons.rsi
+      offset: -0.09375, 0.0625
+      state: FlightControlOfficer
+  - type: Item
+    heldPrefix: blue
+  - type: PresetIdCard
+    job: FlightControlOfficer
+  - type: Tag
+    tags:
+    - DoorBumpOpener
+    - WhitelistChameleon
+    - WhitelistChameleonIdCard
+    - HighRiskItem
+  - type: StealTarget
+    stealGroup: CaptainIDCard
+
+- type: entity
+  parent: [IDCardFlagship, BaseGrandTheftContraband]
+  id: BridgeEnsignIDCard
+  name: Bridge Ensign's ID Card
+  components:
+  - type: Sprite
+    layers:
+    - state: blue
+    - state: stripe_top
+      color: "#1b67a5"
+    - state: stripe_bottom
+      color: "#0e4069"
+    - sprite: /Textures/_Flagship/Interface/Misc/job_icons.rsi
+      offset: -0.09375, 0.0625
+      state: BridgeEnsign
+  - type: Item
+    heldPrefix: blue
+  - type: PresetIdCard
+    job: BridgeEnsign
+  - type: Tag
+    tags:
+    - DoorBumpOpener
+    - WhitelistChameleon
+    - WhitelistChameleonIdCard
+    - HighRiskItem
+  - type: StealTarget
+    stealGroup: CaptainIDCard
+

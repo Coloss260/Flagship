@@ -14,7 +14,11 @@
       department: Medical
       time: 54000 # 15 hours
     - !type:DepartmentTimeRequirement
+<<<<<<< HEAD
       department: Security
+=======
+      department: MilitaryPolice
+>>>>>>> 45de18a59757f707840a024e2c0fcd1bc192e4c9
       time: 54000 # 15 hours
   displayWeight: 60
   startingGear: CommunicationsOfficerGear
@@ -33,11 +37,14 @@
 - type: startingGear
   id: CommunicationsOfficerGear
   equipment:
-    shoes: ClothingShoesBootsLaceup
-    eyes: ClothingEyesGlassesSunglasses
-    gloves: ClothingHandsGlovesCaptain
-    id: CaptainPDA
-    ears: ClothingHeadsetCommandingOfficer
+    jumpsuit: ClothingUniformJumpsuitBridgeCommand
+    shoes: ClothingShoesBootsJack
+    head: ClothingHeadHatBeretNavy
+    eyes: ClothingEyesGlassesCommand
+    gloves: ClothingHandsGlovesNavyOfficer
+    back: ClothingBackpackSatchelBridgeCommand
+    id: CommunicationsOfficerPDA
+    ears: ClothingHeadsetAltCommunicationsOfficer
   storage:
     back:
     - Flash

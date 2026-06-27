@@ -1,7 +1,7 @@
 - type: job
   id: MaintenanceTechnician
-  name: job-name-mainttech
-  description: job-description-mainttech
+  name: job-name-maintenancetechnician
+  description: job-description-maintenancetechnician
   playTimeTracker: JobMaintenanceTechnician
   setPreference: true
   requirements:
@@ -9,7 +9,7 @@
       time: 10800
   displayWeight: 80
   startingGear: MaintenanceTechnicianGear
-  icon: "JobIconStationEngineer"
+  icon: "JobIconMaintenanceTechnician"
   supervisors: job-supervisors-com
   accessGroups:
   - Command

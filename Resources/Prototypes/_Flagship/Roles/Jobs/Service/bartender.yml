@@ -1,0 +1,41 @@
+- type: job
+  id: FlagBartender
+  name: job-name-flag-bartender
+  description: job-description-flag-bartender
+  playTimeTracker: JobFlagBartender
+  requirements:
+    - !type:DepartmentTimeRequirement
+      department: Service
+      time: 0.5h
+  startingGear: FlagBartenderGear
+  icon: "JobIconFlagBartender"
+  supervisors: job-supervisors-oo
+  access:
+  - Service
+  - Maintenance
+  - Bar
+  extendedAccess:
+  - Kitchen
+  - Hydroponics
+
+- type: startingGear
+  id: FlagBartenderGear
+  equipment:
+    shoes: ClothingShoesColorBlack
+    id: BartenderPDA
+    ears: ClothingHeadsetService
+  #storage:
+    #back:
+    #- Stuff
+
+- type: chameleonOutfit
+  id: FlagBartenderChameleonOutfit
+  job: FlagBartender
+  equipment:
+    head: ClothingHeadHatTophat
+    eyes: ClothingEyesGlassesSunglasses
+    mask: ClothingMaskBreath
+    neck: ClothingNeckScarfStripedBlack
+    outerClothing: ClothingOuterArmorBasicSlim
+    gloves: ClothingHandsGlovesColorBlack
+

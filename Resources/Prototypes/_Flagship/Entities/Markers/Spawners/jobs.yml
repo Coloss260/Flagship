@@ -89,47 +89,147 @@
   - type: SpawnPoint
     job_id: MaintenanceIntern
 
-# Security
+# Military Police
 - type: entity
-  id: SpawnPointSecurityChief
+  id: SpawnPointMPChief
   parent: SpawnPointJobBase
-  name: Security Chief
+  name: Military Police Chief
   components:
   - type: SpawnPoint
-    job_id: SecurityChief
+    job_id: MPChief
 
 - type: entity
-  id: SpawnPointSecurityMedic
+  id: SpawnPointMPMedic
   parent: SpawnPointJobBase
-  name: Security Medic
+  name: Military Police Medic
   components:
   - type: SpawnPoint
-    job_id: SecurityMedic
+    job_id: MPMedic
 
 - type: entity
-  id: SpawnPointSecurityOfficer
+  id: SpawnPointMPOfficer
   parent: SpawnPointJobBase
-  name: Security Officer
+  name: Military Police Officer
   components:
   - type: SpawnPoint
-    job_id: SecurityOfficer
+    job_id: MPOfficer
 
 - type: entity
-  id: SpawnPointSecurityTrainee
+  id: SpawnPointMPTrainee
   parent: SpawnPointJobBase
-  name: Security Trainee
+  name: Military Police Trainee
   components:
   - type: SpawnPoint
-    job_id: SecurityTrainee
+    job_id: MPTrainee
 
 # Science
+- type: entity
+  id: SpawnPointScienceSupervisor
+  parent: SpawnPointJobBase
+  name: Science Supervisor
+  components:
+  - type: SpawnPoint
+    job_id: ScienceSupervisor
+
+- type: entity
+  id: SpawnPointFlagRoboticist
+  parent: SpawnPointJobBase
+  name: Roboticist
+  components:
+  - type: SpawnPoint
+    job_id: FlagRoboticist
+
+- type: entity
+  id: SpawnPointFlagScientist
+  parent: SpawnPointJobBase
+  name: Scientist
+  components:
+  - type: SpawnPoint
+    job_id: FlagScientist
+
+- type: entity
+  id: SpawnPointFlagResearchAssistant
+  parent: SpawnPointJobBase
+  name: Research assistant
+  components:
+  - type: SpawnPoint
+    job_id: FlagResearchAssistant
+
 
 # Supply
+- type: entity
+  id: SpawnPointSuppliesQuartermaster
+  parent: SpawnPointJobBase
+  name: Supplies QuarterMaster
+  components:
+  - type: SpawnPoint
+    job_id: SuppliesQuartermaster
+
+- type: entity
+  id: SpawnPointArtillerySpecialist
+  parent: SpawnPointJobBase
+  name: Artillery Specialist
+  components:
+  - type: SpawnPoint
+    job_id: ArtillerySpecialist
+
+- type: entity
+  id: SpawnPointSuppliesCrewman
+  parent: SpawnPointJobBase
+  name: Supplies Crewman
+  components:
+  - type: SpawnPoint
+    job_id: SuppliesCrewman
 
 # Medical
+- type: entity
+  id: SpawnPointChiefOfMedical
+  parent: SpawnPointJobBase
+  name: Chief Of Medical
+  components:
+  - type: SpawnPoint
+    job_id: ChiefOfMedical
 
+- type: entity
+  id: SpawnPointFlagMedicalDoctor
+  parent: SpawnPointJobBase
+  name: Medical Doctor
+  components:
+  - type: SpawnPoint
+    job_id: FlagMedicalDoctor
+
+- type: entity
+  id: SpawnPointFlagChemist
+  parent: SpawnPointJobBase
+  name: Chemist
+  components:
+  - type: SpawnPoint
+    job_id: FlagChemist
+
+- type: entity
+  id: SpawnPointParamedicalSpecialist
+  parent: SpawnPointJobBase
+  name: Paramedical Specialist
+  components:
+  - type: SpawnPoint
+    job_id: ParamedicalSpecialist
+
+- type: entity
+  id: SpawnPointFlagMedicalIntern
+  parent: SpawnPointJobBase
+  name: Medical Intern
+  components:
+  - type: SpawnPoint
+    job_id: FlagMedicalIntern
 
 # Service
+- type: entity
+  id: SpawnPointFlagBartender
+  parent: SpawnPointPassenger
+  components:
+  - type: SpawnPoint
+    job_id: FlagBartender
+
 - type: entity
   id: SpawnPointCustodian
   parent: SpawnPointJanitor

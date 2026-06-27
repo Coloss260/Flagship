@@ -1,22 +1,22 @@
 - type: job
-  id: SecurityOfficer
-  name: job-name-security-officer
-  description: job-description-security-officer
-  playTimeTracker: JobSecurityOfficer
+  id: MPOfficer
+  name: job-name-mpofficer
+  description: job-description-mpofficer
+  playTimeTracker: JobMPOfficer
   setPreference: true
-  startingGear: SecurityOfficerGear
-  icon: "JobIconSecurityOfficer"
+  startingGear: MPOfficerGear
+  icon: "JobIconMPOfficer"
   supervisors: job-supervisors-sc
   requirements:
     - !type:DepartmentTimeRequirement
-      department: Security
+      department: MilitaryPolice
       time: 54000 # 15 hours
   displayWeight: 60
   accessGroups:
   - Command
 
 - type: startingGear
-  id: SecurityOfficerGear
+  id: MPOfficerGear
   equipment:
     shoes: ClothingShoesBootsJack
     id: HoSPDA

@@ -1,32 +1,4 @@
 - type: radioChannel
-  id: Common
-  name: chat-radio-common
-  keycode: ";"
-  frequency: 1459
-  color: "#999999"
-
-- type: radioChannel
-  id: Security
-  name: chat-radio-security
-  keycode: 's'
-  frequency: 1359
-  color: "#d10000"
-
-- type: radioChannel
-  id: Maintenance
-  name: chat-radio-maintenance
-  keycode: 'e'
-  frequency: 1357
-  color: "#fc9700"
-
-- type: radioChannel
-  id: BridgeCommand
-  name: chat-radio-bridge-command
-  keycode: 'c'
-  frequency: 1363
-  color: "#2b72ee"
-
-- type: radioChannel
   id: Tactical
   name: chat-radio-tactical
   keycode: 't'
@@ -38,11 +10,4 @@
   name: chat-radio-operations
   keycode: 'o'
   frequency: 1421
-  color: "#b45f06"
-
-- type: radioChannel
-  id: Supply
-  name: chat-radio-supply
-  keycode: 'u'
-  frequency: 1347
-  color: "#6aa84f"
+  color: "#9c5000"

@@ -14,7 +14,7 @@
       department: Medical
       time: 54000 # 15 hours
     - !type:DepartmentTimeRequirement
-      department: Security
+      department: MilitaryPolice
       time: 54000 # 15 hours
   displayWeight: 90
   startingGear: ExecutiveOfficerGear
@@ -23,6 +23,7 @@
   - Captain
   accessGroups:
   - Command
+  - AllAccess
   special:
   - !type:AddImplantSpecial
      implants: [ MindShieldImplant ]
@@ -33,11 +34,14 @@
 - type: startingGear
   id: ExecutiveOfficerGear
   equipment:
-    shoes: ClothingShoesBootsLaceup
-    eyes: ClothingEyesGlassesSunglasses
-    gloves: ClothingHandsGlovesCaptain
-    id: CaptainPDA
-    ears: ClothingHeadsetCommandingOfficer
+    jumpsuit: ClothingUniformJumpsuitExecutiveOfficer
+    head: ClothingHeadHatBeretNavy
+    shoes: ClothingShoesBootsJack
+    eyes: ClothingEyesGlassesCommand
+    gloves: ClothingHandsGlovesNavyOfficer
+    back: ClothingBackpackSatchelBridgeCommand
+    id: ExecutiveOfficerPDA
+    ears: ClothingHeadsetAltExecutiveOfficer
   storage:
     back:
     - Flash

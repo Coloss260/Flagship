@@ -1,0 +1,15 @@
+- type: entity
+  parent: ClothingHeadHeadHatBaseFlippable
+  id: ClothingHeadHatBridgeEnsignSoft
+  name: Bridge Ensign cap
+  description: A baseball cap in command's distinctive shade of blue.
+  components:
+  - type: Sprite
+    sprite: _Flagship/Clothing/Head/Soft/bridgeensigncap.rsi
+  - type: Clothing
+    sprite: _Flagship/Clothing/Head/Soft/bridgeensigncap.rsi
+
+- type: entity
+  parent: [ ClothingHeadHeadHatBaseFlipped, ClothingHeadHatBridgeEnsignSoft ]
+  id: ClothingHeadHatBridgeEnsignSoftFlipped
+  name: Bridge Ensign cap

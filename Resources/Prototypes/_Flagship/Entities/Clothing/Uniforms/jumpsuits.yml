@@ -1,0 +1,54 @@
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitCommandingOfficer
+  name: Commanding Officer's Uniform
+  description: A stylish yet simple uniform made specifically to be worn by Commanding Officers of Nanotrasen's Naval Corps.
+  components:
+  - type: Sprite
+    sprite: _Flagship/Clothing/Uniforms/Jumpsuit/commandingofficer.rsi
+  - type: Clothing
+    sprite: _Flagship/Clothing/Uniforms/Jumpsuit/commandingofficer.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitExecutiveOfficer
+  name: Executive Officer's Uniform
+  description: A stylish yet simple uniform made specifically to be worn by Executive Officers of Nanotrasen's Naval Corps.
+  components:
+  - type: Sprite
+    sprite: _Flagship/Clothing/Uniforms/Jumpsuit/executiveofficer.rsi
+  - type: Clothing
+    sprite: _Flagship/Clothing/Uniforms/Jumpsuit/executiveofficer.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitTacticalOfficer
+  name: Tactical Officer's Uniform
+  description: A stylish yet simple uniform made specifically to be worn by Tactical Officers of Nanotrasen's Naval Corps.
+  components:
+  - type: Sprite
+    sprite: _Flagship/Clothing/Uniforms/Jumpsuit/tactical.rsi
+  - type: Clothing
+    sprite: _Flagship/Clothing/Uniforms/Jumpsuit/tactical.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitOperationsOfficer
+  name: Operations Officer's Uniform
+  description: A stylish yet simple uniform made specifically to be worn by Operations Officers of Nanotrasen's Naval Corps.
+  components:
+  - type: Sprite
+    sprite: _Flagship/Clothing/Uniforms/Jumpsuit/operations.rsi
+  - type: Clothing
+    sprite: _Flagship/Clothing/Uniforms/Jumpsuit/operations.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitBridgeCommand
+  name: Bridge Officer's Uniform
+  description: A stylish yet simple uniform made specifically to be worn by Bridge Officers of Nanotrasen's Naval Corps.
+  components:
+  - type: Sprite
+    sprite: _Flagship/Clothing/Uniforms/Jumpsuit/bridgecommand.rsi
+  - type: Clothing
+    sprite: _Flagship/Clothing/Uniforms/Jumpsuit/bridgecommand.rsi

@@ -1,22 +1,22 @@
 - type: job
-  id: ResearchAssistant
-  name: job-name-research-assistant
-  description: job-description-research-assistant
-  playTimeTracker: JobResearchAssistant
+  id: FlagResearchAssistant
+  name: job-name-flag-research-assistant
+  description: job-description-flag-research-assistant
+  playTimeTracker: JobFlagResearchAssistant
   setPreference: true
-  startingGear: ResearchAssistantGear
-  icon: "JobIconResearchAssistant"
+  startingGear: FlagResearchAssistantGear
+  icon: "JobIconFlagResearchAssistant"
   supervisors: job-supervisors-ss
   requirements:
     - !type:DepartmentTimeRequirement
-      department: Security
+      department: FlagScience
       time: 54000 # 15 hours
   displayWeight: 40
   accessGroups:
-  - Science
+  - Research
 
 - type: startingGear
-  id: ResearchAssistantGear
+  id: FlagResearchAssistantGear
   equipment:
     shoes: ClothingShoesColorWhite
     id: ResearchAssistantPDA

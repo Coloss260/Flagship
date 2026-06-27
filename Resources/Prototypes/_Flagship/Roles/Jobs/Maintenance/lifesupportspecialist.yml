@@ -1,7 +1,7 @@
 - type: job
   id: LifeSupportSpecialist
-  name: job-name-lifesupportspec
-  description: job-description-lifesupportspec
+  name: job-name-lifesupportspecialist
+  description: job-description-lifesupportspecialist
   playTimeTracker: JobLifeSupportSpecialist
   setPreference: true
   requirements:
@@ -9,7 +9,7 @@
       time: 10800
   displayWeight: 90
   startingGear: LifeSupportSpecialistGear
-  icon: "JobIconAtmosphericTechnician"
+  icon: "JobIconLifeSupportSpecialist"
   supervisors: job-supervisors-com
   accessGroups:
   - Command

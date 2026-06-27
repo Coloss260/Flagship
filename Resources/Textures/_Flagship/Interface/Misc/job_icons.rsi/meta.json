@@ -1,7 +1,11 @@
 {
     "version": 1,
     "license": "CC-BY-SA-3.0",
+<<<<<<< HEAD
     "copyright": "Color swapped from existing sprites content by the original Space Station 14 developpers at https://github.com/space-wizards/space-station-14",
+=======
+    "copyright": "Taken from https://github.com/vgstation-coders/vgstation13/blob/e71d6c4fba5a51f99b81c295dcaec4fc2f58fb19/icons/mob/screen1.dmi | Mercenary and Pilot icons made by erhardsteinhauer (discord). Pirate icons by _starch_ (discord).",
+>>>>>>> 45de18a59757f707840a024e2c0fcd1bc192e4c9
 
     "size": {
         "x": 8,
@@ -9,6 +13,7 @@
     },
     "states": [
         {
+<<<<<<< HEAD
             "name": "CommandingOfficer"
         },
         {
@@ -28,6 +33,102 @@
         },
         {
             "name": "BridgeEnsign"
+=======
+            "name": "ArtillerySpecialist"
+        },
+        {
+            "name": "Bartender"
+        },
+        {
+            "name": "BridgeEnsign"
+        },
+        {
+            "name": "Chemist"
+        },
+        {
+            "name": "ChiefOfMaintenance"
+        },
+        {
+            "name": "ChiefOfMedical"
+        },
+        {
+            "name": "CommandingOfficer"
+        },
+        {
+            "name": "CommunicationsOfficer"
+        },
+        {
+            "name": "Custodian"
+        },
+        {
+            "name": "ExecutiveOfficer"
+        },
+        {
+            "name": "FlightControlOfficer"
+        },
+        {
+            "name": "HydroponicsBiologist"
+        },
+        {
+            "name": "LifeSupportSpecialist"
+        },
+        {
+            "name": "MaintenanceIntern"
+        },
+        {
+            "name": "MaintenanceTechnician"
+        },
+        {
+            "name": "MedicalDoctor"
+        },
+        {
+            "name": "MedicalIntern"
+        },
+        {
+            "name": "MessChef"
+        },
+        {
+            "name": "MPChief"
+        },
+        {
+            "name": "MPMedic"
+        },
+        {
+            "name": "MPOfficer"
+        },
+        {
+            "name": "MPTrainee"
+        },
+        {
+            "name": "OffDutyCrew"
+        },
+        {
+            "name": "OperationsOfficer"
+        },
+        {
+            "name": "ParamedicalSpecialist"
+        },
+        {
+            "name": "ResearchAssistant"
+        },
+        {
+            "name": "Roboticist"
+        },
+        {
+            "name": "ScienceSupervisor"
+        },
+        {
+            "name": "Scientist"
+        },
+        {
+            "name": "SuppliesCrewman"
+        },
+        {
+            "name": "SuppliesQuartermaster"
+        },
+        {
+            "name": "TacticalOfficer"
+>>>>>>> 45de18a59757f707840a024e2c0fcd1bc192e4c9
         }
     ]
 }

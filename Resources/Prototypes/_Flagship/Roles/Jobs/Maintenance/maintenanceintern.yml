@@ -1,7 +1,7 @@
 - type: job
   id: MaintenanceIntern
-  name: job-name-maintintern
-  description: job-description-maintintern
+  name: job-name-maintenanceintern
+  description: job-description-maintenanceintern
   playTimeTracker: JobMaintenanceIntern
   requirements:
 #    - !type:DepartmentTimeRequirement
@@ -12,7 +12,7 @@
       time: 10800 #
   displayWeight: 70
   startingGear: MaintenanceInternGear
-  icon: "JobIconTechnicalAssistant"
+  icon: "JobIconMaintenanceIntern"
   supervisors: job-supervisors-com
   accessGroups:
   - Command

@@ -9,11 +9,11 @@
   supervisors: job-supervisors-oo
   requirements:
     - !type:DepartmentTimeRequirement
-      department: Security
+      department: FlagScience
       time: 54000 # 15 hours
   displayWeight: 100
   accessGroups:
-  - Science
+  - Research
 
 - type: startingGear
   id: ScienceSupervisorGear

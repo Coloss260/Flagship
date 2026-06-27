@@ -10,6 +10,7 @@
   <Import Project="../MSBuild/Content.props" />
   <ItemGroup>
     <ProjectReference Include="../Content.FlagShip.Shared/Content.FlagShip.Shared.csproj" />
+    <ProjectReference Include="../Content.Client/Content.Client.csproj" />
   </ItemGroup>
 
   <Import Project="../RobustToolbox/Imports/Client.props" />

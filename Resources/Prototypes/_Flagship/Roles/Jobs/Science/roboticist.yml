@@ -1,22 +1,22 @@
 - type: job
-  id: Roboticist
-  name: job-name-roboticist
-  description: job-description-roboticist
-  playTimeTracker: JobRoboticist
+  id: FlagRoboticist
+  name: job-name-flag-roboticist
+  description: job-description-flag-roboticist
+  playTimeTracker: JobFlagRoboticist
   setPreference: true
-  startingGear: RoboticistGear
-  icon: "JobIconRoboticist"
+  startingGear: FlagRoboticistGear
+  icon: "JobIconFlagRoboticist"
   supervisors: job-supervisors-ss
   requirements:
     - !type:DepartmentTimeRequirement
-      department: Security
+      department: FlagScience
       time: 54000 # 15 hours
   displayWeight: 60
   accessGroups:
-  - Science
+  - Research
 
 - type: startingGear
-  id: RoboticistGear
+  id: FlagRoboticistGear
   equipment:
     shoes: ClothingShoesBootsJack
     id: HoSPDA

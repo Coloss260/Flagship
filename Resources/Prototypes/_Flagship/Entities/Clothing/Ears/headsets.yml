@@ -1,29 +1,139 @@
-# Bridge Command
 - type: entity
-  parent: ClothingHeadset
-  id: ClothingHeadsetCommandingOfficer
-  name: commanding officer headset
-  description: Headset used by commanding officers.
+  abstract: true
+  parent: Clothing
+  id: ClothingHeadsetFlag
+  name: headset
+  description: An updated, modular intercom that fits over the head. Takes encryption keys.
   components:
+  - type: ContainerContainer
+    containers:
+      key_slots: !type:Container
   - type: ContainerFill
     containers:
       key_slots:
       - EncryptionKeyCommon
-      - EncryptionKeyMaintenance
-      - EncryptionKeyService
-      - EncryptionKeyBridgeCommand
-      - EncryptionKeyTactical
-      - EncryptionKeyOperations
-      - EncryptionKeySecurity
-      - EncryptionKeyScience
-      - EncryptionKeyMedical
-      - EncryptionKeySupply
+  - type: Headset
+  - type: EncryptionKeyHolder
+    keySlots: 4
   - type: Sprite
-    sprite: Clothing/Ears/Headsets/command.rsi
+    state: icon
+  - type: Item
+    size: Small
   - type: Clothing
-    sprite: Clothing/Ears/Headsets/command.rsi
+    slots:
+    - ears
+    sprite: Clothing/Ears/Headsets/base.rsi
+  - type: GuideHelp
+    guides:
+    - Radio
 
-# Security
+# Bridge Command
+- type: entity
+  parent: ClothingHeadsetFlag
+  id: ClothingHeadsetCommandingOfficer
+  name: Commanding Officer's Headset
+  description: Headset used by Commanding Officers.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyCommandingOfficer
+  - type: Sprite
+    sprite: _Flagship/Clothing/Ears/Headsets/bridgecommand.rsi
+  - type: Clothing
+    sprite: _Flagship/Clothing/Ears/Headsets/bridgecommand.rsi
+
+- type: entity
+  parent: ClothingHeadsetFlag
+  id: ClothingHeadsetExecutiveOfficer
+  name: Executive Officer's Headset
+  description: Headset used by Executive Officers.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyExecutiveOfficer
+  - type: Sprite
+    sprite: _Flagship/Clothing/Ears/Headsets/bridgecommand.rsi
+  - type: Clothing
+    sprite: _Flagship/Clothing/Ears/Headsets/bridgecommand.rsi
+
+- type: entity
+  parent: ClothingHeadsetFlag
+  id: ClothingHeadsetTacticalOfficer
+  name: Tactical Officer's Headset
+  description: Headset used by Tactical Officers.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyTacticalOfficer
+  - type: Sprite
+    sprite: _Flagship/Clothing/Ears/Headsets/bridgecommand.rsi
+  - type: Clothing
+    sprite: _Flagship/Clothing/Ears/Headsets/bridgecommand.rsi
+
+- type: entity
+  parent: ClothingHeadsetFlag
+  id: ClothingHeadsetOperationsOfficer
+  name: Operations Officer's Headset
+  description: Headset used by Operations Officers.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyOperationsOfficer
+  - type: Sprite
+    sprite: _Flagship/Clothing/Ears/Headsets/bridgecommand.rsi
+  - type: Clothing
+    sprite: _Flagship/Clothing/Ears/Headsets/bridgecommand.rsi
+
+- type: entity
+  parent: ClothingHeadsetFlag
+  id: ClothingHeadsetCommunicationsOfficer
+  name: Communications Officer's Headset
+  description: Headset used by Communications Officers.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyCommunicationsOfficer
+  - type: Sprite
+    sprite: _Flagship/Clothing/Ears/Headsets/bridgecommand.rsi
+  - type: Clothing
+    sprite: _Flagship/Clothing/Ears/Headsets/bridgecommand.rsi
+
+- type: entity
+  parent: ClothingHeadsetFlag
+  id: ClothingHeadsetFlightControlOfficer
+  name: Flight Control Officer's Headset
+  description: Headset used by Flight Control Officers.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyBridgeCommand
+  - type: Sprite
+    sprite: _Flagship/Clothing/Ears/Headsets/bridgecommand.rsi
+  - type: Clothing
+    sprite: _Flagship/Clothing/Ears/Headsets/bridgecommand.rsi
+
+- type: entity
+  parent: ClothingHeadsetFlag
+  id: ClothingHeadsetBridgeEnsign
+  name: Bridge Ensign's Headset
+  description: Headset used by Bridge Ensigns.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyBridgeCommand
+  - type: Sprite
+    sprite: _Flagship/Clothing/Ears/Headsets/bridgecommand.rsi
+  - type: Clothing
+    sprite: _Flagship/Clothing/Ears/Headsets/bridgecommand.rsi
+
+# Military Police
 
 # Science
 

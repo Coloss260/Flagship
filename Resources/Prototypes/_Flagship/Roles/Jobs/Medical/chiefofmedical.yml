@@ -1,0 +1,49 @@
+- type: job
+  id: ChiefOfMedical
+  name: job-name-chiefofmedical
+  description: job-description-chiefofmedical
+  playTimeTracker: JobChiefOfMedical
+  setPreference: true
+  requirements:
+    - !type:DepartmentTimeRequirement
+      department: FlagMedical
+      time: 54000 #15 hrs
+  displayWeight: 100
+  startingGear: ChiefOfMedicalGear
+  icon: "JobIconChiefOfMedical"
+  supervisors: job-supervisors-oo
+  access:
+  - Medical
+  - Command
+  - Maintenance
+  - Chemistry
+  - ChiefMedicalOfficer
+  - Brig
+  - Cryogenics
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant ]
+  - !type:AddComponentSpecial
+    components:
+      - type: CommandStaff
+
+- type: startingGear
+  id: ChiefOfMedicalGear
+  equipment:
+    id: CMOPDA
+    ears: ClothingHeadsetCommandingOfficer
+  storage:
+    back:
+    - Flash
+
+- type: chameleonOutfit
+  id: ChiefOfMedicalChameleonOutfit
+  job: ChiefOfMedical
+  hasMindShield: true
+  equipment:
+    head: ClothingHeadHatBeretCmo
+    eyes: ClothingEyesHudMedical
+    mask: ClothingMaskSterile
+    neck: ClothingCloakCmo
+    outerClothing: ClothingOuterCoatLabCmo
+    gloves: ClothingHandsGlovesNitrile

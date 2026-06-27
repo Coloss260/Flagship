@@ -1,22 +1,22 @@
 - type: job
-  id: Scientist
-  name: job-name-scientist
-  description: job-description-scientist
-  playTimeTracker: JobScientist
+  id: FlagScientist
+  name: job-name-flag-scientist
+  description: job-description-flag-scientist
+  playTimeTracker: JobFlagScientist
   setPreference: true
-  startingGear: ScientistGear
-  icon: "JobIconScientist"
+  startingGear: FlagScientistGear
+  icon: "JobIconFlagScientist"
   supervisors: job-supervisors-ss
   requirements:
     - !type:DepartmentTimeRequirement
-      department: Security
+      department: FlagScience
       time: 54000 # 15 hours
   displayWeight: 80
   accessGroups:
-  - Science
+  - Research
 
 - type: startingGear
-  id: ScientistGear
+  id: FlagScientistGear
   equipment:
     ears: ClothingHeadsetScience
   #storage:
@@ -24,8 +24,8 @@
     #- Stuff
 
 - type: chameleonOutfit
-  id: ScientistChameleonOutfit
-  job: Scientist
+  id: FlagScientistChameleonOutfit
+  job: FlagScientist
   equipment:
     head: ClothingHeadBandSkull
     eyes: ClothingEyesGlassesCheapSunglasses

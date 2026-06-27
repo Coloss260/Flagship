@@ -1,15 +1,16 @@
 - type: job
   id: ChiefOfMaintenance
-  name: job-name-com
-  description: job-description-com
+  name: job-name-chiefofmaintenance
+  description: job-description-chiefofmaintenance
   playTimeTracker: JobChiefOfMaintenance
   setPreference: true
+  requireAdminNotify: true
   requirements:
     - !type:OverallPlaytimeRequirement
       time: 144000 #40 hrs
   displayWeight: 100
   startingGear: ChiefOfMaintenanceGear
-  icon: "JobIconChiefEngineer"
+  icon: "JobIconChiefOfMaintenance"
   supervisors: job-supervisors-to
   accessGroups:
   - Command

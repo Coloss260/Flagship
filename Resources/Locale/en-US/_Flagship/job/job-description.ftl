@@ -8,28 +8,37 @@ job-description-flightcontrolofficer = Steer the ship where and when the Command
 job-description-bridgeensign = Be an overall assistant to the Bridge Staff. Obey any orders given to you, and make sure any information coming to Command is heard by someone. Make coffee.
 
 # Maintenance
-job-description-com = Supervise power generation and air distribution with your team. Make sure the Operations Officer does not cry to the Commanding Officer.
-job-description-mainttech = Make sure the ship is powered and intact at all times. Activate or Deactivate the shield at the will of Command.
-job-description-lifesupportspec = Distribute breathable air and seal up breaches in the ship. Make some funny gas in a high-danger room when bored.
-job-description-maintintern = Learn the ropes of what it means to maintain a battle ship during a full on war.
+job-description-chiefofmaintenance = Supervise power generation and air distribution with your team. Make sure the Operations Officer does not cry to the Commanding Officer.
+job-description-maintenancetechnician = Make sure the ship is powered and intact at all times. Activate or Deactivate the shield at the will of Command.
+job-description-lifesupportspecialist = Distribute breathable air and seal up breaches in the ship. Make some funny gas in a high-danger room when bored.
+job-description-maintenanceintern = Learn the ropes of what it means to maintain a battle ship during a full on war.
 
-# Security
-job-description-security-chief = Keep your boot-wearing troops on patrol for any illegal activities and make sure the Armoury is safe from intruders.
-job-description-security-medic = Keep your bloodthirsty colleagues healthy and take serve as a field medic when a gunfight is happening.
-job-description-security-officer = Patrol the tight corridors of the ship and prevent any wrongdoers from disrupting the war effort. Occasionally stop a team of boarders from sabotaging critical systems.
-job-description-security-trainee = Learn the ropes and tactics of the Security Team while accompanying an Officer on patrol.
+# Military Police
+job-description-mpchief = Keep your boot-wearing troops on patrol for any illegal activities and make sure the Armoury is safe from intruders.
+job-description-mpmedic = Keep your bloodthirsty colleagues healthy and take serve as a field medic when a gunfight is happening.
+job-description-mpofficer = Patrol the tight corridors of the ship and prevent any wrongdoers from disrupting the war effort. Occasionally stop a team of boarders from sabotaging critical systems.
+job-description-mptrainee = Learn the ropes and tactics of the Security Team while accompanying an Officer on patrol.
 
 # Science
 job-description-science-supervisor = Oversee the Science department, and make sure that progress is made. Planify salvage expeditions for ancient technology.
-job-description-roboticist = Create an army of robots that work for the Flagship. Create powerful mechs for the glory of war.
-job-description-scientist = Be the embodiment of the pinnacle of progress in scientific research. Research powerful upgrades and tools for the Flagship.
-job-description-research-assistant = Be an academic student and learn the ropes of science in the worst place imaginable.
+job-description-flag-roboticist = Create an army of robots that work for the Flagship. Create powerful mechs for the glory of war.
+job-description-flag-scientist = Be the embodiment of the pinnacle of progress in scientific research. Research powerful upgrades and tools for the Flagship.
+job-description-flag-research-assistant = Be an academic student and learn the ropes of science in the worst place imaginable.
 
 # Supply
+job-description-suppliesquartermaster = Lead the supplies department, make sure guns are loaded, and that every department is stocked. Order your Artillery Specialists to their battle stations on Red Alert.
+job-description-artilleryspecialist = Produce or buy ammunations for the ship guns and PDCs, maintain and reload, then man when the enemy is here.
+job-description-suppliescrewman = Move materials around, buy them from the shop, and set up a manufacturing facility for extra firepower.
 
 # Medical
+job-description-chiefofmedical = WIP
+job-description-flag-medicaldoctor = WIP
+job-description-flag-chemist = WIP
+job-description-paramedicalspecialist = WIP
+job-description-flag-medicalintern = WIP
 
 # Service
+job-description-flag-bartender = Manage the bar and keep it lively, give out drinks, and listen to the crew's stories.
 job-description-hydroponics-biologist = Grow food for the chef, drugs for medbay, and other plants to keep yourself entertained.
 job-description-mess-chef = Keep the station fed with a variety of food items, butcher dead animals to ensure ammonia doesn't leak, and help keep the bar lively.
 job-description-custodian = Keep the station clean of any trash or slipping hazards, and help deal with rat infestations.

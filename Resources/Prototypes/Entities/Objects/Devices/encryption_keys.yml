@@ -187,41 +187,40 @@
     - state: crypt_gray
     - state: robotics_label
 
-#- type: entity
-#  parent: [ EncryptionKey, BaseSecurityLawyerContraband ]
-#  id: EncryptionKeySecurity
-#  name: security encryption key
-#  description: An encryption key used by security.
-#  components:
-#  - type: EncryptionKey
-#    channels:
-#    - Security
-#    defaultChannel: Security
-#  - type: Sprite
-#    layers:
-#    - state: crypt_gray
-#    - state: sec_label
-#  - type: Tag
-#    tags:
-#    - EncryptionSecurity
-
-#- type: entity
-#  parent: [ EncryptionKey, BaseCivilianContraband ]
-#  id: EncryptionKeyService
-#  name: service encryption key
-#  description: An encryption key used by the service staff, tasked with keeping the station full, happy and clean.
-#  components:
-#  - type: EncryptionKey
-#    channels:
-#    - Service
-#    defaultChannel: Service
-#  - type: Sprite
-#    layers:
-#    - state: crypt_gray
-#    - state: service_label
-#  - type: Tag
-#    tags:
-#    - EncryptionService
+- type: entity
+  parent: [ EncryptionKey, BaseSecurityLawyerContraband ]
+  id: EncryptionKeySecurity
+  name: security encryption key
+  description: An encryption key used by security.
+  components:
+  - type: EncryptionKey
+    channels:
+    - Security
+    defaultChannel: Security
+  - type: Sprite
+    layers:
+    - state: crypt_gray
+    - state: sec_label
+  - type: Tag
+    tags:
+    - EncryptionSecurity
+- type: entity
+  parent: [ EncryptionKey, BaseCivilianContraband ]
+  id: EncryptionKeyService
+  name: service encryption key
+  description: An encryption key used by the service staff, tasked with keeping the station full, happy and clean.
+  components:
+  - type: EncryptionKey
+    channels:
+    - Service
+    defaultChannel: Service
+  - type: Sprite
+    layers:
+    - state: crypt_gray
+    - state: service_label
+  - type: Tag
+    tags:
+    - EncryptionService
 
 - type: entity
   parent: [ EncryptionKey, BaseSyndicateContraband ]

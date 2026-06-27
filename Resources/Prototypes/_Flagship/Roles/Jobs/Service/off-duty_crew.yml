@@ -6,7 +6,7 @@
   setPreference: true
   startingGear: OffDutyCrewGear
   supervisors: job-supervisors-oo
-  icon: "JobIconPassenger"
+  icon: "JobIconOffDutyCrew"
   displayWeight: 10
   accessGroups:
   - Command

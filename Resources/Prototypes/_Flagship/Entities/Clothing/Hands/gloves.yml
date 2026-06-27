@@ -1,0 +1,13 @@
+- type: entity
+  parent: ClothingHandsGlovesColorBlack
+  id: ClothingHandsGlovesNavyOfficer
+  name: Navy Officer Gloves
+  description: Gloves specifically made with an insulating material for high-ranking members of the Nanotrasen Navy Corps.
+  components:
+  - type: Sprite
+    sprite: _Flagship/Clothing/Hands/Gloves/bridgecommand.rsi
+  - type: Clothing
+    sprite: _Flagship/Clothing/Hands/Gloves/bridgecommand.rsi
+  - type: Insulated
+  - type: Fiber
+    fiberMaterial: fibers-insulative
