@@ -5,6 +5,7 @@ on:
     paths:
       - '**.rsi/**.png'
 
+
 jobs:
   diff:
     name: Diff

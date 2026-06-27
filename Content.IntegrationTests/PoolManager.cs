@@ -104,7 +104,6 @@ public sealed class ContentPoolManager : PoolManager<TestPair>
         var shared = extraAssemblies
                 .Append(typeof(Shared.Entry.EntryPoint).Assembly)
                 .Append(typeof(PoolManager).Assembly)
-                .Append(typeof(FlagShip.Shared.Entry.EntryPoint).Assembly)
                 .ToArray();
 
         Startup([typeof(Client.Entry.EntryPoint).Assembly],
