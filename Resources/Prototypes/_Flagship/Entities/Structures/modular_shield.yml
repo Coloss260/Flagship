@@ -1,0 +1,57 @@
+- type: entity
+  id: StructureDefenseModularShieldCore
+  name: Modular Shield Core
+  description: It's the core of a modular shield system.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Sprite
+    snapCardinals: true
+    sprite: Structures/Power/Generation/ame.rsi
+    state: control
+  - type: Physics
+  - type: Fixtures
+    fixtures:
+    fix1:
+      shape:
+        !type:PhysShapeAabb
+        bounds: "-0.45,-0.45,0.45,0.45"
+      density: 190
+      mask:
+      - FullTileMask
+      layer:
+      - WallLayer
+  - type: Damageable
+    damageModifierSet: StructuralMetallicStrong
+  - type: Injurable
+    damageContainer: StructuralInorganic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          SheetSteel1:
+            min: 1
+            max: 1
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+  - type: Transform
+    anchored: true
+    noRot: true
+  - type: Anchorable
+  - type: Pullable
+  - type: NodeContainer
+    examinable: true
+    nodes:
+      ame:
+        !type:AdjacentNode
+        nodeGroupID: ModularShield
+      input:
+        !type:CableDeviceNode
+        nodeGroupID: HVPower
+
