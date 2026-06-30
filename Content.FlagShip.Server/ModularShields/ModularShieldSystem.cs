@@ -8,6 +8,7 @@ using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
+using YamlDotNet.Core;
 
 namespace Content.FlagShip.Server.ModularShields;
 
@@ -35,17 +36,17 @@ public sealed partial class ModularShieldSystem : EntitySystem
     /// <summary>
     /// Performs update operations for a single shield core component
     /// </summary>
-    /// <param name="uid"></param>
-    /// <param name="core"></param>
+    /// <param name="shieldCoreUid"></param>
+    /// <param name="shieldCore"></param>
     /// <param name="nodeContainer"></param>
-    private void UpdateCore(float frameTime, EntityUid uid, ModularShieldCoreComponent core, NodeContainerComponent nodeContainer)
+    private void UpdateCore(float frameTime, EntityUid shieldCoreUid, ModularShieldCoreComponent shieldCore, NodeContainerComponent nodeContainer)
     {
         var curTime = _gameTiming.CurTime;
 
-        if (!TryGetModularShieldNodeGroup(uid, out var nodeGroup, nodeContainer))
+        if (!TryGetModularShieldNodeGroup(shieldCoreUid, out var nodeGroup, nodeContainer))
             return;
 
-        if (!_power.IsPowered(uid))
+        if (!_power.IsPowered(shieldCoreUid))
         {
             return;
         }
@@ -55,57 +56,67 @@ public sealed partial class ModularShieldSystem : EntitySystem
 
         foreach (var energyGenerator in energyGeneration)
         {
-            UpdateEnergyGenerator(frameTime, core, nodeGroup, energyGenerator.Item1, energyGenerator.Item2);
+            UpdateEnergyGenerator(frameTime, shieldCore, nodeGroup, energyGenerator.EntityUid, energyGenerator.EnergyGenerationComponent);
         }
 
         foreach (var fluxDestructor in fluxDestruction)
         {
-            UpdateFluxDestructor(frameTime, core, nodeGroup, fluxDestructor.Item1, fluxDestructor.Item2, nodeContainer);
+            UpdateFluxDestructor(frameTime, shieldCore, nodeGroup, fluxDestructor.EntityUid, fluxDestructor.FluxDestructionComponent, nodeContainer);
         }
 
 
 
         // Perform passive shield energy drain.
-        if (core.ProjectingShield)
+        if (shieldCore.ShieldProjected != null)
         {
-            float excessDestruction = DestroyEnergy(nodeGroup, core.ShieldProjectionPassiveEnergyDrain);
+            float excessDestruction = DestroyEnergy(nodeGroup, shieldCore.ShieldProjectionPassiveEnergyDrain);
         }
 
-        // Check an ongoing shield core overload is finished.
-        if (core.FluxOverloadEnd != null)
+        // Check whether to start shield core overflow.
+        if (shieldCore.FluxOverflow > 0 &&
+            shieldCore.FluxOverflowBufferEnd == null)
         {
-            if (core.FluxOverloadEnd < curTime)
-            {
-                core.FluxOverloadEnd = null;
-            }
+            shieldCore.FluxOverflowBufferEnd = curTime + shieldCore.FluxOverflowBufferDuration;
         }
 
         // Check an ongoing shield core overflow buffer
-        if (core.FluxOverflowBufferEnd != null)
+        if (shieldCore.FluxOverflowBufferEnd != null)
         {
-            if (core.FluxOverflow == 0)
+            if (shieldCore.FluxOverflow == 0)
             {
                 // Flux overflow cleared.
-                core.FluxOverflowBufferEnd = null;
+                shieldCore.FluxOverflowBufferEnd = null;
             }
 
-            if (core.FluxOverflowBufferEnd < curTime)
+            if (shieldCore.FluxOverflowBufferEnd < curTime)
             {
                 // Overload the shield.
-                PerformShieldCoreOverloadPunishments(uid, core, core.FluxOverflow);
-                core.FluxOverflow = 0;
-                core.FluxOverflowBufferEnd = null;
-                core.FluxOverloadEnd = curTime + core.FluxOverloadDuration;
-                core.ProjectingShield = false;
+                PerformShieldCoreOverloadPunishments(shieldCoreUid, shieldCore, shieldCore.FluxOverflow);
+                shieldCore.FluxOverflow = 0;
+                shieldCore.FluxOverflowBufferEnd = null;
+                shieldCore.FluxOverloadEnd = curTime + shieldCore.FluxOverloadDuration;
             }
         }
-        // Check whether to start shield  core overflow.
-        else if (core.FluxOverflow > 0)
+
+        // Check an ongoing shield core overload is finished.
+        if (shieldCore.FluxOverloadEnd != null)
         {
-            core.FluxOverflowBufferEnd = curTime + core.FluxOverflowBufferDuration;
+            if (shieldCore.FluxOverloadEnd < curTime)
+            {
+                shieldCore.FluxOverloadEnd = null;
+            }
         }
 
-        // Check whether to start projecting the shield
+        if (shieldCore.ShieldProjectionEnabled &&
+            shieldCore.ShieldProjected == null)
+        {
+            TryStartModularShieldProjection(shieldCoreUid, shieldCore, nodeGroup);
+        }
+        else if (!shieldCore.ShieldProjectionEnabled &&
+            shieldCore.ShieldProjected != null)
+        {
+            TryStopModularShieldProjection(shieldCoreUid, shieldCore, nodeGroup, true);
+        }
     }
 
 
@@ -113,18 +124,18 @@ public sealed partial class ModularShieldSystem : EntitySystem
     /// <summary>
     /// Performs update operations for a single energy generation component
     /// </summary>
-    /// <param name="uid"></param>
+    /// <param name="energyGeneratorUid"></param>
     /// <param name="generator"></param>
     /// <param name="nodeContainer"></param>
-    private void UpdateEnergyGenerator(float frameTime, ModularShieldCoreComponent shieldCore, ModularShieldNodeGroup nodeGroup, EntityUid uid, ModularShieldEnergyGenerationComponent generator)
+    private void UpdateEnergyGenerator(float frameTime, ModularShieldCoreComponent shieldCore, ModularShieldNodeGroup nodeGroup, EntityUid energyGeneratorUid, ModularShieldEnergyGenerationComponent generator)
     {
-        if (!_power.IsPowered(uid))
+        if (!_power.IsPowered(energyGeneratorUid))
         {
             return;
         }
 
         float energyToGenerate = generator.EnergyGenerationRateMaximum * frameTime;
-        if (shieldCore?.ProjectingShield ?? false)
+        if (shieldCore?.ShieldProjected != null)
         {
             energyToGenerate = energyToGenerate * generator.EnergyGenerationWhileShieldProjectedRateMultiplier;
         }
@@ -134,7 +145,7 @@ public sealed partial class ModularShieldSystem : EntitySystem
         float excessGeneration = GenerateEnergy(nodeGroup, energyToGenerate);
 
         float energyForCosting = generator.EnergyGenerationRateMaximum - excessGeneration;
-        if (shieldCore?.ProjectingShield ?? false)
+        if (shieldCore?.ShieldProjected != null)
         {
             energyForCosting = energyForCosting * generator.EnergyGenerationWhileShieldProjectedCostMultiplier;
         }
@@ -145,18 +156,18 @@ public sealed partial class ModularShieldSystem : EntitySystem
     /// <summary>
     /// Performs update operations for a single flux destruction component
     /// </summary>
-    /// <param name="uid"></param>
+    /// <param name="fluxDestructorUid"></param>
     /// <param name="destructor"></param>
     /// <param name="nodeContainer"></param>
-    private void UpdateFluxDestructor(float frameTime, ModularShieldCoreComponent shieldCore, ModularShieldNodeGroup nodeGroup, EntityUid uid, ModularShieldFluxDestructionComponent destructor, NodeContainerComponent nodeContainer)
+    private void UpdateFluxDestructor(float frameTime, ModularShieldCoreComponent shieldCore, ModularShieldNodeGroup nodeGroup, EntityUid fluxDestructorUid, ModularShieldFluxDestructionComponent destructor, NodeContainerComponent nodeContainer)
     {
-        if (!_power.IsPowered(uid))
+        if (!_power.IsPowered(fluxDestructorUid))
         {
             return;
         }
 
         float fluxToDestroy = destructor.FluxDestructionRateMaximum * frameTime;
-        if (shieldCore?.ProjectingShield ?? false)
+        if (shieldCore?.ShieldProjected != null)
         {
             fluxToDestroy = fluxToDestroy * destructor.FluxDestructionWhileShieldProjectedRateMultiplier;
         }
@@ -166,7 +177,7 @@ public sealed partial class ModularShieldSystem : EntitySystem
         float excessDestruction = DestroyFlux(nodeGroup, destructor.FluxDestructionRateMaximum);
 
         float fluxForCosting = destructor.FluxDestructionRateMaximum - excessDestruction;
-        if (shieldCore?.ProjectingShield ?? false)
+        if (shieldCore?.ShieldProjected != null)
         {
             fluxForCosting = fluxForCosting * destructor.FluxDestructionWhileShieldProjectedCostMultiplier;
         }
@@ -185,6 +196,81 @@ public sealed partial class ModularShieldSystem : EntitySystem
 
     }
 
+
+
+    public bool TryStartModularShieldProjection(
+        EntityUid shieldCoreUid,
+        ModularShieldCoreComponent? shieldCoreComponent = null,
+        ModularShieldNodeGroup? nodeGroup = null)
+    {
+        if (!Resolve(shieldCoreUid, ref shieldCoreComponent))
+            return false;
+
+        if (nodeGroup == null && !TryGetModularShieldNodeGroup(shieldCoreUid, out nodeGroup))
+            return false;
+
+
+        var parentGridEntityUid = Transform(shieldCoreUid).GridUid;
+
+        var energyStorageStats = nodeGroup.GetEnergyStorageStatistics();
+
+        bool success = false;
+
+        // Whether to start projecting the shield.
+        if (shieldCoreComponent.ShieldProjected == null && // Shield needs to be off
+            shieldCoreComponent.ShieldedEntity == null && // Can't be shielding something
+            parentGridEntityUid != null && // Need to be on a grid.
+            shieldCoreComponent.FluxOverloadEnd == null && // Overload disables shields
+            shieldCoreComponent.FluxOverflowBufferEnd != null && // Flux overflow locks shield into staying up or down
+            shieldCoreComponent.MinimumEnergyStoredToProjectShield <= energyStorageStats.EnergyStored &&
+            shieldCoreComponent.MinimumEnergyStoredToProjectShieldPercent <= (energyStorageStats.EnergyStored / energyStorageStats.EnergyCapacity))
+        {
+            EntityUid shieldEntityUid = ShieldEntity((EntityUid)parentGridEntityUid, shieldCoreUid);
+            if (shieldEntityUid != EntityUid.Invalid)
+            {
+                success = true;
+                shieldCoreComponent.ShieldProjected = shieldEntityUid;
+                shieldCoreComponent.ShieldedEntity = parentGridEntityUid;
+            }
+        }
+
+        return success;
+    }
+
+
+
+    public bool TryStopModularShieldProjection(
+        EntityUid shieldCoreUid,
+        ModularShieldCoreComponent? shieldCoreComponent = null,
+        ModularShieldNodeGroup? nodeGroup = null,
+        bool force = false)
+    {
+        if (!Resolve(shieldCoreUid, ref shieldCoreComponent))
+            return false;
+
+        var parentGridEntityUid = Transform(shieldCoreUid).GridUid;
+        bool success = false;
+
+        if (force)
+        {
+            success = UnshieldEntity(shieldCoreUid);
+            shieldCoreComponent.ShieldProjected = null;
+            shieldCoreComponent.ShieldedEntity = null;
+        }
+        // Whether to stop projecting the shield.
+        else if (shieldCoreComponent.ShieldProjected != null && // Shield needs to be on
+                shieldCoreComponent.ShieldedEntity != null &&   // We need to be shielding something
+                shieldCoreComponent.FluxOverflowBufferEnd != null && ( // Flux Overflow locks shield into staying up or down
+                    shieldCoreComponent.FluxOverloadEnd != null // Overload disables shields.
+                ))
+        {
+            success = UnshieldEntity((EntityUid)shieldCoreComponent.ShieldedEntity);
+            shieldCoreComponent.ShieldProjected = null;
+            shieldCoreComponent.ShieldedEntity = null;
+        }
+
+        return success;
+    }
 
 
 

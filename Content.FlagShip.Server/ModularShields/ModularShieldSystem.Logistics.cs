@@ -54,12 +54,14 @@ public partial class ModularShieldSystem
     /// <returns>Amount of energy that could not be destroyed due to lack of stored energy</returns>
     public float DestroyEnergy(ModularShieldNodeGroup nodeGroup, float amountToDestroy)
     {
-        ModularShieldCoreComponent? shieldCore = nodeGroup.GetMasterModularShieldCore()?.Item2;
+
+        var shieldCore = nodeGroup.GetMasterModularShieldCore();
         if (shieldCore == null)
         {
             // No master shield core, disabled.
             return amountToDestroy;
         }
+        var shieldCoreEntityUid = shieldCore.Value.EntityUid;
 
         // We're destroying energy, so we sort in reverse order to remove from the lowest priority storage first.
         var energyStorage = nodeGroup.OrderEnergyStorageByPriority(nodeGroup.GetEnergyStorage(), highestPriorityFirst: false);
@@ -85,7 +87,7 @@ public partial class ModularShieldSystem
         // Out of energy, disable shield.
         if (amountRemaining > 0)
         {
-            shieldCore.ProjectingShield = false;
+            TryStopModularShieldProjection(shieldCoreEntityUid);
         }
 
         return amountRemaining;

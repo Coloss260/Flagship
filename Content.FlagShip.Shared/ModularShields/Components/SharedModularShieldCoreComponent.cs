@@ -1,3 +1,4 @@
+using Robust.Shared.Audio;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -15,10 +16,22 @@ public partial class SharedModularShieldCoreComponent : Component
     public bool ShieldProjectionEnabled = true;
 
     /// <summary>
-    /// Whether the modular shield core is projecting it's shield at the moment.
+    /// The shield entity this modular shield core is currently projecting.
     /// </summary>
     [DataField]
-    public bool ProjectingShield = false;
+    public EntityUid? ShieldProjected = null;
+
+    /// <summary>
+    /// The entity that this shield core's shield is projected around.
+    /// </summary>
+    [DataField]
+    public EntityUid? ShieldedEntity = null;
+
+    /// <summary>
+    /// The cooldown on toggling the shield projection on/off.
+    /// </summary>
+    [DataField]
+    public TimeSpan? ShieldProjectionToggleCooldown = null;
 
     /// <summary>
     /// The amount of flux that has overflown the flux capacity of the system.
@@ -37,6 +50,19 @@ public partial class SharedModularShieldCoreComponent : Component
     /// </summary>
     [DataField]
     public TimeSpan? FluxOverloadEnd = default;
+
+    /// <summary>
+    /// The color of the projected shield.
+    /// </summary>
+    [DataField]
+    public Color ShieldColor = Color.White;
+
+    /// <summary>
+    /// Whether the energy storage of this shield core's node group's energy storage has hit zero.
+    /// Used to disable the shield if disabling is allowed under the current circumstances and reset whether or not 
+    /// </summary>
+    [DataField]
+    public bool EnergyEmptied = false;
 
 
 
@@ -85,6 +111,9 @@ public partial class SharedModularShieldCoreComponent : Component
     [DataField]
     public bool FluxOverflowFluxDestructionAllowed = false;
 
+    /// <summary>
+    /// If disabled, flux generated during flux overflow buffer is forced into the overflow buffer regardless of remaining flux capacity in the system.
+    /// </summary>
     [DataField]
     public bool FluxOverflowAllowUsingNormalStorageDuringOverflow = false;
 
@@ -93,4 +122,34 @@ public partial class SharedModularShieldCoreComponent : Component
     /// </summary>
     [DataField]
     public TimeSpan FluxOverloadDuration = TimeSpan.FromSeconds(30.0);
+
+    /// <summary>
+    /// How long the cooldown is on shield projection toggling.
+    /// </summary>
+    [DataField]
+    public TimeSpan ShieldProjectionToggleCooldownTime = TimeSpan.FromSeconds(1.0);
+
+    /// <summary>
+    /// On shield projection starting.
+    /// </summary>
+    [DataField]
+    public SoundSpecifier ProjectionStartSound = new SoundPathSpecifier("/Audio/Effects/teleport_arrival.ogg");
+
+    /// <summary>
+    /// On shield projection ending under normal conditions.
+    /// </summary>
+    [DataField]
+    public SoundSpecifier ProjectionEndCalmSound = new SoundPathSpecifier("/Audio/Effects/teleport_departure.ogg");
+
+    /// <summary>
+    /// When the shield system has started to overflow with flux.
+    /// </summary>
+    [DataField]
+    public SoundSpecifier? OverflowBufferStartSoundSpecifier = null;
+
+    /// <summary>
+    /// When the shield system has overloaded due to flux.
+    /// </summary>
+    [DataField]
+    public SoundSpecifier OverloadSound = new SoundPathSpecifier("/Audio/Effects/teleport_departure.ogg");]
 }
