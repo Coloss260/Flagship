@@ -24,12 +24,12 @@
 - type: startingGear
   id: ArtillerySpecialistGear
   equipment:
-    id: CargoPDA
+    id: ArtillerySpecialistPDA
     head: ClothingHeadHatBeretArtillerySpecialist
     eyes: ClothingEyesGlassesSunglasses
     ears: ClothingHeadsetArtillerySpecialist
     outerClothing: ClothingOuterVestHazardArtillerySpecialist
-    jumpsuit: ClothingUniformJumpsuitSuppliesCrewman
+    jumpsuit: ClothingUniformJumpsuitArtillerySpecialist
     gloves: ClothingHandsGlovesColorBlack
     back: ClothingBackpackSatchelLeather
     belt: ClothingBeltUtilityFilled

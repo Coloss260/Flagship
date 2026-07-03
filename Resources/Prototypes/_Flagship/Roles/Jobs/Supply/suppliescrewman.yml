@@ -24,7 +24,7 @@
 - type: startingGear
   id: SuppliesCrewmanGear
   equipment:
-    id: CargoPDA
+    id: SuppliesCrewmanPDA
     head: ClothingHeadHatSuppliesCrewman
     ears: ClothingHeadsetSupplies
     jumpsuit: ClothingUniformJumpsuitSuppliesCrewman

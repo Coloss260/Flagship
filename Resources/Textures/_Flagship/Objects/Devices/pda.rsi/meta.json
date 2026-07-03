@@ -34,6 +34,12 @@
             "name": "pda-militarypolice"
         },
         {
+            "name": "pda-supplies"
+        },
+        {
+            "name": "pda-artilleryspecialist"
+        },
+        {
             "name": "pda"
         }
     ]

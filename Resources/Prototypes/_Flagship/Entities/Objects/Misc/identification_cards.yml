@@ -323,3 +323,79 @@
     - DoorBumpOpener
     - WhitelistChameleon
     - WhitelistChameleonIdCard
+
+# Supply
+- type: entity
+  parent: [IDCardFlagship]
+  id: SuppliesQuartermasterIDCard
+  name: Supplies Quartermaster ID Card
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+    - state: stripe_top
+      color: "#2d6122"
+    - state: stripe_bottom
+      color: "#397a2b"
+    - sprite: /Textures/_Flagship/Interface/Misc/job_icons.rsi
+      offset: -0.09375, 0.0625
+      state: SuppliesQuartermaster
+  - type: Item
+    heldPrefix: default
+  - type: PresetIdCard
+    job: SuppliesQuartermaster
+  - type: Tag
+    tags:
+    - DoorBumpOpener
+    - WhitelistChameleon
+    - WhitelistChameleonIdCard
+
+- type: entity
+  parent: [IDCardFlagship]
+  id: ArtillerySpecialistIDCard
+  name: Artillery Specialist ID Card
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+    - state: stripe_top
+      color: "#22351f"
+    - state: stripe_bottom
+      color: "#2a3926"
+    - sprite: /Textures/_Flagship/Interface/Misc/job_icons.rsi
+      offset: -0.09375, 0.0625
+      state: ArtillerySpecialist
+  - type: Item
+    heldPrefix: default
+  - type: PresetIdCard
+    job: ArtillerySpecialist
+  - type: Tag
+    tags:
+    - DoorBumpOpener
+    - WhitelistChameleon
+    - WhitelistChameleonIdCard
+
+- type: entity
+  parent: [IDCardFlagship]
+  id: SuppliesCrewmanIDCard
+  name: Supplies Crewman ID Card
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+    - state: stripe_top
+      color: "#2d6122"
+    - state: stripe_bottom
+      color: "#397a2b"
+    - sprite: /Textures/_Flagship/Interface/Misc/job_icons.rsi
+      offset: -0.09375, 0.0625
+      state: SuppliesCrewman
+  - type: Item
+    heldPrefix: default
+  - type: PresetIdCard
+    job: SuppliesCrewman
+  - type: Tag
+    tags:
+    - DoorBumpOpener
+    - WhitelistChameleon
+    - WhitelistChameleonIdCard
