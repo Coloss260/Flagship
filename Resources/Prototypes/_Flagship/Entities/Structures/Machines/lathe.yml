@@ -1,0 +1,13 @@
+# NEW FRONTIER 14 // START
+
+- type: entity
+  id: BiogeneratorFill
+  parent: Biogenerator
+  name: biogenerator
+  suffix: Biomass, 50
+  components:
+  - type: MaterialStorage
+    storage:
+      Biomass: 50
+
+# NEW FRONTIER 14 // END

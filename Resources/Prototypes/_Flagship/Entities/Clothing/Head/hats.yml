@@ -34,3 +34,16 @@
     - WhitelistChameleon
     - PetWearable
     - CorgiWearable
+
+# NEW FRONTIER 14 // START
+- type: entity
+  parent: ClothingHeadBaseButcherable
+  id: ClothingHeadHatMcCrown
+  name: mccargo crown
+  description: 'Crowns and tiaras, McCargo King.'
+  components:
+  - type: Sprite
+    sprite: _NF/Clothing/Head/Hoods/mccargocrown.rsi
+  - type: Clothing
+    sprite: _NF/Clothing/Head/Hoods/mccargocrown.rsi
+# NEW FRONTIER 14 // END
