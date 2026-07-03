@@ -108,6 +108,25 @@
     - PetWearable
     - CorgiWearable
 
+# Maintenance
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatBeretChiefOfMaintenance
+  name: Chief of Maintenance beret
+  description: A beret worn by the Chief of Maintenance of a Nanotrasen Flagship.
+  components:
+  - type: Sprite
+    sprite: _Flagship/Clothing/Head/Hats/chiefofmaintenanceberet.rsi
+  - type: Clothing
+    sprite: _Flagship/Clothing/Head/Hats/chiefofmaintenanceberet.rsi
+  - type: Tag
+    tags:
+    - ClothMade
+    - HamsterWearable
+    - WhitelistChameleon
+    - PetWearable
+    - CorgiWearable
+
 # Supplies
 - type: entity
   parent: ClothingHeadBase

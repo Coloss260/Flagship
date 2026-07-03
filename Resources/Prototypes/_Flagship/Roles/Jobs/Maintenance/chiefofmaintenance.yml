@@ -22,7 +22,7 @@
   id: ChiefOfMaintenanceGear
   equipment:
     id: ChiefOfMaintenancePDA
-    head: ClothingHeadHatBeretEngineering
+    head: ClothingHeadHatBeretChiefOfMaintenance
     eyes: ClothingEyesGlassesMeson
     ears: ClothingHeadsetAltMaintenance
     outerClothing: ClothingOuterVestHazard
