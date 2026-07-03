@@ -23,7 +23,7 @@
     id: EngineerPDA
     head: ClothingHeadHatHardhatOrange
     eyes: ClothingEyesGlassesMeson
-    ears: ClothingHeadsetEngineering
+    ears: ClothingHeadsetMaintenance
     outerClothing: ClothingOuterVestHazard
     jumpsuit: ClothingUniformJumpsuitMaintenanceTechnician
     gloves: ClothingHandsGlovesColorYellow

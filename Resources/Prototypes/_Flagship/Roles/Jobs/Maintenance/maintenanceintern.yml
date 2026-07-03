@@ -27,7 +27,7 @@
     id: TechnicalAssistantPDA
     head: ClothingHeadHatOrangesoft
     eyes: ClothingEyesGlassesMeson
-    ears: ClothingHeadsetEngineering
+    ears: ClothingHeadsetMaintenance
     outerClothing: ClothingOuterVestHazard
     jumpsuit: ClothingUniformJumpsuitMaintenanceTechnician
     gloves: ClothingHandsGlovesColorYellow

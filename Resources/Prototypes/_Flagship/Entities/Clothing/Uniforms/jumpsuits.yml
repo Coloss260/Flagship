@@ -78,6 +78,17 @@
   - type: Clothing
     sprite: _Flagship/Clothing/Uniforms/Jumpsuit/maintenance.rsi
 
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitLifeSupportSpecialist
+  name: Life Support Specialist service uniform
+  description: A stylish yet simple uniform made specifically to be work by Life Support Specialists of Nanotrasen's Naval Corps.
+  components:
+  - type: Sprite
+    sprite: _Flagship/Clothing/Uniforms/Jumpsuit/lifesupportspecialist.rsi
+  - type: Clothing
+    sprite: _Flagship/Clothing/Uniforms/Jumpsuit/lifesupportspecialist.rsi
+
 # Supplies
 - type: entity
   parent: ClothingUniformBase

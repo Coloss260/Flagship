@@ -133,6 +133,23 @@
   - type: Clothing
     sprite: _Flagship/Clothing/Ears/Headsets/militarypolice.rsi
 
+# Maintenance
+- type: entity
+  parent: ClothingHeadsetAltFlag
+  id: ClothingHeadsetAltMaintenance
+  name: Chief of Maintenance over-ear headset
+  description: Headset used by Chiefs of Maintenance.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyMaintenance
+      - EncryptionKeyTactical
+  - type: Sprite
+    sprite: _Flagship/Clothing/Ears/Headsets/maintenance.rsi
+  - type: Clothing
+    sprite: _Flagship/Clothing/Ears/Headsets/maintenance.rsi
+
 # Science
 
 # Supply

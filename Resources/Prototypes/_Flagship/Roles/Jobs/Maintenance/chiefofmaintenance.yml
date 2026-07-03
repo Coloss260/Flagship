@@ -24,7 +24,7 @@
     id: CEPDA
     head: ClothingHeadHatBeretEngineering
     eyes: ClothingEyesGlassesMeson
-    ears: ClothingHeadsetCE
+    ears: ClothingHeadsetAltMaintenance
     outerClothing: ClothingOuterVestHazard
     jumpsuit: ClothingUniformJumpsuitMaintenanceTechnician
     gloves: ClothingHandsGlovesColorYellow

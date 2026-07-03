@@ -165,6 +165,37 @@
   - type: Clothing
     sprite: _Flagship/Clothing/Ears/Headsets/militarypolicemedic.rsi
 
+# Maintenance
+- type: entity
+  parent: ClothingHeadsetFlag
+  id: ClothingHeadsetMaintenance
+  name: Maintenance headset
+  description: Headset used by grunts of the Maintenance department.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyMaintenance
+  - type: Sprite
+    sprite: _Flagship/Clothing/Ears/Headsets/maintenance.rsi
+  - type: Clothing
+    sprite: _Flagship/Clothing/Ears/Headsets/maintenance.rsi
+
+- type: entity
+  parent: ClothingHeadsetFlag
+  id: ClothingHeadsetLifeSupportSpecialist
+  name: Life Support Specialist headset
+  description: Headset used by Life Support Specialists of the Maintenance department.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyMaintenance
+  - type: Sprite
+    sprite: _Flagship/Clothing/Ears/Headsets/lifesupportspecialist.rsi
+  - type: Clothing
+    sprite: _Flagship/Clothing/Ears/Headsets/lifesupportspecialist.rsi
+
 # Science
 - type: entity
   parent: ClothingHeadsetFlag
