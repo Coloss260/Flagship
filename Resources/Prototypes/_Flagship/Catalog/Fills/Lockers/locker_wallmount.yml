@@ -102,7 +102,7 @@
 - type: entity
   id: LockerWallColorMedicalDoctorFilled
   parent:
-  - LockerWallColorMedical
+ # - LockerWallColorMedical
   - BaseStructureWallmount
   - LockerMedicalFilled
   name: medical doctor's wall locker
@@ -142,7 +142,7 @@
   id: LockerWallColorHydroponicsEmpty
   suffix: Empty, Frontier
   parent:
-  - LockerWallColorHydroponics
+ # - LockerWallColorHydroponics
   - BaseStructureWallmount
   name: botanist wall locker
 # endregion
