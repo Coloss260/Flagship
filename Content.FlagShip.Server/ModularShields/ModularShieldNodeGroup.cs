@@ -1,6 +1,8 @@
-using Content.FlagShip.Server.ModularShields.Components;
+using Content.FlagShip.Shared.ModularShields;
+using Content.FlagShip.Shared.ModularShields.Components;
 using Content.Server.NodeContainer.NodeGroups;
 using Content.Shared.NodeContainer;
+using Content.Shared.NodeContainer.NodeGroups;
 using Robust.Shared.Timing;
 using Robust.Shared.Utility;
 using System;
@@ -10,6 +12,7 @@ using System.Text;
 
 namespace Content.FlagShip.Server.ModularShields;
 
+[NodeGroup(NodeGroupID.ModularShield)]
 public sealed partial class ModularShieldNodeGroup : BaseNodeGroup
 {
     [Dependency] private IEntityManager _entMan = default!;
@@ -95,7 +98,7 @@ public sealed partial class ModularShieldNodeGroup : BaseNodeGroup
         var totalEnergyCapacity = 0;
         foreach (var energyStorage in GetEnergyStorage())
         {
-            var energyStorageComponent = energyStorage.EnergyStorageComponent;
+            var energyStorageComponent = energyStorage.Comp;
             totalEnergyStored += energyStorageComponent.EnergyStored;
             totalEnergyCapacity += energyStorageComponent.EnergyCapacity;
         }
@@ -111,7 +114,7 @@ public sealed partial class ModularShieldNodeGroup : BaseNodeGroup
         var totalFluxCapacity = 0;
         foreach (var fluxStorage in GetFluxStorage())
         {
-            var fluxStorageComponent = fluxStorage.FluxStorageComponent;
+            var fluxStorageComponent = fluxStorage.Comp;
             totalFluxStored += fluxStorageComponent.FluxStored;
             totalFluxCapacity += fluxStorageComponent.FluxCapacity;
         }
@@ -122,13 +125,14 @@ public sealed partial class ModularShieldNodeGroup : BaseNodeGroup
 
 
 
-    public (EntityUid EntityUid, ModularShieldCoreComponent ShieldCoreComponent)? GetMasterModularShieldCore()
+    public Entity<ModularShieldCoreComponent>? GetMasterModularShieldCore()
     {
         if (_masterShieldCore == null)
             return null;
         var shieldCoreQuery = _entMan.GetEntityQuery<ModularShieldCoreComponent>();
 
         ModularShieldCoreComponent? shieldCore = null;
+
 
         if (shieldCoreQuery.Resolve(_masterShieldCore.Value, ref shieldCore))
         {
@@ -138,7 +142,7 @@ public sealed partial class ModularShieldNodeGroup : BaseNodeGroup
     }
 
 
-    public IEnumerable<(EntityUid EntityUid, ModularShieldEnergyGenerationComponent EnergyGenerationComponent)> GetEnergyGeneration()
+    public IEnumerable<Entity<ModularShieldEnergyGenerationComponent>> GetEnergyGeneration()
     {
         var energyGenerationQuery = _entMan.GetEntityQuery<ModularShieldEnergyGenerationComponent>();
 
@@ -152,7 +156,7 @@ public sealed partial class ModularShieldNodeGroup : BaseNodeGroup
         }
     }
 
-    public IEnumerable<(EntityUid EntityUid, ModularShieldEnergyStorageComponent EnergyStorageComponent)> GetEnergyStorage()
+    public IEnumerable<Entity<ModularShieldEnergyStorageComponent>> GetEnergyStorage()
     {
         var energyStorageQuery = _entMan.GetEntityQuery<ModularShieldEnergyStorageComponent>();
 
@@ -166,7 +170,7 @@ public sealed partial class ModularShieldNodeGroup : BaseNodeGroup
         }
     }
 
-    public IEnumerable<(EntityUid EntityUid, ModularShieldFluxStorageComponent FluxStorageComponent)> GetFluxStorage()
+    public IEnumerable<Entity<ModularShieldFluxStorageComponent>> GetFluxStorage()
     {
         var fluxStorageQuery = _entMan.GetEntityQuery<ModularShieldFluxStorageComponent>();
 
@@ -180,7 +184,7 @@ public sealed partial class ModularShieldNodeGroup : BaseNodeGroup
         }
     }
 
-    public IEnumerable<(EntityUid EntityUid, ModularShieldFluxDestructionComponent FluxDestructionComponent)> GetFluxDestruction()
+    public IEnumerable<Entity<ModularShieldFluxDestructionComponent>> GetFluxDestruction()
     {
         var fluxDestructionQuery = _entMan.GetEntityQuery<ModularShieldFluxDestructionComponent>();
 
@@ -194,31 +198,31 @@ public sealed partial class ModularShieldNodeGroup : BaseNodeGroup
         }
     }
 
-    public IEnumerable<(EntityUid EntityUid, ModularShieldEnergyGenerationComponent EnergyGenerationComponent)> OrderEnergyGenerationByPriority(IEnumerable<(EntityUid EntityUid, ModularShieldEnergyGenerationComponent EnergyGenerationComponent)> components, bool highestPriorityFirst = true)
+    public IEnumerable<Entity<ModularShieldEnergyGenerationComponent>> OrderEnergyGenerationByPriority(IEnumerable<Entity<ModularShieldEnergyGenerationComponent>> entities, bool highestPriorityFirst = true)
     {
-        return components
-            .OrderByDescending(component => component.EnergyGenerationComponent.EnergyGenerationPriority) // Order by priority (lower numbers = higher priority).
-            .ThenByDescending(component => component.EnergyGenerationComponent.EnergyGenerationPriorityTieBreaker); // Arbitrary ordering
+        return entities
+            .OrderByDescending(component => component.Comp.EnergyGenerationPriority) // Order by priority (lower numbers = higher priority).
+            .ThenByDescending(component => component.Comp.EnergyGenerationPriorityTieBreaker); // Arbitrary ordering
     }
 
-    public IEnumerable<(EntityUid EntityUid, ModularShieldEnergyStorageComponent EnergyStorageComponent)> OrderEnergyStorageByPriority(IEnumerable<(EntityUid EntityUid, ModularShieldEnergyStorageComponent EnergyStorageComponent)> components, bool highestPriorityFirst = true)
+    public IEnumerable<Entity<ModularShieldEnergyStorageComponent>> OrderEnergyStorageByPriority(IEnumerable<Entity<ModularShieldEnergyStorageComponent>> entities, bool highestPriorityFirst = true)
     {
-        return components
-            .OrderByDescending(storage => storage.EnergyStorageComponent.EnergyStoragePriority) // Order by priority (lower numbers = higher priority).
-            .ThenByDescending(storage => storage.EnergyStorageComponent.EnergyStoragePriorityTieBreaker); // Arbitrary ordering
+        return entities
+            .OrderByDescending(storage => storage.Comp.EnergyStoragePriority) // Order by priority (lower numbers = higher priority).
+            .ThenByDescending(storage => storage.Comp.EnergyStoragePriorityTieBreaker); // Arbitrary ordering
     }
 
-    public IEnumerable<(EntityUid EntityUid, ModularShieldFluxStorageComponent FluxStorageComponent)> OrderFluxStorageByPriority(IEnumerable<(EntityUid EntityUid, ModularShieldFluxStorageComponent FluxStorageComponent)> components, bool highestPriorityFirst = true)
+    public IEnumerable<Entity<ModularShieldFluxStorageComponent>> OrderFluxStorageByPriority(IEnumerable<Entity<ModularShieldFluxStorageComponent>> entities, bool highestPriorityFirst = true)
     {
-        return components
-            .OrderByDescending(storage => storage.FluxStorageComponent.FluxStoragePriority) // Order by priority (lower numbers = higher priority).
-            .ThenByDescending(storage => storage.FluxStorageComponent.FluxStoragePriorityTieBreaker); // Arbitrary ordering
+        return entities
+            .OrderByDescending(storage => storage.Comp.FluxStoragePriority) // Order by priority (lower numbers = higher priority).
+            .ThenByDescending(storage => storage.Comp.FluxStoragePriorityTieBreaker); // Arbitrary ordering
     }
 
-    public IEnumerable<(EntityUid EntityUid, ModularShieldFluxDestructionComponent FluxDestructionComponent)> OrderFluxDestructionByPriority(IEnumerable<(EntityUid EntityUid, ModularShieldFluxDestructionComponent FluxDestructionComponent)> components, bool highestPriorityFirst = true)
+    public IEnumerable<Entity<ModularShieldFluxDestructionComponent>> OrderFluxDestructionByPriority(IEnumerable<Entity<ModularShieldFluxDestructionComponent>> entities, bool highestPriorityFirst = true)
     {
-        return components
-            .OrderByDescending(component => component.FluxDestructionComponent.FluxDestructionPriority) // Order by priority (lower numbers = higher priority).
-            .ThenByDescending(component => component.FluxDestructionComponent.FluxDestructionPriorityTieBreaker); // Arbitrary ordering
+        return entities
+            .OrderByDescending(component => component.Comp.FluxDestructionPriority) // Order by priority (lower numbers = higher priority).
+            .ThenByDescending(component => component.Comp.FluxDestructionPriorityTieBreaker); // Arbitrary ordering
     }
 }

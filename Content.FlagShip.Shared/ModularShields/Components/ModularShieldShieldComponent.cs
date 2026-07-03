@@ -1,7 +1,7 @@
 namespace Content.FlagShip.Shared.ModularShields.Components;
 
-[Virtual]
-public partial class SharedModularShieldShieldComponent : Component
+[RegisterComponent]
+public sealed partial class ModularShieldShieldComponent : Component
 {
     public EntityUid? ModularShieldCoreSource;
     public EntityUid ShieldedEntity;

@@ -1,4 +1,4 @@
-using Content.FlagShip.Server.ModularShields.Components;
+using Content.FlagShip.Shared.ModularShields.Components;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,7 +15,7 @@ public partial class ModularShieldSystem
     /// <returns>Amount of energy that could not be added due to lack of capacity</returns>
     public float GenerateEnergy(ModularShieldNodeGroup nodeGroup, float amountToAdd)
     {
-        ModularShieldCoreComponent? shieldCore = nodeGroup.GetMasterModularShieldCore()?.Item2;
+        ModularShieldCoreComponent? shieldCore = nodeGroup.GetMasterModularShieldCore()?.Comp;
         if (shieldCore == null)
         {
             // No master shield core, disabled.
@@ -28,7 +28,7 @@ public partial class ModularShieldSystem
 
         foreach (var energyStorageEntity in energyStorage)
         {
-            var energyStorageComponent = energyStorageEntity.Item2;
+            var energyStorageComponent = energyStorageEntity.Comp;
             var remainingCapacity = energyStorageComponent.EnergyCapacity - energyStorageComponent.EnergyStored;
 
             if (remainingCapacity < amountRemaining)
@@ -61,7 +61,7 @@ public partial class ModularShieldSystem
             // No master shield core, disabled.
             return amountToDestroy;
         }
-        var shieldCoreEntityUid = shieldCore.Value.EntityUid;
+        var shieldCoreEntityUid = shieldCore.Value.Owner;
 
         // We're destroying energy, so we sort in reverse order to remove from the lowest priority storage first.
         var energyStorage = nodeGroup.OrderEnergyStorageByPriority(nodeGroup.GetEnergyStorage(), highestPriorityFirst: false);
@@ -70,7 +70,7 @@ public partial class ModularShieldSystem
 
         foreach (var energyStorageEntity in energyStorage)
         {
-            var energyStorageComponent = energyStorageEntity.Item2;
+            var energyStorageComponent = energyStorageEntity.Comp;
             if (energyStorageComponent.EnergyStored < amountRemaining)
             {
                 amountRemaining -= energyStorageComponent.EnergyStored;
@@ -82,12 +82,6 @@ public partial class ModularShieldSystem
                 amountRemaining = 0;
                 break;
             }
-        }
-
-        // Out of energy, disable shield.
-        if (amountRemaining > 0)
-        {
-            TryStopModularShieldProjection(shieldCoreEntityUid);
         }
 
         return amountRemaining;
@@ -102,7 +96,7 @@ public partial class ModularShieldSystem
     /// <returns>Amount of flux that could not be added due to lack of capacity</returns>
     public float GenerateFlux(ModularShieldNodeGroup nodeGroup, float amountToAdd)
     {
-        ModularShieldCoreComponent? shieldCore = nodeGroup.GetMasterModularShieldCore()?.Item2;
+        ModularShieldCoreComponent? shieldCore = nodeGroup.GetMasterModularShieldCore()?.Comp;
         if (shieldCore == null)
         {
             // No master shield core, disabled.
@@ -120,7 +114,7 @@ public partial class ModularShieldSystem
         {
             foreach (var fluxStorageEntity in fluxStorage)
             {
-                var fluxStorageComponent = fluxStorageEntity.Item2;
+                var fluxStorageComponent = fluxStorageEntity.Comp;
                 var remainingCapacity = fluxStorageComponent.FluxCapacity - fluxStorageComponent.FluxStored;
 
                 if (remainingCapacity < amountRemaining)
@@ -154,7 +148,7 @@ public partial class ModularShieldSystem
     /// <returns>Amount of flux that could not be destroyed due to lack of stored flux</returns>
     public float DestroyFlux(ModularShieldNodeGroup nodeGroup, float amountToDestroy)
     {
-        ModularShieldCoreComponent? masterShieldCore = nodeGroup.GetMasterModularShieldCore()?.Item2;
+        ModularShieldCoreComponent? masterShieldCore = nodeGroup.GetMasterModularShieldCore()?.Comp;
         if (masterShieldCore == null)
         {
             // No master shield core, disabled.
@@ -192,7 +186,7 @@ public partial class ModularShieldSystem
 
         foreach (var fluxStorageEntity in fluxStorage)
         {
-            var fluxStorageComponent = fluxStorageEntity.Item2;
+            var fluxStorageComponent = fluxStorageEntity.Comp;
             if (fluxStorageComponent.FluxStored < amountRemaining)
             {
                 amountRemaining -= fluxStorageComponent.FluxStored;

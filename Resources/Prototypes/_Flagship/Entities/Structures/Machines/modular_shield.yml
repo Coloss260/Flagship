@@ -1,0 +1,122 @@
+- type: entity
+  abstract: true
+  parent: BaseMachine
+  id: ModularShieldBase
+  components:
+  - type: NodeContainer
+    examinable: true
+    nodes:
+      modularShield:
+        !type:AdjacentNode
+        nodeGroupID: ModularShield
+
+
+
+- type: entity
+  parent: ModularShieldBase
+  id: ModularShieldCore
+  name: Modular Shield Core
+  description: It's the core of a modular shield system.
+  components:
+  - type: ModularShieldCore
+  - type: Sprite
+    snapCardinals: true
+    sprite: Structures/Power/Generation/ame.rsi
+    state: control
+
+- type: entity
+  parent: ModularShieldCore
+  id: ModularShieldCoreDebug
+  name: Modular Shield Debug Core
+  description: It's an all-in-one modular shield system with absurd stats.
+  components:
+  - type: ModularShieldEnergyGeneration
+    energyGenerationRateMaximum: 20000
+  - type: ModularShieldEnergyStorage
+    energyCapacity: 20000
+  - type: ModularShieldFluxStorage
+    fluxCapacity: 20000
+  - type: ModularShieldFluxDestruction
+    fluxDestructionRateMaximum: 20000
+
+
+
+- type: entity
+  parent: ModularShieldBase
+  id: ModularShieldEnergyGeneratorSimple
+  name: Modular Shield Electrical Generator
+  description: It uses the ship's electrical grid to generate a small amount of energy per second.
+  components:
+  - type: ModularShieldEnergyGeneration
+  - type: ApcPowerReceiver
+    powerLoad: 1000
+  - type: ExtensionCableReceiver
+  - type: LightningTarget
+    priority: 1
+  - type: Sprite
+    snapCardinals: true
+    sprite: Structures/Power/Generation/portable_generator.rsi
+    state: portgen0
+
+
+
+
+- type: entity
+  parent: ModularShieldBase
+  id: ModularShieldEnergyStorageMedium
+  name: Modular Shield Medium Energy Storage
+  description: It stores a decent amount of energy for the modular shield system.
+  components:
+  - type: ModularShieldEnergyStorage
+  - type: Sprite
+    snapCardinals: true
+    sprite: Structures/storage/tanks.rsi
+    state: highwatertank
+
+
+
+
+- type: entity
+  parent: ModularShieldBase
+  id: ModularShieldFluxStorageMedium
+  name: Modular Shield Medium Flux Storage
+  description: It stores a decent amount of flux from the modular shield system.
+  components:
+  - type: ModularShieldFluxStorage
+  - type: Sprite
+    snapCardinals: true
+    sprite: Structures/Storage/tanks.rsi
+    state: highfueltank
+
+
+
+
+- type: entity
+  parent: ModularShieldBase
+  id: ModularShieldFluxDestructorSimple
+  name: Modular Shield Electrical Flux Dissipator
+  description: It uses electricity to dissipate a small amount of flux from the modular shield system per second.
+  components:
+  - type: ModularShieldFluxDestruction
+  - type: ApcPowerReceiver
+    powerLoad: 1000
+  - type: ExtensionCableReceiver
+  - type: LightningTarget
+    priority: 1
+  - type: Sprite
+    snapCardinals: true
+    sprite: Structures/Power/Generation/portable_generator.rsi
+    state: portgen1
+
+
+
+
+- type: entity
+  id: ModularShieldShield
+  name: ship shield
+  description: The projected shield of a modular shield system.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: ModularShieldShield
+  - type: ModularShieldShieldVisuals
+

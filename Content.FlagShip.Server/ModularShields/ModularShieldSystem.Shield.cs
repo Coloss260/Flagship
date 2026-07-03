@@ -1,5 +1,6 @@
-using Content.FlagShip.Server.ModularShields.Components;
+using Content.FlagShip.Shared.ModularShields.Components;
 using Content.Shared.Physics;
+using Content.Shared.Projectiles;
 using Robust.Server.GameObjects;
 using Robust.Server.GameStates;
 using Robust.Shared.Map;
@@ -7,6 +8,7 @@ using Robust.Shared.Map.Components;
 using Robust.Shared.Physics;
 using Robust.Shared.Physics.Collision.Shapes;
 using Robust.Shared.Physics.Components;
+using Robust.Shared.Physics.Events;
 using Robust.Shared.Physics.Systems;
 using System;
 using System.Collections.Generic;
@@ -81,6 +83,7 @@ public partial class ModularShieldSystem
             collisionLayer: (int)CollisionGroup.BulletImpassable, // Mono - Only try to block bullets
             body: shieldPhysics);
 
+
         _physicsSystem.WakeBody(shield, body: shieldPhysics);
         _physicsSystem.SetSleepingAllowed(shield, shieldPhysics, false);
 
@@ -144,9 +147,50 @@ public partial class ModularShieldSystem
 
         _fixtureSystem.TryCreateFixture(uid, chain, name,
             hard: false,
-            collisionLayer: (int)CollisionGroup.BulletImpassable, // Mono - Only blocks bullets
+            // This causes debug assertion failures when bullets hit the shield where it overlaps with the internal shield.
+            // If set to BulletImpassable
+            collisionLayer: (int)CollisionGroup.None,
             body: physics);
 
         return chain;
     }
+
+
+    private void OnPreventCollide(EntityUid uid, ModularShieldShieldComponent component, ref PreventCollideEvent args)
+    {
+        if (!_projectileQuery.TryGetComponent(args.OtherEntity, out var projectile) || projectile.ProjectileSpent)
+        {
+            args.Cancelled = true;
+            return;
+        }
+
+        //if (TryComp<TimedDespawnComponent>(args.OtherEntity, out var despawn))
+        //    despawn.Lifetime += despawn.Lifetime;
+
+        // I originally tried reflection but the math is too hard with the fucked coordinate system in this game (WorldRotation can be negative. Vector to Angle conversion loses information. Etc etc.)
+        // Might try again at some point using just vector math with this (https://math.stackexchange.com/questions/13261/how-to-get-a-reflection-vector)
+        //var deflectionVector = Transform(args.OtherEntity).WorldPosition - Transform(uid).WorldPosition;
+        //var angle = _random.NextFloat(DeflectionSpread);
+
+        //if (_random.Prob(0.5f))
+        //    angle = -angle;
+
+        //deflectionVector = new Vector2((float) (Math.Cos(angle) * deflectionVector.X - Math.Sin(angle) * deflectionVector.Y), (float) (Math.Sin(angle) * deflectionVector.X - Math.Cos(angle) * deflectionVector.Y));
+
+        // instead of reflecting the projectile, just delete it. this works better for gameplay and intuiting what is going on in a fight.
+        // why shoot the projectile again when you can just 180 its physics, tho?
+        //_gun.ShootProjectile(args.OtherEntity, deflectionVector, _physicsSystem.GetMapLinearVelocity(uid), uid, null, velocity.Length());
+
+        if (component.ModularShieldCoreSource is { } source)
+        {
+            var ev = new ModularShieldAbsorbedEvent(args.OtherEntity, projectile);
+            RaiseLocalEvent(source, ref ev);
+        }
+    }
+}
+
+[ByRefEvent]
+public record struct ModularShieldAbsorbedEvent(EntityUid AbsorbedProjectile, ProjectileComponent Projectile)
+{
+
 }
