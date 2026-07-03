@@ -21,7 +21,7 @@
 - type: startingGear
   id: ChiefOfMaintenanceGear
   equipment:
-    id: CEPDA
+    id: ChiefOfMaintenancePDA
     head: ClothingHeadHatBeretEngineering
     eyes: ClothingEyesGlassesMeson
     ears: ClothingHeadsetAltMaintenance

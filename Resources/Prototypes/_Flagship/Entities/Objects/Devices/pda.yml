@@ -464,3 +464,100 @@
     borderColor: "#102e46"
   - type: Icon
     state: pda-supplies
+
+# Maintenance
+- type: entity
+  parent: BaseFlagPDA
+  id: ChiefOfMaintenancePDA
+  name: Chief Of Maintenance PDA
+  description: Surprisingly no different from your PDA.
+  components:
+  - type: Pda
+    id: ChiefOfMaintenanceIDCard
+    penSlot:
+      startingItem: PenCap
+      priority: -1
+      whitelist:
+        tags:
+        - Write
+  - type: Appearance
+    appearanceDataInit:
+     enum.PdaVisuals.PdaType:
+       !type:String
+       pda-maintenance
+  - type: PdaBorderColor
+    borderColor: "#af6200"
+  - type: Icon
+    state: pda-maintenance
+
+- type: entity
+  parent: BaseFlagPDA
+  id: LifeSupportSpecialistPDA
+  name: Life Support Specialist PDA
+  description: Surprisingly no different from your PDA.
+  components:
+  - type: Pda
+    id: LifeSupportSpecialistIDCard
+    penSlot:
+      startingItem: PenCap
+      priority: -1
+      whitelist:
+        tags:
+        - Write
+  - type: Appearance
+    appearanceDataInit:
+     enum.PdaVisuals.PdaType:
+       !type:String
+       pda-lifesupportspecialist
+  - type: PdaBorderColor
+    borderColor: "#c2a000"
+  - type: Icon
+    state: pda-lifesupportspecialist
+
+- type: entity
+  parent: BaseFlagPDA
+  id: MaintenanceTechnicianPDA
+  name: Maintenance Technician PDA
+  description: Surprisingly no different from your PDA.
+  components:
+  - type: Pda
+    id: MaintenanceTechnicianIDCard
+    penSlot:
+      startingItem: PenCap
+      priority: -1
+      whitelist:
+        tags:
+        - Write
+  - type: Appearance
+    appearanceDataInit:
+     enum.PdaVisuals.PdaType:
+       !type:String
+       pda-maintenance
+  - type: PdaBorderColor
+    borderColor: "#af6200"
+  - type: Icon
+    state: pda-maintenance
+
+- type: entity
+  parent: BaseFlagPDA
+  id: MaintenanceInternPDA
+  name: Maintenance Intern PDA
+  description: Surprisingly no different from your PDA.
+  components:
+  - type: Pda
+    id: MaintenanceInternIDCard
+    penSlot:
+      startingItem: PenCap
+      priority: -1
+      whitelist:
+        tags:
+        - Write
+  - type: Appearance
+    appearanceDataInit:
+     enum.PdaVisuals.PdaType:
+       !type:String
+       pda-maintenance
+  - type: PdaBorderColor
+    borderColor: "#af6200"
+  - type: Icon
+    state: pda-maintenance

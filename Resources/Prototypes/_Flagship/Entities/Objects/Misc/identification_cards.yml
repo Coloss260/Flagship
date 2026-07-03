@@ -324,6 +324,107 @@
     - WhitelistChameleon
     - WhitelistChameleonIdCard
 
+# Maintenance
+- type: entity
+  parent: [IDCardFlagship]
+  id: ChiefOfMaintenanceIDCard
+  name: Chief of Maintenance ID Card
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+    - state: stripe_top
+      color: "#e68100"
+    - state: stripe_bottom
+      color: "#c66f00"
+    - sprite: /Textures/_Flagship/Interface/Misc/job_icons.rsi
+      offset: -0.09375, 0.0625
+      state: ChiefOfMaintenance
+  - type: Item
+    heldPrefix: default
+  - type: PresetIdCard
+    job: ChiefOfMaintenance
+  - type: Tag
+    tags:
+    - DoorBumpOpener
+    - WhitelistChameleon
+    - WhitelistChameleonIdCard
+
+- type: entity
+  parent: [IDCardFlagship]
+  id: LifeSupportSpecialistIDCard
+  name: Life Support Specialist ID Card
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+    - state: stripe_top
+      color: "#ffee00"
+    - state: stripe_bottom
+      color: "#c2a000"
+    - sprite: /Textures/_Flagship/Interface/Misc/job_icons.rsi
+      offset: -0.09375, 0.0625
+      state: LifeSupportSpecialist
+  - type: Item
+    heldPrefix: default
+  - type: PresetIdCard
+    job: LifeSupportSpecialist
+  - type: Tag
+    tags:
+    - DoorBumpOpener
+    - WhitelistChameleon
+    - WhitelistChameleonIdCard
+
+- type: entity
+  parent: [IDCardFlagship]
+  id: MaintenanceTechnicianIDCard
+  name: Maintenance Technician ID Card
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+    - state: stripe_top
+      color: "#e68100"
+    - state: stripe_bottom
+      color: "#c66f00"
+    - sprite: /Textures/_Flagship/Interface/Misc/job_icons.rsi
+      offset: -0.09375, 0.0625
+      state: MaintenanceTechnician
+  - type: Item
+    heldPrefix: default
+  - type: PresetIdCard
+    job: MaintenanceTechnician
+  - type: Tag
+    tags:
+    - DoorBumpOpener
+    - WhitelistChameleon
+    - WhitelistChameleonIdCard
+
+- type: entity
+  parent: [IDCardFlagship]
+  id: MaintenanceInternIDCard
+  name: Maintenance Intern ID Card
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+    - state: stripe_top
+      color: "#e68100"
+    - state: stripe_bottom
+      color: "#c66f00"
+    - sprite: /Textures/_Flagship/Interface/Misc/job_icons.rsi
+      offset: -0.09375, 0.0625
+      state: MaintenanceIntern
+  - type: Item
+    heldPrefix: default
+  - type: PresetIdCard
+    job: MaintenanceIntern
+  - type: Tag
+    tags:
+    - DoorBumpOpener
+    - WhitelistChameleon
+    - WhitelistChameleonIdCard
+
 # Supply
 - type: entity
   parent: [IDCardFlagship]

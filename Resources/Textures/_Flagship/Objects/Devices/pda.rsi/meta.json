@@ -40,6 +40,12 @@
             "name": "pda-artilleryspecialist"
         },
         {
+            "name": "pda-maintenance"
+        },
+        {
+            "name": "pda-lifesupportspecialist"
+        },
+        {
             "name": "pda"
         }
     ]

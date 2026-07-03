@@ -24,7 +24,7 @@
 - type: startingGear
   id: LifeSupportSpecialistGear
   equipment:
-    id: AtmosPDA
+    id: LifeSupportSpecialistPDA
     head: ClothingHeadHatHardhatYellow
     eyes: ClothingEyesGlassesMeson
     ears: ClothingHeadsetLifeSupportSpecialist

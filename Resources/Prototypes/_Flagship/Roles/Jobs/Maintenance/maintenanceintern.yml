@@ -24,7 +24,7 @@
 - type: startingGear
   id: MaintenanceInternGear
   equipment:
-    id: TechnicalAssistantPDA
+    id: MaintenanceInternPDA
     head: ClothingHeadHatOrangesoft
     eyes: ClothingEyesGlassesMeson
     ears: ClothingHeadsetMaintenance
