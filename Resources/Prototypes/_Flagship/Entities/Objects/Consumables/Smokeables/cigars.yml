@@ -1,0 +1,42 @@
+# NEW FRONTIER 14 // START
+- type: entity
+  id: CigarPlatinumCase
+  parent: CigarCase
+  name: Generalissimo No. 3 cigar case
+  description: Subtly embossed, and labelled "12/40". Smells of cedar.
+  components:
+  - type: StorageFill
+    contents:
+    - id: CigarPlatinum
+      amount: 8
+  - type: Sprite
+    sprite: _NF/Objects/Consumable/Smokeables/Cigars/case-platinum.rsi
+
+- type: entity
+  id: CigarPlatinum
+  parent: CigarGold
+  name: Generalissimo No. 3 cigar
+  description: You feel dignified just looking at it. Smells of cedar.
+  components:
+  - type: Sprite
+    scale: 1.2, 1.2
+    sprite: _NF/Objects/Consumable/Smokeables/Cigars/cigar-platinum.rsi
+    state: unlit-icon
+  - type: Clothing
+    sprite: _NF/Objects/Consumable/Smokeables/Cigars/cigar-platinum.rsi
+    equippedPrefix: unlit
+
+- type: entity
+  id: CigarPlatinumSpent
+  parent: CigarPlatinum
+  suffix: spent
+  components:
+  - type: Sprite
+    state: burnt-icon
+  - type: Smokable
+    state: Burnt
+  - type: SolutionContainerManager
+    solutions:
+      smokable:
+        maxVol: 20
+# NEW FRONTIER 14 // END

@@ -1,0 +1,108 @@
+# MONOLITH // START
+- type: entity
+  parent: [VendingMachineAmmo, BaseStructureDisableAnchoring]
+  id: VendingMachineAmmoPOIMercenary
+  name: PMC liberation station
+  suffix: POI, PMC
+  components:
+  - type: VendingMachine
+    pack: WeaponryWorksVendPOIMercInventory
+    requiresCash: true
+  - type: AccessReader
+    access: [["Mercenary"], ["Security"]]
+
+- type: entity
+  parent: [BaseStructureDisableToolUse, VendingMachineSyndieContraband]
+  id: VendingMachineSyndieContrabandPOI
+  name: ContraVend
+  suffix: POI
+  description: Wanted across multiple sectors!
+
+- type: entity
+  parent: VendingMachine
+  id: VendingMachineBarista
+  name: Barista Vendor
+  description: Sells a variety of coffees, teas, and pastries.
+  suffix: POI
+  components:
+  - type: VendingMachine
+    pack: BaristaVendInventory
+    dispenseOnHitChance: 0.25
+    dispenseOnHitThreshold: 2
+    offState: off
+    brokenState: broken
+    normalState: normal-unshaded
+    # ejectState: eject-unshaded
+    # denyState: deny-unshaded
+    ejectDelay: 1.9
+    initialStockQuality: 1
+    requiresCash: true
+  - type: MarketModifier
+    mod: 10
+  - type: Advertise
+    pack: BaristaAds
+  - type: SpeakOnUIClosed
+    pack: BaristaGoodbyes
+  - type: Sprite
+    sprite: _Mono/Structures/Machines/VendingMachines/barista.rsi
+    layers:
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.Base"]
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
+      shader: unshaded
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: PointLight
+    radius: 1.5
+    energy: 1.6
+    color: "#D82929"
+
+
+- type: entity
+  parent: VendingMachineBarista
+  id: VendingMachineBaristaShip
+  name: Barista Vendor
+  description: Sells a variety of coffees, teas, and pastries.
+  suffix: "0.35%"
+  components:
+  - type: VendingMachine
+    pack: BaristaVendInventory
+    dispenseOnHitChance: 0.25
+    dispenseOnHitThreshold: 2
+    offState: off
+    brokenState: broken
+    normalState: normal-unshaded
+    # ejectState: eject-unshaded
+    # denyState: deny-unshaded
+    ejectDelay: 1.9
+    initialStockQuality: 0.35
+
+
+- type: entity
+  parent: [VendingMachineAstroVend, BaseStructureDisableAnchoring]
+  id: VendingMachinePMCclothingsPOI
+  name: Uncle Boris's surplus clothing vend
+  description: Sells various PMC and military surplus gears.
+  suffix: POI
+  components:
+  - type: VendingMachine
+    pack: PMCclothings
+    offState: off
+    brokenState: broken
+    normalState: normal-unshaded
+  - type: MarketModifier
+    mod: 2
+  - type: Sprite
+    sprite: _Mono/Structures/Machines/VendingMachines/boris_surplus.rsi
+    layers:
+    - state: "off"
+      map: [ "enum.VendingMachineVisualLayers.Base" ]
+    - state: "off"
+      map: [ "enum.VendingMachineVisualLayers.BaseUnshaded" ]
+      shader: unshaded
+    - state: panel
+      map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
+  - type: AccessReader
+    access: [["Mercenary"], ["Security"]]
+# MONOLITH // END
