@@ -9,14 +9,8 @@ namespace Content.FlagShip.Shared.FTLDrive;
 public sealed partial class ShuttleFTLDriveComponent : Component
 {
     /// <summary>
-    /// How far the shuttle should be able to FTL
+    /// The actual FTL drive entity that is on the shuttle
     /// </summary>
-    [DataField, AutoNetworkedField]
-    public float Range;
-
-    /// <summary>
-    /// The acutal FTL drive entity that is on the shuttle
-    /// </summary>
-    [ViewVariables]
-    public Entity<FTLDriveComponent> FTLDriveEntity;
+    [ViewVariables, AutoNetworkedField]
+    public EntityUid? FTLDriveEntity;
 }

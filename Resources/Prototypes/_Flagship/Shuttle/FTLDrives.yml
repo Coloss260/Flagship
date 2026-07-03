@@ -15,6 +15,16 @@
     - state: screen
       visible: False
       map: [ "enum.PowerDeviceVisualLayers.Powered" ]
+  - type: Modifiable
+    allowedAspects:
+    - FTLDriveRange
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+  - type: ContainerContainer
+    containers:
+      cell_slot: !type:ContainerSlot { }
   - type: Appearance
   - type: FTLDrive
     fTLComponents:
@@ -36,7 +46,7 @@
     volume: 15
     range: 7
     sound:
-      path: /Audio/_FlagShip/Effects/Shuttle/FTL_drive_hum.ogg
+      path: /Audio/_Flagship/Effects/Shuttle/FTL_drive_hum.ogg
   - type: ApcPowerReceiver
     powerLoad: 50
   - type: PowerState
@@ -76,3 +86,12 @@
 - type: entity
   parent: FTLDriveBase
   id: FTLDriveNanotrasen
+
+- type: entity
+  parent: PowerCageSmall
+  id: TestFuelCell
+  components:
+  - type: Modifier
+    modifiers:
+    - FTLRangeIncreaseMinor
+  - type: AddModifierOnInserted
