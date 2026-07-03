@@ -95,6 +95,19 @@ public struct HitscanRaycastFiredEvent
     public HitscanRaycastFiredData Data;
 }
 
+/// <summary>
+/// Raised on the target that is about to take hitscan damage (regardless of if they have a DamageableComponent).
+/// This is raised before the damage is applied and can be cancelled to prevent the damage from being applied.
+/// </summary>
+/// <param name="Origin">Entity that fired the hitscan.</param>
+/// <param name="DamageToTake">Amount of damage to be dealt.</param>
+/// <param name="Cancelled"></param>
+[ByRefEvent]
+public record struct HitscanDamageAttemptEvent(EntityUid Origin, DamageSpecifier DamageToTake, bool Cancelled = false)
+{
+}
+
+
 [ByRefEvent]
 public record struct HitscanDamageDealtEvent
 {

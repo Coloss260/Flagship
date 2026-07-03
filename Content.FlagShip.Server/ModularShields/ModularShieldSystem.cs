@@ -11,6 +11,7 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Text;
@@ -33,8 +34,8 @@ public sealed partial class ModularShieldSystem : EntitySystem
         base.Initialize();
         _projectileQuery = GetEntityQuery<ProjectileComponent>();
 
-        SubscribeLocalEvent<ModularShieldShieldComponent, PreventCollideEvent>(OnPreventCollide);
-        SubscribeLocalEvent<ModularShieldCoreComponent, ModularShieldAbsorbedEvent>(OnModularShieldAbsorbed);
+        SubscribeLocalEvent<ModularShieldCoreComponent, ModularShieldAbsorbedProjectileEvent>(OnModularShieldProjectileAbsorbed);
+        SubscribeLocalEvent<ModularShieldCoreComponent, ModularShieldAbsorbedDamageEvent>(OnModularShieldDamageAbsorbed);
         SubscribeLocalEvent<ModularShieldCoreComponent, ComponentShutdown>(OnModularShieldCoreShutdown);
 
         SubscribeLocalEvent<ModularShieldCoreComponent, ExaminedEvent>(OnShieldCoreExamined);
@@ -42,6 +43,8 @@ public sealed partial class ModularShieldSystem : EntitySystem
         SubscribeLocalEvent<ModularShieldEnergyStorageComponent, ExaminedEvent>(OnEnergyStorageExamined);
         SubscribeLocalEvent<ModularShieldFluxStorageComponent, ExaminedEvent>(OnFluxStorageExamined);
         SubscribeLocalEvent<ModularShieldFluxDestructionComponent, ExaminedEvent>(OnFluxDestructorExamined);
+
+        InitializeShield();
     }
 
     public override void Update(float frameTime)
@@ -306,7 +309,7 @@ public sealed partial class ModularShieldSystem : EntitySystem
 
 
 
-    private void OnModularShieldAbsorbed(EntityUid uid, ModularShieldCoreComponent component, ModularShieldAbsorbedEvent args)
+    private void OnModularShieldProjectileAbsorbed(EntityUid uid, ModularShieldCoreComponent component, ModularShieldAbsorbedProjectileEvent args)
     {
         var calculatedDamage = 0f;
         if (TryComp<EmpOnTriggerComponent>(args.AbsorbedProjectile, out var emp))
@@ -323,13 +326,20 @@ public sealed partial class ModularShieldSystem : EntitySystem
         calculatedDamage += (float)args.Projectile.Damage.GetTotal();
         args.Projectile.ProjectileSpent = true;
 
-        if (calculatedDamage > 0 && TryGetModularShieldNodeGroup(uid, out var nodeGroup))
-        {
-            DestroyEnergy(nodeGroup, calculatedDamage * component.DamageAbsorbedToEnergyDestructionRatio);
-            GenerateFlux(nodeGroup, calculatedDamage * component.DamageAbsorbedToFluxGenerationRatio);
-        }
+        var ev = new ModularShieldAbsorbedDamageEvent(calculatedDamage);
+        RaiseLocalEvent(uid, ref ev);
 
         QueueDel(args.AbsorbedProjectile);
+    }
+
+
+    private void OnModularShieldDamageAbsorbed(Entity<ModularShieldCoreComponent> ent, ref ModularShieldAbsorbedDamageEvent args)
+    {
+        if (args.DamageDealt > 0 && TryGetModularShieldNodeGroup(ent.Owner, out var nodeGroup))
+        {
+            DestroyEnergy(nodeGroup, args.DamageDealt * ent.Comp.DamageAbsorbedToEnergyDestructionRatio);
+            GenerateFlux(nodeGroup, args.DamageDealt * ent.Comp.DamageAbsorbedToFluxGenerationRatio);
+        }
     }
 
 
@@ -462,5 +472,20 @@ public sealed partial class ModularShieldSystem : EntitySystem
             .FirstOrDefault();
 
         return group != null;
+    }
+
+
+
+
+
+    [ByRefEvent]
+    public record struct ModularShieldAbsorbedProjectileEvent(EntityUid AbsorbedProjectile, ProjectileComponent Projectile)
+    {
+
+    }
+    [ByRefEvent]
+    public record struct ModularShieldAbsorbedDamageEvent(float DamageDealt)
+    {
+
     }
 }

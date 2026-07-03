@@ -1,6 +1,11 @@
 using Content.FlagShip.Shared.ModularShields.Components;
+using Content.Shared.Damage;
+using Content.Shared.Damage.Systems;
 using Content.Shared.Physics;
 using Content.Shared.Projectiles;
+using Content.Shared.Trigger.Components.Triggers;
+using Content.Shared.Weapons.Hitscan.Components;
+using Content.Shared.Weapons.Hitscan.Events;
 using Robust.Server.GameObjects;
 using Robust.Server.GameStates;
 using Robust.Shared.Map;
@@ -25,6 +30,16 @@ public partial class ModularShieldSystem
     [Dependency] private FixtureSystem _fixtureSystem = default!;
     [Dependency] private PhysicsSystem _physicsSystem = default!;
     [Dependency] private PvsOverrideSystem _pvsSys = default!;
+
+
+
+    public void InitializeShield()
+    {
+        SubscribeLocalEvent<ModularShieldShieldComponent, PreventCollideEvent>(OnPreventCollide);
+        SubscribeLocalEvent<ModularShieldShieldComponent, HitscanDamageAttemptEvent>(OnHitscanDamageAttemptEvent);
+    }
+
+
 
     /// <summary>
     /// Produces a shield around a grid entity, if it doesn't already exist.
@@ -80,7 +95,7 @@ public partial class ModularShieldSystem
 
         _fixtureSystem.TryCreateFixture(shield, internalPoly, "internalShield",
             hard: true,
-            collisionLayer: (int)CollisionGroup.BulletImpassable, // Mono - Only try to block bullets
+            collisionLayer: (int)(CollisionGroup.BulletImpassable | CollisionGroup.ModularShield),
             body: shieldPhysics);
 
 
@@ -164,33 +179,22 @@ public partial class ModularShieldSystem
             return;
         }
 
-        //if (TryComp<TimedDespawnComponent>(args.OtherEntity, out var despawn))
-        //    despawn.Lifetime += despawn.Lifetime;
-
-        // I originally tried reflection but the math is too hard with the fucked coordinate system in this game (WorldRotation can be negative. Vector to Angle conversion loses information. Etc etc.)
-        // Might try again at some point using just vector math with this (https://math.stackexchange.com/questions/13261/how-to-get-a-reflection-vector)
-        //var deflectionVector = Transform(args.OtherEntity).WorldPosition - Transform(uid).WorldPosition;
-        //var angle = _random.NextFloat(DeflectionSpread);
-
-        //if (_random.Prob(0.5f))
-        //    angle = -angle;
-
-        //deflectionVector = new Vector2((float) (Math.Cos(angle) * deflectionVector.X - Math.Sin(angle) * deflectionVector.Y), (float) (Math.Sin(angle) * deflectionVector.X - Math.Cos(angle) * deflectionVector.Y));
-
-        // instead of reflecting the projectile, just delete it. this works better for gameplay and intuiting what is going on in a fight.
-        // why shoot the projectile again when you can just 180 its physics, tho?
-        //_gun.ShootProjectile(args.OtherEntity, deflectionVector, _physicsSystem.GetMapLinearVelocity(uid), uid, null, velocity.Length());
-
         if (component.ModularShieldCoreSource is { } source)
         {
-            var ev = new ModularShieldAbsorbedEvent(args.OtherEntity, projectile);
+            var ev = new ModularShieldAbsorbedProjectileEvent(args.OtherEntity, projectile);
             RaiseLocalEvent(source, ref ev);
         }
     }
-}
 
-[ByRefEvent]
-public record struct ModularShieldAbsorbedEvent(EntityUid AbsorbedProjectile, ProjectileComponent Projectile)
-{
 
+    private void OnHitscanDamageAttemptEvent(Entity<ModularShieldShieldComponent> ent, ref HitscanDamageAttemptEvent args)
+    {
+        if (ent.Comp.ModularShieldCoreSource != null)
+        {
+            var ev = new ModularShieldAbsorbedDamageEvent((float)args.DamageToTake.GetTotal());
+            RaiseLocalEvent((EntityUid)ent.Comp.ModularShieldCoreSource, ref ev);
+
+            args.Cancelled = true;
+        }
+    }
 }
