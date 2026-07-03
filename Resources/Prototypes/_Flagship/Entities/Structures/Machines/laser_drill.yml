@@ -76,101 +76,101 @@
   - type: ItemMiner
     interval: 10 # previously 20
 
-- type: entity
-  name: random ores
-  id: SpawnLootOres15
-  parent: MarkerBasePlaceFree
-  suffix: "Laser Drill, 15"
-  components:
-  - type: Sprite
-    layers:
-    - state: green
-      scale: 0.7, 0.7
-    - sprite: Objects/Materials/ore.rsi
-      state: plasma
-    - sprite: _NF/Markers/general.rsi
-      state: questionmark
-      color: red
-  - type: RandomSpawner
-    prototypes:
-    - GoldOre15
-    - SteelOre15
-    - PlasmaOre15
-    - SilverOre15
-    - SpaceQuartz15
-    - UraniumOre15
-    - Coal15
-    - LithiumOre15
-    - CopperOre15
-    chance: 0.95
-    offset: 0.0
-    rarePrototypes:
-    - BananiumOre1
-    - DiamondOre1
-    - BluespaceOre1
-    rareChance: 0.01
-
-- type: entity
-  parent: GoldOre
-  id: GoldOre15
-  suffix: Fifteen
-  components:
-  - type: Stack
-    count: 15
-
-- type: entity
-  parent: SteelOre
-  id: SteelOre15
-  suffix: Fifteen
-  components:
-  - type: Stack
-    count: 15
-
-- type: entity
-  parent: PlasmaOre
-  id: PlasmaOre15
-  suffix: Fifteen
-  components:
-  - type: Stack
-    count: 15
-
-- type: entity
-  parent: SilverOre
-  id: SilverOre15
-  suffix: Fifteen
-  components:
-  - type: Stack
-    count: 15
-
-- type: entity
-  parent: SpaceQuartz
-  id: SpaceQuartz15
-  suffix: Fifteen
-  components:
-  - type: Stack
-    count: 15
-
-- type: entity
-  parent: UraniumOre
-  id: UraniumOre15
-  suffix: Fifteen
-  components:
-  - type: Stack
-    count: 15
-
-- type: entity
-  parent: LithiumOre
-  id: LithiumOre15
-  suffix: Fifteen
-  components:
-  - type: Stack
-    count: 15
-
-- type: entity
-  parent: CopperOre
-  id: CopperOre15
-  suffix: Fifteen
-  components:
-  - type: Stack
-    count: 15
+#- type: entity
+#  name: random ores
+#  id: SpawnLootOres15
+#  parent: MarkerBasePlaceFree
+#  suffix: "Laser Drill, 15"
+#  components:
+#  - type: Sprite
+#    layers:
+#    - state: green
+#      scale: 0.7, 0.7
+#    - sprite: Objects/Materials/ore.rsi
+#      state: plasma
+#    - sprite: _NF/Markers/general.rsi
+#      state: questionmark
+#      color: red
+#  - type: RandomSpawner
+#    prototypes:
+#    - GoldOre15
+#    - SteelOre15
+#    - PlasmaOre15
+#    - SilverOre15
+#    - SpaceQuartz15
+#    - UraniumOre15
+#    - Coal15
+#    - LithiumOre15
+#    - CopperOre15
+#    chance: 0.95
+#    offset: 0.0
+#    rarePrototypes:
+#    - BananiumOre1
+#    - DiamondOre1
+#    - BluespaceOre1
+#    rareChance: 0.01
+#
+#- type: entity
+#  parent: GoldOre
+#  id: GoldOre15
+#  suffix: Fifteen
+#  components:
+#  - type: Stack
+#    count: 15
+#
+#- type: entity
+#  parent: SteelOre
+#  id: SteelOre15
+#  suffix: Fifteen
+#  components:
+#  - type: Stack
+#    count: 15
+#
+#- type: entity
+#  parent: PlasmaOre
+#  id: PlasmaOre15
+#  suffix: Fifteen
+#  components:
+#  - type: Stack
+#    count: 15
+#
+#- type: entity
+#  parent: SilverOre
+#  id: SilverOre15
+#  suffix: Fifteen
+#  components:
+#  - type: Stack
+#    count: 15
+#
+#- type: entity
+#  parent: SpaceQuartz
+#  id: SpaceQuartz15
+#  suffix: Fifteen
+#  components:
+#  - type: Stack
+#    count: 15
+#
+#- type: entity
+#  parent: UraniumOre
+#  id: UraniumOre15
+#  suffix: Fifteen
+#  components:
+#  - type: Stack
+#    count: 15
+#
+#- type: entity
+#  parent: LithiumOre
+#  id: LithiumOre15
+#  suffix: Fifteen
+#  components:
+#  - type: Stack
+#    count: 15
+#
+#- type: entity
+#  parent: CopperOre
+#  id: CopperOre15
+#  suffix: Fifteen
+#  components:
+#  - type: Stack
+#    count: 15
 # MONOLITH // END

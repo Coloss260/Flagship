@@ -31,9 +31,9 @@
       - !type:PlaySoundBehavior
         sound:
           collection: MetalSlam
-  - type: ShipRepairable
-    repairTime: 1
-    repairCost: 0
+#  - type: ShipRepairable
+#    repairTime: 1
+#    repairCost: 0
   - type: Sprite
     drawDepth: Overdoors
 
@@ -52,9 +52,9 @@
     - state: antenna1
     - state: antenna1_unshaded
       shader: unshaded
-  - type: GridEdgeMarker
-    begin: 0, -0.1
-    end: 0, 1.5
+#  - type: GridEdgeMarker
+#    begin: 0, -0.1
+#    end: 0, 1.5
 
 - type: entity
   parent: BaseGreeble
@@ -71,9 +71,9 @@
     - state: antenna2
     - state: antenna2_unshaded
       shader: unshaded
-  - type: GridEdgeMarker
-    begin: 0, -0.1
-    end: 0, 1.2
+#  - type: GridEdgeMarker
+#    begin: 0, -0.1
+#    end: 0, 1.2
 
 - type: entity
   parent: BaseGreeble

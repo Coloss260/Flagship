@@ -54,9 +54,9 @@
     shipType: Energy
   - type: ShipGunClass
     shipClass: Medium
-  - type: ShipRepairable
-    repairTime: 15
-    repairCost: 60
+#  - type: ShipRepairable
+#    repairTime: 15
+#    repairCost: 60
 
 # Cerbrus
 
@@ -113,9 +113,9 @@
     shipType: Energy
   - type: ShipGunClass
     shipClass: Heavy
-  - type: ShipRepairable
-    repairTime: 50
-    repairCost: 120
+#  - type: ShipRepairable
+#    repairTime: 50
+#    repairCost: 120
 
 # Type 54 autopulser
 
@@ -173,9 +173,9 @@
     shipType: Energy
   - type: ShipGunClass
     shipClass: Heavy
-  - type: ShipRepairable
-    repairTime: 25
-    repairCost: 100
+#  - type: ShipRepairable
+#    repairTime: 25
+#    repairCost: 100
 
 
  # M25
@@ -246,9 +246,9 @@
     shipType: Energy
   - type: ShipGunClass
     shipClass: Superlight
-  - type: ShipRepairable
-    repairTime: 10
-    repairCost: 20
+#  - type: ShipRepairable
+#    repairTime: 10
+#    repairCost: 20
 
 # RUBICON
 
@@ -303,9 +303,9 @@
     shipType: Energy
   - type: ShipGunClass
     shipClass: Medium
-  - type: ShipRepairable
-    repairTime: 30
-    repairCost: 60
+#  - type: ShipRepairable
+#    repairTime: 30
+#    repairCost: 60
 
 # Scylla
 
@@ -373,9 +373,9 @@
     shipType: Energy
   - type: ShipGunClass
     shipClass: Heavy
-  - type: ShipRepairable
-    repairTime: 70
-    repairCost: 150
+#  - type: ShipRepairable
+#    repairTime: 70
+#    repairCost: 150
 
 # DYMERE
 
@@ -451,9 +451,9 @@
     shipType: Energy
   - type: ShipGunClass
     shipClass: Superheavy
-  - type: ShipRepairable
-    repairTime: 45
-    repairCost: 250
+#  - type: ShipRepairable
+#    repairTime: 45
+#    repairCost: 250
 
 # Laser Hitscan
 
@@ -508,9 +508,9 @@
     shipType: Energy
   - type: ShipGunClass
     shipClass: Light
-  - type: ShipRepairable
-    repairTime: 15
-    repairCost: 40
+#  - type: ShipRepairable
+#    repairTime: 15
+#    repairCost: 40
 
 # Prometheus
 
@@ -574,9 +574,9 @@
     shipType: Energy
   - type: ShipGunClass
     shipClass: Heavy
-  - type: ShipRepairable
-    repairTime: 30
-    repairCost: 100
+#  - type: ShipRepairable
+#    repairTime: 30
+#    repairCost: 100
 
 # Apollo
 
@@ -641,9 +641,9 @@
         - MachineLayer
   - type: ShipGunType
     shipType: Energy
-  - type: ShipRepairable
-    repairTime: 25
-    repairCost: 100
+#  - type: ShipRepairable
+#    repairTime: 25
+#    repairCost: 100
 
 # PRE- FRACTURE
 
@@ -729,13 +729,13 @@
     shipType: Energy
   - type: ShipGunClass
     shipClass: Superheavy
-  - type: ShipRepairable
-    repairTime: 60
-    repairCost: 300
-  - type: ShipRepairableRestrict
-    toolWhitelist:
-      tags:
-      - ADSRepairTool
+#  - type: ShipRepairable
+#    repairTime: 60
+#    repairCost: 300
+#  - type: ShipRepairableRestrict
+#    toolWhitelist:
+#      tags:
+#      - ADSRepairTool
 
 
 # Tachyon Lance "Reaper"
@@ -810,13 +810,13 @@
     shipType: Energy
   - type: ShipGunClass
     shipClass: Superheavy
-  - type: ShipRepairable
-    repairTime: 60
-    repairCost: 300
-  - type: ShipRepairableRestrict
-    toolWhitelist:
-      tags:
-      - ADSRepairTool
+#  - type: ShipRepairable
+#    repairTime: 60
+#    repairCost: 300
+#  - type: ShipRepairableRestrict
+#    toolWhitelist:
+#      tags:
+#      - ADSRepairTool
 
 # Ion Cannnon "Harbringer"
 
@@ -891,13 +891,13 @@
     shipType: Energy
   - type: ShipGunClass
     shipClass: Superheavy
-  - type: ShipRepairable
-    repairTime: 60
-    repairCost: 300
-  - type: ShipRepairableRestrict
-    toolWhitelist:
-      tags:
-      - ADSRepairTool
+#  - type: ShipRepairable
+#    repairTime: 60
+#    repairCost: 300
+#  - type: ShipRepairableRestrict
+#    toolWhitelist:
+#      tags:
+#      - ADSRepairTool
 
 # Anti-Matter Particle Cannon "Tartarus"
 
@@ -964,13 +964,13 @@
     shipType: Energy
   - type: ShipGunClass
     shipClass: Heavy
-  - type: ShipRepairable
-    repairTime: 60
-    repairCost: 200
-  - type: ShipRepairableRestrict
-    toolWhitelist:
-      tags:
-      - ADSRepairTool
+#  - type: ShipRepairable
+#    repairTime: 60
+#    repairCost: 200
+#  - type: ShipRepairableRestrict
+#    toolWhitelist:
+#      tags:
+#      - ADSRepairTool
 
 # Proton Cannon "Sunder"
 
@@ -1027,13 +1027,13 @@
     shipType: Energy
   - type: ShipGunClass
     shipClass: Medium
-  - type: ShipRepairable
-    repairTime: 20
-    repairCost: 100
-  - type: ShipRepairableRestrict
-    toolWhitelist:
-      tags:
-      - ADSRepairTool
+#  - type: ShipRepairable
+#    repairTime: 20
+#    repairCost: 100
+#  - type: ShipRepairableRestrict
+#    toolWhitelist:
+#      tags:
+#      - ADSRepairTool
 
 # Neutron Repeater "Scythe"
 
@@ -1095,13 +1095,13 @@
     shipType: Energy
   - type: ShipGunClass
     shipClass: Heavy
-  - type: ShipRepairable
-    repairTime: 30
-    repairCost: 120
-  - type: ShipRepairableRestrict
-    toolWhitelist:
-      tags:
-      - ADSRepairTool
+#  - type: ShipRepairable
+#    repairTime: 30
+#    repairCost: 120
+#  - type: ShipRepairableRestrict
+#    toolWhitelist:
+#      tags:
+#      - ADSRepairTool
 
 # Auto-Coil "Flayer"
 
@@ -1154,10 +1154,10 @@
     shipType: Ballistic
   - type: ShipGunClass
     shipClass: Light
-  - type: ShipRepairable
-    repairTime: 15
-    repairCost: 80
-  - type: ShipRepairableRestrict
-    toolWhitelist:
-      tags:
-      - ADSRepairTool
+#  - type: ShipRepairable
+#    repairTime: 15
+#    repairCost: 80
+#  - type: ShipRepairableRestrict
+#    toolWhitelist:
+#      tags:
+#      - ADSRepairTool

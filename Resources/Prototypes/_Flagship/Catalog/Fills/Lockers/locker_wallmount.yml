@@ -111,7 +111,7 @@
 - type: entity
   id: LockerWallColorMedicalFilled
   parent:
-  - LockerWallColorMedical
+ # - LockerWallColorMedical
   - LockerWallMedicalFilled
   name: medicine wall locker
   suffix: Filled, Frontier
@@ -126,7 +126,7 @@
   id: LockerWallColorChemistryFilled
   suffix: Filled, Frontier
   parent:
-  - LockerWallColorChemistry
+  #- LockerWallColorChemistry
   - BaseStructureWallmount
   - LockerChemistryFilled
   name: chemistry wall locker
@@ -136,7 +136,7 @@
 - type: entity
   id: LockerWallColorHydroponicsFilled
   suffix: Filled, Frontier
-  parent: [LockerWallColorHydroponics, LockerBotanistFilled]
+  #parent: [LockerWallColorHydroponics, LockerBotanistFilled]
 
 - type: entity
   id: LockerWallColorHydroponicsEmpty
