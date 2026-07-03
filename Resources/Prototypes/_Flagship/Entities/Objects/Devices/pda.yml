@@ -127,7 +127,7 @@
 
 # Bridge Command
 - type: entity
-  parent: BaseFlagPDA
+  parent: [BaseFlagPDA, BaseGrandTheftContraband]
   id: CommandingOfficerPDA
   name: Commanding Officer's PDA
   description: Surprisingly no different from your PDA.
@@ -151,7 +151,7 @@
     state: pda-commandingofficer
 
 - type: entity
-  parent: BaseFlagPDA
+  parent: [BaseFlagPDA, BaseBridgeCommandContraband]
   id: ExecutiveOfficerPDA
   name: Executive Officer's PDA
   description: Surprisingly no different from your PDA.
@@ -175,7 +175,7 @@
     state: pda-bridgecommand
 
 - type: entity
-  parent: BaseFlagPDA
+  parent: [BaseFlagPDA, BaseBridgeCommandContraband]
   id: TacticalOfficerPDA
   name: Tactical Officer's PDA
   description: Surprisingly no different from your PDA.
@@ -199,7 +199,7 @@
     state: pda-bridgecommand
 
 - type: entity
-  parent: BaseFlagPDA
+  parent: [BaseFlagPDA, BaseBridgeCommandContraband]
   id: OperationsOfficerPDA
   name: Operations Officer's PDA
   description: Surprisingly no different from your PDA.
@@ -223,7 +223,7 @@
     state: pda-bridgecommand
 
 - type: entity
-  parent: BaseFlagPDA
+  parent: [BaseFlagPDA, BaseBridgeCommandContraband]
   id: CommunicationsOfficerPDA
   name: Communications Officer's PDA
   description: Surprisingly no different from your PDA.
@@ -247,7 +247,7 @@
     state: pda-bridgecommand
 
 - type: entity
-  parent: BaseFlagPDA
+  parent: [BaseFlagPDA, BaseBridgeCommandContraband]
   id: FlightControlOfficerPDA
   name: Flight Control Officer's PDA
   description: Surprisingly no different from your PDA.
@@ -271,7 +271,7 @@
     state: pda-bridgecommand
 
 - type: entity
-  parent: BaseFlagPDA
+  parent: [BaseFlagPDA, BaseBridgeCommandContraband]
   id: BridgeEnsignPDA
   name: Bridge Ensign's PDA
   description: Surprisingly no different from your PDA.
@@ -297,7 +297,7 @@
 # Military Police
 
 - type: entity
-  parent: BaseFlagPDA
+  parent: [BaseFlagPDA, BaseMilitaryPoliceContraband]
   id: MilitaryPoliceChiefPDA
   name: Military Police Chief's PDA
   description: Surprisingly no different from your PDA.
@@ -321,7 +321,7 @@
     state: pda-militarypolice
 
 - type: entity
-  parent: BaseFlagPDA
+  parent: [BaseFlagPDA, BaseMilitaryPoliceContraband]
   id: MilitaryPoliceMedicPDA
   name: Military Police Medic's PDA
   description: Surprisingly no different from your PDA.
@@ -345,7 +345,7 @@
     state: pda-militarypolice
 
 - type: entity
-  parent: BaseFlagPDA
+  parent: [BaseFlagPDA, BaseMilitaryPoliceContraband]
   id: MilitaryPoliceOfficerPDA
   name: Military Police Officer's PDA
   description: Surprisingly no different from your PDA.
@@ -369,7 +369,7 @@
     state: pda-militarypolice
 
 - type: entity
-  parent: BaseFlagPDA
+  parent: [BaseFlagPDA, BaseMilitaryPoliceContraband]
   id: MilitaryPoliceTraineePDA
   name: Military Police Trainee's PDA
   description: Surprisingly no different from your PDA.
@@ -394,7 +394,7 @@
 
 # Supply
 - type: entity
-  parent: BaseFlagPDA
+  parent: [BaseFlagPDA, BaseSupplyContraband]
   id: SuppliesQuartermasterPDA
   name: Supplies Quartermaster PDA
   description: Surprisingly no different from your PDA.
@@ -418,7 +418,7 @@
     state: pda-supplies
 
 - type: entity
-  parent: BaseFlagPDA
+  parent: [BaseFlagPDA, BaseSupplyContraband]
   id: ArtillerySpecialistPDA
   name: Artillery Specialist PDA
   description: Surprisingly no different from your PDA.
@@ -442,7 +442,7 @@
     state: pda-artilleryspecialist
 
 - type: entity
-  parent: BaseFlagPDA
+  parent: [BaseFlagPDA, BaseSupplyContraband]
   id: SuppliesCrewmanPDA
   name: Supplies Crewman PDA
   description: Surprisingly no different from your PDA.
@@ -467,7 +467,7 @@
 
 # Maintenance
 - type: entity
-  parent: BaseFlagPDA
+  parent: [BaseFlagPDA, BaseMaintenanceContraband]
   id: ChiefOfMaintenancePDA
   name: Chief Of Maintenance PDA
   description: Surprisingly no different from your PDA.
@@ -491,7 +491,7 @@
     state: pda-maintenance
 
 - type: entity
-  parent: BaseFlagPDA
+  parent: [BaseFlagPDA, BaseMaintenanceContraband]
   id: LifeSupportSpecialistPDA
   name: Life Support Specialist PDA
   description: Surprisingly no different from your PDA.
@@ -515,7 +515,7 @@
     state: pda-lifesupportspecialist
 
 - type: entity
-  parent: BaseFlagPDA
+  parent: [BaseFlagPDA, BaseMaintenanceContraband]
   id: MaintenanceTechnicianPDA
   name: Maintenance Technician PDA
   description: Surprisingly no different from your PDA.
@@ -539,7 +539,7 @@
     state: pda-maintenance
 
 - type: entity
-  parent: BaseFlagPDA
+  parent: [BaseFlagPDA, BaseMaintenanceContraband]
   id: MaintenanceInternPDA
   name: Maintenance Intern PDA
   description: Surprisingly no different from your PDA.

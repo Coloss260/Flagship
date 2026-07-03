@@ -1,3 +1,12 @@
+# Bridge Command Contraband
+- type: entity
+  id: BaseBridgeCommandContraband
+  parent: BaseRestrictedContraband
+  abstract: true
+  components:
+  - type: Contraband
+    allowedDepartments: [ BridgeCommand ]
+
 # Military Police Contraband
 - type: entity
   id: BaseMilitaryPoliceContraband
@@ -16,3 +25,29 @@
   - type: Contraband
     allowedDepartments: [ Maintenance ]
 
+# Supply Contraband
+- type: entity
+  id: BaseSupplyContraband
+  parent: BaseRestrictedContraband
+  abstract: true
+  components:
+  - type: Contraband
+    allowedDepartments: [ Supply ]
+
+# Service Contraband
+- type: entity
+  id: BaseServiceContraband
+  parent: BaseRestrictedContraband
+  abstract: true
+  components:
+  - type: Contraband
+    allowedDepartments: [ Service ]
+
+# Bridge Command and Military Police Contraband
+- type: entity
+  id: BaseMilitaryPoliceBridgeCommandContraband
+  parent: BaseRestrictedContraband
+  abstract: true
+  components:
+  - type: Contraband
+    allowedDepartments: [ MilitaryPolice, BridgeCommand ]

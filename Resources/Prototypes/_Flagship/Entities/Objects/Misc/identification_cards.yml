@@ -56,7 +56,7 @@
     stealGroup: CaptainIDCard
 
 - type: entity
-  parent: [IDCardFlagship, BaseGrandTheftContraband]
+  parent: [IDCardFlagship, BaseBridgeCommandContraband]
   id: ExecutiveOfficerIDCard
   name: Executive Officer's ID Card
   components:
@@ -84,7 +84,7 @@
     stealGroup: CaptainIDCard
 
 - type: entity
-  parent: [IDCardFlagship, BaseGrandTheftContraband]
+  parent: [IDCardFlagship, BaseBridgeCommandContraband]
   id: TacticalOfficerIDCard
   name: Tactical Officer's ID Card
   components:
@@ -112,7 +112,7 @@
     stealGroup: CaptainIDCard
 
 - type: entity
-  parent: [IDCardFlagship, BaseGrandTheftContraband]
+  parent: [IDCardFlagship, BaseBridgeCommandContraband]
   id: OperationsOfficerIDCard
   name: Operations Officer's ID Card
   components:
@@ -140,7 +140,7 @@
     stealGroup: CaptainIDCard
 
 - type: entity
-  parent: [IDCardFlagship, BaseGrandTheftContraband]
+  parent: [IDCardFlagship, BaseBridgeCommandContraband]
   id: CommunicationsOfficerIDCard
   name: Communications Officer's ID Card
   components:
@@ -168,7 +168,7 @@
     stealGroup: CaptainIDCard
 
 - type: entity
-  parent: [IDCardFlagship, BaseGrandTheftContraband]
+  parent: [IDCardFlagship, BaseBridgeCommandContraband]
   id: FlightControlOfficerIDCard
   name: Flight Control Officer's ID Card
   components:
@@ -196,7 +196,7 @@
     stealGroup: CaptainIDCard
 
 - type: entity
-  parent: [IDCardFlagship, BaseGrandTheftContraband]
+  parent: [IDCardFlagship, BaseBridgeCommandContraband]
   id: BridgeEnsignIDCard
   name: Bridge Ensign's ID Card
   components:
@@ -225,7 +225,7 @@
 
 # Military Police
 - type: entity
-  parent: [IDCardFlagship, BaseGrandTheftContraband]
+  parent: [IDCardFlagship, BaseMilitaryPoliceContraband]
   id: MilitaryPoliceChiefIDCard
   name: Military Police Chief's ID Card
   components:
@@ -250,7 +250,7 @@
     - WhitelistChameleonIdCard
 
 - type: entity
-  parent: [IDCardFlagship, BaseGrandTheftContraband]
+  parent: [IDCardFlagship, BaseMilitaryPoliceContraband]
   id: MilitaryPoliceMedicIDCard
   name: Military Police Medic's ID Card
   components:
@@ -275,7 +275,7 @@
     - WhitelistChameleonIdCard
 
 - type: entity
-  parent: [IDCardFlagship, BaseGrandTheftContraband]
+  parent: [IDCardFlagship, BaseMilitaryPoliceContraband]
   id: MilitaryPoliceOfficerIDCard
   name: Military Police Officer's ID Card
   components:
@@ -300,7 +300,7 @@
     - WhitelistChameleonIdCard
 
 - type: entity
-  parent: [IDCardFlagship, BaseGrandTheftContraband]
+  parent: [IDCardFlagship, BaseMilitaryPoliceContraband]
   id: MilitaryPoliceTraineeIDCard
   name: Military Police Trainee's ID Card
   components:
@@ -326,7 +326,7 @@
 
 # Maintenance
 - type: entity
-  parent: [IDCardFlagship]
+  parent: [IDCardFlagship, BaseMaintenanceContraband]
   id: ChiefOfMaintenanceIDCard
   name: Chief of Maintenance ID Card
   components:
@@ -351,7 +351,7 @@
     - WhitelistChameleonIdCard
 
 - type: entity
-  parent: [IDCardFlagship]
+  parent: [IDCardFlagship, BaseMaintenanceContraband]
   id: LifeSupportSpecialistIDCard
   name: Life Support Specialist ID Card
   components:
@@ -376,7 +376,7 @@
     - WhitelistChameleonIdCard
 
 - type: entity
-  parent: [IDCardFlagship]
+  parent: [IDCardFlagship, BaseMaintenanceContraband]
   id: MaintenanceTechnicianIDCard
   name: Maintenance Technician ID Card
   components:
@@ -401,7 +401,7 @@
     - WhitelistChameleonIdCard
 
 - type: entity
-  parent: [IDCardFlagship]
+  parent: [IDCardFlagship, BaseMaintenanceContraband]
   id: MaintenanceInternIDCard
   name: Maintenance Intern ID Card
   components:
@@ -427,7 +427,7 @@
 
 # Supply
 - type: entity
-  parent: [IDCardFlagship]
+  parent: [IDCardFlagship, BaseSupplyContraband]
   id: SuppliesQuartermasterIDCard
   name: Supplies Quartermaster ID Card
   components:
@@ -452,7 +452,7 @@
     - WhitelistChameleonIdCard
 
 - type: entity
-  parent: [IDCardFlagship]
+  parent: [IDCardFlagship, BaseSupplyContraband]
   id: ArtillerySpecialistIDCard
   name: Artillery Specialist ID Card
   components:
@@ -477,7 +477,7 @@
     - WhitelistChameleonIdCard
 
 - type: entity
-  parent: [IDCardFlagship]
+  parent: [IDCardFlagship, BaseSupplyContraband]
   id: SuppliesCrewmanIDCard
   name: Supplies Crewman ID Card
   components:
