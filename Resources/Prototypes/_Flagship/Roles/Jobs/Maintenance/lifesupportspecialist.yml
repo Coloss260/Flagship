@@ -29,6 +29,6 @@
     eyes: ClothingEyesGlassesMaintenanceMeson
     ears: ClothingHeadsetLifeSupportSpecialist
     jumpsuit: ClothingUniformJumpsuitLifeSupportSpecialist
-    back: ClothingBackpackAtmospherics
+    back: ClothingBackpackLifeSupportSpecialist
     belt: ClothingBeltUtilityEngineering
     shoes: ClothingShoesBootsWork

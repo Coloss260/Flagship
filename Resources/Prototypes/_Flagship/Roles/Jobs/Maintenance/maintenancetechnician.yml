@@ -27,6 +27,6 @@
     outerClothing: ClothingOuterVestHazard
     jumpsuit: ClothingUniformJumpsuitMaintenanceTechnician
     gloves: ClothingHandsGlovesColorYellow
-    back: ClothingBackpackEngineering
+    back: ClothingBackpackMaintenance
     belt: ClothingBeltUtilityEngineering
     shoes: ClothingShoesBootsWork

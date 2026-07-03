@@ -1,0 +1,18 @@
+# Military Police Contraband
+- type: entity
+  id: BaseMilitaryPoliceContraband
+  parent: BaseRestrictedContraband
+  abstract: true
+  components:
+  - type: Contraband
+    allowedDepartments: [ MilitaryPolice ]
+
+# Maintenance Contraband
+- type: entity
+  id: BaseMaintenanceContraband
+  parent: BaseRestrictedContraband
+  abstract: true
+  components:
+  - type: Contraband
+    allowedDepartments: [ Maintenance ]
+

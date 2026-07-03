@@ -1,8 +1,28 @@
+# Military Police
 - type: entity
-  parent: [ClothingBackpack, BaseSecurityContraband]
+  parent: [ClothingBackpack, BaseMilitaryPoliceContraband]
   id: ClothingBackpackMilitaryPolice
   name: Military Police backpack
   description: It's a very robust backpack.
   components:
   - type: Sprite
     sprite: _Flagship/Clothing/Back/Backpacks/militarypolice.rsi
+
+# Maintenance
+- type: entity
+  parent: [ClothingBackpack, BaseMaintenanceContraband]
+  id: ClothingBackpackMaintenance
+  name: Maintenance backpack
+  description: It's a very robust backpack.
+  components:
+  - type: Sprite
+    sprite: _Flagship/Clothing/Back/Backpacks/maintenance.rsi
+
+- type: entity
+  parent: [ClothingBackpack, BaseMaintenanceContraband]
+  id: ClothingBackpackLifeSupportSpecialist
+  name: Life Support Specialist backpack
+  description: It's a very robust backpack.
+  components:
+  - type: Sprite
+    sprite: _Flagship/Clothing/Back/Backpacks/lifesupportspecialist.rsi
