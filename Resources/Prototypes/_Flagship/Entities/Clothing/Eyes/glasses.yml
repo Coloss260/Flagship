@@ -57,3 +57,22 @@
     - Antagonists
   - type: IdentityBlocker
     coverage: EYES
+
+# Maintenance
+- type: entity
+  parent: [ClothingEyesBase, BaseEngineeringContraband]
+  id: ClothingEyesGlassesMaintenanceMeson
+  name: Maintenance goggles #less confusion
+  description: Green-tinted goggles using a proprietary polymer that provides protection from eye damage of all types.
+  components:
+  - type: Sprite
+    sprite: _Flagship/Clothing/Eyes/Glasses/maintenancemeson.rsi
+  - type: Clothing
+    sprite: _Flagship/Clothing/Eyes/Glasses/maintenancemeson.rsi
+  - type: EyeProtection
+  - type: IdentityBlocker
+    coverage: EYES
+  - type: Tag
+    tags:
+    - PetWearable
+    - WhitelistChameleon

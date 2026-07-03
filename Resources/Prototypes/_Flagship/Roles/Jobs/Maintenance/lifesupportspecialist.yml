@@ -26,7 +26,7 @@
   equipment:
     id: LifeSupportSpecialistPDA
     head: ClothingHeadHatHardhatYellow
-    eyes: ClothingEyesGlassesMeson
+    eyes: ClothingEyesGlassesMaintenanceMeson
     ears: ClothingHeadsetLifeSupportSpecialist
     jumpsuit: ClothingUniformJumpsuitLifeSupportSpecialist
     back: ClothingBackpackAtmospherics

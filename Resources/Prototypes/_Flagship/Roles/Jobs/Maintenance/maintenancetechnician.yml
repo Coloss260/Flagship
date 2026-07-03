@@ -22,7 +22,7 @@
   equipment:
     id: MaintenanceTechnicianPDA
     head: ClothingHeadHatHardhatOrange
-    eyes: ClothingEyesGlassesMeson
+    eyes: ClothingEyesGlassesMaintenanceMeson
     ears: ClothingHeadsetMaintenance
     outerClothing: ClothingOuterVestHazard
     jumpsuit: ClothingUniformJumpsuitMaintenanceTechnician

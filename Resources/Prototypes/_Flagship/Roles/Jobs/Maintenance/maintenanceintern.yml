@@ -26,7 +26,7 @@
   equipment:
     id: MaintenanceInternPDA
     head: ClothingHeadHatOrangesoft
-    eyes: ClothingEyesGlassesMeson
+    eyes: ClothingEyesGlassesMaintenanceMeson
     ears: ClothingHeadsetMaintenance
     outerClothing: ClothingOuterVestHazard
     jumpsuit: ClothingUniformJumpsuitMaintenanceTechnician
