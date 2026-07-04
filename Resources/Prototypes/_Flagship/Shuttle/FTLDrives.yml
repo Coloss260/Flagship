@@ -86,12 +86,3 @@
 - type: entity
   parent: FTLDriveBase
   id: FTLDriveNanotrasen
-
-- type: entity
-  parent: PowerCageSmall
-  id: TestFuelCell
-  components:
-  - type: Modifier
-    modifiers:
-    - FTLRangeIncreaseMinor
-  - type: AddModifierOnInserted

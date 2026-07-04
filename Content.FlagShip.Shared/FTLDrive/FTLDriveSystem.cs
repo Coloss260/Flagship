@@ -51,14 +51,10 @@ public sealed partial class FTLDriveSystem : EntitySystem
 
     private void OnGetRange(Entity<ShuttleFTLDriveComponent> ent, ref GetFTLDriveRangeEvent args)
     {
-        var driveEntity = GetFTLDriveEnt(ent.Comp.FTLDriveEntity);
-
-        if (driveEntity is null || driveEntity.Value.Comp.State is not FTLDriveState.Engaged)
+        if (ent.Comp.FTLDriveEntity is null)
             return;
 
-        var drive = driveEntity.Value;
-
-        args.Range = _modSystem.GetNumberModified(drive.Comp.Range, drive.Owner, FTLRangeAspect);
+        args.Range = GetFTLDriveRange(ent.Comp.FTLDriveEntity.Value);
     }
 
     private void OnPowerChanged(Entity<FTLDriveComponent> ent, ref PowerChangedEvent args)
@@ -200,7 +196,7 @@ public sealed partial class FTLDriveSystem : EntitySystem
 
         data.State = drive.State;
         data.CoolDown = drive.CoolDownTime;
-        data.Range = _modSystem.GetNumberModified(drive.Range, uid, FTLRangeAspect);
+        data.Range = GetFTLDriveRange(uid);
         data.StableTime = drive.StableEngagedTime;
         data.StartUp = drive.StartUpTime;
         data.CoolDownFinishedTime = drive.CoolDownFinishedTime - _timing.CurTime;
@@ -256,4 +252,20 @@ public sealed partial class FTLDriveSystem : EntitySystem
         return (entity.Value, drive);
     }
 
+    /// <summary>
+    /// Gets the range of a ftl drive, returns 0 if State is not FTLDriveState.Engaged or it doesn't have the ftl drive component
+    /// </summary>
+    /// <param name="entity">The drive</param>
+    /// <returns></returns>
+    public float GetFTLDriveRange(EntityUid entity)
+    {
+        var driveEntity = GetFTLDriveEnt(entity);
+
+        if (driveEntity is null || driveEntity.Value.Comp.State is not FTLDriveState.Engaged)
+            return 0;
+
+        var drive = driveEntity.Value;
+
+        return _modSystem.GetNumberModified(drive.Comp.Range, drive.Owner, FTLRangeAspect);
+    }
 }

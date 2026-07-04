@@ -25,8 +25,7 @@ public sealed partial class ModifierPrototype : IPrototype
 [Serializable, NetSerializable]
 public enum ModifierType : byte
 {
-    Addition,
-    Subtraction,
-    Division,
-    Multiplication,
+    Addition, // Adds value (also use for subtraction)
+    Multiplication, // Multiples by value (also use for division)
+    Set, // Sets to value
 }
