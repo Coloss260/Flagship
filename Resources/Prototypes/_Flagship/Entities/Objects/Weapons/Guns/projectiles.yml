@@ -3,9 +3,9 @@
   id: BaseBulletTriggerSpent # like BaseBulletTrigger, but only triggers when the projectile is spent and deleted
   parent: BaseBullet
   categories: [ HideSpawnMenu ]
-#  components:
-#  - type: TriggerOnProjectileSpent
-
+  components:
+  - type: TriggerOnProjectileSpent
+    
 - type: entity
   id: BulletRocketEmp
   name: rocket
