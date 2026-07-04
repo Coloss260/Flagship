@@ -103,7 +103,7 @@
   id: LockerWallColorMedicalDoctorFilled
   parent:
  # - LockerWallColorMedical
-  - BaseStructureWallmount
+  - BaseWallmount
   - LockerMedicalFilled
   name: medical doctor's wall locker
   suffix: Filled, Frontier
@@ -127,7 +127,7 @@
   suffix: Filled, Frontier
   parent:
   #- LockerWallColorChemistry
-  - BaseStructureWallmount
+  - BaseWallmount
   - LockerChemistryFilled
   name: chemistry wall locker
 # endregion
@@ -143,6 +143,6 @@
   suffix: Empty, Frontier
   parent:
  # - LockerWallColorHydroponics
-  - BaseStructureWallmount
+  - BaseWallmount
   name: botanist wall locker
 # endregion
