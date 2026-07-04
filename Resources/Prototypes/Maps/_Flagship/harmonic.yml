@@ -2,7 +2,7 @@
 - type: gameMap
   id: Harmonic
   mapName: 'Harmonic'
-  mapPath: /Maps/harmonic.yml
+  mapPath: /Maps/_Flagship/harmonic.yml
   minPlayers: 7
   maxPlayers: 35
   stations:
