@@ -328,7 +328,7 @@
   parent:
   - BaseStructureDisableToolUse
   - BaseStructureIndestructible
-  #- KitchenDeepFryer --Flagship
+  - KitchenDeepFryer
   suffix: POI
 
 - type: entity
@@ -336,6 +336,6 @@
   parent:
   - BaseStructureDisableToolUse
   - BaseStructureIndestructible
-  #- KitchenDeepFryerCauldron -- Flagship
+  - KitchenDeepFryerCauldron
   suffix: Holiday Special, POI
 # MONOLITH // END

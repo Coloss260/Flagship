@@ -19,9 +19,9 @@
   - type: StaticPrice # Frontier
     price: 20 # Frontier: 20
   # Mono
-#  - type: ShipRepairable
-#    repairTime: 1
-#    repairCost: 1
+  - type: ShipRepairable
+    repairTime: 1
+    repairCost: 1
 
 # Park benches
 - type: entity

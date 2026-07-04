@@ -82,9 +82,9 @@
     shipType: Ballistic
   - type: ShipGunClass
     shipClass: Light
-#  - type: ShipRepairable
-#    repairTime: 10
-#    repairCost: 20
+  - type: ShipRepairable
+    repairTime: 10
+    repairCost: 20
 
 # Draupnir
 
@@ -152,6 +152,6 @@
     shipType: Ballistic
   - type: ShipGunClass
     shipClass: Medium
-#  - type: ShipRepairable
-#    repairTime: 15
-#    repairCost: 40
+  - type: ShipRepairable
+    repairTime: 15
+    repairCost: 40

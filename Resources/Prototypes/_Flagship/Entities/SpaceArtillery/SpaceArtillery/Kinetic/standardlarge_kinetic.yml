@@ -78,9 +78,9 @@
     shipType: Ballistic
   - type: ShipGunClass
     shipClass: Medium
-#  - type: ShipRepairable
-#    repairTime: 30
-#    repairCost: 150
+  - type: ShipRepairable
+    repairTime: 30
+    repairCost: 150
 
 # AK820 120mm
 
@@ -157,9 +157,9 @@
     shipType: Ballistic
   - type: ShipGunClass
     shipClass: Superheavy
-#  - type: ShipRepairable
-#    repairTime: 30
-#    repairCost: 150
+  - type: ShipRepairable
+    repairTime: 30
+    repairCost: 150
 
 - type: soundCollection
   id: 120mmAutocannonAK820
@@ -242,9 +242,9 @@
     shipType: Ballistic
   - type: ShipGunClass
     shipClass: Medium
-#  - type: ShipRepairable
-#    repairTime: 30
-#    repairCost: 150
+  - type: ShipRepairable
+    repairTime: 30
+    repairCost: 150
 
 # HADES 255mm
 
@@ -325,9 +325,9 @@
     shipType: Ballistic
   - type: ShipGunClass
     shipClass: Superheavy
-#  - type: ShipRepairable
-#    repairTime: 45
-#    repairCost: 300
+  - type: ShipRepairable
+    repairTime: 45
+    repairCost: 300
 
 # R-300 430mm
 
@@ -402,9 +402,9 @@
     shipType: Ballistic
   - type: ShipGunClass
     shipClass: Superheavy
-#  - type: ShipRepairable
-#    repairTime: 45
-#    repairCost: 200
+  - type: ShipRepairable
+    repairTime: 45
+    repairCost: 200
 
 # Longbow
 
@@ -487,6 +487,6 @@
     shipType: Ballistic
   - type: ShipGunClass
     shipClass: Superheavy
-#  - type: ShipRepairable
-#    repairTime: 45
-#    repairCost: 300
+  - type: ShipRepairable
+    repairTime: 45
+    repairCost: 300

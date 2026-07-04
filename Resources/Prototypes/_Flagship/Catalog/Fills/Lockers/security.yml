@@ -12,6 +12,20 @@
     - id: BoxZiptie
 
 - type: entity
+  id: LockerNfsdSilverDetectiveFilled
+  suffix: Detective, Filled
+  parent: LockerNfsdSilver
+  components:
+  - type: StorageFill
+    contents:
+    - id: BoxForensicPad
+    - id: DrinkDetFlask
+    - id: BoxEvidenceMarkers
+    - id: HandLabeler
+  - type: AccessReader
+    access: [["Detective"]]
+
+- type: entity
   id: NFLockerSecurityFilled
   parent: LockerSecurityFilled
   components:
