@@ -70,18 +70,34 @@ public sealed partial class ServerFTLDriveSystem : EntitySystem
 
     private void OnFTLCompleted(Entity<ShuttleFTLDriveComponent> ent, ref FTLCompletedEvent args)
     {
-        _ftlDrive.ShutDownFTLDrive(ent.Comp.FTLDriveEntity, ent.Comp.FTLDriveEntity.Comp.CoolDownTime);
+        var ftlDrive = _ftlDrive.GetFTLDriveEnt(ent.Comp.FTLDriveEntity);
 
-        if (ent.Comp.FTLDriveEntity.Comp.FTLComponents is not null)
-            EntityManager.RemoveComponents(ent.Comp.FTLDriveEntity.Owner, ent.Comp.FTLDriveEntity.Comp.FTLComponents);
+        if (ftlDrive is null)
+            return;
+
+        var drive = ftlDrive.Value;
+        var ftlComponents = ftlDrive.Value.Comp.FTLComponents;
+
+        _ftlDrive.ShutDownFTLDrive(drive, drive.Comp.CoolDownTime);
+
+        if (ftlComponents is not null)
+            EntityManager.RemoveComponents(drive.Owner, ftlComponents);
     }
 
     private void OnFTLStarted(Entity<ShuttleFTLDriveComponent> ent, ref FTLStartedEvent args)
     {
-        if (ent.Comp.FTLDriveEntity.Comp.FTLComponents is not null)
-            EntityManager.AddComponents(ent.Comp.FTLDriveEntity.Owner, ent.Comp.FTLDriveEntity.Comp.FTLComponents);
+        var ftlDrive = _ftlDrive.GetFTLDriveEnt(ent.Comp.FTLDriveEntity);
 
-        ent.Comp.FTLDriveEntity.Comp.State = FTLDriveState.InWarp;
-        Dirty(ent.Comp.FTLDriveEntity);
+        if (ftlDrive is null)
+            return;
+
+        var drive = ftlDrive.Value;
+        var ftlComponents = ftlDrive.Value.Comp.FTLComponents;
+
+        if (ftlComponents is not null)
+            EntityManager.AddComponents(drive.Owner, ftlComponents);
+
+        drive.Comp.State = FTLDriveState.InWarp;
+        Dirty(drive);
     }
 }

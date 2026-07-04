@@ -1,4 +1,5 @@
 using Content.FlagShip.Common.FTLDrive;
+using Content.FlagShip.Shared.ModSystem.Prototypes;
 using Content.Shared.Audio;
 using Content.Shared.Explosion.EntitySystems;
 using Content.Shared.Power;
@@ -6,6 +7,8 @@ using Content.Shared.Power.Components;
 using Content.Shared.Power.EntitySystems;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Timing;
+using Content.FlagShip.Shared.ModSystem.Systems;
+using Robust.Shared.Prototypes;
 
 namespace Content.FlagShip.Shared.FTLDrive;
 
@@ -16,17 +19,42 @@ public sealed partial class FTLDriveSystem : EntitySystem
     [Dependency] private SharedAppearanceSystem _appearance = default!;
     [Dependency] private SharedExplosionSystem _explosion = default!;
     [Dependency] private SharedPowerStateSystem _powerState = default!;
+    [Dependency] private ModifierSystem _modSystem = default!;
+
+    private static readonly ProtoId<ModAspectPrototype> FTLRangeAspect = "FTLDriveRange";
 
     public override void Initialize()
     {
         base.Initialize();
         SubscribeLocalEvent<ShuttleFTLDriveComponent, GetFTLDriveRangeEvent>(OnGetRange);
+        SubscribeLocalEvent<FTLDriveComponent, AnchorStateChangedEvent>(OnAnchored);
         SubscribeLocalEvent<FTLDriveComponent, PowerChangedEvent>(OnPowerChanged);
+    }
+
+    private void OnAnchored(Entity<FTLDriveComponent> ent, ref AnchorStateChangedEvent args)
+    {
+        var shuttleUid = Transform(ent.Owner).GridUid;
+
+        if (shuttleUid is null)
+            return;
+
+        if (!args.Anchored)
+        {
+            RemComp<ShuttleFTLDriveComponent>(shuttleUid.Value);
+            return;
+        }
+        var shuttleDriveComponent = EnsureComp<ShuttleFTLDriveComponent>(shuttleUid.Value);
+
+        shuttleDriveComponent.FTLDriveEntity = ent.Owner;
+        Dirty(shuttleUid.Value, shuttleDriveComponent);
     }
 
     private void OnGetRange(Entity<ShuttleFTLDriveComponent> ent, ref GetFTLDriveRangeEvent args)
     {
-        args.Range = ent.Comp.Range;
+        if (ent.Comp.FTLDriveEntity is null)
+            return;
+
+        args.Range = GetFTLDriveRange(ent.Comp.FTLDriveEntity.Value);
     }
 
     private void OnPowerChanged(Entity<FTLDriveComponent> ent, ref PowerChangedEvent args)
@@ -72,8 +100,8 @@ public sealed partial class FTLDriveSystem : EntitySystem
 
         _powerState.SetWorkingState(ent.Owner, true);
 
-        Dirty(ent);
         EnsureComp<ActiveFTLDriveComponent>(ent.Owner);
+        Dirty(ent);
     }
 
     /// <summary>
@@ -117,6 +145,7 @@ public sealed partial class FTLDriveSystem : EntitySystem
 
         ent.Comp.EngagedBreakdownTime = _timing.CurTime;
         RemComp<ActiveFTLDriveComponent>(ent.Owner);
+        Dirty(ent);
     }
 
     /// <summary>
@@ -126,24 +155,6 @@ public sealed partial class FTLDriveSystem : EntitySystem
     public void FinishChargingFTLDrive(Entity<FTLDriveComponent> ent)
     {
         ent.Comp.State = FTLDriveState.Engaged;
-
-        var shuttleUid = Transform(ent.Owner).GridUid;
-
-        if (shuttleUid is not null)
-        {
-            if (!HasComp<ShuttleFTLDriveComponent>(shuttleUid.Value))
-            {
-                var shuttleDriveComponent = EnsureComp<ShuttleFTLDriveComponent>(shuttleUid.Value);
-
-                shuttleDriveComponent.Range = ent.Comp.Range;
-                shuttleDriveComponent.FTLDriveEntity = ent;
-                Dirty(shuttleUid.Value, shuttleDriveComponent);
-            }
-            else
-            {
-                Log.Warning("Tried to add ShuttleFTLDriveComponent to: " + shuttleUid + " But already had a ShuttleFTLDriveComponent!");
-            }
-        }
 
         if (ent.Comp.EngagedComponents is not null)
             EntityManager.AddComponents(ent.Owner, ent.Comp.EngagedComponents);
@@ -155,6 +166,7 @@ public sealed partial class FTLDriveSystem : EntitySystem
         }
 
         ent.Comp.EngagedBreakdownTime = _timing.CurTime + ent.Comp.StableEngagedTime;
+        Dirty(ent);
     }
 
     /// <summary>
@@ -184,7 +196,7 @@ public sealed partial class FTLDriveSystem : EntitySystem
 
         data.State = drive.State;
         data.CoolDown = drive.CoolDownTime;
-        data.Range = drive.Range;
+        data.Range = _modSystem.GetNumberModified(drive.Range, drive.Owner, FTLRangeAspect);
         data.StableTime = drive.StableEngagedTime;
         data.StartUp = drive.StartUpTime;
         data.CoolDownFinishedTime = drive.CoolDownFinishedTime - _timing.CurTime;
@@ -229,4 +241,31 @@ public sealed partial class FTLDriveSystem : EntitySystem
         return data;
     }
 
+    public Entity<FTLDriveComponent>? GetFTLDriveEnt(EntityUid? entity)
+    {
+        if (entity is null)
+            return null;
+
+        if (!TryComp<FTLDriveComponent>(entity, out var drive))
+            return null;
+
+        return (entity.Value, drive);
+    }
+
+    /// <summary>
+    /// Gets the range of a ftl drive, returns 0 if State is not FTLDriveState.Engaged or it doesn't have the ftl drive component
+    /// </summary>
+    /// <param name="entity">The drive</param>
+    /// <returns></returns>
+    public float GetFTLDriveRange(EntityUid entity)
+    {
+        var driveEntity = GetFTLDriveEnt(entity);
+
+        if (driveEntity is null || driveEntity.Value.Comp.State is not FTLDriveState.Engaged)
+            return 0;
+
+        var drive = driveEntity.Value;
+
+        return _modSystem.GetNumberModified(drive.Comp.Range, drive.Owner, FTLRangeAspect);
+    }
 }

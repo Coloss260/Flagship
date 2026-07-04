@@ -106,16 +106,16 @@ public sealed partial class FTLDriveComponent : Component
     public ComponentRegistry? EngagedComponents;
 
     [DataField]
-    public SoundPathSpecifier SpoolUpSound = new ("/Audio/_FlagShip/Effects/Shuttle/main_drive_spoolup.ogg");
+    public SoundPathSpecifier SpoolUpSound = new ("/Audio/_Flagship/Effects/Shuttle/main_drive_spoolup.ogg");
 
     [DataField]
-    public SoundPathSpecifier SpoolDownSound = new ("/Audio/_FlagShip/Effects/Shuttle/main_drive_spooldown.ogg");
+    public SoundPathSpecifier SpoolDownSound = new ("/Audio/_Flagship/Effects/Shuttle/main_drive_spooldown.ogg");
 
     [DataField]
-    public SoundPathSpecifier EngagedLoopSound = new ("/Audio/_FlagShip/Effects/Shuttle/main_drive_loop.ogg");
+    public SoundPathSpecifier EngagedLoopSound = new ("/Audio/_Flagship/Effects/Shuttle/main_drive_loop.ogg");
 
     [DataField]
-    public SoundPathSpecifier LoopSound = new ("/Audio/_FlagShip/Effects/Shuttle/FTL_drive_hum.ogg");
+    public SoundPathSpecifier LoopSound = new ("/Audio/_Flagship/Effects/Shuttle/FTL_drive_hum.ogg");
 }
 
 [Serializable, NetSerializable]

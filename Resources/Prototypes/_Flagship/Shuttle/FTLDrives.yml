@@ -15,6 +15,16 @@
     - state: screen
       visible: False
       map: [ "enum.PowerDeviceVisualLayers.Powered" ]
+  - type: Modifiable
+    allowedAspects:
+    - FTLDriveRange
+  - type: ItemSlots
+    slots:
+      fuel_slot:
+        name: drive-fuel-cell-slot-name
+  - type: ContainerContainer
+    containers:
+      fuel_slot: !type:ContainerSlot { }
   - type: Appearance
   - type: FTLDrive
     fTLComponents:
@@ -36,7 +46,7 @@
     volume: 15
     range: 7
     sound:
-      path: /Audio/_FlagShip/Effects/Shuttle/FTL_drive_hum.ogg
+      path: /Audio/_Flagship/Effects/Shuttle/FTL_drive_hum.ogg
   - type: ApcPowerReceiver
     powerLoad: 50
   - type: PowerState
