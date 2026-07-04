@@ -174,6 +174,20 @@ public sealed partial class ExplosionSystem : SharedExplosionSystem
     }
 
     /// <summary>
+    /// 'Explodes' the explosive without actually creating an explosion.
+    /// </summary>
+    /// <param name="uid"></param>
+    /// <param name="explosive"></param>
+    /// <param name="delete"></param>
+    public override void DefuseExplosive(EntityUid uid, ExplosiveComponent? explosive = null, bool delete = true)
+    {
+        if (!Resolve(uid, ref explosive, logMissing: false))
+            return;
+
+        explosive.Exploded = true;
+    }
+
+    /// <summary>
     ///     Find the strength needed to generate an explosion of a given radius. More useful for radii larger then 4, when the explosion becomes less "blocky".
     /// </summary>
     /// <remarks>

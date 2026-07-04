@@ -177,7 +177,11 @@ public partial class ModularShieldSystem
 
     private void OnPreventCollide(EntityUid uid, ModularShieldShieldComponent component, ref PreventCollideEvent args)
     {
-        if (!_projectileQuery.TryGetComponent(args.OtherEntity, out var projectile) || projectile.ProjectileSpent)
+        if (args.Cancelled)
+            return;
+
+        if (!_projectileQuery.TryGetComponent(args.OtherEntity, out var projectile) ||
+            projectile.ProjectileSpent)
         {
             args.Cancelled = true;
             return;

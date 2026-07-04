@@ -1,4 +1,5 @@
 using Content.FlagShip.Shared.ModularShields.Components;
+using Content.Server.Explosion.EntitySystems;
 using Content.Server.Power.EntitySystems;
 using Content.Shared.Examine;
 using Content.Shared.Explosion.Components;
@@ -26,6 +27,7 @@ public sealed partial class ModularShieldSystem : EntitySystem
     [Dependency] private IGameTiming _gameTiming = default!;
     [Dependency] private PowerReceiverSystem _power = default!;
     [Dependency] private IPrototypeManager _prototypeManager = default!;
+    [Dependency] private ExplosionSystem _explosion = default!;
 
     private EntityQuery<ProjectileComponent> _projectileQuery;
 
@@ -321,6 +323,7 @@ public sealed partial class ModularShieldSystem : EntitySystem
         if (TryComp<ExplosiveComponent>(args.AbsorbedProjectile, out var exp) && _prototypeManager.TryIndex(exp.ExplosionType, out var type))
         {
             calculatedDamage += exp.TotalIntensity * (float)type.DamagePerIntensity.GetTotal();
+            _explosion.DefuseExplosive(args.AbsorbedProjectile, exp);
         }
 
         calculatedDamage += (float)args.Projectile.Damage.GetTotal();

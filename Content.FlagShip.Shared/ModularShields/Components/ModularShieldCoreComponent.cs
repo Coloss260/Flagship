@@ -1,4 +1,5 @@
 using Robust.Shared.Audio;
+using Robust.Shared.Serialization;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -79,7 +80,7 @@ public sealed partial class ModularShieldCoreComponent : Component
     public float EmpDamageToNormalDamageRatio = 0.01f;
 
     /// <summary>
-    /// The minimum amount of energy that must be stored in order to start projecting the shield.
+    /// The minimum amount of energ y that must be stored in order to start projecting the shield.
     /// </summary>
     [DataField, ViewVariables(VVAccess.ReadWrite)]
     public float MinimumEnergyStoredToProjectShield = 100;
@@ -160,4 +161,20 @@ public sealed partial class ModularShieldCoreComponent : Component
     /// </summary>
     [DataField, ViewVariables(VVAccess.ReadWrite)]
     public SoundSpecifier OverloadSound = new SoundPathSpecifier("/Audio/Effects/teleport_departure.ogg");
+}
+
+[Serializable, NetSerializable]
+public enum ModularShieldCoreVisuals
+{
+    DisplayState,
+}
+
+[Serializable, NetSerializable]
+public enum ModularShieldCoreState
+{
+    Off,
+    UnableToProject,
+    Projecting,
+    FluxOverflow,
+    FluxOverload,
 }
