@@ -1,42 +1,18 @@
-# NEW FRONTIER 14 // START
 - type: entity
   parent: TelecomServer
-  id: NFTelecomServerFilled
+  id: FlagTelecomServerFilled
   suffix: Filled All
   components:
   - type: ContainerFill
     containers:
       key_slots:
-      - EncryptionKeyCommon
-      - EncryptionKeyCargo
-      - EncryptionKeyEngineering
-      - EncryptionKeyMedical
-      - EncryptionKeyScience
-      - EncryptionKeySecurity
-      - EncryptionKeyService
-      - EncryptionKeyCommand #Mono
-      - EncryptionKeyTraffic
-
-- type: entity
-  parent: TelecomServer
-  id: TelecomServerFilledShuttle
-  suffix: Ship
-  components:
-  - type: ContainerFill
-    containers:
-      key_slots:
-      - EncryptionKeyCommon
-      - EncryptionKeyTraffic
-      - EncryptionKeyMedical
-
-- type: entity
-  parent: TelecomServer
-  id: TelecomServerFilledSyndicate
-  suffix: Syndicate
-  components:
-  - type: ContainerFill
-    containers:
-      key_slots:
-      - EncryptionKeySyndie
-
-# NEW FRONTIER 14 // END
+      - EncryptionKeyShip
+      - EncryptionKeyTactical
+      - EncryptionKeyOperations
+      - EncryptionKeySupplies
+      - EncryptionKeyMaintenance
+      - EncryptionKeyFlagMedical
+      - EncryptionKeyFlagScience
+      - EncryptionKeyMilitaryPolice
+      - EncryptionKeyFlagService
+      - EncryptionKeyBridgeCommand
