@@ -5,9 +5,9 @@
   description: A heads-up display that scans the humanoids in view and provides accurate data about their health status.
   components:
   - type: Sprite
-    sprite: Clothing/Eyes/Hud/med.rsi
+    sprite: _Flagship/Clothing/Eyes/Hud/med.rsi
   - type: Clothing
-    sprite: Clothing/Eyes/Hud/med.rsi
+    sprite: _Flagship/Clothing/Eyes/Hud/med.rsi
   - type: Tag
     tags:
     - HudMedical
