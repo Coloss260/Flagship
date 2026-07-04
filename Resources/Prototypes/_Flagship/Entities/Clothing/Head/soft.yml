@@ -35,3 +35,14 @@
     sprite: _Flagship/Clothing/Head/Soft/suppliescrewmencap.rsi
   - type: Clothing
     sprite: _Flagship/Clothing/Head/Soft/suppliescrewmencap.rsi
+
+- type: entity
+  parent: ClothingHeadHeadHatBaseFlippable
+  id: ClothingHeadHatWhiteCap
+  name: White cap
+  description: A baseball cap colored in white.
+  components:
+  - type: Sprite
+    sprite: _Flagship/Clothing/Head/Soft/whitecap.rsi
+  - type: Clothing
+    sprite: _Flagship/Clothing/Head/Soft/whitecap.rsi

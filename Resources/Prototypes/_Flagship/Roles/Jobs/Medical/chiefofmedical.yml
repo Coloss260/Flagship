@@ -35,7 +35,7 @@
   equipment:
     id: CMOPDA
     head: ClothingHeadHatBeretCmo
-    eyes: ClothingEyesHudMedical
+    eyes: ClothingEyesFlagHudMedical
     ears: ClothingHeadsetCMO
     mask: ClothingMaskSterile
     jumpsuit: ClothingUniformJumpsuitFlagMedicalDoctor

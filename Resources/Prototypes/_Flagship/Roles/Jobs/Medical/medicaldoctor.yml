@@ -30,7 +30,7 @@
   equipment:
     id: MedicalPDA
     head: ClothingHeadHatBeretMedic
-    eyes: ClothingEyesHudMedical
+    eyes: ClothingEyesFlagHudMedical
     ears: ClothingHeadsetMedical
     mask: ClothingMaskSterile
     jumpsuit: ClothingUniformJumpsuitFlagMedicalDoctor

@@ -19,8 +19,8 @@
   id: FlagMedicalInternGear
   equipment:
     id: MedicalInternPDA
-    head: ClothingHeadHatMimesoft
-    eyes: ClothingEyesHudMedical
+    head: ClothingHeadHatWhiteCap
+    eyes: ClothingEyesFlagHudMedical
     ears: ClothingHeadsetMedical
     mask: ClothingMaskSterile
     jumpsuit: ClothingUniformJumpsuitFlagMedicalDoctor
