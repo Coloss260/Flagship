@@ -70,7 +70,7 @@
   - type: ModularShieldEnergyStorage
   - type: Sprite
     snapCardinals: true
-    sprite: Structures/storage/tanks.rsi
+    sprite: Structures/Storage/tanks.rsi
     state: highwatertank
 
 

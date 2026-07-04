@@ -167,8 +167,7 @@ public partial class ModularShieldSystem
 
         _fixtureSystem.TryCreateFixture(uid, chain, name,
             hard: false,
-            // This causes debug assertion failures when bullets hit the shield where it overlaps with the internal shield.
-            // If set to BulletImpassable
+            // Do not try to make the outer shield block bullets/lasers. Because the whole thing is off the edge of the parent grid it's inconsistent as hell.
             collisionLayer: (int)CollisionGroup.None,
             body: physics);
 
