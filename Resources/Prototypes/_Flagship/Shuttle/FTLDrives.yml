@@ -20,11 +20,11 @@
     - FTLDriveRange
   - type: ItemSlots
     slots:
-      cell_slot:
-        name: power-cell-slot-component-slot-name-default
+      fuel_slot:
+        name: drive-fuel-cell-slot-name
   - type: ContainerContainer
     containers:
-      cell_slot: !type:ContainerSlot { }
+      fuel_slot: !type:ContainerSlot { }
   - type: Appearance
   - type: FTLDrive
     fTLComponents:

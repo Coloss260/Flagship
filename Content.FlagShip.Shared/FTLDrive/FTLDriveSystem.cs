@@ -196,7 +196,7 @@ public sealed partial class FTLDriveSystem : EntitySystem
 
         data.State = drive.State;
         data.CoolDown = drive.CoolDownTime;
-        data.Range = GetFTLDriveRange(uid);
+        data.Range = _modSystem.GetNumberModified(drive.Range, drive.Owner, FTLRangeAspect);
         data.StableTime = drive.StableEngagedTime;
         data.StartUp = drive.StartUpTime;
         data.CoolDownFinishedTime = drive.CoolDownFinishedTime - _timing.CurTime;

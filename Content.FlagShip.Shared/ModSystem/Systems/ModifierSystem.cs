@@ -77,9 +77,9 @@ public sealed partial class ModifierSystem : EntitySystem
             return value;
 
         var orderedMods = modifiable.CurrentModifiers
-            .OrderBy(mod => mod.ModifierType == ModifierType.Addition)
+            .OrderBy(mod => mod.ModifierType == ModifierType.Set)
             .ThenBy(mod => mod.ModifierType == ModifierType.Multiplication)
-            .ThenBy(mod => mod.ModifierType == ModifierType.Set);
+            .ThenBy(mod => mod.ModifierType == ModifierType.Addition);
 
         foreach (var mod in orderedMods)
         {

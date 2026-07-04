@@ -1,6 +1,6 @@
 - type: entity
   parent: PowerCageSmall
-  id: TestFuelCell
+  id: FuelCellBasic
   components:
   - type: Modifier
     modifiers:
