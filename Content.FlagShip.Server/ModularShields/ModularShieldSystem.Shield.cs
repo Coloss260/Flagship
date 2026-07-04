@@ -76,6 +76,11 @@ public partial class ModularShieldSystem
         _transformSystem.SetCoordinates(shield, gridCenter);
         _transformSystem.SetWorldRotation(shield, _transformSystem.GetWorldRotation(entity));
 
+        // If you're wondering what the fuck is up with these fixtures:
+        // Don't think it's entirely a bug, it's optimisations on fixture handling preventing the fixture from extending too far from the grid's limits.
+        // It makes more sense if you put the shield generator on the small ship, the actual fixture you can hover over with "physics shapeinfo" in the console is very tight around the ship compared to the fixture displayed with "physics shapes".
+        // Projectiles only hit the tight fixture.
+        // Hitscans will hit the full size fixture only if they were fired from inside the full size fixture. Hitscans fired from outside the full size fixture will only hit the tight fixture.
         var chain = GenerateOvalFixture(shield, "shield", shieldPhysics, mapGrid, shieldVisuals.Padding);
 
         List<Vector2> roughPoly = new();
