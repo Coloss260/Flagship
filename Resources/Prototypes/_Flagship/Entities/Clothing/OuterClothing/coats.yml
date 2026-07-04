@@ -1,0 +1,21 @@
+- type: entity
+  parent: [ClothingOuterStorageFoldableBase, BaseMedicalContraband]
+  id: ClothingOuterCoatLabCom
+  name: Chief of Medical lab coat
+  description: Custom made blue lab coat for the Chief of Medical, offers improved protection against chemical spills and minor cuts.
+  components:
+  - type: Sprite
+    sprite: _Flagship/Clothing/OuterClothing/Coats/labcoat_com.rsi
+  - type: Clothing
+    sprite: _Flagship/Clothing/OuterClothing/Coats/labcoat_com.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Slash: 0.95
+        Heat: 0.95
+        Caustic: 0.65
+
+- type: entity
+  parent: [ClothingOuterStorageFoldableBaseOpened, ClothingOuterCoatLabCom, BaseMedicalContraband]
+  id: ClothingOuterCoatLabComOpened
+  name: Chief of Medical lab coat

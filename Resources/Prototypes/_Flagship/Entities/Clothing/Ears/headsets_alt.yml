@@ -170,5 +170,21 @@
     sprite: _Flagship/Clothing/Ears/Headsets/supplycrew.rsi
 
 # Medical
+- type: entity
+  parent: ClothingHeadsetAltFlag
+  id: ClothingHeadsetAltFlagMedical
+  name: Chief of Medical over-ear headset
+  description: Headset used by Chiefs of Medical.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyFlagMedical
+      - EncryptionKeyOperations
+  - type: Sprite
+    sprite: _Flagship/Clothing/Ears/Headsets/medical.rsi
+  - type: Clothing
+    sprite: _Flagship/Clothing/Ears/Headsets/medical.rsi
+
 
 # Service

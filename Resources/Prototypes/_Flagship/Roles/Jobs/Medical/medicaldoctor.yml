@@ -31,7 +31,7 @@
     id: MedicalPDA
     head: ClothingHeadHatBeretMedic
     eyes: ClothingEyesFlagHudMedical
-    ears: ClothingHeadsetMedical
+    ears: ClothingHeadsetFlagMedical
     mask: ClothingMaskSterile
     jumpsuit: ClothingUniformJumpsuitFlagMedicalDoctor
     outerClothing: ClothingOuterCoatLabOpened

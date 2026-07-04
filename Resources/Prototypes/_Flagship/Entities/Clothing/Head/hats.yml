@@ -163,3 +163,23 @@
     - WhitelistChameleon
     - PetWearable
     - CorgiWearable
+
+# Medical
+- type: entity
+  parent: [ClothingHeadBase, BaseMedicalContraband]
+  id: ClothingHeadHatBeretCom
+  name: Chief of Medical beret
+  description: A turquoise beret with a cross on the front. The sight of it calms you down and makes it clear that you will be cured.
+  components:
+  - type: Sprite
+    sprite: _Flagship/Clothing/Head/Hats/beret_com.rsi
+  - type: Clothing
+    sprite: _Flagship/Clothing/Head/Hats/beret_com.rsi
+  - type: Tag
+    tags:
+    - PetWearable
+    - CorgiWearable
+    - ClothMade
+    - Recyclable
+    - HamsterWearable
+    - WhitelistChameleon

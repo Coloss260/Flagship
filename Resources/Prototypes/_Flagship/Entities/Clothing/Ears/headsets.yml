@@ -263,22 +263,6 @@
 # Medical
 - type: entity
   parent: ClothingHeadsetFlag
-  id: ClothingHeadsetChiefOfMedical
-  name: Chief of Medical headset
-  description: Headset used by workers of the Supplies department.
-  components:
-  - type: ContainerFill
-    containers:
-      key_slots:
-      - EncryptionKeyFlagMedical
-      - EncryptionKeyOperations
-  - type: Sprite
-    sprite: _Flagship/Clothing/Ears/Headsets/militarypolicemedic.rsi
-  - type: Clothing
-    sprite: _Flagship/Clothing/Ears/Headsets/militarypolicemedic.rsi
-
-- type: entity
-  parent: ClothingHeadsetFlag
   id: ClothingHeadsetFlagMedical
   name: Medical headset
   description: Headset used by doctors of the Medical department.
@@ -288,9 +272,9 @@
       key_slots:
       - EncryptionKeyFlagMedical
   - type: Sprite
-    sprite: _Flagship/Clothing/Ears/Headsets/militarypolicemedic.rsi
+    sprite: _Flagship/Clothing/Ears/Headsets/medical.rsi
   - type: Clothing
-    sprite: _Flagship/Clothing/Ears/Headsets/militarypolicemedic.rsi
+    sprite: _Flagship/Clothing/Ears/Headsets/medical.rsi
 
 # Service
 - type: entity

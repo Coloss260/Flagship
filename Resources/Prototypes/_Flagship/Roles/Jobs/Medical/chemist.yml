@@ -27,7 +27,7 @@
     id: ChemistryPDA
     head: ClothingHeadHatMimesoft
     eyes: ClothingEyesGlassesChemical
-    ears: ClothingHeadsetMedical
+    ears: ClothingHeadsetFlagMedical
     mask: ClothingMaskSterile
     jumpsuit: ClothingUniformJumpsuitFlagMedicalDoctor
     outerClothing: ClothingOuterCoatLabOpened

@@ -34,12 +34,12 @@
   id: ChiefOfMedicalGear
   equipment:
     id: CMOPDA
-    head: ClothingHeadHatBeretCmo
+    head: ClothingHeadHatBeretCom
     eyes: ClothingEyesFlagHudMedical
-    ears: ClothingHeadsetCMO
+    ears: ClothingHeadsetAltFlagMedical
     mask: ClothingMaskSterile
     jumpsuit: ClothingUniformJumpsuitFlagMedicalDoctor
-    outerClothing: ClothingOuterCoatLabCmoOpened
+    outerClothing: ClothingOuterCoatLabComOpened
     gloves: ClothingHandsGlovesNitrile
     back: ClothingBackpackMedical
     belt: ClothingBeltMedical

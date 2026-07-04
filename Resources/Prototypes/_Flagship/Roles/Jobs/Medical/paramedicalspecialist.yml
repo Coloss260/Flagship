@@ -27,7 +27,7 @@
     id: ParamedicPDA
     head: ClothingHeadHatParamedicsoft
     eyes: ClothingEyesFlagHudMedical
-    ears: ClothingHeadsetMedical
+    ears: ClothingHeadsetFlagMedical
     mask: ClothingMaskSterile
     jumpsuit: ClothingUniformJumpsuitFlagMedicalDoctor
     outerClothing: ClothingOuterCoatParamedicWB
