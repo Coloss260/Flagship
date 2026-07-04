@@ -18,41 +18,48 @@
         emergencyShuttlePath: /Maps/Shuttles/emergency_crimson.yml
       - type: StationJobs
         availableJobs:
-          #command (7)
-          Captain: [ 1, 1 ]
-          HeadOfPersonnel: [ 1, 1 ]
-          HeadOfSecurity: [ 1, 1 ]
-          ChiefMedicalOfficer: [ 1, 1 ]
-          ChiefEngineer: [ 1, 1 ]
-          ResearchDirector: [ 1, 1 ]
-          Quartermaster: [ 1, 1 ]
-          #service (4-5)
-          ServiceWorker: [ 3, 5 ]
-          Janitor: [1, 2]
-          Botanist: [1,2]
-          #engineering (3-5)
-          AtmosphericTechnician: [ 1, 1 ]
-          StationEngineer: [ 2, 2 ]
-          TechnicalAssistant: [ 1, 2 ] #intern, not counted
-          #medical (3-6)
-          Chemist: [ 1, 1 ]
-          MedicalDoctor: [ 1, 2 ]
-          MedicalIntern: [ 1, 2 ] #intern, not counted
-          Paramedic: [ 1, 1 ]
-          #science (2-6)
-          Scientist: [ 2, 4 ]
-          Roboticist: [1, 1]
-          ResearchAssistant: [ 2, 2 ] #intern, not counted
-          #security (6)
-          Warden: [ 1, 1 ]
-          SecurityOfficer: [ 3, 4 ]
-          Brigmedic: [ 1, 1 ]
-          SecurityCadet: [ 1, 2 ] #intern, not counted
-          #supply (4)
-          SalvageSpecialist: [ 2, 2 ]
-          CargoTechnician: [ 1, 2 ]
-          #civilian (3+)
-          Passenger: [ -1, -1 ] #infinite, not counted
-          Musician: [ 1, 1 ]
-          #silicon (3)
-          StationAi: [ 1, 1 ]
+          # Bridge Command (7)
+          CommandingOfficer: [ 1, 1 ]
+          ExecutiveOfficer: [ 1, 1 ]
+          TacticalOfficer: [ 1, 1 ]
+          OperationsOfficer: [ 1, 1 ]
+          CommunicationsOfficer: [ 1, 1 ]
+          FlightControlOfficer: [ 1, 1 ]
+          BridgeEnsign: [ 1, 1 ]
+          
+          # Service (4-7)
+          MessChef: [ 1, 2 ]
+          Custodian: [1, 2]
+          HydroponicsBiologist: [1,2]
+          FlagBartender: [1, 1]
+          OffDutyCrew: [-1, -1] # infinite
+          
+          # Maintenance (5-6)
+          ChiefOfMaintenance: [1, 1]
+          LifeSupportSpecialist: [ 1, 1]
+          MaintenanceTechnician: [ 2, 2 ]
+          MaintenanceIntern: [ 1, 2 ] #intern, not counted
+          
+          # Medical (5-7)
+          ChiefOfMedical: [1, 1]
+          FlagChemist: [ 1, 1 ]
+          ParamedicalSpecialist: [1, 1]
+          FlagMedicalDoctor: [ 1, 2 ]
+          FlagMedicalIntern: [ 1, 2 ] #intern, not counted
+          
+          # Science (4-6)
+          ScienceSupervisor: [1, 1]
+          FlagScientist: [ 2, 4 ]
+          FlagRoboticist: [1, 1]
+          FlagResearchAssistant: [ 2, 2 ] #intern, not counted
+          
+          # Military Police (6)
+          MPChief: [ 1, 1 ]
+          MPOfficer: [ 3, 4 ]
+          MPMedic: [ 1, 1 ]
+          MPTrainee: [ 1, 2 ] #intern, not counted
+          
+          # Supplies (4-6)
+          SuppliesQuartermaster: [ 1, 1 ]
+          ArtillerySpecialist: [ 1, 2 ]
+          SuppliesCrewman: [2, 3]
