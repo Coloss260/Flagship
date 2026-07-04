@@ -6,18 +6,18 @@
   name: electric range
   description: A functional range with a range of functions.
   components:
-#  - type: Microwave
-#    capacity: 10
-#    canMicrowaveIdsSafely: false
-#    explosionChance: 0
-#    lightningChance: 0
-#    beginCookingSound: /Audio/_NF/Machines/egg-timer.ogg
-#    foodDoneSound: /Audio/Machines/ding.ogg
-#    loopingSound: /Audio/_NF/Effects/silence.ogg
-#    validRecipeTypes: Oven
-#    canHeat: true
-#    canIrradiate: false
-#    key: ElectricRangeKey
+  - type: Microwave
+    capacity: 10
+    canMicrowaveIdsSafely: false
+    explosionChance: 0
+    lightningChance: 0
+    beginCookingSound: /Audio/_NF/Machines/egg-timer.ogg
+    foodDoneSound: /Audio/Machines/ding.ogg
+    loopingSound: /Audio/_NF/Effects/silence.ogg
+    validRecipeTypes: Oven
+    canHeat: true
+    canIrradiate: false
+    key: ElectricRangeKey
   - type: Appearance
   - type: GenericVisualizer
     visuals:
@@ -40,8 +40,8 @@
           Low: { visible: true, state: range_low }
           Medium: { visible: true, state: range_medium }
           High: { visible: true, state: range_high }
-#  - type: ActivatableUI
-#    key: enum.MicrowaveUiKey.ElectricRangeKey
+  - type: ActivatableUI
+    key: enum.MicrowaveUiKey.ElectricRangeKey
   - type: DeviceLinkSink
     ports:
     - On
@@ -50,10 +50,10 @@
     receiveFrequencyId: BasicDevice
   - type: WirelessNetworkConnection
     range: 200
-#  - type: UserInterface
-#    interfaces:
-#      enum.MicrowaveUiKey.ElectricRangeKey:
-#        type: MicrowaveBoundUserInterface
+  - type: UserInterface
+    interfaces:
+      enum.MicrowaveUiKey.ElectricRangeKey:
+        type: MicrowaveBoundUserInterface
   - type: Physics
     bodyType: Static
   - type: Fixtures
@@ -158,16 +158,16 @@
   name: food-o-mat
   description: Assembles and prepares NT-approved meals. You don't know what it's doing in there.
   components:
-#  - type: Microwave
-#    explosionChance: 0
-#    lightningChance: 0
-#    beginCookingSound: /Audio/Machines/machine_switch.ogg
-#    foodDoneSound: /Audio/Machines/ding.ogg
-#    loopingSound: /Audio/_NF/Machines/assembler.ogg
-#    validRecipeTypes: Assembler
-#    canHeat: false
-#    canIrradiate: false
-#    key: AssemblerKey
+  - type: Microwave
+    explosionChance: 0
+    lightningChance: 0
+    beginCookingSound: /Audio/Machines/machine_switch.ogg
+    foodDoneSound: /Audio/Machines/ding.ogg
+    loopingSound: /Audio/_NF/Machines/assembler.ogg
+    validRecipeTypes: Assembler
+    canHeat: false
+    canIrradiate: false
+    key: AssemblerKey
   - type: GenericVisualizer #TODO: needs work
     visuals:
       enum.PowerDeviceVisuals.VisualState:
@@ -220,12 +220,12 @@
     powerLoad: 400
   - type: Machine
     board: KitchenAssemblerMachineCircuitboard
-#  - type: ActivatableUI
-#    key: enum.MicrowaveUiKey.AssemblerKey
-#  - type: UserInterface
-#    interfaces:
-#      enum.MicrowaveUiKey.AssemblerKey:
-#        type: AssemblerBoundUserInterface
+  - type: ActivatableUI
+    key: enum.MicrowaveUiKey.AssemblerKey
+  - type: UserInterface
+    interfaces:
+      enum.MicrowaveUiKey.AssemblerKey:
+        type: AssemblerBoundUserInterface
 
 - type: entity
   id: MedicalAssembler
@@ -233,12 +233,12 @@
   name: medical assembler
   description: Great for medicine, apparently. You don't know how it works.
   components:
-#  - type: Microwave
-#    validRecipeTypes: MedicalAssembler
-#    beginCookingSound: /Audio/Machines/machine_switch.ogg
-#    foodDoneSound: /Audio/Effects/Shuttle/radar_ping.ogg
-#    loopingSound: /Audio/_NF/Machines/medical-assembler.ogg
-#    key: MedicalAssemblerKey
+  - type: Microwave
+    validRecipeTypes: MedicalAssembler
+    beginCookingSound: /Audio/Machines/machine_switch.ogg
+    foodDoneSound: /Audio/Effects/Shuttle/radar_ping.ogg
+    loopingSound: /Audio/_NF/Machines/medical-assembler.ogg
+    key: MedicalAssemblerKey
   - type: GenericVisualizer
     visuals:
       enum.PowerDeviceVisuals.VisualState:
@@ -268,15 +268,74 @@
     powerLoad: 500
   - type: Machine
     board: MedicalAssemblerMachineCircuitboard
-#  - type: ActivatableUI
-#    key: enum.MicrowaveUiKey.MedicalAssemblerKey
-#  - type: UserInterface
-#    interfaces:
-#      enum.MicrowaveUiKey.MedicalAssemblerKey:
-#        type: AssemblerBoundUserInterface
+  - type: ActivatableUI
+    key: enum.MicrowaveUiKey.MedicalAssemblerKey
+  - type: UserInterface
+    interfaces:
+      enum.MicrowaveUiKey.MedicalAssemblerKey:
+        type: AssemblerBoundUserInterface
   - type: ContainerContainer # Redefined due to inheritance order
     containers:
       microwave_entity_container: !type:Container
       machine_board: !type:Container
       machine_parts: !type:Container
+
+        # POI versions of microwave machines
+
+- type: entity
+  id: KitchenMicrowavePOI
+  parent:
+  - BaseStructureDisableToolUse
+  - BaseStructureIndestructible
+  - KitchenMicrowave
+  suffix: POI
+
+- type: entity
+  id: KitchenElectricRangePOI
+  parent:
+  - BaseStructureDisableToolUse
+  - BaseStructureIndestructible
+  - KitchenElectricRange
+  suffix: POI
+
+- type: entity
+  id: KitchenAssemblerPOI
+  parent:
+  - BaseStructureDisableToolUse
+  - BaseStructureIndestructible
+  - KitchenAssembler
+  suffix: POI
+
+- type: entity
+  id: MedicalAssemblerPOI
+  parent:
+  - BaseStructureDisableToolUse
+  - BaseStructureIndestructible
+  - MedicalAssembler
+  suffix: POI
+
+# TODO: move this
+- type: entity
+  id: KitchenReagentGrinderPOI
+  parent:
+  - BaseStructureDisableToolUse
+  - BaseStructureIndestructible
+  - KitchenReagentGrinder
+  suffix: POI
+
+- type: entity
+  id: KitchenDeepFryerPOI
+  parent:
+  - BaseStructureDisableToolUse
+  - BaseStructureIndestructible
+  #- KitchenDeepFryer --Flagship
+  suffix: POI
+
+- type: entity
+  id: KitchenDeepFryerCauldronPOI
+  parent:
+  - BaseStructureDisableToolUse
+  - BaseStructureIndestructible
+  #- KitchenDeepFryerCauldron -- Flagship
+  suffix: Holiday Special, POI
 # MONOLITH // END

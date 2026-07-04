@@ -106,11 +106,11 @@
     graph: TableFoldingGraph
     node: TableFolding
   - type: DamageExaminable
-#  - type: FoldableFixture
-#    foldedFixtures:
-#    - item
-#    unfoldedFixtures:
-#    - table
+  - type: FoldableFixture
+    foldedFixtures:
+    - item
+    unfoldedFixtures:
+    - table
 
 - type: entity
   parent: TableFolding

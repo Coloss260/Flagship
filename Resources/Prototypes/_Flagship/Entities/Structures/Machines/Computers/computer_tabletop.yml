@@ -519,4 +519,297 @@
     - map: ["computerLayerKeys"]
       sprite: Structures/Machines/computers.rsi
       state: service_keys
+
+## Computers: Frontier
+#
+#- type: entity
+#  parent: [BaseStructureComputerTabletop, ComputerMarketConsoleNFLow]
+#  id: ComputerTabletopMarketConsoleNFLow
+#  suffix: Low, Tabletop
+#  components:
+#  - type: Sprite
+#    drawdepth: SmallObjects
+#    layers: &cargoMarketSprite
+#    - map: ["computerLayerBody"]
+#      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+#      state: computer_tabletop
+#    - map: ["computerLayerKeyboard"]
+#      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+#      state: generic_keyboard_tabletop
+#    - map: ["computerLayerScreen"]
+#      sprite: _NF/Structures/Machines/computers.rsi
+#      state: cargo_market
+#    - map: ["computerLayerKeys"]
+#      sprite: Structures/Machines/computers.rsi
+#      state: tech_key
+#
+#- type: entity
+#  parent: [BaseStructureComputerTabletop, ComputerMarketConsoleNFNormal]
+#  id: ComputerTabletopMarketConsoleNFNormal
+#  suffix: Normal, Tabletop
+#  components:
+#  - type: Sprite
+#    drawdepth: SmallObjects
+#    layers: *cargoMarketSprite
+#
+#- type: entity
+#  parent: [BaseStructureComputerTabletop, ComputerMarketConsoleNFHigh]
+#  id: ComputerTabletopMarketConsoleNFHigh
+#  suffix: High, Tabletop
+#  components:
+#  - type: Sprite
+#    drawdepth: SmallObjects
+#    layers: *cargoMarketSprite
+#
+#- type: entity
+#  parent: [BaseStructureIndestructible, BaseStructureComputerTabletop, ComputerPalletConsoleNFHighMarket]
+#  id: ComputerTabletopPalletConsoleNFHighMarket
+#  suffix: High, Tabletop
+#  components:
+#  - type: Sprite
+#    drawdepth: SmallObjects
+#    layers: &cargoPalletSprite
+#    - map: ["computerLayerBody"]
+#      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+#      state: computer_tabletop
+#    - map: ["computerLayerKeyboard"]
+#      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+#      state: generic_keyboard_tabletop
+#    - map: ["computerLayerScreen"]
+#      sprite: _NF/Structures/Machines/computers.rsi
+#      state: cargo_sale
+#    - map: ["computerLayerKeys"]
+#      sprite: Structures/Machines/computers.rsi
+#      state: tech_key
+#
+#- type: entity
+#  parent: [BaseStructureIndestructible, BaseStructureComputerTabletop, ComputerPalletConsoleNFNormalMarket]
+#  id: ComputerTabletopPalletConsoleNFNormalMarket
+#  suffix: Normal, Tabletop
+#  components:
+#  - type: Sprite
+#    drawdepth: SmallObjects
+#    layers: *cargoPalletSprite
+#
+#- type: entity
+#  parent: [BaseStructureIndestructible, BaseStructureComputerTabletop, ComputerPalletConsoleNFLowMarket]
+#  id: ComputerTabletopPalletConsoleNFLowMarket
+#  suffix: Low, Tabletop
+#  components:
+#  - type: Sprite
+#    drawdepth: SmallObjects
+#    layers: *cargoPalletSprite
+#
+#- type: entity
+#  parent: [BaseStructureComputerTabletop, ComputerPalletConsoleNFVeryLowMarket]
+#  id: ComputerTabletopPalletConsoleNFVeryLowMarket
+#  suffix: VeryLow, Tabletop
+#  components:
+#  - type: Sprite
+#    drawdepth: SmallObjects
+#    layers: *cargoPalletSprite
+#
+#- type: entity
+#  parent: [BaseStructureIndestructible, BaseStructureComputerTabletop, BaseStationAdminBankATM]
+#  name: station administration console
+#  id: BaseComputerTabletopStationAdminBankATM
+#  abstract: true
+#  components:
+#  - type: Sprite
+#    drawdepth: SmallObjects
+#    layers:
+#    - map: ["computerLayerBody"]
+#      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+#      state: computer_tabletop
+#    - map: ["computerLayerKeyboard"]
+#      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+#      state: generic_keyboard_tabletop
+#    - map: ["computerLayerScreen"]
+#      sprite: _NF/Structures/Machines/computers.rsi
+#      state: station_atm
+#    - map: ["computerLayerKeys"]
+#      sprite: Structures/Machines/computers.rsi
+#      state: id_key
+#
+#- type: entity
+#  parent: BaseComputerTabletopStationAdminBankATM
+#  id: ComputerTabletopStationAdminBankATMFrontier
+#  description: Used to transfer funds from Colonial Outpost's bank account
+#  suffix: Frontier, Tabletop
+#  components:
+#  - type: StationBankATM
+#    account: Frontier
+#  - type: CompanyAccessReader
+#    requiredCompanies:
+#    - Colonial
+#  - type: AccessReader
+#    access: [["HeadOfPersonnel"]]
+#
+#- type: entity
+#  parent: BaseComputerTabletopStationAdminBankATM
+#  id: ComputerTabletopStationAdminBankATMNfsd
+#  description: Used to transfer funds from the TSFMC-FOB's bank account
+#  suffix: TSFMC, Tabletop
+#  components:
+#  - type: StationBankATM
+#    account: Nfsd
+#  - type: CompanyAccessReader
+#    requiredCompanies:
+#    - TSF
+#  - type: AccessReader
+#    access: [["HeadOfSecurity"]]
+#
+#- type: entity
+#  parent: BaseComputerTabletopStationAdminBankATM
+#  id: ComputerTabletopStationAdminBankATMMedical
+#  description: Used to transfer funds from Medical Dispatch's bank account
+#  suffix: Medical, Tabletop
+#  components:
+#  - type: StationBankATM
+#    account: Medical
+#  - type: CompanyAccessReader
+#    requiredCompanies:
+#    - MD
+#  - type: AccessReader
+#    access: [["ChiefMedicalOfficer"]]
+#
+#- type: entity
+#  parent: [BaseStructureIndestructible, BaseStructureComputerTabletop, ComputerContrabandPalletConsole]
+#  id: ComputerTabletopContrabandPalletConsole
+#  components:
+#  - type: Sprite
+#    drawdepth: SmallObjects
+#    layers:
+#    - map: ["computerLayerBody"]
+#      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+#      state: computer_tabletop
+#    - map: ["computerLayerKeyboard"]
+#      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+#      state: generic_keyboard_tabletop
+#    - map: ["computerLayerScreen"]
+#      sprite: _NF/Structures/Machines/computers.rsi
+#      state: contraband
+#    - map: ["computerLayerKeys"]
+#      sprite: _NF/Structures/Machines/computers.rsi
+#      state: telesci_key
+#
+#- type: entity
+#  parent: [BaseStructureIndestructible, BaseStructureComputerTabletop, ComputerIFFPOI]
+#  id: ComputerTabletopIFFPOI
+#  suffix: POI, Tabletop
+#  components:
+#  - type: Sprite
+#    drawdepth: SmallObjects
+#    layers:
+#    - map: ["computerLayerBody"]
+#      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+#      state: computer_tabletop
+#    - map: ["computerLayerKeyboard"]
+#      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+#      state: generic_keyboard_tabletop
+#    - map: ["computerLayerScreen"]
+#      sprite: Structures/Shuttles/iff.rsi
+#      state: helm
+#    - map: ["computerLayerKeys"]
+#      sprite: Structures/Machines/computers.rsi
+#      state: generic_keys
+#
+#- type: entity
+#  parent: [BaseStructureComputerTabletop, ComputerPirateBounty]
+#  id: ComputerTabletopPirateBounty
+#  suffix: Tabletop
+#  components:
+#  - type: Sprite
+#    drawdepth: SmallObjects
+#    layers:
+#    - map: ["computerLayerBody"]
+#      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+#      state: computer_tabletop
+#    - map: ["computerLayerKeyboard"]
+#      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+#      state: generic_keyboard_tabletop
+#    - map: ["computerLayerScreen"]
+#      sprite: _NF/Structures/Machines/computers.rsi
+#      state: piratebounty
+#    - map: ["computerLayerKeys"]
+#      sprite: _NF/Structures/Machines/computers.rsi
+#      state: blackmarket_key
+#
+#- type: entity
+#  parent: [BaseStructureComputerTabletop, ComputerContrabandPalletConsolePirate]
+#  id: ComputerTabletopContrabandPalletConsolePirate
+#  suffix: Tabletop
+#  components:
+#  - type: Sprite
+#    drawdepth: SmallObjects
+#    layers:
+#    - map: ["computerLayerBody"]
+#      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+#      state: computer_tabletop
+#    - map: ["computerLayerKeyboard"]
+#      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+#      state: generic_keyboard_tabletop
+#    - map: ["computerLayerScreen"]
+#      sprite: _NF/Structures/Machines/computers.rsi
+#      state: contraband # TODO: replace this
+#    - map: ["computerLayerKeys"]
+#      sprite: _NF/Structures/Machines/computers.rsi
+#      state: blackmarket_key
+#
+#- type: entity
+#  parent: [BaseStructureComputerTabletop, ComputerPirateBountyRedemption]
+#  id: ComputerTabletopPirateBountyRedemption
+#  suffix: Tabletop
+#  components:
+#  - type: Sprite
+#    drawdepth: SmallObjects
+#    layers:
+#    - map: ["computerLayerBody"]
+#      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+#      state: computer_tabletop
+#    - map: ["computerLayerKeyboard"]
+#      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+#      state: generic_keyboard_tabletop
+#    - map: ["computerLayerScreen"]
+#      sprite: _NF/Structures/Machines/computers.rsi
+#      state: piratebounty_pad # TODO: replace this
+#    - map: ["computerLayerKeys"]
+#      sprite: _NF/Structures/Machines/computers.rsi
+#      state: blackmarket_key
+#
+#- type: entity
+#  parent: [BaseStructureIndestructible, BaseStructureComputerTabletop, ComputerShuttleFrontierOutpostLocal]
+#  id: ComputerTabletopShuttleFrontierOutpostLocal
+#  suffix: Local, Tabletop
+#  components:
+#  - type: Sprite
+#    drawdepth: SmallObjects
+#    layers: *NFTabletopShuttleConsoleVisuals
+#
+#- type: entity
+#  parent: [BaseStructureIndestructible, BaseStructureComputerTabletop, ComputerShuttleFrontierOutpostRemote]
+#  id: ComputerTabletopShuttleFrontierOutpostRemote
+#  suffix: Remote, Tabletop
+#  components:
+#  - type: Sprite
+#    drawdepth: SmallObjects
+#    layers: *NFTabletopShuttleConsoleVisuals
+#
+#- type: entity
+#  parent: [BaseStructureIndestructible, BaseStructureComputerTabletop, ComputerShuttleTradeOutpostLocal]
+#  id: ComputerTabletopShuttleTradeOutpostLocal
+#  suffix: Local, Tabletop
+#  components:
+#  - type: Sprite
+#    drawdepth: SmallObjects
+#    layers: *NFTabletopShuttleConsoleVisuals
+#
+#- type: entity
+#  parent: [BaseStructureIndestructible, BaseStructureComputerTabletop, ComputerShuttleTradeOutpostRemote]
+#  id: ComputerTabletopShuttleTradeOutpostRemote
+#  suffix: Remote, Tabletop
+#  components:
+#  - type: Sprite
+#    drawdepth: SmallObjects
+#    layers: *NFTabletopShuttleConsoleVisuals
 # NEW FRONTIER 14 // END

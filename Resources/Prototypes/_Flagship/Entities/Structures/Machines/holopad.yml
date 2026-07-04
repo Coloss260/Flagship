@@ -30,4 +30,12 @@
   #- type: ApcPowerReceiver # Mono - comment out
   #  powerDisabled: true #starts off
 
+#- type: entity
+#  parent: [BaseStructureDisableToolUse, BaseStructureIndestructible, NFHolopadShip]
+#  id: NFHolopadPoiBase
+#  suffix: POI
+#  abstract: true
+#  components:
+#  - type: Holopad
+#    useStationName: false
 # NEW FRONTIER 14 // END

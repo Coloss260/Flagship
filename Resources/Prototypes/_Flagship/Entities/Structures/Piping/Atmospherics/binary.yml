@@ -96,25 +96,25 @@
     enabled: false
     uiKey: BidiKey
     settableDirection: true
-#  - type: NodeContainer
-#    nodes:
-#      inlet:
-#        !type:PipeNode
-#        nodeGroupID: Pipe
-#        pipeDirection: North
-#      outlet:
-#        !type:DockablePipeNode
-#        nodeGroupID: Pipe
-#        pipeDirection: South
-#  - type: UserInterface
-#    interfaces:
-#      enum.GasPressurePumpUiKey.BidiKey:
-#        type: GasPressureBidiPumpBoundUserInterface
-#  - type: ActivatableUI
-#    key: enum.GasPressurePumpUiKey.BidiKey
-#  - type: DockablePipe
-#    dockNodeName: outlet
-#    internalNodeName: inlet
+  - type: NodeContainer
+    nodes:
+      inlet:
+        !type:PipeNode
+        nodeGroupID: Pipe
+        pipeDirection: North
+      outlet:
+        !type:DockablePipeNode
+        nodeGroupID: Pipe
+        pipeDirection: South
+  - type: UserInterface
+    interfaces:
+      enum.GasPressurePumpUiKey.BidiKey:
+        type: GasPressureBidiPumpBoundUserInterface
+  - type: ActivatableUI
+    key: enum.GasPressurePumpUiKey.BidiKey
+  - type: DockablePipe
+    dockNodeName: outlet
+    internalNodeName: inlet
   - type: AmbientSound
     enabled: false
     volume: -9
@@ -127,16 +127,16 @@
     - Unstackable
     - Pipe
     - ForceNoFixRotations
-#  - type: AtmosAlertsDevice
-#    group: Gaslock
+  - type: AtmosAlertsDevice
+    group: Gaslock
   - type: AtmosAlarmable
-#  - type: DeviceNetwork
-#    deviceNetId: AtmosDevices
-#    receiveFrequencyId: AtmosMonitor
-#    transmitFrequencyId: AtmosMonitor
-#    sendBroadcastAttemptEvent: true
-#    examinableAddress: true
-#    prefix: device-address-prefix-gaslock
+  - type: DeviceNetwork
+    deviceNetId: AtmosDevices
+    receiveFrequencyId: AtmosMonitor
+    transmitFrequencyId: AtmosMonitor
+    sendBroadcastAttemptEvent: true
+    examinableAddress: true
+    prefix: device-address-prefix-gaslock
 
 - type: entity
   parent: BasePressurePumpGaslock
@@ -191,9 +191,9 @@
   - type: Construction
     graph: AirlockShuttle
     node: gaslock
-#  - type: ShipRepairable
-#    repairTime: 6
-#    repairCost: 6
+  - type: ShipRepairable
+    repairTime: 6
+    repairCost: 6
 
 - type: entity
   parent: [BaseStructureDynamic, BasePressurePumpGaslock]
@@ -243,8 +243,8 @@
   - type: Docking
     dockType: Gas
     receiveOnly: true
-#  - type: DeviceNetwork
-#    prefix: device-address-prefix-portable-gaslock
+  - type: DeviceNetwork
+    prefix: device-address-prefix-portable-gaslock
   - type: Fixtures
     fixtures:
       fix1:

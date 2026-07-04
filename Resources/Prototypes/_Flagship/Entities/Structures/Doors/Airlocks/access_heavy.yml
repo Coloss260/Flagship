@@ -8,5 +8,5 @@
   components:
   - type: Sprite
     sprite: _Mono/Structures/Doors/HeavyAirlocks/Standard/security.rsi
-#  - type: PaintableAirlock
-#    department: Security
+  - type: PaintableAirlock
+    department: Security

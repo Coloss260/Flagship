@@ -138,8 +138,8 @@
     guides:
     - VoltageNetworks
     - Power
-#  - type: BatteryDrinkerSource # EE IPCs
-#    maxAmount: 10000
+  - type: BatteryDrinkerSource # EE IPCs
+    maxAmount: 10000
   - type: Fixtures
     fixtures:
       fix1:

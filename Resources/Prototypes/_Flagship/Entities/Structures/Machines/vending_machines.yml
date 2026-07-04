@@ -1,7 +1,6 @@
 # MONOLITH // START
 - type: entity
-  #parent: [VendingMachineAmmo, BaseStructureDisableAnchoring]
-  parent: [VendingMachineAmmo]
+  parent: [VendingMachineAmmo, BaseStructureDisableAnchoring]
   id: VendingMachineAmmoPOIMercenary
   name: PMC liberation station
   suffix: POI, PMC
@@ -11,6 +10,13 @@
     requiresCash: true
   - type: AccessReader
     access: [["Mercenary"], ["Security"]]
+
+- type: entity
+  parent: [BaseStructureDisableToolUse, VendingMachineSyndieContraband]
+  id: VendingMachineSyndieContrabandPOI
+  name: ContraVend
+  suffix: POI
+  description: Wanted across multiple sectors!
 
 - type: entity
   parent: VendingMachine
@@ -31,10 +37,10 @@
     ejectDelay: 1.9
     initialStockQuality: 1
     requiresCash: true
-#  - type: MarketModifier
-#    mod: 10
-#  - type: Advertise
-#    pack: BaristaAds
+  - type: MarketModifier
+    mod: 10
+  - type: Advertise
+    pack: BaristaAds
   - type: SpeakOnUIClosed
     pack: BaristaGoodbyes
   - type: Sprite
@@ -74,8 +80,7 @@
 
 
 - type: entity
-  #parent: [VendingMachineAstroVend, BaseStructureDisableAnchoring]
-  parent: [VendingMachineAstroVend]
+  parent: [VendingMachineAstroVend, BaseStructureDisableAnchoring]
   id: VendingMachinePMCclothingsPOI
   name: Uncle Boris's surplus clothing vend
   description: Sells various PMC and military surplus gears.
@@ -86,8 +91,8 @@
     offState: off
     brokenState: broken
     normalState: normal-unshaded
-#  - type: MarketModifier
-#    mod: 2
+  - type: MarketModifier
+    mod: 2
   - type: Sprite
     sprite: _Mono/Structures/Machines/VendingMachines/boris_surplus.rsi
     layers:
@@ -104,8 +109,7 @@
 
 # NEW FRONTIER 14 // START
 - type: entity
-  #parent: [BaseStructureDisableAnchoring, VendingMachine]
-  parent: VendingMachine
+  parent: [BaseStructureDisableAnchoring, VendingMachine]
   id: VendingMachineCuddlyCritterVend
   name: CuddlyCritterVend
   description: Step into the world of wonder and warmth with Cuddly Critters Vending Machine, a haven for plushie and toy enthusiasts alike.
@@ -117,8 +121,8 @@
     normalState: normal-unshaded
     requiresCash: true
     # ejectState: eject-unshaded  No sprite, see chefvend/dinnerware/BODA/etc for expamples
-#  - type: Advertise
-#    pack: CuddlyCritterAds
+  - type: Advertise
+    pack: CuddlyCritterAds
   - type: Sprite
     sprite: _NF/Structures/Machines/VendingMachines/cuddlycritter.rsi
     layers:
@@ -137,8 +141,7 @@
   #   mod: 10
 
 - type: entity
-  #parent: [BaseStructureDisableAnchoring, VendingMachine]
-  parent: VendingMachine
+  parent: [BaseStructureDisableAnchoring, VendingMachine]
   id: VendingMachineAstroVend
   name: AstroVend
   description: Essential gear for the spaceman on the go.
@@ -150,8 +153,8 @@
     normalState: normal-unshaded
     requiresCash: true
     # ejectState: eject-unshaded  No sprite, see chefvend/dinnerware/BODA/etc for expamples
-#  - type: Advertise
-#    pack: AstroVendAds
+  - type: Advertise
+    pack: AstroVendAds
   - type: Sprite
     sprite: _NF/Structures/Machines/VendingMachines/astrovend.rsi
     layers:
@@ -176,8 +179,7 @@
     pack: AstroVendPOIInventory
 
 - type: entity
-  #parent: [BaseStructureDisableAnchoring, VendingMachine]
-  parent: VendingMachine
+  parent: [BaseStructureDisableAnchoring, VendingMachine]
   id: VendingMachineFlatpackVend
   name: FlatpackVend
   description: Essential tech for the spaceman on the go.
@@ -206,12 +208,11 @@
     radius: 1.5
     energy: 1.6
     color: "#4b93ad"
-#  - type: MarketModifier
-#    mod: 25
+  - type: MarketModifier
+    mod: 25
 
 - type: entity
-  #parent: [BaseStructureDisableAnchoring, VendingMachineFlatpackVend]
-  parent: [VendingMachineFlatpackVend]
+  parent: [BaseStructureDisableAnchoring, VendingMachineFlatpackVend]
   id: VendingMachineExpeditionaryFlatpackVend
   name: Expeditionary FlatpackVend
   description: Essential tech for the spaceman on an expedition.
@@ -227,16 +228,16 @@
   name: ContraVend
   description: Wanted across multiple sectors!
   components:
-#  - type: VendingMachine
-#    cashSlot: Null
-#    offState: off
-#    brokenState: broken
-#    normalState: normal-unshaded
-#    ejectState: eject-unshaded
-#    denyState: deny-unshaded
-#    screenState: screen
-#  - type: Advertise
-#    pack: SyndieDrobeAds
+  - type: VendingMachine
+    cashSlot: Null
+    offState: off
+    brokenState: broken
+    normalState: normal-unshaded
+    ejectState: eject-unshaded
+    denyState: deny-unshaded
+    screenState: screen
+  - type: Advertise
+    pack: SyndieDrobeAds
   - type: Sprite
     sprite: _NF/Structures/Machines/VendingMachines/contravend.rsi
     layers:
@@ -296,6 +297,15 @@
     color: "#4b93ad"
 
 - type: entity
+  parent: [ BaseStructureDisableAnchoring, VendingMachineBountyVend ]
+  id: VendingMachineBountyVendPOI
+  suffix: POI
+  components:
+  - type: VendingMachine
+    pack: BountyVendPOIInventory
+    requiresCash: true
+
+- type: entity
   id: VendingMachineArcadia
   name: ArcadiaDrobe
   parent: VendingMachine
@@ -312,8 +322,8 @@
     # ejectState: eject-unshaded  No sprite, see chefvend/dinnerware/BODA/etc for expamples
     # denyState: deny-unshaded
     ejectDelay: 3
-#  - type: Advertise
-#    pack: ArcadiaDrobeAds
+  - type: Advertise
+    pack: ArcadiaDrobeAds
   - type: Sprite
     sprite: _NF/Structures/Machines/VendingMachines/arcadiadrobe.rsi
     layers:
@@ -345,8 +355,8 @@
     ejectState: eject-unshaded
     denyState: deny-unshaded
     ejectDelay: 3
-#  - type: Advertise
-#    pack: LessLethalVendAds
+  - type: Advertise
+    pack: LessLethalVendAds
   - type: Sprite
     sprite: _NF/Structures/Machines/VendingMachines/lesslethalvend.rsi
     layers:
@@ -361,6 +371,15 @@
     radius: 1.5
     energy: 1.6
     color: "#ff033e"
+
+- type: entity
+  parent: [BaseStructureDisableAnchoring, LessLethalVendingMachine]
+  id: LessLethalVendingMachinePOI
+  suffix: POI
+  components:
+  - type: VendingMachine
+    pack: LessLethalVendPOIInventory
+    requiresCash: true
 
 - type: entity
   parent: VendingMachine
@@ -379,8 +398,8 @@
     denyState: deny-unshaded
     ejectDelay: 3
     requiresCash: true
-#  - type: Advertise
-#    pack: LessLethalVendAds
+  - type: Advertise
+    pack: LessLethalVendAds
   - type: Sprite
     sprite: _NF/Structures/Machines/VendingMachines/nonlethalvend.rsi
     layers:
@@ -397,8 +416,7 @@
     color: "#ff033e"
 
 - type: entity
-  #parent: [BaseStructureDisableAnchoring, VendingMachine]
-  parent: VendingMachine
+  parent: [BaseStructureDisableAnchoring, VendingMachine]
   id: VendingMachineAutoTuneVend
   name: AutoTune
   description: Feeling BASSed? Time to TUNE into AutoVend! Take NOTES and let your audience TREBLE.
@@ -448,8 +466,7 @@
   # - type: GhostTakeoverAvailable
 
 - type: entity
-  #parent: [BaseStructureDisableAnchoring, VendingMachine]
-  parent: VendingMachine
+  parent: [BaseStructureDisableAnchoring, VendingMachine]
   id: VendingMachinePottedPlantVend
   name: Plant-O-Matic
   description: Sometimes potted plants are the best crewmates money can get.
@@ -462,8 +479,8 @@
     ejectState: eject-unshaded
     denyState: deny-unshaded
     requiresCash: true
-#  - type: Advertise
-#    pack: MegaSeedAds
+  - type: Advertise
+    pack: MegaSeedAds
   - type: Sprite
     sprite: _NF/Structures/Machines/VendingMachines/pottedplantvend.rsi
     layers:
@@ -482,8 +499,34 @@
     color: "#EEEEFF"
 
 - type: entity
-  #parent: [BaseStructureDisableAnchoring, VendingMachine]
-  parent: VendingMachine
+  parent: VendingMachine # Mono - removed BaseStructureDisableAnchoring
+  id: VendingMachineNfsdDrobe
+  name: TSFMCDrobe
+  description: A vending machine for TSFMC clothing!
+  components:
+  - type: VendingMachine
+    pack: NfsdDrobeInventory
+    offState: off
+    brokenState: broken
+    normalState: normal-unshaded
+    requiresCash: true
+  - type: Advertise
+    pack: NfsdDrobeAds
+  - type: Sprite
+    sprite: _NF/Structures/Machines/VendingMachines/nfsddrobe.rsi
+    layers:
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.Base"]
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
+      shader: unshaded
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: AccessReader
+    access: [["Security"]]
+
+- type: entity
+  parent: [BaseStructureDisableAnchoring, VendingMachine]
   id: VendingMachineYarrrDrobe
   name: YarrrDrobe
   description: A vending machine for skallywags and booty lovers!
@@ -493,8 +536,8 @@
     offState: off
     brokenState: broken
     normalState: normal-unshaded
-#  - type: Advertise
-#    pack: YarrrDrobeAds
+  - type: Advertise
+    pack: YarrrDrobeAds
   - type: Sprite
     sprite: _NF/Structures/Machines/VendingMachines/yarrrdrobe.rsi
     layers:
@@ -505,6 +548,56 @@
       shader: unshaded
     - state: panel
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
+
+- type: entity
+  parent: VendingMachine # Mono - removed BaseStructureDisableAnchoring
+  id: VendingMachineNfsdTech
+  name: TSFMCTech
+  description: A vending machine for TSFMC tech!
+  components:
+  - type: VendingMachine
+    pack: NfsdTechInventory
+    offState: off
+    brokenState: broken
+    normalState: normal-unshaded
+    requiresCash: true
+  - type: Advertise
+    pack: NfsdDrobeAds
+  - type: Sprite
+    sprite: _NF/Structures/Machines/VendingMachines/nfsdtech.rsi
+    layers:
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.Base"]
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
+      shader: unshaded
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: AccessReader
+    access: [["Security"]]
+
+- type: entity
+  parent: [BaseStructureDisableScrewing, BaseStructureIndestructible, BaseStructureAccessReaderImmuneToEmag, VendingMachineCart]
+  id: NFVendingMachineCart
+  suffix: SR
+  components:
+  - type: VendingMachine
+    pack: NFPTechInventory
+    requiresCash: true
+  - type: AccessReader
+    access: [["Command"]] #Monolith Change: Access change to allow DOC and Colonel to use it
+  - type: MarketModifier
+    mod: 5
+
+- type: entity
+  parent: NFVendingMachineCart
+  id: NFVendingMachineCartNfsd
+  suffix: NFSD
+  components:
+  - type: VendingMachine
+    pack: NFPTechNfsdInventory
+  - type: AccessReader
+    access: [["HeadOfSecurity"]]
 
 ## Punk stuff
 #- type: entity
@@ -578,8 +671,7 @@
 #    color: "#4b93ad"
 
 - type: entity
-  #parent: [BaseStructureDisableToolUse, BaseStructureIndestructible, VendingMachine]
-  parent: [BaseStructureIndestructible, VendingMachine]
+  parent: [BaseStructureDisableToolUse, BaseStructureIndestructible, VendingMachine]
   id: VendingMachineFuelVend
   name: FuelVend
   description: A vendor selling fuel for ship engines. Smells like ozone.
@@ -593,8 +685,8 @@
     denyState: deny-unshaded
     ejectDelay: 2.1
     requiresCash: true
-#  - type: Advertise
-#    pack: FuelVendAds
+  - type: Advertise
+    pack: FuelVendAds
   - type: SpeakOnUIClosed
     pack: FuelVendGoodbyes
   - type: Sprite
@@ -619,16 +711,16 @@
     normalState: normal-unshaded
     requiresCash: true
     # ejectState: eject-unshaded  No sprite, see chefvend/dinnerware/BODA/etc for expamples
-#  - type: Advertise
-#    pack: CiviMedAds
+  - type: Advertise
+    pack: CiviMedAds
   - type: SpeakOnUIClosed
     pack: CiviMedGoodbyes
   - type: PointLight
     radius: 1.5
     energy: 1.6
     color: "#4b93ad"
-#  - type: MarketModifier #Mono
-#    mod: 3 #Mono 10 (damn) >> 3
+  - type: MarketModifier #Mono
+    mod: 3 #Mono 10 (damn) >> 3
   - type: Sprite
     sprite: _NF/Structures/Machines/VendingMachines/civimed.rsi
     layers:
@@ -641,15 +733,13 @@
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
 
 - type: entity
-  #parent: [BaseCiviMedVend, BaseStructureDisableAnchoring, BaseStructureIndestructible, VendingMachine]
-  parent: [BaseCiviMedVend, BaseStructureIndestructible, VendingMachine]
+  parent: [BaseCiviMedVend, BaseStructureDisableAnchoring, BaseStructureIndestructible, VendingMachine]
   id: VendingMachineCiviMedPlus
   name: CiviMed Plus
   description: CiviMed Plus, distributing lifesaving meds harder than the rocks you break! Miners, DON'T DIE!
 
 - type: entity
-  #parent: [BaseCiviMedVend, BaseStructureDisableAnchoring, BaseStructureIndestructible, VendingMachineWallmount]
-  parent: [BaseCiviMedVend, BaseStructureIndestructible, VendingMachineWallmount]
+  parent: [BaseCiviMedVend, BaseStructureDisableAnchoring, BaseStructureIndestructible, VendingMachineWallmount]
   id: VendingMachineCiviMed
   name: CiviMed
   description: CiviMed, distributing lifesaving meds harder than the rocks you break! Miners, DON'T DIE!
@@ -670,8 +760,8 @@
     normalState: normal-unshaded
     requiresCash: true
     # ejectState: eject-unshaded  No sprite, see chefvend/dinnerware/BODA/etc for expamples
-#  - type: Advertise
-#    pack: ValetDrobeAds
+  - type: Advertise
+    pack: ValetDrobeAds
   - type: SpeakOnUIClosed
     pack: ValetDrobeGoodbyes
   - type: Sprite
@@ -704,8 +794,8 @@
     normalState: normal-unshaded
     requiresCash: true
     # ejectState: eject-unshaded  No sprite, see chefvend/dinnerware/BODA/etc for expamples
-#  - type: Advertise
-#    pack: MailVendAds
+  - type: Advertise
+    pack: MailVendAds
   - type: SpeakOnUIClosed
     pack: MailVendGoodbyes
   - type: Sprite
@@ -722,4 +812,107 @@
     radius: 1.5
     energy: 1.6
     color: "#4b93ad"
+
+# POI versions of upstream machines
+
+- type: entity
+  parent: [VendingMachineAmmo, BaseStructureDisableAnchoring]
+  id: VendingMachineAmmoPOI
+  suffix: POI
+  components:
+  - type: VendingMachine
+    pack: WeaponryWorksVendPOIInventory
+    requiresCash: true
+
+- type: entity
+  parent: [VendingMachineEngivend, BaseStructureDisableAnchoring]
+  id: VendingMachineEngivendPOI
+  suffix: POI
+  components:
+  - type: VendingMachine
+    pack: EngiVendPOIInventory
+    requiresCash: true
+
+- type: entity
+  parent: [VendingMachineVendomat, BaseStructureDisableAnchoring]
+  id: VendingMachineVendomatPOI
+  suffix: POI
+  components:
+  - type: VendingMachine
+    pack: VendomatPOIInventory
+    requiresCash: true
+
+- type: entity
+  parent: [VendingMachineYouTool, BaseStructureDisableAnchoring]
+  id: VendingMachineYouToolPOI
+  suffix: POI
+  components:
+  - type: VendingMachine
+    pack: YouToolPOIInventory
+    requiresCash: true
+
+- type: entity
+  parent: [VendingMachineSalvage, BaseStructureDisableAnchoring]
+  id: VendingMachineSalvagePOI
+  suffix: POI
+  components:
+  - type: VendingMachine
+    pack: NFSalvageEquipmentPOIInventory
+    requiresCash: true
+
+- type: entity
+  parent: [VendingMachineMediDrobe, BaseStructureDisableAnchoring]
+  id: VendingMachineMediDrobePOI
+  suffix: POI
+  components:
+  - type: VendingMachine
+    pack: MediDrobeInventory
+    requiresCash: true
+
+- type: entity
+  parent: [VendingMachinePottedPlantVend, BaseStructureDisableAnchoring]
+  id: VendingMachinePottedPlantVendPOI
+  suffix: POI
+  components:
+  - type: VendingMachine
+    pack: PottedPlantVendInventory
+    requiresCash: true
+
+- type: entity
+  parent: [VendingMachineGames, BaseStructureDisableAnchoring]
+  id: VendingMachineGamesPOI
+  suffix: POI
+  components:
+  - type: VendingMachine
+    pack: GoodCleanFunInventory
+    requiresCash: true
+
+- type: entity
+  parent: [VendingMachineCigs, BaseStructureDisableAnchoring]
+  id: VendingMachineCigsPOI
+  suffix: POI
+  components:
+  - type: VendingMachine
+    pack: CigaretteMachineInventory
+    requiresCash: true
+
+- type: entity
+  parent: [VendingMachineBooze, BaseStructureDisableAnchoring]
+  id: VendingMachineBoozePOI
+  suffix: POI
+  components:
+  - type: VendingMachine
+    pack: BoozeOMatInventory
+    requiresCash: true
+
+# Gas Tank Dispenser
+
+- type: entity
+  parent: [VendingMachineTankDispenserEVA, BaseStructureDisableAnchoring] #This one is flagged as POI
+  id: VendingMachineTankDispenserEVAPOI
+  suffix: POI, EVA [O2, N2]
+  components:
+  - type: VendingMachine
+    pack: TankDispenserEVAPOIInventory
+    requiresCash: true
 # NEW FRONTIER 14 // END

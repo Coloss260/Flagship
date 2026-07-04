@@ -38,9 +38,9 @@
     sprite: _NF/Objects/Consumable/Food/meat.rsi
     layers:
     - state: chicken-battered
-#  - type: DeepFrySpawn
-#    cycles: 2
-#    output: FoodMeatResomiFried
+  - type: DeepFrySpawn
+    cycles: 2
+    output: FoodMeatResomiFried
   - type: FlavorProfile
     flavors:
     - raw
@@ -183,7 +183,7 @@
     - salty
     - resomi
   - type: Item
-  - type: Edible
+  - type: Food
     trash:
     - BucketPaper
   - type: SolutionContainerManager
@@ -216,7 +216,7 @@
     - salty
     - meaty
   - type: Item
-  - type: Edible
+  - type: Food
     trash:
     - BucketPaper
   - type: SolutionContainerManager

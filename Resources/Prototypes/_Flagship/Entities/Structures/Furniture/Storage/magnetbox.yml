@@ -86,9 +86,9 @@
     onUse: false
     onAltUse: true
     onActivate: false
-#  - type: ItemToggleExamine
-#    on: item-toggle-examine-magnet-on
-#    off: item-toggle-examine-magnet-off
+  - type: ItemToggleExamine
+    on: item-toggle-examine-magnet-on
+    off: item-toggle-examine-magnet-off
 
 #region ore box
 - type: entity
