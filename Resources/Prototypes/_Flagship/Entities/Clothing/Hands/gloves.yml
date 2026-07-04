@@ -11,3 +11,17 @@
   - type: Insulated
   - type: Fiber
     fiberMaterial: fibers-insulative
+
+- type: entity
+  parent: ClothingHandsButcherable
+  id: ClothingHandsGlovesFlagNitrile
+  name: nitrile gloves
+  description: High-quality nitrile gloves. Expensive medical PPE.
+  components:
+  - type: Sprite
+    sprite: _Flagship/Clothing/Hands/Gloves/nitrile.rsi
+  - type: Clothing
+    sprite: _Flagship/Clothing/Hands/Gloves/nitrile.rsi
+  - type: Fiber
+    fiberMaterial: fibers-nitrile
+  - type: FingerprintMask

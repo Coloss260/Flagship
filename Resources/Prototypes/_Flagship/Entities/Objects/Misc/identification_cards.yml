@@ -500,3 +500,129 @@
     - DoorBumpOpener
     - WhitelistChameleon
     - WhitelistChameleonIdCard
+
+# Medical
+- type: entity
+  parent: [IDCardFlagship, BaseMedicalContraband]
+  id: ChiefOfMedicalIDCard
+  name: Chief of Medical ID Card
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+    - state: stripe_top
+      color: "#5a96bb"
+    - state: stripe_bottom
+      color: "#ffffff"
+    - sprite: /Textures/_Flagship/Interface/Misc/job_icons.rsi
+      offset: -0.09375, 0.0625
+      state: ChiefOfMedical
+  - type: Item
+    heldPrefix: default
+  - type: PresetIdCard
+    job: ChiefOfMedical
+  - type: Tag
+    tags:
+    - DoorBumpOpener
+    - WhitelistChameleon
+    - WhitelistChameleonIdCard
+
+- type: entity
+  parent: [IDCardFlagship, BaseMedicalContraband]
+  id: FlagChemistIDCard
+  name: Chemist ID Card
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+    - state: stripe_top
+      color: "#5a96bb"
+    - state: stripe_bottom
+      color: "#ffffff"
+    - sprite: /Textures/_Flagship/Interface/Misc/job_icons.rsi
+      offset: -0.09375, 0.0625
+      state: Chemist
+  - type: Item
+    heldPrefix: default
+  - type: PresetIdCard
+    job: Chemist
+  - type: Tag
+    tags:
+    - DoorBumpOpener
+    - WhitelistChameleon
+    - WhitelistChameleonIdCard
+
+- type: entity
+  parent: [IDCardFlagship, BaseMedicalContraband]
+  id: ParamedicalSpecialistIDCard
+  name: Paramedical Specialist ID Card
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+    - state: stripe_top
+      color: "#5a96bb"
+    - state: stripe_bottom
+      color: "#ffffff"
+    - sprite: /Textures/_Flagship/Interface/Misc/job_icons.rsi
+      offset: -0.09375, 0.0625
+      state: ParamedicalSpecialist
+  - type: Item
+    heldPrefix: default
+  - type: PresetIdCard
+    job: ParamedicalSpecialist
+  - type: Tag
+    tags:
+    - DoorBumpOpener
+    - WhitelistChameleon
+    - WhitelistChameleonIdCard
+
+- type: entity
+  parent: [IDCardFlagship, BaseMedicalContraband]
+  id: FlagMedicalDoctorIDCard
+  name: Medical Doctor ID Card
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+    - state: stripe_top
+      color: "#5a96bb"
+    - state: stripe_bottom
+      color: "#ffffff"
+    - sprite: /Textures/_Flagship/Interface/Misc/job_icons.rsi
+      offset: -0.09375, 0.0625
+      state: MedicalDoctor
+  - type: Item
+    heldPrefix: default
+  - type: PresetIdCard
+    job: FlagMedicalDoctor
+  - type: Tag
+    tags:
+    - DoorBumpOpener
+    - WhitelistChameleon
+    - WhitelistChameleonIdCard
+
+- type: entity
+  parent: [IDCardFlagship, BaseMedicalContraband]
+  id: FlagMedicalInternIDCard
+  name: Medical Intern ID Card
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+    - state: stripe_top
+      color: "#5a96bb"
+    - state: stripe_bottom
+      color: "#ffffff"
+    - sprite: /Textures/_Flagship/Interface/Misc/job_icons.rsi
+      offset: -0.09375, 0.0625
+      state: MedicalIntern
+  - type: Item
+    heldPrefix: default
+  - type: PresetIdCard
+    job: FlagMedicalIntern
+  - type: Tag
+    tags:
+    - DoorBumpOpener
+    - WhitelistChameleon
+    - WhitelistChameleonIdCard

@@ -46,6 +46,21 @@
             "name": "pda-lifesupportspecialist"
         },
         {
+            "name": "pda-com"
+        },
+        {
+            "name": "pda-chemistry"
+        },
+        {
+            "name": "pda-paramedic"
+        },
+        {
+            "name": "pda-medical"
+        },
+        {
+            "name": "pda-internmed"
+        },
+        {
             "name": "pda"
         }
     ]

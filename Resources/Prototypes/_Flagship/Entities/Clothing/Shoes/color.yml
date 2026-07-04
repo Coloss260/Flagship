@@ -1,0 +1,27 @@
+- type: entity
+  parent: ClothingShoesBaseButcherable
+  id: ClothingShoesFlagColorWhite
+  name: white shoes
+  description: Don't take them off at your office Christmas party.
+  components:
+  - type: Sprite
+    sprite: _Flagship/Clothing/Shoes/color.rsi
+    layers:
+    - state: icon
+      color: "#EAE8E8" #Deliberately NOT pure white
+    - state: soles-icon
+  - type: Item
+    inhandVisuals: #We don't want the sole icons. Since this is white, it's just going to look weird (white on white doesn't really contrast.)
+      left:
+      - state: inhand-left
+        color: "#EAE8E8"
+      right:
+      - state: inhand-right
+        color: "#EAE8E8"
+  - type: Clothing
+    sprite: _Flagship/Clothing/Shoes/color.rsi
+    clothingVisuals:
+      shoes:
+      - state: equipped-FEET
+        color: "#EAE8E8"
+      - state: contrastedsoles-equipped-FEET

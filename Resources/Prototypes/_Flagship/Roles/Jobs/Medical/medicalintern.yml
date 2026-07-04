@@ -18,14 +18,14 @@
 - type: startingGear
   id: FlagMedicalInternGear
   equipment:
-    id: MedicalInternPDA
+    id: FlagMedicalInternPDA
     head: ClothingHeadHatWhiteCap
     eyes: ClothingEyesFlagHudMedical
     ears: ClothingHeadsetFlagMedical
-    mask: ClothingMaskSterile
+    mask: ClothingMaskFlagSterile
     jumpsuit: ClothingUniformJumpsuitFlagMedicalDoctor
-    outerClothing: ClothingOuterCoatLabOpened
-    gloves: ClothingHandsGlovesNitrile
-    back: ClothingBackpackMedical
-    belt: ClothingBeltMedical
-    shoes: ClothingShoesColorWhite
+    outerClothing: ClothingOuterCoatFlagLabOpened
+    gloves: ClothingHandsGlovesFlagNitrile
+    back: ClothingBackpackFlagMedical
+    belt: ClothingBeltFlagMedical
+    shoes: ClothingShoesFlagColorWhite

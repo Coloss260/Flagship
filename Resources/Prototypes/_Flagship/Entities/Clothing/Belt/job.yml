@@ -139,3 +139,80 @@
           tags:
           - Wrench
   - type: Appearance
+
+- type: entity
+  parent: [ClothingBeltStorageBase, BaseMedicalContraband]
+  id: ClothingBeltFlagMedical
+  name: medical belt
+  description: Can hold various medical equipment.
+  components:
+  - type: Sprite
+    sprite: _Flagship/Clothing/Belt/medical.rsi
+  - type: Clothing
+    sprite: _Flagship/Clothing/Belt/medical.rsi
+  - type: Storage
+    whitelist:
+      tags:
+      - Wrench
+      - Bottle
+      - Spray
+      - Brutepack
+      - Bloodpack
+      - Gauze
+      - Ointment
+      - Tourniquet
+      - CigPack
+      - PillCanister
+      - Radio
+      - DiscreteHealthAnalyzer
+      - SurgeryTool
+      - Dropper
+      components:
+      - Injector
+      - Pill
+      - HandLabeler
+  - type: ItemMapper
+    sprite: *BeltOverlay
+    mapLayers:
+      bottle:
+        whitelist:
+          tags:
+          - Bottle
+      hypo:
+        whitelist:
+          tags:
+          - Hypospray
+      pill:
+        whitelist:
+          components:
+          - Pill
+          tags:
+          - PillCanister
+      bottle_spray:
+        whitelist:
+          tags:
+          - Spray
+      # spray_med:
+      #   whitelist:
+      #     tags:
+      #     - SprayMedical
+      # wrench_medical:
+      #   whitelist:
+      #     tags:
+      #     - WrenchMedical
+      wrench:
+        whitelist:
+          tags:
+          - Wrench
+  - type: Appearance
+
+- type: entity
+  parent: ClothingBeltFlagMedical
+  id: ClothingBeltFlagMedicalEMT
+  name: EMT belt
+  description: Perfect for holding various equipment for medical emergencies.
+  components:
+  - type: Sprite
+    sprite: _Flagship/Clothing/Belt/emt.rsi
+  - type: Clothing
+    sprite: _Flagship/Clothing/Belt/emt.rsi

@@ -33,17 +33,17 @@
 - type: startingGear
   id: ChiefOfMedicalGear
   equipment:
-    id: CMOPDA
+    id: ChiefOfMedicalPDA
     head: ClothingHeadHatBeretCom
     eyes: ClothingEyesFlagHudMedical
     ears: ClothingHeadsetAltFlagMedical
-    mask: ClothingMaskSterile
+    mask: ClothingMaskFlagSterile
     jumpsuit: ClothingUniformJumpsuitFlagMedicalDoctor
     outerClothing: ClothingOuterCoatLabComOpened
-    gloves: ClothingHandsGlovesNitrile
-    back: ClothingBackpackMedical
-    belt: ClothingBeltMedical
-    shoes: ClothingShoesColorWhite
+    gloves: ClothingHandsGlovesFlagNitrile
+    back: ClothingBackpackFlagMedical
+    belt: ClothingBeltFlagMedical
+    shoes: ClothingShoesFlagColorWhite
   storage:
     back:
     - Flash

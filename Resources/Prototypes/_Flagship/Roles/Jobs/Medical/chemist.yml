@@ -24,14 +24,14 @@
 - type: startingGear
   id: FlagChemistGear
   equipment:
-    id: ChemistryPDA
-    head: ClothingHeadHatMimesoft
-    eyes: ClothingEyesGlassesChemical
+    id: FlagChemistPDA
+    head: ClothingHeadHatWhiteCap
+    eyes: ClothingEyesFlagGlassesChemical
     ears: ClothingHeadsetFlagMedical
-    mask: ClothingMaskSterile
+    mask: ClothingMaskFlagSterile
     jumpsuit: ClothingUniformJumpsuitFlagMedicalDoctor
-    outerClothing: ClothingOuterCoatLabOpened
-    gloves: ClothingHandsGlovesNitrile
-    back: ClothingBackpackChemistry
-    belt: ClothingBeltMedical
-    shoes: ClothingShoesColorWhite
+    outerClothing: ClothingOuterCoatFlagLabChemOpened
+    gloves: ClothingHandsGlovesFlagNitrile
+    back: ClothingBackpackFlagChemistry
+    belt: ClothingBeltFlagMedical
+    shoes: ClothingShoesFlagColorWhite

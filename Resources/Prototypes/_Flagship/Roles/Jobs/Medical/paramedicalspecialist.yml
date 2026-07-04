@@ -24,14 +24,14 @@
 - type: startingGear
   id: ParamedicalSpecialistGear
   equipment:
-    id: ParamedicPDA
+    id: ParamedicalSpecialistPDA
     head: ClothingHeadHatParamedicsoft
     eyes: ClothingEyesFlagHudMedical
     ears: ClothingHeadsetFlagMedical
-    mask: ClothingMaskSterile
+    mask: ClothingMaskFlagSterile
     jumpsuit: ClothingUniformJumpsuitFlagMedicalDoctor
     outerClothing: ClothingOuterCoatParamedicWB
-    gloves: ClothingHandsGlovesNitrile
-    back: ClothingBackpackMedical
-    belt: ClothingBeltMedicalEMT
-    shoes: ClothingShoesColorWhite
+    gloves: ClothingHandsGlovesFlagNitrile
+    back: ClothingBackpackFlagMedical
+    belt: ClothingBeltFlagMedicalEMT
+    shoes: ClothingShoesFlagColorWhite

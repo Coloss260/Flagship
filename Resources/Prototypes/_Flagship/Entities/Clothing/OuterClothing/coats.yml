@@ -19,3 +19,43 @@
   parent: [ClothingOuterStorageFoldableBaseOpened, ClothingOuterCoatLabCom, BaseMedicalContraband]
   id: ClothingOuterCoatLabComOpened
   name: Chief of Medical lab coat
+
+- type: entity
+  parent: [ClothingOuterStorageFoldableBase, BaseMedicalContraband]
+  id: ClothingOuterCoatFlagLab
+  name: lab coat
+  description: A suit that protects against minor chemical spills.
+  components:
+  - type: Sprite
+    sprite: _Flagship/Clothing/OuterClothing/Coats/labcoat.rsi
+  - type: Clothing
+    sprite: _Flagship/Clothing/OuterClothing/Coats/labcoat.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Caustic: 0.75
+
+- type: entity
+  parent: [ClothingOuterStorageFoldableBaseOpened, ClothingOuterCoatFlagLab, BaseMedicalContraband]
+  id: ClothingOuterCoatFlagLabOpened
+  name: lab coat
+
+- type: entity
+  parent: [ClothingOuterStorageFoldableBase, BaseMedicalContraband]
+  id: ClothingOuterCoatFlagLabChem
+  name: chemist lab coat
+  description: A suit that protects against minor chemical spills. Has an orange stripe on the shoulder.
+  components:
+  - type: Sprite
+    sprite: _Flagship/Clothing/OuterClothing/Coats/labcoat_chem.rsi
+  - type: Clothing
+    sprite: _Flagship/Clothing/OuterClothing/Coats/labcoat_chem.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Caustic: 0.75
+
+- type: entity
+  parent: [ClothingOuterStorageFoldableBaseOpened, ClothingOuterCoatFlagLabChem, BaseMedicalContraband]
+  id: ClothingOuterCoatFlagLabChemOpened
+  name: chemist lab coat

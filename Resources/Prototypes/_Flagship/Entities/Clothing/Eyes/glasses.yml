@@ -76,3 +76,22 @@
     tags:
     - PetWearable
     - WhitelistChameleon
+
+# Medical
+- type: entity
+  parent: ClothingEyesBase
+  id: ClothingEyesFlagGlassesChemical
+  name: chemical analysis goggles
+  description: Goggles that can scan the chemical composition of a solution.
+  components:
+    - type: Sprite
+      sprite: _Flagship/Clothing/Eyes/Glasses/science.rsi
+    - type: Clothing
+      sprite: _Flagship/Clothing/Eyes/Glasses/science.rsi
+    - type: SolutionScanner
+    - type: IdentityBlocker
+      coverage: EYES
+    - type: Tag
+      tags:
+      - PetWearable
+      - WhitelistChameleon
