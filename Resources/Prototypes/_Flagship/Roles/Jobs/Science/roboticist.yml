@@ -22,12 +22,11 @@
   id: FlagRoboticistGear
   equipment:
     id: FlagRoboticistPDA
-    head: ClothingHeadHatWelding
-    ears: ClothingHeadsetRobotics
-    neck: ClothingNeckTieSci
-    outerClothing: ClothingOuterCoatRoboOpened
+    ears: ClothingHeadsetFlagScience
+    neck: ClothingNeckTieFlagSci
+    outerClothing: ClothingOuterCoatFlagRoboOpened
     jumpsuit: ClothingUniformJumpsuitFlagScientist
     gloves: ClothingHandsGlovesColorBlack
-    back: ClothingBackpackScience
+    back: ClothingBackpackFlagScience
     belt: ClothingBeltUtilityFilled
-    shoes: ClothingShoesBootsLaceup
+    shoes: ClothingShoesBootsFlagLaceup

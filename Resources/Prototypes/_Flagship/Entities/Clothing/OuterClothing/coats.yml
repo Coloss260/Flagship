@@ -59,3 +59,64 @@
   parent: [ClothingOuterStorageFoldableBaseOpened, ClothingOuterCoatFlagLabChem, BaseMedicalContraband]
   id: ClothingOuterCoatFlagLabChemOpened
   name: chemist lab coat
+
+- type: entity
+  parent: [ClothingOuterStorageFoldableBase, BaseFlagScienceContraband]
+  id: ClothingOuterCoatFlagScience
+  name: Scientist lab coat
+  description: A suit that protects against minor chemical spills. Has a purple stripe on the shoulder.
+  components:
+  - type: Sprite
+    sprite: _Flagship/Clothing/OuterClothing/Coats/labcoat_sci.rsi
+  - type: Clothing
+    sprite: _Flagship/Clothing/OuterClothing/Coats/labcoat_sci.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Caustic: 0.75
+
+- type: entity
+  parent: [ClothingOuterStorageFoldableBaseOpened, ClothingOuterCoatFlagScience, BaseFlagScienceContraband]
+  id: ClothingOuterCoatFlagSciOpened
+  name: scientist lab coat
+
+- type: entity
+  parent: [ClothingOuterStorageFoldableBase, BaseFlagScienceContraband]
+  id: ClothingOuterCoatFlagRobo
+  name: Roboticist lab coat
+  description: More like an eccentric coat than a labcoat. Helps pass off bloodstains as part of the aesthetic. Comes with red shoulder pads.
+  components:
+  - type: Sprite
+    sprite: _Flagship/Clothing/OuterClothing/Coats/labcoat_robo.rsi
+  - type: Clothing
+    sprite: _Flagship/Clothing/OuterClothing/Coats/labcoat_robo.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Caustic: 0.75
+
+- type: entity
+  parent: [ClothingOuterStorageFoldableBaseOpened, ClothingOuterCoatFlagRobo, BaseFlagScienceContraband]
+  id: ClothingOuterCoatFlagRoboOpened
+  name: roboticist lab coat
+
+- type: entity
+  parent: [ClothingOuterStorageFoldableBase, BaseFlagScienceContraband]
+  id: ClothingOuterCoatScienceSupervisor
+  name: Science Supervisor lab coat
+  description: Woven with top of the line technology, this labcoat helps protect against radiation in similar way to the experimental hardsuit.
+  components:
+  - type: Sprite
+    sprite: _Flagship/Clothing/OuterClothing/Coats/labcoat_sciencesupervisor.rsi
+  - type: Clothing
+    sprite: _Flagship/Clothing/OuterClothing/Coats/labcoat_sciencesupervisor.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Caustic: 0.75
+        Radiation: 0.9
+
+- type: entity
+  parent: [ClothingOuterStorageFoldableBaseOpened, ClothingOuterCoatScienceSupervisor, BaseFlagScienceContraband]
+  id: ClothingOuterCoatScienceSupervisorOpened
+  name: Science Supervisor lab coat

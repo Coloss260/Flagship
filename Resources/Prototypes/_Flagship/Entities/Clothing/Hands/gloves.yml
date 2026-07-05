@@ -25,3 +25,17 @@
   - type: Fiber
     fiberMaterial: fibers-nitrile
   - type: FingerprintMask
+
+- type: entity
+  parent: ClothingHandsButcherable
+  id: ClothingHandsGlovesFlagLatex
+  name: latex gloves
+  description: High-quality nitrile gloves. Expensive medical PPE.
+  components:
+  - type: Sprite
+    sprite: _Flagship/Clothing/Hands/Gloves/latex.rsi
+  - type: Clothing
+    sprite: _Flagship/Clothing/Hands/Gloves/latex.rsi
+  - type: Fiber
+    fiberMaterial: fibers-latex
+  - type: FingerprintMask

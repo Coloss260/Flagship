@@ -22,11 +22,11 @@
   id: FlagScientistGear
   equipment:
     id: FlagScientistPDA
-    head: ClothingHeadHatBeretRND
-    ears: ClothingHeadsetScience
-    neck: ClothingNeckTieSci
-    outerClothing: ClothingOuterCoatLabOpened
+    head: ClothingHeadHatBeretSci
+    ears: ClothingHeadsetFlagScience
+    neck: ClothingNeckTieFlagSci
+    outerClothing: ClothingOuterCoatFlagSciOpened
     jumpsuit: ClothingUniformJumpsuitFlagScientist
-    gloves: ClothingHandsGlovesLatex
-    back: ClothingBackpackScience
-    shoes: ClothingShoesBootsLaceup
+    gloves: ClothingHandsGlovesFlagLatex
+    back: ClothingBackpackFlagScience
+    shoes: ClothingShoesBootsFlagLaceup

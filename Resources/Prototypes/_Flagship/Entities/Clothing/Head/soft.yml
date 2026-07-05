@@ -46,3 +46,14 @@
     sprite: _Flagship/Clothing/Head/Soft/whitecap.rsi
   - type: Clothing
     sprite: _Flagship/Clothing/Head/Soft/whitecap.rsi
+
+- type: entity
+  parent: ClothingHeadHeadHatBaseFlippable
+  id: ClothingHeadHatPurpleCap
+  name: Purple cap
+  description: A baseball cap colored in purple.
+  components:
+  - type: Sprite
+    sprite: _Flagship/Clothing/Head/Soft/purplecap.rsi
+  - type: Clothing
+    sprite: _Flagship/Clothing/Head/Soft/purplecap.rsi

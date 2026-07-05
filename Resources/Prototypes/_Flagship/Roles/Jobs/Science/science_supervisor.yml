@@ -22,11 +22,11 @@
   id: ScienceSupervisorGear
   equipment:
     id: ScienceSupervisorPDA
-    head: ClothingHeadHatBeretRND
-    ears: ClothingHeadsetRD
-    neck: ClothingNeckTieSci
-    outerClothing: ClothingOuterCoatRDOpened
+    head: ClothingHeadHatBeretSci
+    ears: ClothingHeadsetAltFlagScience
+    neck: ClothingNeckTieFlagSci
+    outerClothing: ClothingOuterCoatScienceSupervisorOpened
     jumpsuit: ClothingUniformJumpsuitFlagScientist
-    gloves: ClothingHandsGlovesLatex
-    back: ClothingBackpackScience
-    shoes: ClothingShoesBootsLaceup
+    gloves: ClothingHandsGlovesFlagLatex
+    back: ClothingBackpackFlagScience
+    shoes: ClothingShoesBootsFlagLaceup

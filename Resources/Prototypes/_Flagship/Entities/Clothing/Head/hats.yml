@@ -183,3 +183,23 @@
     - Recyclable
     - HamsterWearable
     - WhitelistChameleon
+
+# Science
+- type: entity
+  parent: [ClothingHeadBase, BaseFlagScienceContraband]
+  id: ClothingHeadHatBeretSci
+  name: Science beret
+  description: A purple beret often worn by scientists.
+  components:
+  - type: Sprite
+    sprite: _Flagship/Clothing/Head/Hats/beret_sci.rsi
+  - type: Clothing
+    sprite: _Flagship/Clothing/Head/Hats/beret_sci.rsi
+  - type: Tag
+    tags:
+    - PetWearable
+    - CorgiWearable
+    - ClothMade
+    - Recyclable
+    - HamsterWearable
+    - WhitelistChameleon

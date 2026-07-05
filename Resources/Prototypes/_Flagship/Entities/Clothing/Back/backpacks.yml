@@ -45,3 +45,12 @@
   components:
   - type: Sprite
     sprite: _Flagship/Clothing/Back/Backpacks/chemistry.rsi
+
+- type: entity
+  parent: [ClothingBackpack, BaseFlagScienceContraband]
+  id: ClothingBackpackFlagScience
+  name: Science backpack
+  description: It's a colourful backpack for sure.
+  components:
+  - type: Sprite
+    sprite: _Flagship/Clothing/Back/Backpacks/science.rsi
