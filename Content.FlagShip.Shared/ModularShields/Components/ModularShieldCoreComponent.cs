@@ -11,6 +11,12 @@ namespace Content.FlagShip.Shared.ModularShields.Components;
 public sealed partial class ModularShieldCoreComponent : Component
 {
     /// <summary>
+    /// Whether this modular shield core is the master core in control of the node group.
+    /// </summary>
+    [ViewVariables(VVAccess.ReadWrite)]
+    public bool IsMasterShieldCore = false;
+
+    /// <summary>
     /// Whether the modular shield core is trying (but possibly not able) to project it's shield at the moment.
     /// </summary>
     [ViewVariables(VVAccess.ReadWrite)]
@@ -172,7 +178,7 @@ public sealed partial class ModularShieldCoreComponent : Component
     /// On shield projectiong ending due to 'violent' means. (e.g. out of energy or overload due to flux).
     /// </summary>
     [DataField, ViewVariables(VVAccess.ReadWrite)]
-    public SoundSpecifier ProjectionEndViolentSound = new SoundPathSpecifier("/Audio/Effects/window_shatter2.ogg");
+    public SoundSpecifier ProjectionEndViolentSound = new SoundPathSpecifier("/Audio/Effects/guardian_warn.ogg");
 
     /// <summary>
     /// When the shield system has started to overflow with flux.

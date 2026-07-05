@@ -1,4 +1,5 @@
 using Content.FlagShip.Shared.ModularShields.Components;
+using Content.Shared.Shuttles.Events;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -40,6 +41,12 @@ public partial class ModularShieldSystem
             {
                 energyStorageComponent.EnergyStored += amountRemaining;
                 amountRemaining = 0;
+            }
+
+            UpdateEnergyStorageDisplay(energyStorageEntity);
+
+            if (amountRemaining <= 0)
+            {
                 break;
             }
         }
@@ -80,6 +87,12 @@ public partial class ModularShieldSystem
             {
                 energyStorageComponent.EnergyStored -= amountRemaining;
                 amountRemaining = 0;
+            }
+
+            UpdateEnergyStorageDisplay(energyStorageEntity);
+
+            if (amountRemaining <= 0)
+            {
                 break;
             }
         }
@@ -126,6 +139,12 @@ public partial class ModularShieldSystem
                 {
                     fluxStorageComponent.FluxStored += amountRemaining;
                     amountRemaining = 0;
+                }
+
+                UpdateFluxStorageDisplay(fluxStorageEntity);
+
+                if (amountRemaining <= 0)
+                {
                     break;
                 }
             }
@@ -196,6 +215,12 @@ public partial class ModularShieldSystem
             {
                 fluxStorageComponent.FluxStored -= amountRemaining;
                 amountRemaining = 0;
+            }
+
+            UpdateFluxStorageDisplay(fluxStorageEntity);
+
+            if (amountRemaining <= 0)
+            {
                 break;
             }
         }

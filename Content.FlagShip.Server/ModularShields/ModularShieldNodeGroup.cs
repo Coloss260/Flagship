@@ -61,7 +61,10 @@ public sealed partial class ModularShieldNodeGroup : BaseNodeGroup
             if (shieldCoreQuery.TryGetComponent(nodeOwner, out var shieldCore))
             {
                 if (_masterShieldCore == null)
+                {
                     _masterShieldCore = nodeOwner;
+                    shieldCore.IsMasterShieldCore = true;
+                }
             }
 
             if (energyGenerationQuery.TryGetComponent(nodeOwner, out var energyGen))

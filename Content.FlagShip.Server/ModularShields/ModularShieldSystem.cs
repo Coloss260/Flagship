@@ -35,6 +35,7 @@ public sealed partial class ModularShieldSystem : EntitySystem
     [Dependency] private ExplosionSystem _explosion = default!;
     [Dependency] private SharedAudioSystem _audio = default!;
     [Dependency] private StationSystem _station = default!;
+    [Dependency] private SharedAppearanceSystem _sharedAppearance = default!;
 
     private EntityQuery<ProjectileComponent> _projectileQuery;
 
@@ -48,12 +49,12 @@ public sealed partial class ModularShieldSystem : EntitySystem
         SubscribeLocalEvent<ModularShieldCoreComponent, ComponentShutdown>(OnModularShieldCoreShutdown);
 
         SubscribeLocalEvent<ModularShieldCoreComponent, ExaminedEvent>(OnShieldCoreExamined);
-        SubscribeLocalEvent<ModularShieldEnergyGenerationComponent, ExaminedEvent>(OnEnergyGeneratorExamined);
-        SubscribeLocalEvent<ModularShieldEnergyStorageComponent, ExaminedEvent>(OnEnergyStorageExamined);
-        SubscribeLocalEvent<ModularShieldFluxStorageComponent, ExaminedEvent>(OnFluxStorageExamined);
-        SubscribeLocalEvent<ModularShieldFluxDestructionComponent, ExaminedEvent>(OnFluxDestructorExamined);
 
         InitializeShield();
+        InitializeEnergyGeneration();
+        InitializeEnergyStorage();
+        InitializeFluxStorage();
+        InitializeFluxDestruction();
     }
 
     public override void Update(float frameTime)
@@ -64,7 +65,10 @@ public sealed partial class ModularShieldSystem : EntitySystem
 
         while (query.MoveNext(out var uid, out var core, out var nodeContainer))
         {
-            UpdateCore(frameTime, uid, core, nodeContainer);
+            if (core.IsMasterShieldCore)
+            {
+                UpdateCore(frameTime, uid, core, nodeContainer);
+            }
         }
     }
 
@@ -151,6 +155,7 @@ public sealed partial class ModularShieldSystem : EntitySystem
             }
         }
 
+        // Check whether to start or stop shield projection.
         if (shieldCore.ShieldProjectionEnabled &&
             shieldCore.ShieldProjected == null)
         {
@@ -160,6 +165,8 @@ public sealed partial class ModularShieldSystem : EntitySystem
         {
             CheckIfStopModularShieldProjection(shieldCoreUid, shieldCore, nodeGroup);
         }
+
+        UpdateShieldCoreDisplay((shieldCoreUid, shieldCore));
 
         // Do energy generation and flux destruction after we do shield core checks
         // So we can check for energy hitting 0 before we generate energy.
@@ -174,70 +181,6 @@ public sealed partial class ModularShieldSystem : EntitySystem
         foreach (var fluxDestructor in fluxDestruction)
         {
             UpdateFluxDestructor(frameTime, shieldCore, nodeGroup, fluxDestructor.Owner, fluxDestructor.Comp, nodeContainer);
-        }
-    }
-
-
-
-    /// <summary>
-    /// Performs update operations for a single energy generation component
-    /// </summary>
-    /// <param name="energyGeneratorUid"></param>
-    /// <param name="generator"></param>
-    /// <param name="nodeContainer"></param>
-    private void UpdateEnergyGenerator(float frameTime, ModularShieldCoreComponent shieldCore, ModularShieldNodeGroup nodeGroup, EntityUid energyGeneratorUid, ModularShieldEnergyGenerationComponent generator)
-    {
-        if (!_power.IsPowered(energyGeneratorUid))
-        {
-            return;
-        }
-
-        float energyToGenerate = generator.EnergyGenerationRateMaximum * frameTime;
-        if (shieldCore?.ShieldProjected != null)
-        {
-            energyToGenerate = energyToGenerate * generator.EnergyGenerationWhileShieldProjectedRateMultiplier;
-        }
-
-        // Amount of extra energy generation that wasn't needed to fill the system with flux.
-        // To be used to 'scale' the cost of the energy generation by comparing against the maximum energy generation rate.
-        float excessGeneration = GenerateEnergy(nodeGroup, energyToGenerate);
-
-        float energyForCosting = generator.EnergyGenerationRateMaximum - excessGeneration;
-        if (shieldCore?.ShieldProjected != null)
-        {
-            energyForCosting = energyForCosting * generator.EnergyGenerationWhileShieldProjectedCostMultiplier;
-        }
-    }
-
-
-
-    /// <summary>
-    /// Performs update operations for a single flux destruction component
-    /// </summary>
-    /// <param name="fluxDestructorUid"></param>
-    /// <param name="destructor"></param>
-    /// <param name="nodeContainer"></param>
-    private void UpdateFluxDestructor(float frameTime, ModularShieldCoreComponent shieldCore, ModularShieldNodeGroup nodeGroup, EntityUid fluxDestructorUid, ModularShieldFluxDestructionComponent destructor, NodeContainerComponent nodeContainer)
-    {
-        if (!_power.IsPowered(fluxDestructorUid))
-        {
-            return;
-        }
-
-        float fluxToDestroy = destructor.FluxDestructionRateMaximum * frameTime;
-        if (shieldCore?.ShieldProjected != null)
-        {
-            fluxToDestroy = fluxToDestroy * destructor.FluxDestructionWhileShieldProjectedRateMultiplier;
-        }
-
-        // Amount of extra flux destruction that wasn't needed to empty the system of flux.
-        // To be used to 'scale' the cost of the flux destruction by comparing against the maximum flux destruction rate.
-        float excessDestruction = DestroyFlux(nodeGroup, fluxToDestroy);
-
-        float fluxForCosting = destructor.FluxDestructionRateMaximum - excessDestruction;
-        if (shieldCore?.ShieldProjected != null)
-        {
-            fluxForCosting = fluxForCosting * destructor.FluxDestructionWhileShieldProjectedCostMultiplier;
         }
     }
 
@@ -399,6 +342,37 @@ public sealed partial class ModularShieldSystem : EntitySystem
 
 
 
+    private void UpdateShieldCoreDisplay(Entity<ModularShieldCoreComponent> ent, AppearanceComponent? appComp = null)
+    {
+        ;
+        if (!Resolve(ent.Owner, ref appComp))
+            return;
+
+        if (ent.Comp.FluxOverloadEnd != null)
+        {
+            _sharedAppearance.SetData(ent.Owner, ModularShieldCoreVisuals.DisplayState, ModularShieldCoreState.FluxOverload, appComp);
+        }
+        else if (ent.Comp.FluxOverflowBufferEnd != null)
+        {
+            _sharedAppearance.SetData(ent.Owner, ModularShieldCoreVisuals.DisplayState, ModularShieldCoreState.FluxOverflow, appComp);
+        }
+        else if (ent.Comp.ShieldProjected != null)
+        {
+            _sharedAppearance.SetData(ent.Owner, ModularShieldCoreVisuals.DisplayState, ModularShieldCoreState.Projecting, appComp);
+        }
+        else if (!ent.Comp.ShieldProjectionEnabled)
+        {
+            _sharedAppearance.SetData(ent.Owner, ModularShieldCoreVisuals.DisplayState, ModularShieldCoreState.Off, appComp);
+        }
+        else
+        {
+            _sharedAppearance.SetData(ent.Owner, ModularShieldCoreVisuals.DisplayState, ModularShieldCoreState.UnableToProject, appComp);
+        }
+    }
+
+
+
+
     private void OnModularShieldProjectileAbsorbed(EntityUid uid, ModularShieldCoreComponent component, ModularShieldAbsorbedProjectileEvent args)
     {
         var calculatedDamage = 0f;
@@ -457,7 +431,12 @@ public sealed partial class ModularShieldSystem : EntitySystem
 
         if (!TryGetModularShieldNodeGroup(uid, out var nodeGroup))
         {
-            args.PushMarkup(Loc.GetString("modular-shield-disconnected"));
+            args.PushMarkup(Loc.GetString("modular-shield-examine-disconnected"));
+            return;
+        }
+        else if (!component.IsMasterShieldCore)
+        {
+            args.PushMarkup(Loc.GetString("modular-shield-core-examine-not-master"));
             return;
         }
 
@@ -492,60 +471,6 @@ public sealed partial class ModularShieldSystem : EntitySystem
         {
             args.PushMarkup(Loc.GetString("modular-shield-core-examine-flux-overload"));
         }
-    }
-
-    private void OnEnergyGeneratorExamined(EntityUid uid, ModularShieldEnergyGenerationComponent component, ExaminedEvent args)
-    {
-        if (!args.IsInDetailsRange)
-            return;
-
-
-        if (!TryGetModularShieldNodeGroup(uid, out var nodeGroup))
-        {
-            args.PushMarkup(Loc.GetString("modular-shield-disconnected"));
-        }
-
-        args.PushMarkup(Loc.GetString("modular-shield-energy-generator-examine", ("energygen", component.EnergyGenerationRateMaximum)));
-    }
-
-    private void OnEnergyStorageExamined(EntityUid uid, ModularShieldEnergyStorageComponent component, ExaminedEvent args)
-    {
-        if (!args.IsInDetailsRange)
-            return;
-
-        if (!TryGetModularShieldNodeGroup(uid, out var nodeGroup))
-        {
-            args.PushMarkup(Loc.GetString("modular-shield-disconnected"));
-        }
-
-        args.PushMarkup(Loc.GetString("modular-shield-energy-storage-examine", ("energy", (int)Math.Round(component.EnergyStored)), ("energymax", component.EnergyCapacity)));
-    }
-
-    private void OnFluxStorageExamined(EntityUid uid, ModularShieldFluxStorageComponent component, ExaminedEvent args)
-    {
-        if (!args.IsInDetailsRange)
-            return;
-
-        if (!TryGetModularShieldNodeGroup(uid, out var nodeGroup))
-        {
-            args.PushMarkup(Loc.GetString("modular-shield-disconnected"));
-        }
-
-        args.PushMarkup(Loc.GetString("modular-shield-flux-storage-examine", ("flux", (int)Math.Round(component.FluxStored)), ("fluxmax", component.FluxCapacity)));
-    }
-
-    private void OnFluxDestructorExamined(EntityUid uid, ModularShieldFluxDestructionComponent component, ExaminedEvent args)
-    {
-        if (!args.IsInDetailsRange)
-            return;
-
-
-        if (!TryGetModularShieldNodeGroup(uid, out var nodeGroup))
-        {
-            args.PushMarkup(Loc.GetString("modular-shield-disconnected"));
-        }
-
-        args.PushMarkup(Loc.GetString("modular-shield-flux-destructor-examine", ("fluxdestruct", component.FluxDestructionRateMaximum)));
     }
 
 

@@ -7,6 +7,8 @@ modular-shield-core-examine-flux-overflow = [color=red]The shield core is overfl
 
 modular-shield-core-examine-flux-overload = [color=red]The shield core has overloaded![/color]
 
+modular-shield-core-examine-not-master = The shield core has detected another shield core in the system and disabled itself.
+
 
 
 modular-shield-energy-generator-examine = It can generate up to [color=lightblue]{$energygen}[/color] energy per second for the system.
@@ -19,4 +21,4 @@ modular-shield-flux-destructor-examine = It can dissipate up to [color=purple]{$
 
 
 
-modular-shield-disconnected = It is not currently connected to any shield system.
+modular-shield-examine-disconnected = It is not currently connected to any shield system.

@@ -28,7 +28,7 @@
       params:
         pitch: 0.5
     projectionEndViolentSound: !type:SoundPathSpecifier
-      path: "/Audio/Effects/window_shatter2.ogg"
+      path: "/Audio/Effects/guardian_warn.ogg"
       params:
         pitch: 0.5
     overflowBufferStartSound: !type:SoundPathSpecifier
@@ -51,6 +51,16 @@
     snapCardinals: true
     sprite: Structures/Power/Generation/ame.rsi
     state: control
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.ModularShieldCoreVisuals.DisplayState:
+        display:
+          Off: { visible: false }
+          UnableToProject: { state: control_warning, visible: true }
+          Projecting: { state: control_on, visible: true }
+          FluxOverflow: { state: control_fuck, visible: true }
+          FluxOverload: { state: control_critical, visible: true }
 
 - type: entity
   parent: ModularShieldCore
@@ -99,7 +109,15 @@
   - type: Sprite
     snapCardinals: true
     sprite: Structures/Storage/tanks.rsi
-    state: highwatertank
+    layers:
+      - state: highwatertank-2
+      - state: highwatertank-2-1
+        map: ["enum.StorageFillVisuals.FillLevel"]
+        visible: false
+  - type: Appearance
+  - type: StorageFillVisualizer
+    maxFillLevels: 7
+    fillBaseName: highwatertank-2-
 
 
 
@@ -114,7 +132,15 @@
   - type: Sprite
     snapCardinals: true
     sprite: Structures/Storage/tanks.rsi
-    state: highfueltank
+    layers:
+      - state: highfueltank-2
+      - state: highfueltank-2-1
+        map: ["enum.StorageFillVisuals.FillLevel"]
+        visible: false
+  - type: Appearance
+  - type: StorageFillVisualizer
+    maxFillLevels: 7
+    fillBaseName: highfueltank-2-
 
 
 
