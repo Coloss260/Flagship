@@ -114,7 +114,7 @@
 
 # Science
 - type: entity
-  parent: [ClothingUniformBase, BaseScienceContraband]
+  parent: [ClothingUniformBase, BaseFlagScienceContraband]
   id: ClothingUniformJumpsuitFlagScientist
   name: Scientist service uniform
   description: A stylish yet simple uniform made specifically to be worn by Scientists of Nanotrasen's Naval Corps.

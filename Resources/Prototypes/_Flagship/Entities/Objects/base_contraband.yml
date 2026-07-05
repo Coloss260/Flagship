@@ -34,6 +34,15 @@
   - type: Contraband
     allowedDepartments: [ Supply ]
 
+# Science Contraband
+- type: entity
+  id: BaseFlagScienceContraband
+  parent: BaseRestrictedContraband
+  abstract: true
+  components:
+  - type: Contraband
+    allowedDepartments: [ FlagScience ]
+
 # Service Contraband
 - type: entity
   id: BaseServiceContraband

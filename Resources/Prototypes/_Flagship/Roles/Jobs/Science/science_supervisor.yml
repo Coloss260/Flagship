@@ -21,7 +21,7 @@
 - type: startingGear
   id: ScienceSupervisorGear
   equipment:
-    id: RnDPDA
+    id: ScienceSupervisorPDA
     head: ClothingHeadHatBeretRND
     ears: ClothingHeadsetRD
     neck: ClothingNeckTieSci

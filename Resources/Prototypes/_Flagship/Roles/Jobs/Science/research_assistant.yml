@@ -21,7 +21,7 @@
 - type: startingGear
   id: FlagResearchAssistantGear
   equipment:
-    id: ResearchAssistantPDA
+    id: FlagResearchAssistantPDA
     head: ClothingHeadHatPurplesoft
     ears: ClothingHeadsetScience
     neck: ClothingNeckTieSci

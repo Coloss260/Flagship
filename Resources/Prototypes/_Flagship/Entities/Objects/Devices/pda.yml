@@ -665,7 +665,7 @@
 
 # Science
 - type: entity
-  parent: [BaseFlagPDA, BaseScienceContraband]
+  parent: [BaseFlagPDA, BaseFlagScienceContraband]
   id: ScienceSupervisorPDA
   name: Science Supervisor PDA
   description: Surprisingly no different from your PDA.
@@ -689,7 +689,7 @@
     state: pda-sciencesupervisor
 
 - type: entity
-  parent: [BaseFlagPDA, BaseScienceContraband]
+  parent: [BaseFlagPDA, BaseFlagScienceContraband]
   id: FlagRoboticistPDA
   name: Roboticist PDA
   description: Surprisingly no different from your PDA.
@@ -713,7 +713,7 @@
     state: pda-roboticist
 
 - type: entity
-  parent: [BaseFlagPDA, BaseScienceContraband]
+  parent: [BaseFlagPDA, BaseFlagScienceContraband]
   id: FlagScientistPDA
   name: Scientist PDA
   description: Surprisingly no different from your PDA.
@@ -737,7 +737,7 @@
     state: pda-science
 
 - type: entity
-  parent: [BaseFlagPDA, BaseScienceContraband]
+  parent: [BaseFlagPDA, BaseFlagScienceContraband]
   id: FlagResearchAssistantPDA
   name: Research Assistant PDA
   description: Surprisingly no different from your PDA.

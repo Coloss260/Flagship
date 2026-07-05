@@ -21,7 +21,7 @@
 - type: startingGear
   id: FlagScientistGear
   equipment:
-    id: SciencePDA
+    id: FlagScientistPDA
     head: ClothingHeadHatBeretRND
     ears: ClothingHeadsetScience
     neck: ClothingNeckTieSci

@@ -634,7 +634,7 @@
 
 # Science
 - type: entity
-  parent: [IDCardFlagship, BaseScienceContraband]
+  parent: [IDCardFlagship, BaseFlagScienceContraband]
   id: ScienceSupervisorIDCard
   name: Science Supervisor ID Card
   components:
@@ -659,7 +659,7 @@
     - WhitelistChameleonIdCard
 
 - type: entity
-  parent: [IDCardFlagship, BaseScienceContraband]
+  parent: [IDCardFlagship, BaseFlagScienceContraband]
   id: FlagRoboticistIDCard
   name: Roboticist ID Card
   components:
@@ -684,7 +684,7 @@
     - WhitelistChameleonIdCard
 
 - type: entity
-  parent: [IDCardFlagship, BaseScienceContraband]
+  parent: [IDCardFlagship, BaseFlagScienceContraband]
   id: FlagScientistIDCard
   name: Scientist ID Card
   components:
@@ -709,7 +709,7 @@
     - WhitelistChameleonIdCard
 
 - type: entity
-  parent: [IDCardFlagship, BaseScienceContraband]
+  parent: [IDCardFlagship, BaseFlagScienceContraband]
   id: FlagResearchAssistantIDCard
   name: Research Assistant ID Card
   components:

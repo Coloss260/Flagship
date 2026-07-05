@@ -21,7 +21,7 @@
 - type: startingGear
   id: FlagRoboticistGear
   equipment:
-    id: SciencePDA
+    id: FlagRoboticistPDA
     head: ClothingHeadHatWelding
     ears: ClothingHeadsetRobotics
     neck: ClothingNeckTieSci
