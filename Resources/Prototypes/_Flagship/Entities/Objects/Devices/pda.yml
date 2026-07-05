@@ -661,6 +661,30 @@
     borderColor: "#5a96bb"
   - type: Icon
     state: pda-medical
+
+- type: entity
+  parent: [BaseFlagPDA, BaseMedicalContraband]
+  id: FlagMedicalInternPDA
+  name: Medical Intern PDA
+  description: Surprisingly no different from your PDA.
+  components:
+  - type: Pda
+    id: FlagMedicalInternIDCard
+    penSlot:
+      startingItem: PenCap
+      priority: -1
+      whitelist:
+        tags:
+        - Write
+  - type: Appearance
+    appearanceDataInit:
+     enum.PdaVisuals.PdaType:
+       !type:String
+       pda-internmed
+  - type: PdaBorderColor
+    borderColor: "#5a96bb"
+  - type: Icon
+    state: pda-internmed
 # End of Medical
 
 # Science
