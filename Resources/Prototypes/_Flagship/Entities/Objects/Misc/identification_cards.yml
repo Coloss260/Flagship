@@ -222,6 +222,7 @@
     - HighRiskItem
   - type: StealTarget
     stealGroup: CaptainIDCard
+# End of Bridge Command
 
 # Military Police
 - type: entity
@@ -323,6 +324,7 @@
     - DoorBumpOpener
     - WhitelistChameleon
     - WhitelistChameleonIdCard
+# End of Military Police
 
 # Maintenance
 - type: entity
@@ -424,6 +426,7 @@
     - DoorBumpOpener
     - WhitelistChameleon
     - WhitelistChameleonIdCard
+# End of Maintenance
 
 # Supply
 - type: entity
@@ -500,6 +503,7 @@
     - DoorBumpOpener
     - WhitelistChameleon
     - WhitelistChameleonIdCard
+# End of Supply
 
 # Medical
 - type: entity
@@ -626,3 +630,106 @@
     - DoorBumpOpener
     - WhitelistChameleon
     - WhitelistChameleonIdCard
+# End of Medical
+
+# Science
+- type: entity
+  parent: [IDCardFlagship, BaseScienceContraband]
+  id: ScienceSupervisorIDCard
+  name: Science Supervisor ID Card
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+    - state: stripe_top
+      color: "#812edf"
+    - state: stripe_bottom
+      color: "#7129c3"
+    - sprite: /Textures/_Flagship/Interface/Misc/job_icons.rsi
+      offset: -0.09375, 0.0625
+      state: ScienceSupervisor
+  - type: Item
+    heldPrefix: default
+  - type: PresetIdCard
+    job: ScienceSupervisor
+  - type: Tag
+    tags:
+    - DoorBumpOpener
+    - WhitelistChameleon
+    - WhitelistChameleonIdCard
+
+- type: entity
+  parent: [IDCardFlagship, BaseScienceContraband]
+  id: FlagRoboticistIDCard
+  name: Roboticist ID Card
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+    - state: stripe_top
+      color: "#812edf"
+    - state: stripe_bottom
+      color: "#7129c3"
+    - sprite: /Textures/_Flagship/Interface/Misc/job_icons.rsi
+      offset: -0.09375, 0.0625
+      state: Roboticist
+  - type: Item
+    heldPrefix: default
+  - type: PresetIdCard
+    job: FlagRoboticist
+  - type: Tag
+    tags:
+    - DoorBumpOpener
+    - WhitelistChameleon
+    - WhitelistChameleonIdCard
+
+- type: entity
+  parent: [IDCardFlagship, BaseScienceContraband]
+  id: FlagScientistIDCard
+  name: Scientist ID Card
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+    - state: stripe_top
+      color: "#812edf"
+    - state: stripe_bottom
+      color: "#7129c3"
+    - sprite: /Textures/_Flagship/Interface/Misc/job_icons.rsi
+      offset: -0.09375, 0.0625
+      state: Scientist
+  - type: Item
+    heldPrefix: default
+  - type: PresetIdCard
+    job: FlagScientist
+  - type: Tag
+    tags:
+    - DoorBumpOpener
+    - WhitelistChameleon
+    - WhitelistChameleonIdCard
+
+- type: entity
+  parent: [IDCardFlagship, BaseScienceContraband]
+  id: FlagResearchAssistantIDCard
+  name: Research Assistant ID Card
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+    - state: stripe_top
+      color: "#812edf"
+    - state: stripe_bottom
+      color: "#7129c3"
+    - sprite: /Textures/_Flagship/Interface/Misc/job_icons.rsi
+      offset: -0.09375, 0.0625
+      state: ResearchAssistant
+  - type: Item
+    heldPrefix: default
+  - type: PresetIdCard
+    job: FlagResearchAssistant
+  - type: Tag
+    tags:
+    - DoorBumpOpener
+    - WhitelistChameleon
+    - WhitelistChameleonIdCard
+# End of Science

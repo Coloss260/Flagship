@@ -61,6 +61,18 @@
             "name": "pda-internmed"
         },
         {
+            "name": "pda-sciencesupervisor"
+        },
+        {
+            "name": "pda-roboticist"
+        },
+        {
+            "name": "pda-science"
+        },
+        {
+            "name": "pda-internsci"
+        },
+        {
             "name": "pda"
         }
     ]

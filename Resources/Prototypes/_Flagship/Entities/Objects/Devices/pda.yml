@@ -293,9 +293,9 @@
     borderColor: "#102e46"
   - type: Icon
     state: pda-bridgecommand
+# End of Bridge Command
 
 # Military Police
-
 - type: entity
   parent: [BaseFlagPDA, BaseMilitaryPoliceContraband]
   id: MilitaryPoliceChiefPDA
@@ -391,6 +391,7 @@
     borderColor: "#102e46"
   - type: Icon
     state: pda-militarypolice
+# End of Military Police
 
 # Supply
 - type: entity
@@ -464,6 +465,7 @@
     borderColor: "#102e46"
   - type: Icon
     state: pda-supplies
+# End of Supply
 
 # Maintenance
 - type: entity
@@ -561,6 +563,7 @@
     borderColor: "#af6200"
   - type: Icon
     state: pda-maintenance
+# End of Maintenance
 
 # Medical
 - type: entity
@@ -658,15 +661,17 @@
     borderColor: "#5a96bb"
   - type: Icon
     state: pda-medical
+# End of Medical
 
+# Science
 - type: entity
-  parent: [BaseFlagPDA, BaseMedicalContraband]
-  id: FlagMedicalInternPDA
-  name: Medical Intern PDA
+  parent: [BaseFlagPDA, BaseScienceContraband]
+  id: ScienceSupervisorPDA
+  name: Science Supervisor PDA
   description: Surprisingly no different from your PDA.
   components:
   - type: Pda
-    id: FlagMedicalInternIDCard
+    id: ScienceSupervisorIDCard
     penSlot:
       startingItem: PenCap
       priority: -1
@@ -677,8 +682,81 @@
     appearanceDataInit:
      enum.PdaVisuals.PdaType:
        !type:String
-       pda-internmed
+       pda-sciencesupervisor
   - type: PdaBorderColor
-    borderColor: "#5a96bb"
+    borderColor: "#5c219f"
   - type: Icon
-    state: pda-internmed
+    state: pda-sciencesupervisor
+
+- type: entity
+  parent: [BaseFlagPDA, BaseScienceContraband]
+  id: FlagRoboticistPDA
+  name: Roboticist PDA
+  description: Surprisingly no different from your PDA.
+  components:
+  - type: Pda
+    id: FlagRoboticistIDCard
+    penSlot:
+      startingItem: PenCap
+      priority: -1
+      whitelist:
+        tags:
+        - Write
+  - type: Appearance
+    appearanceDataInit:
+     enum.PdaVisuals.PdaType:
+       !type:String
+       pda-roboticist
+  - type: PdaBorderColor
+    borderColor: "#5c219f"
+  - type: Icon
+    state: pda-roboticist
+
+- type: entity
+  parent: [BaseFlagPDA, BaseScienceContraband]
+  id: FlagScientistPDA
+  name: Scientist PDA
+  description: Surprisingly no different from your PDA.
+  components:
+  - type: Pda
+    id: FlagScientistIDCard
+    penSlot:
+      startingItem: PenCap
+      priority: -1
+      whitelist:
+        tags:
+        - Write
+  - type: Appearance
+    appearanceDataInit:
+     enum.PdaVisuals.PdaType:
+       !type:String
+       pda-science
+  - type: PdaBorderColor
+    borderColor: "#5c219f"
+  - type: Icon
+    state: pda-science
+
+- type: entity
+  parent: [BaseFlagPDA, BaseScienceContraband]
+  id: FlagResearchAssistantPDA
+  name: Research Assistant PDA
+  description: Surprisingly no different from your PDA.
+  components:
+  - type: Pda
+    id: FlagResearchAssistantIDCard
+    penSlot:
+      startingItem: PenCap
+      priority: -1
+      whitelist:
+        tags:
+        - Write
+  - type: Appearance
+    appearanceDataInit:
+     enum.PdaVisuals.PdaType:
+       !type:String
+       pda-internsci
+  - type: PdaBorderColor
+    borderColor: "#5c219f"
+  - type: Icon
+    state: pda-internsci
+# End of Science
