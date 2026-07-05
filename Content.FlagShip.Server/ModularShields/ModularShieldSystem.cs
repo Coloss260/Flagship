@@ -1,13 +1,18 @@
 using Content.FlagShip.Shared.ModularShields.Components;
 using Content.Server.Explosion.EntitySystems;
 using Content.Server.Power.EntitySystems;
+using Content.Server.Station.Systems;
+using Content.Shared.EntityEffects.Effects.StatusEffects;
 using Content.Shared.Examine;
 using Content.Shared.Explosion.Components;
 using Content.Shared.NodeContainer;
 using Content.Shared.Projectiles;
 using Content.Shared.Trigger.Components.Effects;
 using Content.Shared.Trigger.Systems;
+using Robust.Shared.Audio.Components;
+using Robust.Shared.Audio.Systems;
 using Robust.Shared.Physics.Events;
+using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
 using System;
@@ -28,6 +33,8 @@ public sealed partial class ModularShieldSystem : EntitySystem
     [Dependency] private PowerReceiverSystem _power = default!;
     [Dependency] private IPrototypeManager _prototypeManager = default!;
     [Dependency] private ExplosionSystem _explosion = default!;
+    [Dependency] private SharedAudioSystem _audio = default!;
+    [Dependency] private StationSystem _station = default!;
 
     private EntityQuery<ProjectileComponent> _projectileQuery;
 
@@ -96,6 +103,17 @@ public sealed partial class ModularShieldSystem : EntitySystem
             shieldCore.FluxOverflowBufferEnd == null)
         {
             shieldCore.FluxOverflowBufferEnd = curTime + shieldCore.FluxOverflowBufferDuration;
+
+            var audioEntity = _audio.PlayGlobal(
+                shieldCore.OverflowBufferStartSound,
+                GetShieldSoundPlayerFilter((shieldCoreUid, shieldCore)),
+                true,
+                shieldCore.OverflowBufferStartSound.Params.WithLoop(true));
+
+            if (audioEntity != null)
+            {
+                shieldCore.FluxOverflowBufferAudioEntity = audioEntity.Value.Entity;
+            }
         }
 
         // Check an ongoing shield core overflow buffer
@@ -112,6 +130,12 @@ public sealed partial class ModularShieldSystem : EntitySystem
             {
                 // Overload the shield.
                 PerformShieldCoreOverloadPunishments(shieldCoreUid, shieldCore, shieldCore.FluxOverflow);
+
+                if (shieldCore.FluxOverflowBufferAudioEntity != null)
+                {
+                    _audio.Stop(shieldCore.FluxOverflowBufferAudioEntity.Value);
+                }
+
                 shieldCore.FluxOverflow = 0;
                 shieldCore.FluxOverflowBufferEnd = null;
                 shieldCore.FluxOverloadEnd = curTime + shieldCore.FluxOverloadDuration;
@@ -136,8 +160,6 @@ public sealed partial class ModularShieldSystem : EntitySystem
         {
             CheckIfStopModularShieldProjection(shieldCoreUid, shieldCore, nodeGroup);
         }
-
-
 
         // Do energy generation and flux destruction after we do shield core checks
         // So we can check for energy hitting 0 before we generate energy.
@@ -245,7 +267,6 @@ public sealed partial class ModularShieldSystem : EntitySystem
         if (nodeGroup == null && !TryGetModularShieldNodeGroup(shieldCoreUid, out nodeGroup))
             return false;
 
-
         var parentGridEntityUid = Transform(shieldCoreUid).GridUid;
 
         var energyStorageStats = nodeGroup.GetEnergyStorageStatistics();
@@ -260,13 +281,7 @@ public sealed partial class ModularShieldSystem : EntitySystem
             shieldCoreComponent.MinimumEnergyStoredToProjectShield <= energyStorageStats.EnergyStored &&
             shieldCoreComponent.MinimumEnergyStoredToProjectShieldPercent <= (energyStorageStats.EnergyStored / energyStorageStats.EnergyCapacity))
         {
-            EntityUid shieldEntityUid = ShieldEntity((EntityUid)parentGridEntityUid, shieldCoreUid);
-            if (shieldEntityUid != EntityUid.Invalid)
-            {
-                success = true;
-                shieldCoreComponent.ShieldProjected = shieldEntityUid;
-                shieldCoreComponent.ShieldedEntity = parentGridEntityUid;
-            }
+            success = StartModularShieldProjection(shieldCoreUid, shieldCoreComponent);
         }
 
         return success;
@@ -295,16 +310,89 @@ public sealed partial class ModularShieldSystem : EntitySystem
 
         // Whether to stop projecting the shield.
         if (shieldCoreComponent.ShieldProjected != null && // Shield needs to be on
-                shieldCoreComponent.ShieldedEntity != null && (  // We need to be shielding something
-                    !shieldCoreComponent.ShieldProjectionEnabled || // Shield core has been turned off.
-                    energyStorageStats.EnergyStored == 0 || // No energy disables shields.
-                    shieldCoreComponent.FluxOverloadEnd != null // Overload disables shields.
-                ))
+            shieldCoreComponent.ShieldedEntity != null) // We need to be shielding something)
         {
-            success = UnshieldEntity((EntityUid)shieldCoreComponent.ShieldedEntity);
-            shieldCoreComponent.ShieldProjected = null;
-            shieldCoreComponent.ShieldedEntity = null;
+            bool shutdown = false;
+            bool violent = false;
+            if (energyStorageStats.EnergyStored == 0 || // No energy disables shields.
+                shieldCoreComponent.FluxOverloadEnd != null) // Overload disables shields.
+            {
+                // Violent shutdown of shields (for aesthetics)
+                shutdown = true;
+                violent = true;
+            }
+            else if (!shieldCoreComponent.ShieldProjectionEnabled) // Shield core has been turned off.
+            {
+                // Calm shutdown of projection (for aesthetics)
+                shutdown = true;
+            }
+
+            if (shutdown)
+            {
+                StopModularShieldProjection(shieldCoreUid, shieldCoreComponent, violent);
+            }
         }
+
+        return success;
+    }
+
+
+
+    private void OnModularShieldCoreShutdown(EntityUid uid, ModularShieldCoreComponent component, ComponentShutdown args)
+    {
+        if (component.ShieldProjected != null && component.ShieldedEntity != null)
+        {
+            StopModularShieldProjection(uid, component, true);
+        }
+    }
+
+
+
+    private bool StartModularShieldProjection(EntityUid uid, ModularShieldCoreComponent component)
+    {
+        if (component.ShieldedEntity != null || component.ShieldProjected != null)
+            return false;
+
+        bool success = false;
+        var parentGridEntityUid = Transform(uid).GridUid;
+
+        if (parentGridEntityUid != null)
+        {
+            EntityUid shieldEntityUid = ShieldEntity((EntityUid)parentGridEntityUid, uid);
+            if (shieldEntityUid != EntityUid.Invalid)
+            {
+                success = true;
+                component.ShieldProjected = shieldEntityUid;
+                component.ShieldedEntity = parentGridEntityUid;
+
+                _audio.PlayGlobal(component.ProjectionStartSound, GetShieldSoundPlayerFilter((uid, component)), true, component.ProjectionStartSound.Params);
+            }
+        }
+
+        return success;
+    }
+
+    private bool StopModularShieldProjection(EntityUid uid, ModularShieldCoreComponent component, bool violent = false)
+    {
+        if (component.ShieldedEntity == null || component.ShieldProjected == null)
+            return false;
+
+        bool success = UnshieldEntity((EntityUid)component.ShieldedEntity);
+
+        // Shield core may be terminating at this point so don't use it.
+
+        if (violent)
+        {
+            _audio.PlayGlobal(component.ProjectionEndViolentSound, GetShieldSoundPlayerFilter((uid, component)), true, component.ProjectionEndViolentSound.Params);
+        }
+        else
+        {
+            _audio.PlayGlobal(component.ProjectionEndCalmSound, GetShieldSoundPlayerFilter((uid, component)), true, component.ProjectionEndCalmSound.Params);
+        }
+
+
+        component.ShieldProjected = null;
+        component.ShieldedEntity = null;
 
         return success;
     }
@@ -316,13 +404,13 @@ public sealed partial class ModularShieldSystem : EntitySystem
         var calculatedDamage = 0f;
         if (TryComp<EmpOnTriggerComponent>(args.AbsorbedProjectile, out var emp))
         {
-            calculatedDamage += emp.EnergyConsumption * component.EmpDamageToNormalDamageRatio;
+            calculatedDamage += emp.EnergyConsumption * component.EmpDamageToNormalDamageMultiplier;
             _trigger.Trigger(args.AbsorbedProjectile);
         }
 
         if (TryComp<ExplosiveComponent>(args.AbsorbedProjectile, out var exp) && _prototypeManager.TryIndex(exp.ExplosionType, out var type))
         {
-            calculatedDamage += exp.TotalIntensity * (float)type.DamagePerIntensity.GetTotal();
+            calculatedDamage += exp.TotalIntensity * (float)type.DamagePerIntensity.GetTotal() * component.ExplosionDamageToNormalDamageMultiplier;
             _explosion.DefuseExplosive(args.AbsorbedProjectile, exp);
         }
 
@@ -340,20 +428,23 @@ public sealed partial class ModularShieldSystem : EntitySystem
     {
         if (args.DamageDealt > 0 && TryGetModularShieldNodeGroup(ent.Owner, out var nodeGroup))
         {
-            DestroyEnergy(nodeGroup, args.DamageDealt * ent.Comp.DamageAbsorbedToEnergyDestructionRatio);
-            GenerateFlux(nodeGroup, args.DamageDealt * ent.Comp.DamageAbsorbedToFluxGenerationRatio);
-        }
-    }
+            DestroyEnergy(nodeGroup, args.DamageDealt * ent.Comp.DamageAbsorbedToEnergyDestructionMultiplier);
+            GenerateFlux(nodeGroup, args.DamageDealt * ent.Comp.DamageAbsorbedToFluxGenerationMultiplier);
 
+            if (args.DamageDealt >= ent.Comp.AbsorbedDamageSoundMinimumDamage)
+            {
+                var filter = GetShieldSoundPlayerFilter(ent);
 
+                float soundDamageScale = Math.Clamp((args.DamageDealt - ent.Comp.AbsorbedDamageSoundScalingMinimumDamage) / (ent.Comp.AbsorbedDamageSoundScalingMaximumDamage - ent.Comp.AbsorbedDamageSoundScalingMinimumDamage), 0, 1);
+                // Sound gets loader the more damage is absorbed.
+                float soundVolumeScale = ent.Comp.AbsorbedDamageSoundScalingMinimumVolume + (soundDamageScale * (ent.Comp.AbsorbedDamageSoundScalingMaximumVolume - ent.Comp.AbsorbedDamageSoundScalingMinimumVolume));
+                // Sound gets lower pitched the more dmage is absorbed.
+                float soundPitchScale = ent.Comp.AbsorbedDamageSoundScalingMinimumPitch + ((1 - soundDamageScale) * (ent.Comp.AbsorbedDamageSoundScalingMaximumPitch - ent.Comp.AbsorbedDamageSoundScalingMinimumPitch));
 
-    private void OnModularShieldCoreShutdown(EntityUid uid, ModularShieldCoreComponent component, ComponentShutdown args)
-    {
-        if (component.ShieldProjected != null && component.ShieldedEntity != null)
-        {
-            UnshieldEntity((EntityUid)component.ShieldedEntity);
-            component.ShieldProjected = null;
-            component.ShieldedEntity = null;
+                var audioParams = ent.Comp.AbsorbedDamageSound.Params;
+
+                _audio.PlayGlobal(ent.Comp.AbsorbedDamageSound, filter, true, audioParams.WithVolume(audioParams.Volume + soundVolumeScale).WithPitchScale(audioParams.Pitch * soundPitchScale));
+            }
         }
     }
 
@@ -394,7 +485,7 @@ public sealed partial class ModularShieldSystem : EntitySystem
 
         if (component.FluxOverflowBufferEnd != null)
         {
-            args.PushMarkup(Loc.GetString("modular-shield-core-examine-flux-overflow", ("fluxoverflow", component.FluxOverflow)));
+            args.PushMarkup(Loc.GetString("modular-shield-core-examine-flux-overflow", ("fluxoverflow", (int)Math.Round(component.FluxOverflow))));
         }
 
         if (component.FluxOverloadEnd != null)
@@ -475,6 +566,18 @@ public sealed partial class ModularShieldSystem : EntitySystem
             .FirstOrDefault();
 
         return group != null;
+    }
+
+
+    private Filter GetShieldSoundPlayerFilter(Entity<ModularShieldCoreComponent> shieldCore)
+    {
+        // Prefer using the shielded entity (the grid we're on) in case the shield core is gone.
+        // We can also base the distance for hearing it on the grid's size.
+        if (shieldCore.Comp.ShieldedEntity != null)
+        {
+            return _station.GetInOwningStation((EntityUid)shieldCore.Comp.ShieldedEntity);
+        }
+        return _station.GetInOwningStation(shieldCore.Owner);
     }
 
 

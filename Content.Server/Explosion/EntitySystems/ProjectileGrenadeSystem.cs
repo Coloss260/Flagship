@@ -1,5 +1,6 @@
-﻿using Content.Server.Explosion.Components;
+using Content.Server.Explosion.Components;
 using Content.Server.Weapons.Ranged.Systems;
+using Content.Shared.Projectiles;
 using Content.Shared.Trigger;
 using Robust.Server.GameObjects;
 using Robust.Shared.Containers;
@@ -71,6 +72,9 @@ public sealed partial class ProjectileGrenadeSystem : EntitySystem
 
         while (TrySpawnContents(grenadeCoord, component, out var contentUid))
         {
+            var shooterDataComp = EnsureComp<ProjectileShooterDataCacheComponent>(contentUid);
+            shooterDataComp.ShooterGridUid = Transform(uid).GridUid;
+
             Angle angle;
             if (component.RandomAngle)
                 angle = _random.NextAngle();

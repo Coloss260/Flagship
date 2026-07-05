@@ -27,10 +27,17 @@ public sealed partial class RequireProjectileShooterNotOnSameGridSystem : Entity
 
         if (TryComp(other, out ProjectileComponent? projectile))
         {
-            // ProjectileGrenade origining projectiles will not have a Shooter value.
             if (projectile.Shooter.HasValue && Transform(ent.Owner).GridUid == Transform(projectile.Shooter.Value).GridUid)
             {
                 args.Cancelled = true;
+            }
+            // ProjectileGrenade origining projectiles will not have a Shooter value.
+            else if (TryComp(other, out ProjectileShooterDataCacheComponent? shooterData))
+            {
+                if (shooterData.ShooterGridUid == Transform(ent.Owner).GridUid)
+                {
+                    args.Cancelled = true;
+                }
             }
         }
     }

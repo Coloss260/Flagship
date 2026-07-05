@@ -19,6 +19,34 @@
   description: It's the core of a modular shield system.
   components:
   - type: ModularShieldCore
+    projectionStartSound: !type:SoundPathSpecifier
+      path: "/Audio/Effects/teleport_arrival.ogg"
+      params:
+        pitch: 0.5
+    projectionEndCalmSound: !type:SoundPathSpecifier
+      path: "/Audio/Effects/teleport_arrival.ogg"
+      params:
+        pitch: 0.5
+    projectionEndViolentSound: !type:SoundPathSpecifier
+      path: "/Audio/Effects/window_shatter2.ogg"
+      params:
+        pitch: 0.5
+    overflowBufferStartSound: !type:SoundPathSpecifier
+      ## Needs to loop, or longer than the length of the overflow buffer.
+      path: "/Audio/Effects/Grenades/Supermatter/supermatter_loop.ogg"
+      params:
+        pitch: 1
+    absorbedDamageSound: !type:SoundPathSpecifier
+      path: "/Audio/Weapons/Guns/Hits/laser_sear_wall.ogg"
+      params:
+        pitch: 1
+        volume: 0
+    absorbedDamageSoundScalingMinimumDamage: 20
+    absorbedDamageSoundScalingMaximumDamage: 200
+    absorbedDamageSoundScalingMinimumVolume: -8
+    absorbedDamageSoundScalingMaximumVolume: 0
+    absorbedDamageSoundScalingMinimumPitch: 0.5
+    absorbedDamageSoundScalingMaximumPitch: 1.5
   - type: Sprite
     snapCardinals: true
     sprite: Structures/Power/Generation/ame.rsi
