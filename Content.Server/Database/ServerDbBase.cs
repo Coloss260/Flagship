@@ -47,7 +47,7 @@ namespace Content.Server.Database
                 .Include(p => p.Profiles).ThenInclude(h => h.Jobs)
                 .Include(p => p.Profiles).ThenInclude(h => h.Antags)
                 .Include(p => p.Profiles).ThenInclude(h => h.Traits)
-                .Include(p => p.Profiles).ThenInclude(h => h.Ranks)
+                .Include(p => p.Profiles).ThenInclude(h => h.Ranks) // - FlagShip
                 .Include(p => p.Profiles)
                     .ThenInclude(h => h.Loadouts)
                     .ThenInclude(l => l.Groups)
@@ -106,7 +106,7 @@ namespace Content.Server.Database
                 .Include(p => p.Jobs)
                 .Include(p => p.Antags)
                 .Include(p => p.Traits)
-                .Include(p => p.Ranks)
+                .Include(p => p.Ranks) // - FlagShip
                 .Include(p => p.Loadouts)
                     .ThenInclude(l => l.Groups)
                     .ThenInclude(group => group.Loadouts)
@@ -261,12 +261,14 @@ namespace Content.Server.Database
                         .Select(t => new Trait {TraitName = t})
             );
 
+            // <FlagShip>
             profile.Ranks.Clear();
             profile.Ranks.AddRange(
                 humanoid.RankPreferences
                     .Where(r => r.Value != null)
                     .Select(r => new Rank { JobName = r.Key, RankName = r.Value!.Value.Id })
             );
+            // </FlagShip>
 
             profile.Loadouts.Clear();
 

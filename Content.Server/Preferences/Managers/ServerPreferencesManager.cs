@@ -13,7 +13,7 @@ using Content.Shared.Humanoid.Prototypes;
 using Content.Shared.Preferences;
 using Content.Shared.Preferences.Loadouts;
 using Content.Shared.Roles;
-using Content.Shared.Roles.Ranks;
+using Content.Shared.Roles.Ranks; // - FlagShip
 using Content.Shared.Traits;
 using Robust.Server.Player;
 using Robust.Shared.Configuration;
@@ -182,9 +182,11 @@ namespace Content.Server.Preferences.Managers
                     markings
                 ),
                 spawnPriority,
+                // <FlagShip>
                 profile.Ranks.ToDictionary(
                     rank => new ProtoId<JobPrototype>(rank.JobName),
                     rank => (ProtoId<RankPrototype>?) new ProtoId<RankPrototype>(rank.RankName)),
+                // </FlagShip>
                 jobs,
                 (PreferenceUnavailableMode) profile.PreferenceUnavailable,
                 antags.ToHashSet(),

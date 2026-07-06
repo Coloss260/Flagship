@@ -182,7 +182,7 @@ public sealed partial class JobRequirementsManager : ISharedPlaytimeManager
         return true;
     }
 
-    public bool CheckRoleRequirements(HashSet<JobRequirement>? requirements, HumanoidCharacterProfile? profile, [NotNullWhen(false)] out FormattedMessage? reason)
+    public bool CheckRoleRequirements(HashSet<JobRequirement>? requirements, HumanoidCharacterProfile? profile, [NotNullWhen(false)] out FormattedMessage? reason) // - FlagShip, was private
     {
         reason = null;
 

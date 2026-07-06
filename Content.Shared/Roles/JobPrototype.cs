@@ -1,7 +1,7 @@
 using Content.Shared.Access;
 using Content.Shared.Guidebook;
 using Content.Shared.Players.PlayTimeTracking;
-using Content.Shared.Roles.Ranks;
+using Content.Shared.Roles.Ranks; // - FlagShip
 using Content.Shared.StatusIcon;
 using Robust.Shared.Prototypes;
 
@@ -68,11 +68,13 @@ public sealed partial class JobPrototype : IPrototype
     [DataField]
     public bool SetPreference = true;
 
+    // <FlagShip>
     /// <summary>
     /// Should rank preferences for this job appear in the profile editor?
     /// </summary>
     [DataField]
     public bool SetRankPreference;
+    // </FlagShip>
 
     /// <summary>
     /// Should the selected traits be applied for this job?
@@ -135,11 +137,13 @@ public sealed partial class JobPrototype : IPrototype
     [DataField(serverOnly: true)]
     public JobSpecial[] Special { get; private set; } = Array.Empty<JobSpecial>();
 
+    // <FlagShip>
     /// <summary>
     /// Ordered highest-to-lowest rank ladder for this job.
     /// </summary>
     [DataField]
     public Dictionary<ProtoId<RankPrototype>, HashSet<JobRequirement>?>? Ranks;
+    // </FlagShip>
 
     [DataField]
     public IReadOnlyCollection<ProtoId<AccessLevelPrototype>> Access = Array.Empty<ProtoId<AccessLevelPrototype>>();
