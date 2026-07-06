@@ -78,10 +78,22 @@
   paygrade: flagship-rank-paygrade-e7
 
 - type: rank
-  id: PettyOfficer
-  name: Petty Officer
-  prefix: PO.
+  id: PettyOfficerFirstClass
+  name: Petty Officer First Class
+  prefix: PO1.
+  paygrade: flagship-rank-paygrade-e6
+
+- type: rank
+  id: PettyOfficerSecondClass
+  name: Petty Officer Second Class
+  prefix: PO2.
   paygrade: flagship-rank-paygrade-e5
+
+- type: rank
+  id: PettyOfficerThirdClass
+  name: Petty Officer Third Class
+  prefix: PO3.
+  paygrade: flagship-rank-paygrade-e4
 
 - type: rank
   id: Crewman
