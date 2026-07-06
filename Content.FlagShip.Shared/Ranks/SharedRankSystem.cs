@@ -35,7 +35,7 @@ public abstract partial class SharedRankSystem : EntitySystem
     public void SetRank(EntityUid uid, ProtoId<RankPrototype> from)
     {
         var comp = EnsureComp<RankComponent>(uid);
-        comp.Rank = from;
+        comp.RankId = from;
         Dirty(uid, comp);
     }
 
@@ -46,7 +46,10 @@ public abstract partial class SharedRankSystem : EntitySystem
 
     public RankPrototype? GetRank(RankComponent component)
     {
-        return _prototypes.TryIndex(component.Rank, out RankPrototype? rankProto) ? rankProto : null;
+        if (string.IsNullOrWhiteSpace(component.RankId.Id))
+            return null;
+
+        return _prototypes.TryIndex(component.RankId, out RankPrototype? rankProto) ? rankProto : null;
     }
 
     public string? GetRankString(EntityUid uid, bool isShort = false, bool hasPaygrade = false)
