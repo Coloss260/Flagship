@@ -1,0 +1,91 @@
+- type: rank
+  id: NTDirector
+  name: NT Director
+  prefix: NTD.
+
+- type: rank
+  id: FleetAdmiral
+  name: Fleet Admiral
+  prefix: FADM.
+
+- type: rank
+  id: Admiral
+  name: Admiral
+  prefix: ADM.
+
+- type: rank
+  id: ViceAdmiral
+  name: Vice Admiral
+  prefix: VADM.
+
+- type: rank
+  id: RearAdmiral
+  name: Rear Admiral
+  prefix: RADM.
+
+- type: rank
+  id: Captain
+  name: Captain
+  prefix: CAPT.
+  paygrade: flagship-rank-paygrade-o5
+
+- type: rank
+  id: Commander
+  name: Commander
+  prefix: CDR.
+  paygrade: flagship-rank-paygrade-o4
+
+- type: rank
+  id: LieutenantCommander
+  name: Lieutenant Commander
+  prefix: LCDR.
+  paygrade: flagship-rank-paygrade-o3
+
+- type: rank
+  id: Lieutenant
+  name: Lieutenant
+  prefix: LT.
+  paygrade: flagship-rank-paygrade-o2
+
+- type: rank
+  id: Ensign
+  name: Ensign
+  prefix: ENS.
+  paygrade: flagship-rank-paygrade-o1
+
+- type: rank
+  id: MasterChiefPettyOfficer
+  name: Master Chief Petty Officer
+  prefix: MCPO.
+  paygrade: flagship-rank-paygrade-e5
+
+- type: rank
+  id: SeniorChiefPettyOfficer
+  name: Senior Chief Petty Officer
+  prefix: SCPO.
+  paygrade: flagship-rank-paygrade-e4
+
+- type: rank
+  id: ChiefPettyOfficer
+  name: Chief Petty Officer
+  prefix: CPO.
+  paygrade: flagship-rank-paygrade-e3
+
+- type: rank
+  id: PettyOfficer
+  name: Petty Officer
+  prefix: PO.
+  paygrade: flagship-rank-paygrade-e2
+
+- type: rank
+  id: Crewman
+  name: Crewman
+  prefix: CMN.
+  paygrade: flagship-rank-paygrade-e1
+
+- type: rank
+  id: Civilian
+  name: Civilian
+  prefix: Civ.
+  malePrefix: Mr.
+  femalePrefix: Ms.
