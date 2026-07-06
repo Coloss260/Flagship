@@ -18,3 +18,5 @@ flagship-rank-paygrade-e4 = E4
 flagship-rank-paygrade-e5 = E5
 flagship-rank-paygrade-e6 = E6
 flagship-rank-paygrade-e7 = E7
+flagship-rank-paygrade-e8 = E8
+flagship-rank-paygrade-e9 = E9
