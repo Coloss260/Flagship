@@ -302,7 +302,7 @@ public sealed partial class HumanoidProfileEditor
                     };
                 }
 
-                var rankOptions = new OptionButton()
+                var rankOptions = new TooltipOptionButton()
                 {
                     Name = "RankOptionsButton",
                     HorizontalAlignment = HAlignment.Right,
@@ -325,9 +325,10 @@ public sealed partial class HumanoidProfileEditor
                         rankProtoIds.Add(rankId);
 
                         if (requirements != null &&
-                            !_requirements.CheckRoleRequirements(requirements, Profile, out _))
+                            !_requirements.CheckRoleRequirements(requirements, Profile, out var rankReason))
                         {
                             rankOptions.SetItemDisabled(rankOptions.ItemCount - 1, true);
+                            rankOptions.SetItemToolTip(rankOptions.ItemCount - 1, rankReason.ToString());
                         }
                     }
 
