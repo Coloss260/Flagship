@@ -46,6 +46,14 @@ public sealed partial class HumanoidProfileEditor
     {
         foreach (var (jobId, button, rankIds) in _rankPriorities)
         {
+            // <FlagShip>
+            if (rankIds.Count <= 2)
+            {
+                button.SelectId(0);
+                continue;
+            }
+            // </FlagShip>
+
             ProtoId<RankPrototype>? preferredRank = null;
             Profile?.RankPreferences.TryGetValue(jobId, out preferredRank);
 
@@ -331,6 +339,8 @@ public sealed partial class HumanoidProfileEditor
                             rankOptions.SetItemToolTip(rankOptions.ItemCount - 1, rankReason.ToString());
                         }
                     }
+
+                    rankOptions.SelectId(0); // - FlagShip
 
                     if (rankProtoIds.Count <= 2)
                         rankOptions.Disabled = true;
