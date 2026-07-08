@@ -51,7 +51,7 @@ public abstract class SharedExplosionSystem : EntitySystem
     }
 
     /// <summary>
-    /// Given an entity with an explosive component, mark it as exploded without actually exploding it.
+    /// Flagship. Given an entity with an explosive component, mark it as exploded without actually exploding it.
     /// </summary>
     public virtual void DefuseExplosive(EntityUid uid, ExplosiveComponent? explosive = null, bool delete = true)
     {

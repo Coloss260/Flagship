@@ -173,5 +173,5 @@
   components:
   - type: ModularShieldShield
   - type: ModularShieldShieldVisuals
-  - type: RequireProjectileShooterNotOnSameGrid
+  - type: RequireShooterNotOnSameGrid
 

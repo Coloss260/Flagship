@@ -1,16 +1,17 @@
+using Robust.Shared.GameStates;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace Content.FlagShip.Shared.ModularShields.Components;
 
-[RegisterComponent]
+[RegisterComponent, NetworkedComponent]
 public sealed partial class ModularShieldFluxDestructionComponent : Component
 {
     /// <summary>
     /// The maximum rate at which this flux destruction component can destroy flux per second
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public int FluxDestructionRateMaximum = 20;
 
     /// <summary>
@@ -18,7 +19,7 @@ public sealed partial class ModularShieldFluxDestructionComponent : Component
     /// Lower numbers indicate higher priority and will be used first to destroy flux.
     /// Equal priority components will be used in an arbitrary order.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public int FluxDestructionPriority = 0;
 
 
@@ -27,7 +28,7 @@ public sealed partial class ModularShieldFluxDestructionComponent : Component
     /// The secondary priority for usage of this flux destruction component.
     /// Generated and arbitrary, used to have a consistent ordering across identical 
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public int FluxDestructionPriorityTieBreaker = 0;
 
     /// <summary>
@@ -36,7 +37,7 @@ public sealed partial class ModularShieldFluxDestructionComponent : Component
     /// This multiplier will just be treated as though the flux destruction rate maximum was lower/higher.
     /// As such any costs will be scaled down/up as well.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public float FluxDestructionWhileShieldProjectedRateMultiplier = 1;
 
     /// <summary>
@@ -46,7 +47,7 @@ public sealed partial class ModularShieldFluxDestructionComponent : Component
     /// e.g. You want the shield to generate 25% of the normal flux, but 'cost' the same amount it does normally.
     /// This would be a RateMultiplier of 0.25 and a CostMultiplier of 4.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public float FluxDestructionWhileShieldProjectedCostMultiplier = 1;
 
 
@@ -54,13 +55,13 @@ public sealed partial class ModularShieldFluxDestructionComponent : Component
     /// See <see cref="FluxDestructionWhileShieldProjectedRateMultiplier"/>.
     /// Same thing but for overloading.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public float FluxDestructionWhileOverloadedRateMultiplier = 0.1f;
 
     /// <summary>
     /// See <see cref="FluxDestructionWhileShieldProjectedCostMultiplier"/>.
     /// Same thing but for overloading.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public float FluxDestructionWhileOverloadedCostMultiplier = 10f;
 }

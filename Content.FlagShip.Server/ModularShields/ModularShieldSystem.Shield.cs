@@ -1,3 +1,4 @@
+using Content.FlagShip.Common.Weapons.Hitscan.Events;
 using Content.FlagShip.Shared.ModularShields.Components;
 using Content.Shared.Damage;
 using Content.Shared.Damage.Systems;
@@ -199,7 +200,7 @@ public partial class ModularShieldSystem
     {
         if (ent.Comp.ModularShieldCoreSource != null)
         {
-            var ev = new ModularShieldAbsorbedDamageEvent((float)args.DamageToTake.GetTotal());
+            var ev = new ModularShieldAbsorbedDamageEvent(args.DamageToTake);
             RaiseLocalEvent((EntityUid)ent.Comp.ModularShieldCoreSource, ref ev);
 
             args.Cancelled = true;

@@ -1,16 +1,17 @@
+using Robust.Shared.GameStates;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace Content.FlagShip.Shared.ModularShields.Components;
 
-[RegisterComponent]
+[RegisterComponent, NetworkedComponent]
 public sealed partial class ModularShieldEnergyGenerationComponent : Component
 {
     /// <summary>
     /// The maximum rate at which this energy generation component can generate energy per second.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public int EnergyGenerationRateMaximum = 20;
 
     /// <summary>
@@ -18,14 +19,14 @@ public sealed partial class ModularShieldEnergyGenerationComponent : Component
     /// Lower numbers indicate higher priority and will be used first to generate energy.
     /// Equal priority components will be used in an arbitrary order.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public int EnergyGenerationPriority = 0;
 
     /// <summary>
     /// The secondary priority for usage of this energy generation component.
     /// Generated and arbitrary, used to have a consistent ordering across identical 
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public int EnergyGenerationPriorityTieBreaker = 0;
 
     /// <summary>
@@ -34,7 +35,7 @@ public sealed partial class ModularShieldEnergyGenerationComponent : Component
     /// This multiplier will just be treated as though the energy generation rate maximum was lower/higher.
     /// As such any costs will be scaled down/up as well.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public float EnergyGenerationWhileShieldProjectedRateMultiplier = 1f;
 
     /// <summary>
@@ -44,20 +45,20 @@ public sealed partial class ModularShieldEnergyGenerationComponent : Component
     /// e.g. You want the shield to generate 25% of the normal energy, but 'cost' the same amount it does normally.
     /// This would be a RateMultiplier of 0.25 and a CostMultiplier of 4.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public float EnergyGenerationWhileShieldProjectedCostMultiplier = 1f;
 
     /// <summary>
     /// See <see cref="EnergyGenerationWhileShieldProjectedRateMultiplier"/>.
     /// Same thing but for overloading.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public float EnergyGenerationWhileOverloadedRateMultiplier = 0.1f;
 
     /// <summary>
     /// See <see cref="EnergyGenerationWhileShieldProjectedCostMultiplier"/>.
     /// Same thing but for overloading.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public float EnergyGenerationWhileOverloadedCostMultiplier = 10f;
 }

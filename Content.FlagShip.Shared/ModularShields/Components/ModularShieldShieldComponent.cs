@@ -1,6 +1,8 @@
+using Robust.Shared.GameStates;
+
 namespace Content.FlagShip.Shared.ModularShields.Components;
 
-[RegisterComponent]
+[RegisterComponent, NetworkedComponent]
 public sealed partial class ModularShieldShieldComponent : Component
 {
     [ViewVariables(VVAccess.ReadOnly)]
