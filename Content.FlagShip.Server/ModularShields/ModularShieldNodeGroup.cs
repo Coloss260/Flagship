@@ -203,29 +203,48 @@ public sealed partial class ModularShieldNodeGroup : BaseNodeGroup
 
     public IEnumerable<Entity<ModularShieldEnergyGenerationComponent>> OrderEnergyGenerationByPriority(IEnumerable<Entity<ModularShieldEnergyGenerationComponent>> entities, bool highestPriorityFirst = true)
     {
+        if (highestPriorityFirst)
+            return entities
+                .OrderByDescending(component => component.Comp.EnergyGenerationPriority) // Order by priority.
+                .ThenByDescending(component => component.Comp.EnergyGenerationPriorityTieBreaker); // Arbitrary ordering
+
         return entities
-            .OrderByDescending(component => component.Comp.EnergyGenerationPriority) // Order by priority (lower numbers = higher priority).
-            .ThenByDescending(component => component.Comp.EnergyGenerationPriorityTieBreaker); // Arbitrary ordering
+            .OrderBy(component => component.Comp.EnergyGenerationPriority) // Order by priority.
+            .ThenBy(component => component.Comp.EnergyGenerationPriorityTieBreaker); // Arbitrary
     }
 
     public IEnumerable<Entity<ModularShieldEnergyStorageComponent>> OrderEnergyStorageByPriority(IEnumerable<Entity<ModularShieldEnergyStorageComponent>> entities, bool highestPriorityFirst = true)
     {
-        return entities
-            .OrderByDescending(storage => storage.Comp.EnergyStoragePriority) // Order by priority (lower numbers = higher priority).
+        if (highestPriorityFirst)
+            return entities
+            .OrderByDescending(storage => storage.Comp.EnergyStoragePriority) // Order by priority.
             .ThenByDescending(storage => storage.Comp.EnergyStoragePriorityTieBreaker); // Arbitrary ordering
+
+        return entities
+        .OrderBy(storage => storage.Comp.EnergyStoragePriority) // Order by priority.
+        .ThenBy(storage => storage.Comp.EnergyStoragePriorityTieBreaker); // Arbitrary ordering
     }
 
     public IEnumerable<Entity<ModularShieldFluxStorageComponent>> OrderFluxStorageByPriority(IEnumerable<Entity<ModularShieldFluxStorageComponent>> entities, bool highestPriorityFirst = true)
     {
+        if (highestPriorityFirst)
+            return entities
+                .OrderByDescending(storage => storage.Comp.FluxStoragePriority) // Order by priority.
+                .ThenByDescending(storage => storage.Comp.FluxStoragePriorityTieBreaker); // Arbitrary ordering
         return entities
-            .OrderByDescending(storage => storage.Comp.FluxStoragePriority) // Order by priority (lower numbers = higher priority).
-            .ThenByDescending(storage => storage.Comp.FluxStoragePriorityTieBreaker); // Arbitrary ordering
+            .OrderBy(storage => storage.Comp.FluxStoragePriority) // Order by priority.
+            .ThenBy(storage => storage.Comp.FluxStoragePriorityTieBreaker); // Arbitrary ordering
     }
 
     public IEnumerable<Entity<ModularShieldFluxDestructionComponent>> OrderFluxDestructionByPriority(IEnumerable<Entity<ModularShieldFluxDestructionComponent>> entities, bool highestPriorityFirst = true)
     {
+        if (!highestPriorityFirst)
+            return entities
+                .OrderByDescending(component => component.Comp.FluxDestructionPriority) // Order by priority.
+                .ThenByDescending(component => component.Comp.FluxDestructionPriorityTieBreaker); // Arbitrary ordering
+
         return entities
-            .OrderByDescending(component => component.Comp.FluxDestructionPriority) // Order by priority (lower numbers = higher priority).
-            .ThenByDescending(component => component.Comp.FluxDestructionPriorityTieBreaker); // Arbitrary ordering
+            .OrderBy(component => component.Comp.FluxDestructionPriority) // Order by priority.
+            .ThenBy(component => component.Comp.FluxDestructionPriorityTieBreaker);
     }
 }

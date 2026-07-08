@@ -33,7 +33,7 @@ public sealed partial class ModularShieldSystem
         if (!Resolve(ent.Owner, ref appComp, ref visualizerComponent))
             return;
 
-        byte fillLevel = (byte)Math.Ceiling(ent.Comp.EnergyStored / ent.Comp.EnergyCapacity * visualizerComponent.MaxFillLevels);
+        var fillLevel = (int)Math.Ceiling(ent.Comp.EnergyStored / ent.Comp.EnergyCapacity * visualizerComponent.MaxFillLevels);
         _sharedAppearance.SetData(ent.Owner, StorageFillVisuals.FillLevel, fillLevel, appComp);
     }
 }

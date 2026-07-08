@@ -111,13 +111,14 @@
     sprite: Structures/Storage/tanks.rsi
     layers:
       - state: highwatertank-2
-      - state: highwatertank-2-1
-        map: ["enum.StorageFillVisuals.FillLevel"]
-        visible: false
+      - state: highwatertank-2-0
+        map: ["enum.StorageFillLayers.Fill"]
+        color: LightBlue
+        visible: true
   - type: Appearance
   - type: StorageFillVisualizer
     maxFillLevels: 7
-    fillBaseName: highwatertank-2-
+    fillBaseName: highwatertank-2
 
 
 
@@ -134,13 +135,14 @@
     sprite: Structures/Storage/tanks.rsi
     layers:
       - state: highfueltank-2
-      - state: highfueltank-2-1
-        map: ["enum.StorageFillVisuals.FillLevel"]
-        visible: false
+      - state: highfueltank-2-0
+        map: ["enum.StorageFillLayers.Fill"]
+        color: Purple
+        visible: true
   - type: Appearance
   - type: StorageFillVisualizer
     maxFillLevels: 7
-    fillBaseName: highfueltank-2-
+    fillBaseName: highfueltank-2
 
 
 
