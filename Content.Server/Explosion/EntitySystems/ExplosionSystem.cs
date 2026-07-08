@@ -174,6 +174,7 @@ public sealed partial class ExplosionSystem : SharedExplosionSystem
     }
 
     /// <summary>
+    /// Flagship.
     /// 'Explodes' the explosive without actually creating an explosion.
     /// </summary>
     /// <param name="uid"></param>

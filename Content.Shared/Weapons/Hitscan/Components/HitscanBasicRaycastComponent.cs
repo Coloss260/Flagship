@@ -19,5 +19,5 @@ public sealed partial class HitscanBasicRaycastComponent : Component
     /// The collision mask the hitscan ray uses to collide with other objects. See the enum for more information
     /// </summary>
     [DataField]
-    public CollisionGroup CollisionMask = CollisionGroup.Opaque | CollisionGroup.ModularShield;
+    public CollisionGroup CollisionMask = CollisionGroup.Opaque | CollisionGroup.ModularShield; // Flagship. Added ModularShield collision group to allow for hitscans to hit modular shield.
 }

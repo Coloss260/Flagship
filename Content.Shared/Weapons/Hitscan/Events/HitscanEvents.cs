@@ -95,7 +95,6 @@ public struct HitscanRaycastFiredEvent
     public HitscanRaycastFiredData Data;
 }
 
-
 [ByRefEvent]
 public record struct HitscanDamageDealtEvent
 {
