@@ -18,7 +18,7 @@ public sealed partial class ShooterDataCacheSystem : EntitySystem
     }
 
     [ByRefEvent]
-    public record struct ShooterUpdatedEvent(EntityUid Shooter)
+    public record struct ShooterUpdatedEvent(EntityUid Shooter, bool willShooterEntityBeDeletedSoon = false)
     {
 
     }

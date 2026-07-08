@@ -5,6 +5,7 @@ using Robust.Server.GameObjects;
 using Robust.Shared.Containers;
 using Robust.Shared.Map;
 using Robust.Shared.Random;
+using static Content.FlagShip.Common.Projectiles.Systems.ShooterDataCacheSystem; // Flagship.
 
 namespace Content.Server.Explosion.EntitySystems;
 
@@ -87,6 +88,13 @@ public sealed partial class ProjectileGrenadeSystem : EntitySystem
             var direction = angle.ToVec().Normalized();
             var velocity = _random.NextVector2(component.MinVelocity, component.MaxVelocity);
             _gun.ShootProjectile(contentUid, direction, velocity, null);
+
+            // Flagship.
+            // Raising event to store shooter information at time of firing. Used for modular shields.
+            // Because we aren't passing a gunUid to the _gun.ShootProjectile method (as the relevant entity is being deleted shortly and isn't safe to store)
+            // we'll have to manually raise the event to allow for storing of data in the shooter data cache.
+            var shooterEvent = new ShooterUpdatedEvent(uid, true);
+            RaiseLocalEvent(contentUid, ref shooterEvent);
         }
     }
 

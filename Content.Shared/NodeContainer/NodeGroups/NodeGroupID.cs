@@ -19,7 +19,7 @@ public enum NodeGroupID : byte
     ExCable,
 
     /// <summary>
-    /// Flagship fork modification.
+    /// Flagship.
     /// Group used by the modular shield.
     /// </summary>
     ModularShield

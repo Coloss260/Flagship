@@ -173,13 +173,7 @@ public sealed partial class ExplosionSystem : SharedExplosionSystem
             QueueDel(uid);
     }
 
-    /// <summary>
-    /// Flagship.
-    /// 'Explodes' the explosive without actually creating an explosion.
-    /// </summary>
-    /// <param name="uid"></param>
-    /// <param name="explosive"></param>
-    /// <param name="delete"></param>
+    /// <inheritdoc/>
     public override void DefuseExplosive(EntityUid uid, ExplosiveComponent? explosive = null, bool delete = true)
     {
         if (!Resolve(uid, ref explosive, logMissing: false))

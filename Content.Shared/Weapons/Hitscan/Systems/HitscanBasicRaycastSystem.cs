@@ -1,5 +1,5 @@
 using System.Numerics;
-using Content.FlagShip.Common.Weapons.Hitscan.Events;
+using Content.FlagShip.Common.Weapons.Hitscan.Events; // Flagship
 using Content.Shared.Administration.Logs;
 using Content.Shared.Damage.Components;
 using Content.Shared.Database;

@@ -1,4 +1,4 @@
-using Content.FlagShip.Common.Weapons.Hitscan.Events;
+using Content.FlagShip.Common.Weapons.Hitscan.Events; // Flagship
 using Content.Shared.Damage.Systems;
 using Content.Shared.Weapons.Hitscan.Components;
 using Content.Shared.Weapons.Hitscan.Events;
