@@ -24,7 +24,7 @@
       params:
         pitch: 0.5
     projectionEndCalmSound: !type:SoundPathSpecifier
-      path: "/Audio/Effects/teleport_arrival.ogg"
+      path: "/Audio/Items/Medical/jet_injector.ogg"
       params:
         pitch: 0.5
     projectionEndViolentSound: !type:SoundPathSpecifier
@@ -41,6 +41,7 @@
       params:
         pitch: 1
         volume: 0
+        variation: 0.1
     absorbedDamageSoundScalingMinimumDamage: 20
     absorbedDamageSoundScalingMaximumDamage: 200
     absorbedDamageSoundScalingMinimumVolume: -8

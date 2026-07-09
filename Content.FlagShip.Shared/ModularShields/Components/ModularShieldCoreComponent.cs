@@ -152,7 +152,7 @@ public sealed partial class ModularShieldCoreComponent : Component
     /// How long the cooldown is on shield projection toggling.
     /// </summary>
     [DataField]
-    public TimeSpan ShieldProjectionToggleCooldownTime = TimeSpan.FromSeconds(1.0);
+    public TimeSpan ShieldProjectionToggleCooldownTime = TimeSpan.FromSeconds(0.5);
 
     /// <summary>
     /// On shield projection starting.
@@ -164,7 +164,7 @@ public sealed partial class ModularShieldCoreComponent : Component
     /// On shield projection ending under normal conditions.
     /// </summary>
     [DataField]
-    public SoundSpecifier ProjectionEndCalmSound = new SoundPathSpecifier("/Audio/Effects/teleport_departure.ogg");
+    public SoundSpecifier ProjectionEndCalmSound = new SoundPathSpecifier("/Audio/Items/Medical/jet_injector.ogg");
 
     /// <summary>
     /// On shield projectiong ending due to 'violent' means. (e.g. out of energy or overload due to flux).

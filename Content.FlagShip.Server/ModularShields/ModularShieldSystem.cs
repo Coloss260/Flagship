@@ -5,6 +5,7 @@ using Content.Server.Station.Systems;
 using Content.Shared.EntityEffects.Effects.StatusEffects;
 using Content.Shared.Examine;
 using Content.Shared.Explosion.Components;
+using Content.Shared.Interaction;
 using Content.Shared.NodeContainer;
 using Content.Shared.Projectiles;
 using Content.Shared.Trigger.Components.Effects;
@@ -47,6 +48,7 @@ public sealed partial class ModularShieldSystem : EntitySystem
         SubscribeLocalEvent<ModularShieldCoreComponent, ModularShieldAbsorbedProjectileEvent>(OnModularShieldProjectileAbsorbed);
         SubscribeLocalEvent<ModularShieldCoreComponent, ModularShieldAbsorbedDamageEvent>(OnModularShieldDamageAbsorbed);
         SubscribeLocalEvent<ModularShieldCoreComponent, ComponentShutdown>(OnModularShieldCoreShutdown);
+        SubscribeLocalEvent<ModularShieldCoreComponent, ActivateInWorldEvent>(OnShieldCoreActivateInWorld);
 
         SubscribeLocalEvent<ModularShieldCoreComponent, ExaminedEvent>(OnShieldCoreExamined);
 
@@ -65,10 +67,7 @@ public sealed partial class ModularShieldSystem : EntitySystem
 
         while (query.MoveNext(out var uid, out var core, out var nodeContainer))
         {
-            if (core.IsMasterShieldCore)
-            {
-                UpdateCore(frameTime, uid, core, nodeContainer);
-            }
+            UpdateCore(frameTime, uid, core, nodeContainer);
         }
     }
 
@@ -88,11 +87,15 @@ public sealed partial class ModularShieldSystem : EntitySystem
             return;
 
         if (!_power.IsPowered(shieldCoreUid))
+            return;
+
+        // Exit early if we're not the master shield core, performing minor tasks that don't require.
+        if (!shieldCore.IsMasterShieldCore)
         {
+            UpdateShieldCoreDisplay((shieldCoreUid, shieldCore));
+            StopModularShieldProjection((shieldCoreUid, shieldCore));
             return;
         }
-
-
 
         // Perform passive shield energy drain.
         if (shieldCore.ShieldProjected != null)
@@ -272,7 +275,7 @@ public sealed partial class ModularShieldSystem : EntitySystem
 
             if (shutdown)
             {
-                StopModularShieldProjection(shieldCoreUid, shieldCoreComponent, violent);
+                StopModularShieldProjection((shieldCoreUid, shieldCoreComponent), violent);
             }
         }
 
@@ -285,7 +288,7 @@ public sealed partial class ModularShieldSystem : EntitySystem
     {
         if (component.ShieldProjected != null && component.ShieldedEntity != null)
         {
-            StopModularShieldProjection(uid, component, true);
+            StopModularShieldProjection((uid, component), true);
         }
     }
 
@@ -315,27 +318,27 @@ public sealed partial class ModularShieldSystem : EntitySystem
         return success;
     }
 
-    private bool StopModularShieldProjection(EntityUid uid, ModularShieldCoreComponent component, bool violent = false)
+    private bool StopModularShieldProjection(Entity<ModularShieldCoreComponent> shieldCore, bool violent = false)
     {
-        if (component.ShieldedEntity == null || component.ShieldProjected == null)
+        if (shieldCore.Comp.ShieldedEntity == null || shieldCore.Comp.ShieldProjected == null)
             return false;
 
-        bool success = UnshieldEntity((EntityUid)component.ShieldedEntity);
+        bool success = UnshieldEntity((EntityUid)shieldCore.Comp.ShieldedEntity);
 
         // Shield core may be terminating at this point so don't use it.
 
         if (violent)
         {
-            _audio.PlayGlobal(component.ProjectionEndViolentSound, GetShieldSoundPlayerFilter((uid, component)), true, component.ProjectionEndViolentSound.Params);
+            _audio.PlayGlobal(shieldCore.Comp.ProjectionEndViolentSound, GetShieldSoundPlayerFilter(shieldCore), true, shieldCore.Comp.ProjectionEndViolentSound.Params);
         }
         else
         {
-            _audio.PlayGlobal(component.ProjectionEndCalmSound, GetShieldSoundPlayerFilter((uid, component)), true, component.ProjectionEndCalmSound.Params);
+            _audio.PlayGlobal(shieldCore.Comp.ProjectionEndCalmSound, GetShieldSoundPlayerFilter(shieldCore), true, shieldCore.Comp.ProjectionEndCalmSound.Params);
         }
 
 
-        component.ShieldProjected = null;
-        component.ShieldedEntity = null;
+        shieldCore.Comp.ShieldProjected = null;
+        shieldCore.Comp.ShieldedEntity = null;
 
         return success;
     }
@@ -348,7 +351,11 @@ public sealed partial class ModularShieldSystem : EntitySystem
         if (!Resolve(ent.Owner, ref appComp))
             return;
 
-        if (ent.Comp.FluxOverloadEnd != null)
+        if (!ent.Comp.IsMasterShieldCore)
+        {
+            _sharedAppearance.SetData(ent.Owner, ModularShieldCoreVisuals.DisplayState, ModularShieldCoreState.Off, appComp);
+        }
+        else if (ent.Comp.FluxOverloadEnd != null)
         {
             _sharedAppearance.SetData(ent.Owner, ModularShieldCoreVisuals.DisplayState, ModularShieldCoreState.FluxOverload, appComp);
         }
@@ -417,8 +424,27 @@ public sealed partial class ModularShieldSystem : EntitySystem
 
                 var audioParams = ent.Comp.AbsorbedDamageSound.Params;
 
-                _audio.PlayGlobal(ent.Comp.AbsorbedDamageSound, filter, true, audioParams.WithVolume(audioParams.Volume + soundVolumeScale).WithPitchScale(audioParams.Pitch * soundPitchScale));
+                _audio.PlayGlobal(
+                    ent.Comp.AbsorbedDamageSound,
+                    filter,
+                    true,
+                    audioParams
+                        .WithVolume(audioParams.Volume + soundVolumeScale)
+                        .WithPitchScale(audioParams.Pitch * soundPitchScale)
+                        .WithVariation(audioParams.Variation * soundPitchScale));
             }
+        }
+    }
+
+
+
+    private void OnShieldCoreActivateInWorld(Entity<ModularShieldCoreComponent> ent, ref ActivateInWorldEvent args)
+    {
+        if (args.Complex && ent.Comp.ShieldProjectionToggleCooldown == null || ent.Comp.ShieldProjectionToggleCooldown < _gameTiming.CurTime)
+        {
+            ent.Comp.ShieldProjectionEnabled = !ent.Comp.ShieldProjectionEnabled;
+            ent.Comp.ShieldProjectionToggleCooldown = _gameTiming.CurTime + ent.Comp.ShieldProjectionToggleCooldownTime;
+            args.Handled = true;
         }
     }
 
