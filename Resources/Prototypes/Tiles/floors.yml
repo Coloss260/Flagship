@@ -29,7 +29,7 @@
   id: FloorSteel
   parent: BaseStationTile
   name: tiles-steel-floor
-  sprite: /Textures/Tiles/steel.png
+  sprite: /Textures/_Flagship/Tiles/steel.png # Flagship
   variants: 4
   placementVariants:
   - 1.0
@@ -114,7 +114,7 @@
   id: FloorSteelMono
   parent: BaseStationTile
   name: tiles-steel-floor-mono
-  sprite: /Textures/Tiles/steel_mono.png
+  sprite: /Textures/_Flagship/Tiles/steel_mono.png # Flagship
   variants: 4
   placementVariants:
   - 1.0
@@ -622,7 +622,7 @@
   id: FloorTechMaint
   parent: BaseStationTile
   name: tiles-techmaint-floor
-  sprite: /Textures/Tiles/tech_maint.png
+  sprite: /Textures/_Flagship/Tiles/tech_maint.png # Flagship
   footstepSounds:
     collection: FootstepHull
   itemDrop: FloorTileItemTechmaint

@@ -768,7 +768,7 @@ public sealed partial class AdminVerbSystem
         {
             Text = lockerName,
             Category = VerbCategory.Smite,
-            Icon = new SpriteSpecifier.Rsi(new("/Textures/Structures/Storage/closet.rsi"), "generic"),
+            Icon = new SpriteSpecifier.Rsi(new("/Textures/_Flagship/Structures/Storage/closet.rsi # Flagship"), "generic"),
             Act = () =>
             {
                 var xform = Transform(args.Target);

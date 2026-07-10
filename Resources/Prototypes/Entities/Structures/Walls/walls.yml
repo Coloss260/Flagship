@@ -565,9 +565,9 @@
   name: reinforced wall
   components:
   - type: Sprite
-    sprite: Structures/Walls/solid.rsi
+    sprite: _Flagship/Structures/Walls/solid.rsi # Flagship
   - type: Icon
-    sprite: Structures/Walls/solid.rsi
+    sprite: _Flagship/Structures/Walls/solid.rsi # Flagship
     state: rgeneric
   - type: Construction
     graph: Girder
@@ -908,13 +908,13 @@
   name: solid wall
   components:
   - type: Sprite
-    sprite: Structures/Walls/solid.rsi
+    sprite: _Flagship/Structures/Walls/solid.rsi # Flagship
   - type: WallReplacementMarker
   - type: Construction
     graph: Girder
     node: wall
   - type: Icon
-    sprite: Structures/Walls/solid.rsi
+    sprite: _Flagship/Structures/Walls/solid.rsi # Flagship
   - type: RCDDeconstructable
     cost: 6
     delay: 8
@@ -943,10 +943,10 @@
   components:
   - type: Sprite
     drawdepth: Walls
-    sprite: Structures/Walls/solid_diagonal.rsi
+    sprite: _Flagship/Structures/Walls/solid_diagonal.rsi # Flagship
     state: state0
   - type: Icon
-    sprite: Structures/Walls/solid_diagonal.rsi
+    sprite: _Flagship/Structures/Walls/solid_diagonal.rsi # Flagship
     state: state0
   - type: Destructible
     thresholds:

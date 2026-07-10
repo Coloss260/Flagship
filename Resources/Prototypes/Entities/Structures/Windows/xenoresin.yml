@@ -6,9 +6,9 @@
   components:
   - type: Sprite
     drawdepth: WallTops
-    sprite: Structures/Windows/xeno_resin.rsi
+    sprite: _Flagship/Structures/Windows/xeno_resin.rsi
   - type: Icon
-    sprite: Structures/Windows/xeno_resin.rsi
+    sprite: _Flagship/Structures/Windows/xeno_resin.rsi
   - type: Destructible
     thresholds:
     - trigger:
@@ -32,4 +32,4 @@
     damageDivisor: 4
     trackAllDamage: true
     damageOverlay:
-      sprite: Structures/Windows/cracks.rsi
+      sprite: _Flagship/Structures/Windows/cracks.rsi
