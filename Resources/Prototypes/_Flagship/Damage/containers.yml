@@ -1,0 +1,40 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later
+# Goobstation - Blob
+- type: damageContainer
+  id: Blob
+  supportedGroups:
+  - Brute
+  - Burn
+
+- type: damageContainer
+  id: SiliconRadiation
+  supportedGroups:
+    - Brute
+    - Electronic
+  supportedTypes:
+    - Heat
+    - Shock
+    - Radiation
+
+# based on inorganic
+- type: damageContainer
+  id: ClowncarDamageContainer
+  supportedGroups:
+  - Brute
+  supportedTypes:
+  - Heat
+  - Shock
+
+- type: damageContainer
+  id: OnlyStructural
+  supportedTypes:
+  - Structural
+
+- type: damageContainer
+  id: Barricade
+  supportedGroups:
+  - Brute
+  supportedTypes:
+  - Heat
+  - Caustic
+  - Structural

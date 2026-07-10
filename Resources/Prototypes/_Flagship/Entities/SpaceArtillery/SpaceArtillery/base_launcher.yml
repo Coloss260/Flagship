@@ -11,7 +11,7 @@
     priority: 1
   - type: ApcPowerReceiver
     powerLoad: 250
-  - type: Injurable
+  - type: Damageable
     damageContainer: StructuralInorganic
     damageModifierSet: StructuralMetallic
   - type: Destructible
