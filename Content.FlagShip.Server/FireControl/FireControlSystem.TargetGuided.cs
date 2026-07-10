@@ -11,7 +11,7 @@ namespace Content.FlagShip.Server.FireControl;
 
 public sealed partial class FireControlSystem
 {
-    [Dependency] private readonly TargetGuidedSystem _targetGuided = null!;
+    [Dependency] private TargetGuidedSystem _targetGuided = null!;
 
     /// <summary>
     /// List of active guided missiles that need cursor position updates
@@ -217,7 +217,7 @@ public sealed partial class FireControlSystem
         // Remove positions for consoles without any missiles
         foreach (var consoleUid in _consoleMousePositions.Keys.ToList())
         {
-            if (!activeConsoles.Contains(consoleUid) || !EntityManager.EntityExists(consoleUid))
+            if (!activeConsoles.Contains(consoleUid) || !Exists(consoleUid))
             {
                 _consoleMousePositions.Remove(consoleUid);
             }

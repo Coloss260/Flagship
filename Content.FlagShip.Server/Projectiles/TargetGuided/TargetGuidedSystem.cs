@@ -10,11 +10,11 @@ namespace Content.FlagShip.Server.Projectiles.TargetGuided;
 /// <summary>
 /// Handles the logic for cursor-guided projectiles.
 /// </summary>
-public sealed class TargetGuidedSystem : EntitySystem
+public sealed partial class TargetGuidedSystem : EntitySystem
 {
-    [Dependency] private readonly SharedTransformSystem _transform = null!;
-    [Dependency] private readonly RotateToFaceSystem _rotateToFace = null!;
-    [Dependency] private readonly PhysicsSystem _physics = null!;
+    [Dependency] private SharedTransformSystem _transform = null!;
+    [Dependency] private RotateToFaceSystem _rotateToFace = null!;
+    [Dependency] private PhysicsSystem _physics = null!;
 
     public override void Initialize()
     {
@@ -194,7 +194,7 @@ public sealed class TargetGuidedSystem : EntitySystem
         // Check if controlling console still exists
         if (component.ControllingConsole.HasValue)
         {
-            if (!EntityManager.EntityExists(component.ControllingConsole.Value))
+            if (!Exists(component.ControllingConsole.Value))
                 return true;
 
             // Check if console is still powered/functioning
