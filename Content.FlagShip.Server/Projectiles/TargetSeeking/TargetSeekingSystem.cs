@@ -163,11 +163,10 @@ public sealed partial class TargetSeekingSystem : EntitySystem
     /// </summary>
     public void ApplyPredictiveTracking(EntityUid uid, TargetSeekingComponent comp, TransformComponent xform, float frameTime)
     {
-        if (!comp.CurrentTarget.HasValue || !TryComp<TransformComponent>(comp.CurrentTarget.Value, out var targetXform))
-        {
+        if (!comp.CurrentTarget.HasValue)
             return;
-        }
 
+        var targetXform = Transform(comp.CurrentTarget.Value);
         // Get current positions
         var currentTargetPosition = _transform.ToMapCoordinates(targetXform.Coordinates).Position;
         var sourcePosition = _transform.ToMapCoordinates(xform.Coordinates).Position;
@@ -211,10 +210,14 @@ public sealed partial class TargetSeekingSystem : EntitySystem
     /// </summary>
     public void ApplyDirectTracking(EntityUid uid, TargetSeekingComponent comp, TransformComponent xform, float frameTime)
     {
-        if (!comp.CurrentTarget.HasValue || !TryComp<TransformComponent>(comp.CurrentTarget.Value, out var targetXform))
-        {
+        if (!comp.CurrentTarget.HasValue)
             return;
-        }
+
+        var targetUid = comp.CurrentTarget.Value;
+        if (Deleted(targetUid))
+            return;
+
+        var targetXform = Transform(targetUid);
 
         // Get the angle directly toward the target
         var angleToTarget = (
