@@ -54,9 +54,9 @@
   components:
   - type: Sprite
     drawdepth: WallTops
-    sprite: Structures/Windows/plastitanium_window.rsi
+    sprite: _Flagship/Structures/Windows/plastitanium_window.rsi # Flagship
   - type: Icon
-    sprite: Structures/Windows/plastitanium_window.rsi
+    sprite: _Flagship/Structures/Windows/plastitanium_window.rsi # Flagship
     state: full
   - type: IconSmooth
     key: windows
@@ -110,7 +110,7 @@
     damageDivisor: 20
     trackAllDamage: true
     damageOverlay:
-      sprite: Structures/Windows/cracks.rsi
+      sprite: _Flagship/Structures/Windows/cracks.rsi # Flagship
   - type: Repairable
     fuelCost: 15
     doAfterDelay: 3
@@ -128,14 +128,14 @@
   components:
   - type: Sprite
     drawdepth: WallTops
-    sprite: Structures/Windows/plastitanium_window_diagonal.rsi
+    sprite: _Flagship/Structures/Windows/plastitanium_window_diagonal.rsi # Flagship
     state: state0
   - type: Tag
     tags:
     - Diagonal
     - Window
   - type: Icon
-    sprite: Structures/Windows/plastitanium_window_diagonal.rsi
+    sprite: _Flagship/Structures/Windows/plastitanium_window_diagonal.rsi # Flagship
     state: state0
   - type: IconSmooth
     mode: Diagonal
@@ -200,7 +200,7 @@
     damageDivisor: 20
     trackAllDamage: true
     damageOverlay:
-      sprite: Structures/Windows/cracks_diagonal.rsi
+      sprite: _Flagship/Structures/Windows/cracks_diagonal.rsi # Flagship
   - type: Repairable
     fuelCost: 15
     doAfterDelay: 3

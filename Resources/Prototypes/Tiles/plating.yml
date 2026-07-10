@@ -14,7 +14,7 @@
   id: Plating
   parent: BasePlating
   name: tiles-plating
-  sprite: /Textures/Tiles/plating.png
+  sprite: /Textures/_Flagship/Tiles/plating.png # Flagship
 
 - type: tile
   id: PlatingRCD

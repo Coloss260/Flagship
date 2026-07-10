@@ -11,7 +11,7 @@
     noRot: true
   - type: Sprite
     noRot: true
-    sprite: Structures/Storage/closet.rsi
+    sprite: _Flagship/Structures/Storage/closet.rsi # Flagship
     layers:
     - state: generic
       map: ["enum.StorageVisualLayers.Base"]

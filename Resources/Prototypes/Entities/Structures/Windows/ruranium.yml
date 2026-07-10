@@ -5,9 +5,9 @@
   components:
   - type: Sprite
     drawdepth: WallTops
-    sprite: Structures/Windows/reinforced_uranium_window.rsi
+    sprite: _Flagship/Structures/Windows/reinforced_uranium_window.rsi # Flagship
   - type: Icon
-    sprite: Structures/Windows/reinforced_uranium_window.rsi
+    sprite: _Flagship/Structures/Windows/reinforced_uranium_window.rsi # Flagship
   - type: Damageable
     damageModifierSet: RGlass
   - type: Injurable
@@ -42,7 +42,7 @@
     damageDivisor: 6
     trackAllDamage: true
     damageOverlay:
-      sprite: Structures/Windows/cracks.rsi
+      sprite: _Flagship/Structures/Windows/cracks.rsi # Flagship
   - type: StaticPrice
     price: 215
   - type: RadiationBlocker
@@ -59,10 +59,10 @@
     - Window
   components:
   - type: Sprite
-    sprite: Structures/Windows/directional.rsi
+    sprite: _Flagship/Structures/Windows/directional.rsi # Flagship
     state: uranium_reinforced_window
   - type: Icon
-    sprite: Structures/Windows/directional.rsi
+    sprite: _Flagship/Structures/Windows/directional.rsi # Flagship
     state: uranium_reinforced_window
   - type: Construction
     graph: WindowDirectional
@@ -73,7 +73,7 @@
     damageDivisor: 3
     trackAllDamage: true
     damageOverlay:
-      sprite: Structures/Windows/cracks_directional.rsi
+      sprite: _Flagship/Structures/Windows/cracks_directional.rsi # Flagship
   - type: Damageable
     damageModifierSet: RGlass
   - type: Destructible
@@ -111,7 +111,7 @@
   components:
   - type: Sprite
     drawdepth: WallTops
-    sprite: Structures/Windows/reinforced_uranium_diagonal.rsi
+    sprite: _Flagship/Structures/Windows/reinforced_uranium_diagonal.rsi # Flagship
     state: state0
   - type: Tag
     tags:
@@ -122,7 +122,7 @@
     key: windows
     base: state
   - type: Icon
-    sprite: Structures/Windows/reinforced_uranium_diagonal.rsi
+    sprite: _Flagship/Structures/Windows/reinforced_uranium_diagonal.rsi # Flagship
     state: state0
   - type: Fixtures
     fixtures:
@@ -144,7 +144,7 @@
     - East
   - type: DamageVisuals
     damageOverlay:
-      sprite: Structures/Windows/cracks_diagonal.rsi
+      sprite: _Flagship/Structures/Windows/cracks_diagonal.rsi # Flagship
   - type: Construction
     graph: WindowDiagonal
     node: reinforcedUraniumWindowDiagonal

@@ -1,0 +1,117 @@
+# Sterile techmaint tiles
+
+- type: entity
+  name: sterile techmaint tile
+  parent: FloorTileItemBase
+  id: FloorTileItemTechmaintSterile
+  components:
+  - type: Sprite
+    state: steelmaintfloor
+  - type: Item
+    heldPrefix: dark
+  - type: FloorTile
+    outputs:
+    - Plating
+    - FloorTechMaintSterile
+  - type: Stack
+    stackType: FloorTileTechmaintSterile
+
+- type: stack
+  id: FloorTileTechmaintSterile
+  name: sterile-techmaint-tile
+  spawn: FloorTileItemTechmaintSterile
+  maxCount: 30
+
+# maint tile
+
+- type: entity
+  name: sterile maint tile
+  parent: FloorTileItemBase
+  id: FloorTileItemMaintSterile
+  components:
+  - type: Sprite
+    state: steelmaintfloor
+  - type: Item
+    heldPrefix: dark
+  - type: FloorTile
+    outputs:
+    - Plating
+    - FloorMaintSterile
+  - type: Stack
+    stackType: FloorTileMaintSterile
+
+- type: stack
+  id: FloorTileMaintSterile
+  name: sterile-maint-tile
+  spawn: FloorTileItemMaintSterile
+  maxCount: 30
+
+# mono maint tile
+
+- type: entity
+  name: sterile maint mono tile
+  parent: FloorTileItemBase
+  id: FloorTileItemMaintMonoSterile
+  components:
+  - type: Sprite
+    state: steel-mono
+  - type: Item
+    heldPrefix: dark
+  - type: FloorTile
+    outputs:
+    - Plating
+    - FloorMaintMonoSterile
+  - type: Stack
+    stackType: FloorTileMaintMonoSterile
+
+- type: stack
+  id: FloorTileMaintMonoSterile
+  name: sterile-maint-mono-tile
+  spawn: FloorTileItemMaintMonoSterile
+  maxCount: 30
+
+# Grid floors
+
+- type: entity
+  name: maintenance grid tile
+  parent: FloorTileItemBase
+  id: FloorTileItemGrid
+  components:
+  - type: Sprite
+    state: shuttlegrey
+  - type: Item
+    heldPrefix: dark
+  - type: FloorTile
+    outputs:
+    - Plating
+    - FloorMaintGrid
+  - type: Stack
+    stackType: FloorTileGrid
+
+- type: stack
+  id: FloorTileGrid
+  name: maintenance-grid-tile
+  spawn: FloorTileItemGrid
+  maxCount: 30
+
+- type: entity
+  name: dark maintenance grid tile
+  parent: FloorTileItemBase
+  id: FloorTileItemGridDark
+  components:
+  - type: Sprite
+    state: shuttlegrey
+  - type: Item
+    heldPrefix: dark
+  - type: FloorTile
+    outputs:
+    - Plating
+    - FloorMaintGridDark
+  - type: Stack
+    stackType: FloorTileGridDark
+
+- type: stack
+  id: FloorTileGridDark
+  name: dark-maintenance-grid-tile
+  spawn: FloorTileItemGridDark
+  maxCount: 30

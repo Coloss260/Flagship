@@ -832,7 +832,7 @@
   - type: SpeakOnUIClosed
     pack: GenericVendGoodbyes
   - type: Sprite
-    sprite: Structures/Machines/VendingMachines/magivend.rsi
+    sprite: _Flagship/Structures/Machines/VendingMachines/magivend.rsi # Flagship
     layers:
     - state: "off"
       map: ["enum.VendingMachineVisualLayers.Base"]
@@ -893,7 +893,7 @@
     ejectState: eject-unshaded
     denyState: deny-unshaded
   - type: Sprite
-    sprite: Structures/Machines/VendingMachines/engivend.rsi
+    sprite: _Flagship/Structures/Machines/VendingMachines/engivend.rsi # Flagship
     layers:
     - state: "off"
       map: ["enum.VendingMachineVisualLayers.Base"]
@@ -1379,7 +1379,7 @@
     ejectState: eject-unshaded
     denyState: deny-unshaded
   - type: Sprite
-    sprite: Structures/Machines/VendingMachines/youtool.rsi
+    sprite: _Flagship/Structures/Machines/VendingMachines/youtool.rsi # Flagship
     layers:
     - state: "off"
       map: ["enum.VendingMachineVisualLayers.Base"]
@@ -1573,7 +1573,7 @@
   - type: SpeakOnUIClosed
     pack: LawDrobeGoodbyes
   - type: Sprite
-    sprite: Structures/Machines/VendingMachines/lawdrobe.rsi
+    sprite: _Flagship/Structures/Machines/VendingMachines/lawdrobe.rsi # Flagship
     layers:
     - state: "off"
       map: ["enum.VendingMachineVisualLayers.Base"]
@@ -1689,7 +1689,7 @@
   - type: SpeakOnUIClosed
     pack: GenericVendGoodbyes
   - type: Sprite
-    sprite: Structures/Machines/VendingMachines/cargodrobe.rsi
+    sprite: _Flagship/Structures/Machines/VendingMachines/cargodrobe.rsi # Flagship
     layers:
     - state: "off"
       map: ["enum.VendingMachineVisualLayers.Base"]
@@ -1721,7 +1721,7 @@
   - type: SpeakOnUIClosed
     pack: GenericVendGoodbyes
   - type: Sprite
-    sprite: Structures/Machines/VendingMachines/medidrobe.rsi
+    sprite: _Flagship/Structures/Machines/VendingMachines/medidrobe.rsi # Flagship
     layers:
     - state: "off"
       map: ["enum.VendingMachineVisualLayers.Base"]
@@ -1749,7 +1749,7 @@
   - type: SpeakOnUIClosed
     pack: GenericVendGoodbyes
   - type: Sprite
-    sprite: Structures/Machines/VendingMachines/chemdrobe.rsi
+    sprite: _Flagship/Structures/Machines/VendingMachines/chemdrobe.rsi # Flagship
     layers:
     - state: "off"
       map: ["enum.VendingMachineVisualLayers.Base"]
@@ -1837,7 +1837,7 @@
   - type: SpeakOnUIClosed
     pack: GenericVendGoodbyes
   - type: Sprite
-    sprite: Structures/Machines/VendingMachines/engidrobe.rsi
+    sprite: _Flagship/Structures/Machines/VendingMachines/engidrobe.rsi # Flagship
     layers:
     - state: "off"
       map: ["enum.VendingMachineVisualLayers.Base"]
@@ -2073,7 +2073,7 @@
   - type: SpeakOnUIClosed
     pack: GenericVendGoodbyes
   - type: Sprite
-    sprite: Structures/Machines/VendingMachines/virodrobe.rsi
+    sprite: _Flagship/Structures/Machines/VendingMachines/virodrobe.rsi # Flagship
     layers:
     - state: "off"
       map: ["enum.VendingMachineVisualLayers.Base"]
@@ -2228,7 +2228,7 @@
     denyState: deny
     ejectDelay: 2
   - type: Sprite
-    sprite: Structures/Machines/VendingMachines/chemvend.rsi
+    sprite: _Flagship/Structures/Machines/VendingMachines/chemvend.rsi # Flagship
     layers:
     - state: "off"
       map: ["enum.VendingMachineVisualLayers.Base"]

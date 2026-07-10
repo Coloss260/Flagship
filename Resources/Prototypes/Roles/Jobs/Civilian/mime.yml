@@ -41,7 +41,7 @@
     priority: -1
     useDelay: 30
     icon:
-      sprite: Structures/Walls/solid.rsi
+      sprite: _Flagship/Structures/Walls/solid.rsi # Flagship
       state: full
   - type: InstantAction
     event: !type:InvisibleWallActionEvent
