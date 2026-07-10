@@ -42,7 +42,7 @@
 
 - type: stack
   id: FloorTileMaintSterile
-  name: sterile maint tile
+  name: sterile-maint-tile
   spawn: FloorTileItemMaintSterile
   maxCount: 30
 

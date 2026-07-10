@@ -8,3 +8,4 @@ sterile-techmaint-tile = sterile techmaint tile
 sterile-maint-mono-tile = sterile maint mono tile
 maintenance-grid-tile = maintenance grid tile
 dark-maintenance-grid-tile = dark maintenance grid tile
+sterile-maint-tile = sterile maint tile
