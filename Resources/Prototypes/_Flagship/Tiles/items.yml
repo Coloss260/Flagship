@@ -18,7 +18,7 @@
 
 - type: stack
   id: FloorTileTechmaintSterile
-  name: sterile techmaint tile
+  name: sterile-techmaint-tile
   spawn: FloorTileItemTechmaintSterile
   maxCount: 30
 
@@ -66,7 +66,7 @@
 
 - type: stack
   id: FloorTileMaintMonoSterile
-  name: sterile maint mono tile
+  name: sterile-maint-mono-tile
   spawn: FloorTileItemMaintMonoSterile
   maxCount: 30
 
@@ -90,7 +90,7 @@
 
 - type: stack
   id: FloorTileGrid
-  name: maintenance grid tile
+  name: maintenance-grid-tile
   spawn: FloorTileItemGrid
   maxCount: 30
 
@@ -112,6 +112,6 @@
 
 - type: stack
   id: FloorTileGridDark
-  name: dark maintenance grid tile
+  name: dark-maintenance-grid-tile
   spawn: FloorTileItemGridDark
   maxCount: 30
