@@ -5,9 +5,9 @@
   components:
   - type: Sprite
     drawdepth: WallTops
-    sprite: _Flagship/Structures/Windows/uranium_window.rsi
+    sprite: _Flagship/Structures/Windows/uranium_window.rsi # Flagship
   - type: Icon
-    sprite: _Flagship/Structures/Windows/uranium_window.rsi
+    sprite: _Flagship/Structures/Windows/uranium_window.rsi # Flagship
     state: full
   - type: Damageable
     damageModifierSet: Glass
@@ -40,7 +40,7 @@
     damageDivisor: 3
     trackAllDamage: true
     damageOverlay:
-      sprite: _Flagship/Structures/Windows/cracks.rsi
+      sprite: _Flagship/Structures/Windows/cracks.rsi # Flagship
   - type: StaticPrice
     price: 200
   - type: RadiationBlocker
@@ -57,10 +57,10 @@
     - Window
   components:
   - type: Sprite
-    sprite: _Flagship/Structures/Windows/directional.rsi
+    sprite: _Flagship/Structures/Windows/directional.rsi # Flagship
     state: uranium_window
   - type: Icon
-    sprite: _Flagship/Structures/Windows/directional.rsi
+    sprite: _Flagship/Structures/Windows/directional.rsi # Flagship
     state: uranium_window
   - type: Construction
     graph: WindowDirectional
@@ -71,7 +71,7 @@
     damageDivisor: 1.5
     trackAllDamage: true
     damageOverlay:
-      sprite: _Flagship/Structures/Windows/cracks_directional.rsi
+      sprite: _Flagship/Structures/Windows/cracks_directional.rsi # Flagship
   - type: Destructible
     thresholds:
     - trigger:
@@ -104,7 +104,7 @@
   components:
   - type: Sprite
     drawdepth: WallTops
-    sprite: _Flagship/Structures/Windows/uranium_window_diagonal.rsi
+    sprite: _Flagship/Structures/Windows/uranium_window_diagonal.rsi # Flagship
     state: state0
   - type: Tag
     tags:
@@ -115,7 +115,7 @@
     key: windows
     base: state
   - type: Icon
-    sprite: _Flagship/Structures/Windows/uranium_window_diagonal.rsi
+    sprite: _Flagship/Structures/Windows/uranium_window_diagonal.rsi # Flagship
     state: state0
   - type: Fixtures
     fixtures:
@@ -137,7 +137,7 @@
     - East
   - type: DamageVisuals
     damageOverlay:
-      sprite: _Flagship/Structures/Windows/cracks_diagonal.rsi
+      sprite: _Flagship/Structures/Windows/cracks_diagonal.rsi # Flagship
   - type: Construction
     graph: WindowDiagonal
     node: uraniumWindowDiagonal
