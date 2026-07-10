@@ -4,7 +4,7 @@
   id: WeaponShuttleMissileVespera
   name: ADMP VESPERA missile launcher
   parent: BallisticArtillery
-  description: A rapid-fire swarm missile pod manufactured by Aetherion Dynamics. Can be remotely activated or linked up to a GCS.
+  description: A rapid-fire swarm missile pod manufactured by Aetherion Dynamics. Can be remotely activated, or linked up to a GCS.
   components:
   - type: ApcPowerReceiver
     powerLoad: 950
