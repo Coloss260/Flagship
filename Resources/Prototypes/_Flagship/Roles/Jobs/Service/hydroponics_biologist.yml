@@ -31,5 +31,5 @@
     jumpsuit: ClothingUniformJumpsuitHydroponicsBiologist # Flagship
     gloves: ClothingHandsGlovesFlagLeather # Flagship
     back: ClothingBackpackFlag # Flagship
-    belt: ClothingBeltPlant
+    belt: ClothingBeltHydroponicsBiologist # Flagship
     shoes: ClothingShoesColorBlack

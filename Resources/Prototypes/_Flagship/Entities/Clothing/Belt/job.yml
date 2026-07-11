@@ -216,3 +216,213 @@
     sprite: _Flagship/Clothing/Belt/emt.rsi
   - type: Clothing
     sprite: _Flagship/Clothing/Belt/emt.rsi
+
+- type: entity
+  parent: ClothingBeltStorageBase
+  id: ClothingBeltCustodian
+  name: custodian belt
+  description: A belt used to hold most janitorial supplies.
+  components:
+  - type: Sprite
+    sprite: _Flagship/Clothing/Belt/janitor.rsi
+  - type: Clothing
+    sprite: _Flagship/Clothing/Belt/janitor.rsi
+  - type: Storage
+    maxItemSize: Large
+    whitelist:
+      tags:
+      - Wrench
+      - Bottle
+      - Spray
+      - Soap
+      - Flashlight
+      - CigPack
+      - TrashBag
+      - WetFloorSign
+      - HolosignProjector
+      - Plunger
+      - TrashBagBlue
+      - GoldenPlunger
+      - WireBrush
+      - LightReplacer
+      - CleanerGrenade
+  - type: ItemMapper
+    sprite: *BeltOverlay
+    mapLayers:
+      bottle:
+        whitelist:
+          tags:
+          - Bottle
+      bottle_spray:
+        whitelist:
+          tags:
+          - Spray
+      light_replacer:
+        whitelist:
+          tags:
+          - LightReplacer
+      trashbag:
+        whitelist:
+          tags:
+          - TrashBag
+      trashbag_blue:
+        whitelist:
+          tags:
+          - TrashBagBlue
+      wetfloorsign:
+        whitelist:
+          tags:
+          - WetFloorSign
+      soap:
+        whitelist:
+          tags:
+          - Soap
+      wire_brush:
+        whitelist:
+          tags:
+          - WireBrush
+      holosign:
+        whitelist:
+          tags:
+          - HolosignProjector
+      plunger:
+        whitelist:
+          tags:
+          - Plunger
+      golden_plunger:
+        whitelist:
+          tags:
+          - GoldenPlunger
+      cleaner_grenade:
+        whitelist:
+          tags:
+          - CleanerGrenade
+  - type: Appearance
+
+- type: entity
+  parent: ClothingBeltStorageBase
+  id: ClothingBeltHydroponicsBiologist
+  name: botanical belt
+  description: A belt used to hold most hydroponics supplies. Suprisingly, not green.
+  components:
+  - type: Sprite
+    sprite: _Flagship/Clothing/Belt/plant.rsi
+  - type: Clothing
+    sprite: _Flagship/Clothing/Belt/plant.rsi
+  - type: Storage
+    whitelist:
+      tags:
+      - PlantSampleTaker
+      - BotanyShovel
+      - BotanyHoe
+      - BotanyHatchet
+      - PlantBGone
+      - Bottle
+      - Syringe
+      - CigPack
+      - Dropper
+      components:
+      - Seed
+      - Smokable
+      - HandLabeler
+  - type: ItemMapper
+    sprite: *BeltOverlay
+    mapLayers:
+      hatchet:
+        whitelist:
+          tags:
+          - BotanyHatchet
+      hoe:
+        whitelist:
+          tags:
+          - BotanyHoe
+      secateurs: # We don't have secateurs and this looks similar enough.
+        whitelist:
+          tags:
+          - BotanyShovel
+      plantbgone:
+        whitelist:
+          tags:
+          - PlantBGone
+      bottle:
+        whitelist:
+          tags:
+          - Bottle
+  - type: Appearance
+
+- type: entity
+  parent: ClothingBeltStorageBase
+  id: ClothingBeltMessChef
+  name: mess chef belt
+  description: A belt used to hold kitchen knives and condiments for quick access.
+  components:
+  - type: Sprite
+    sprite: _Flagship/Clothing/Belt/chef.rsi
+  - type: Clothing
+    sprite: _Flagship/Clothing/Belt/chef.rsi
+  - type: Storage
+    whitelist:
+      tags:
+      - KitchenKnife
+      - Cleaver
+      - RollingPin
+      - Coldsauce
+      - Enzyme
+      - Hotsauce
+      - Ketchup
+      - BBQsauce
+      - SaltShaker
+      - PepperShaker
+      - CigPack
+      - Packet
+      - Skewer
+      - MonkeyCube
+      - Mayo
+      components:
+      - Mousetrap
+      - Smokable
+      - Utensil
+  - type: ItemMapper
+    sprite: *BeltOverlay
+    mapLayers:
+      kitchenknife:
+        whitelist:
+          tags:
+          - KitchenKnife
+      cleaver:
+        whitelist:
+          tags:
+          - Cleaver
+      rollingpin:
+        whitelist:
+          tags:
+          - RollingPin
+      coldsauce:
+        whitelist:
+          tags:
+          - Coldsauce
+      enzyme:
+        whitelist:
+          tags:
+          - Enzyme
+      hotsauce:
+        whitelist:
+          tags:
+          - Hotsauce
+      ketchup:
+        whitelist:
+          tags:
+          - Ketchup
+      bbqsauce:
+        whitelist:
+          tags:
+          - BBQsauce
+      saltshaker:
+        whitelist:
+          tags:
+          - SaltShaker
+      peppershaker:
+        whitelist:
+          tags:
+          - PepperShaker
+  - type: Appearance

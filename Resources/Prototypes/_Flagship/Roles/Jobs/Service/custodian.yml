@@ -27,5 +27,5 @@
     jumpsuit: ClothingUniformJumpsuitCustodian # Flagship
     gloves: ClothingHandsGlovesCustodian # Flagship
     back: ClothingBackpackFlag # Flagship
-    belt: ClothingBeltJanitor
+    belt: ClothingBeltCustodian # Flagship
     shoes: ClothingShoesGaloshes
