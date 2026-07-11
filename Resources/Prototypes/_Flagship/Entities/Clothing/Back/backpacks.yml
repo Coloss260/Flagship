@@ -1,6 +1,43 @@
+- type: entity
+  parent: [Clothing, ContentsExplosionResistanceBase]
+  id: ClothingBackpackFlag
+  name: backpack
+  description: You wear this on your back and put items into it.
+  components:
+  - type: Sprite
+    sprite: _Flagship/Clothing/Back/Backpacks/backpack.rsi
+    state: icon
+  - type: Item
+    size: Huge
+  - type: Clothing
+    quickEquip: false
+    slots:
+    - back
+  - type: Storage
+    grid:
+    - 0,0,6,3
+    maxItemSize: Huge
+  - type: ContainerContainer
+    containers:
+      storagebase: !type:Container
+        ents: []
+  - type: UserInterface
+    interfaces:
+      enum.StorageUiKey.Key:
+        type: StorageBoundUserInterface
+  # to prevent bag open/honk spam
+  - type: UseDelay
+    delay: 0.5
+  - type: ExplosionResistance
+    damageCoefficient: 0.9
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+    - Backpack
+
 # Military Police
 - type: entity
-  parent: [ClothingBackpack, BaseMilitaryPoliceContraband]
+  parent: [ClothingBackpackFlag, BaseMilitaryPoliceContraband]
   id: ClothingBackpackMilitaryPolice
   name: Military Police backpack
   description: It's a very robust backpack.
@@ -10,7 +47,7 @@
 
 # Maintenance
 - type: entity
-  parent: [ClothingBackpack, BaseMaintenanceContraband]
+  parent: [ClothingBackpackFlag, BaseMaintenanceContraband]
   id: ClothingBackpackMaintenance
   name: Maintenance backpack
   description: It's a very robust backpack.
@@ -19,7 +56,7 @@
     sprite: _Flagship/Clothing/Back/Backpacks/maintenance.rsi
 
 - type: entity
-  parent: [ClothingBackpack, BaseMaintenanceContraband]
+  parent: [ClothingBackpackFlag, BaseMaintenanceContraband]
   id: ClothingBackpackLifeSupportSpecialist
   name: Life Support Specialist backpack
   description: It's a very robust backpack.
@@ -29,7 +66,7 @@
 
 # Medical
 - type: entity
-  parent: ClothingBackpack
+  parent: ClothingBackpackFlag
   id: ClothingBackpackFlagMedical
   name: medical backpack
   description: It's a backpack especially designed for use in a sterile environment.
@@ -38,7 +75,7 @@
     sprite: _Flagship/Clothing/Back/Backpacks/medical.rsi
 
 - type: entity
-  parent: ClothingBackpack
+  parent: ClothingBackpackFlag
   id: ClothingBackpackFlagChemistry
   name: chemistry backpack
   description: A backpack specially designed to repel stains and hazardous liquids.
@@ -47,7 +84,7 @@
     sprite: _Flagship/Clothing/Back/Backpacks/chemistry.rsi
 
 - type: entity
-  parent: [ClothingBackpack, BaseFlagScienceContraband]
+  parent: [ClothingBackpackFlag, BaseFlagScienceContraband]
   id: ClothingBackpackFlagScience
   name: Science backpack
   description: It's a colourful backpack for sure.

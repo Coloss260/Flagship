@@ -30,6 +30,6 @@
     outerClothing: ClothingOuterApronHydroponicsBiologist # Flagship
     jumpsuit: ClothingUniformJumpsuitHydroponicsBiologist # Flagship
     gloves: ClothingHandsGlovesFlagLeather # Flagship
-    back: ClothingBackpack
+    back: ClothingBackpackFlag # Flagship
     belt: ClothingBeltPlant
     shoes: ClothingShoesColorBlack

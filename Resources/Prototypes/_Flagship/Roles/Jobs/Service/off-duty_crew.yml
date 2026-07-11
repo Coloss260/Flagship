@@ -20,5 +20,5 @@
     id: OffDutyCrewPDA # Flagship
     ears: ClothingHeadsetFlagShip # Flagship
     jumpsuit: ClothingUniformJumpsuitFlagColorGrey # Flagship
-    back: ClothingBackpack
+    back: ClothingBackpackFlag # Flagship
     shoes: ClothingShoesColorBlack

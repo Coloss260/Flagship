@@ -30,5 +30,5 @@
     ears: ClothingHeadsetFlagService # Flagship
     jumpsuit: ClothingUniformJumpsuitFlagBartender # Flagship
     gloves: ClothingHandsGlovesFlagColorWhite # Flagship
-    back: ClothingBackpackSatchelLeather
+    back: ClothingBackpackSatchelFlagLeather # Flagship
     shoes: ClothingShoesBootsLaceup

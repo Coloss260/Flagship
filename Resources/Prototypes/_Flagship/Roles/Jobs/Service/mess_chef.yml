@@ -25,6 +25,6 @@
     ears: ClothingHeadsetFlagService # Flagship
     outerClothing: ClothingOuterApronMessChef
     jumpsuit: ClothingUniformJumpsuitMessChef # Flagship
-    back: ClothingBackpack
+    back: ClothingBackpackFlag # Flagship
     belt: ClothingBeltChef
     shoes: ClothingShoesChef
