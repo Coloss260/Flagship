@@ -26,7 +26,7 @@
   equipment:
     id: FlagBartenderPDA # Flagship
     head: ClothingHeadHatFlagTophat # Flagship
-    eyes: ClothingEyesGlassesCheapSunglasses
+    eyes: ClothingEyesGlassesFlagCheapSunglasses # Flagship
     ears: ClothingHeadsetFlagService # Flagship
     jumpsuit: ClothingUniformJumpsuitBartender
     gloves: ClothingHandsGlovesColorWhite

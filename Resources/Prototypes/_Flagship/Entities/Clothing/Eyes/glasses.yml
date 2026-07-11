@@ -95,3 +95,22 @@
       tags:
       - PetWearable
       - WhitelistChameleon
+
+# Other
+- type: entity
+  parent: ClothingEyesBase
+  id: ClothingEyesGlassesFlagCheapSunglasses
+  name: cheap sunglasses
+  description: A pair of black sunglasses. Doesn't block light well, more of an accessory than something useful.
+  components:
+  - type: Sprite
+    sprite: _Flagship/Clothing/Eyes/Glasses/sunglasses.rsi
+  - type: Clothing
+    sprite: _Flagship/Clothing/Eyes/Glasses/sunglasses.rsi
+  - type: Tag
+    tags:
+    - HamsterWearable
+    - PetWearable
+    - WhitelistChameleon
+  - type: IdentityBlocker
+    coverage: EYES
