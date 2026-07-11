@@ -1,0 +1,31 @@
+- type: entity
+  parent: ClothingOuterStorageBase
+  id: ClothingOuterApronHydroponicsBiologist
+  name: apron
+  suffix: Botanical
+  description: A thick blue-apron, perfect for insulating your soft flesh from spills, soil and thorns.
+  components:
+  - type: Sprite
+    sprite: _Flagship/Clothing/OuterClothing/Misc/apronbotanist.rsi
+  - type: Clothing
+    sprite: _Flagship/Clothing/OuterClothing/Misc/apronbotanist.rsi
+  - type: Tag
+    tags:
+    - Apron
+    - WhitelistChameleon
+
+- type: entity
+  parent: ClothingOuterStorageBase
+  id: ClothingOuterApronMessChef
+  name: apron
+  suffix: Mess Chef
+  description: An apron-jacket used by a high class chef.
+  components:
+  - type: Sprite
+    sprite: _Flagship/Clothing/OuterClothing/Misc/apronchef.rsi
+  - type: Clothing
+    sprite: _Flagship/Clothing/OuterClothing/Misc/apronchef.rsi
+  - type: Tag
+    tags:
+    - Apron
+    - WhitelistChameleon

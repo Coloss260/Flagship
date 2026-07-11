@@ -1,3 +1,4 @@
+# Bridge Command
 - type: entity
   parent: ClothingHeadBase
   id: ClothingHeadHatCommandingOfficer
@@ -34,3 +35,224 @@
     - WhitelistChameleon
     - PetWearable
     - CorgiWearable
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatCapNavy
+  name: Navy Officer cap
+  description: A cap worn by high-ranking officers of the Nanotrasen Navy Corps.
+  components:
+  - type: Sprite
+    sprite: _Flagship/Clothing/Head/Hats/navycap.rsi
+  - type: Clothing
+    sprite: _Flagship/Clothing/Head/Hats/navycap.rsi
+  - type: Tag
+    tags:
+    - ClothMade
+    - WhitelistChameleon
+    - PetWearable
+    - CorgiWearable
+
+# Military Police
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatBeretMilitaryPoliceChief
+  name: Military Police Chief beret
+  description: A beret worn by Military Police Chiefs of the Nanotrasen Navy Corps.
+  components:
+  - type: Sprite
+    sprite: _Flagship/Clothing/Head/Hats/militarypolicechiefberet.rsi
+  - type: Clothing
+    sprite: _Flagship/Clothing/Head/Hats/militarypolicechiefberet.rsi
+  - type: Tag
+    tags:
+    - ClothMade
+    - HamsterWearable
+    - WhitelistChameleon
+    - PetWearable
+    - CorgiWearable
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatBeretMilitaryPoliceMedic
+  name: Military Police Medic beret
+  description: A beret worn by Military Police Medics of the Nanotrasen Navy Corps.
+  components:
+  - type: Sprite
+    sprite: _Flagship/Clothing/Head/Hats/militarypolicemedicberet.rsi
+  - type: Clothing
+    sprite: _Flagship/Clothing/Head/Hats/militarypolicemedicberet.rsi
+  - type: Tag
+    tags:
+    - ClothMade
+    - HamsterWearable
+    - WhitelistChameleon
+    - PetWearable
+    - CorgiWearable
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatBeretMilitaryPolice
+  name: Military Police beret
+  description: A beret worn by Military Police grunts of the Nanotrasen Navy Corps.
+  components:
+  - type: Sprite
+    sprite: _Flagship/Clothing/Head/Hats/militarypoliceberet.rsi
+  - type: Clothing
+    sprite: _Flagship/Clothing/Head/Hats/militarypoliceberet.rsi
+  - type: Tag
+    tags:
+    - ClothMade
+    - HamsterWearable
+    - WhitelistChameleon
+    - PetWearable
+    - CorgiWearable
+
+# Maintenance
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatBeretChiefOfMaintenance
+  name: Chief of Maintenance beret
+  description: A beret worn by the Chief of Maintenance of a Nanotrasen Flagship.
+  components:
+  - type: Sprite
+    sprite: _Flagship/Clothing/Head/Hats/chiefofmaintenanceberet.rsi
+  - type: Clothing
+    sprite: _Flagship/Clothing/Head/Hats/chiefofmaintenanceberet.rsi
+  - type: Tag
+    tags:
+    - ClothMade
+    - HamsterWearable
+    - WhitelistChameleon
+    - PetWearable
+    - CorgiWearable
+
+# Supplies
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatBeretSuppliesQuartermaster
+  name: Supplies Quartermaster beret
+  description: A beret worn by the Supply Quartermaster of a Nanotrasen Flagship.
+  components:
+  - type: Sprite
+    sprite: _Flagship/Clothing/Head/Hats/suppliesquartermasterberet.rsi
+  - type: Clothing
+    sprite: _Flagship/Clothing/Head/Hats/suppliesquartermasterberet.rsi
+  - type: Tag
+    tags:
+    - ClothMade
+    - HamsterWearable
+    - WhitelistChameleon
+    - PetWearable
+    - CorgiWearable
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatBeretArtillerySpecialist
+  name: Artillery Specialist beret
+  description: A beret worn by Artillery Specialists in Nanotrasen combat vessels.
+  components:
+  - type: Sprite
+    sprite: _Flagship/Clothing/Head/Hats/artilleryspecialistberet.rsi
+  - type: Clothing
+    sprite: _Flagship/Clothing/Head/Hats/artilleryspecialistberet.rsi
+  - type: Tag
+    tags:
+    - ClothMade
+    - HamsterWearable
+    - WhitelistChameleon
+    - PetWearable
+    - CorgiWearable
+
+# Medical
+- type: entity
+  parent: [ClothingHeadBase, BaseMedicalContraband]
+  id: ClothingHeadHatBeretCom
+  name: Chief of Medical beret
+  description: A turquoise beret with a cross on the front. The sight of it calms you down and makes it clear that you will be cured.
+  components:
+  - type: Sprite
+    sprite: _Flagship/Clothing/Head/Hats/beret_com.rsi
+  - type: Clothing
+    sprite: _Flagship/Clothing/Head/Hats/beret_com.rsi
+  - type: Tag
+    tags:
+    - PetWearable
+    - CorgiWearable
+    - ClothMade
+    - Recyclable
+    - HamsterWearable
+    - WhitelistChameleon
+
+# Science
+- type: entity
+  parent: [ClothingHeadBase, BaseFlagScienceContraband]
+  id: ClothingHeadHatBeretSci
+  name: Science beret
+  description: A purple beret often worn by scientists.
+  components:
+  - type: Sprite
+    sprite: _Flagship/Clothing/Head/Hats/beret_sci.rsi
+  - type: Clothing
+    sprite: _Flagship/Clothing/Head/Hats/beret_sci.rsi
+  - type: Tag
+    tags:
+    - PetWearable
+    - CorgiWearable
+    - ClothMade
+    - Recyclable
+    - HamsterWearable
+    - WhitelistChameleon
+
+# Service
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatFlagTophat
+  name: tophat
+  description: A stylish black tophat.
+  components:
+  - type: Sprite
+    sprite: _Flagship/Clothing/Head/Hats/tophat.rsi
+  - type: Clothing
+    sprite: _Flagship/Clothing/Head/Hats/tophat.rsi
+  - type: Tag
+    tags:
+    - PetWearable
+    - CorgiWearable
+    - ClothMade
+    - Recyclable
+    - HamsterWearable
+    - WhitelistChameleon
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatFlagChef
+  name: mess chef's hat
+  description: A hat used by chefs to keep their hair out of your food. Judging by the food in the mess, they don't work.
+  components:
+  - type: Sprite
+    sprite: _Flagship/Clothing/Head/Hats/chefhat.rsi
+  - type: Clothing
+    sprite: _Flagship/Clothing/Head/Hats/chefhat.rsi
+  - type: Storage
+    grid:
+    - 0,0,0,0
+  - type: UserInterface
+    interfaces:
+      enum.StorageUiKey.Key:
+        type: StorageBoundUserInterface
+  - type: ContainerContainer
+    containers:
+      storagebase: !type:Container
+  - type: PilotedClothing
+    pilotWhitelist:
+      tags:
+        - ChefPilot
+  - type: Tag
+    tags:
+    - PetWearable
+    - CorgiWearable
+    - ClothMade
+    - Recyclable
+    - HamsterWearable
+    - WhitelistChameleon

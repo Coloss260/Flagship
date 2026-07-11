@@ -31,6 +31,60 @@
             "name": "pda-commandingofficer"
         },
         {
+            "name": "pda-militarypolice"
+        },
+        {
+            "name": "pda-supplies"
+        },
+        {
+            "name": "pda-artilleryspecialist"
+        },
+        {
+            "name": "pda-maintenance"
+        },
+        {
+            "name": "pda-lifesupportspecialist"
+        },
+        {
+            "name": "pda-com"
+        },
+        {
+            "name": "pda-chemistry"
+        },
+        {
+            "name": "pda-paramedic"
+        },
+        {
+            "name": "pda-medical"
+        },
+        {
+            "name": "pda-internmed"
+        },
+        {
+            "name": "pda-sciencesupervisor"
+        },
+        {
+            "name": "pda-roboticist"
+        },
+        {
+            "name": "pda-science"
+        },
+        {
+            "name": "pda-internsci"
+        },
+        {
+            "name": "pda-bartender"
+        },
+        {
+            "name": "pda-custodian"
+        },
+        {
+            "name": "pda-messchef"
+        },
+        {
+            "name": "pda-hydroponicsbiologist"
+        },
+        {
             "name": "pda"
         }
     ]

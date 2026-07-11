@@ -2,7 +2,7 @@
   abstract: true
   parent: Clothing
   id: ClothingHeadsetFlag
-  name: headset
+  name: Ship headset
   description: An updated, modular intercom that fits over the head. Takes encryption keys.
   components:
   - type: ContainerContainer
@@ -29,7 +29,7 @@
 
 # Bridge Command
 - type: entity
-  parent: ClothingHeadsetFlag
+  parent: [ClothingHeadsetFlag, BaseBridgeCommandContraband]
   id: ClothingHeadsetCommandingOfficer
   name: Commanding Officer's Headset
   description: Headset used by Commanding Officers.
@@ -44,7 +44,7 @@
     sprite: _Flagship/Clothing/Ears/Headsets/bridgecommand.rsi
 
 - type: entity
-  parent: ClothingHeadsetFlag
+  parent: [ClothingHeadsetFlag, BaseBridgeCommandContraband]
   id: ClothingHeadsetExecutiveOfficer
   name: Executive Officer's Headset
   description: Headset used by Executive Officers.
@@ -59,9 +59,9 @@
     sprite: _Flagship/Clothing/Ears/Headsets/bridgecommand.rsi
 
 - type: entity
-  parent: ClothingHeadsetFlag
+  parent: [ClothingHeadsetFlag, BaseBridgeCommandContraband]
   id: ClothingHeadsetTacticalOfficer
-  name: Tactical Officer's Headset
+  name: Tactical Officer Headset
   description: Headset used by Tactical Officers.
   components:
   - type: ContainerFill
@@ -74,9 +74,9 @@
     sprite: _Flagship/Clothing/Ears/Headsets/bridgecommand.rsi
 
 - type: entity
-  parent: ClothingHeadsetFlag
+  parent: [ClothingHeadsetFlag, BaseBridgeCommandContraband]
   id: ClothingHeadsetOperationsOfficer
-  name: Operations Officer's Headset
+  name: Operations Officer Headset
   description: Headset used by Operations Officers.
   components:
   - type: ContainerFill
@@ -89,9 +89,9 @@
     sprite: _Flagship/Clothing/Ears/Headsets/bridgecommand.rsi
 
 - type: entity
-  parent: ClothingHeadsetFlag
+  parent: [ClothingHeadsetFlag, BaseBridgeCommandContraband]
   id: ClothingHeadsetCommunicationsOfficer
-  name: Communications Officer's Headset
+  name: Communications Officer Headset
   description: Headset used by Communications Officers.
   components:
   - type: ContainerFill
@@ -104,9 +104,9 @@
     sprite: _Flagship/Clothing/Ears/Headsets/bridgecommand.rsi
 
 - type: entity
-  parent: ClothingHeadsetFlag
+  parent: [ClothingHeadsetFlag, BaseBridgeCommandContraband]
   id: ClothingHeadsetFlightControlOfficer
-  name: Flight Control Officer's Headset
+  name: Flight Control Officer Headset
   description: Headset used by Flight Control Officers.
   components:
   - type: ContainerFill
@@ -119,9 +119,9 @@
     sprite: _Flagship/Clothing/Ears/Headsets/bridgecommand.rsi
 
 - type: entity
-  parent: ClothingHeadsetFlag
+  parent: [ClothingHeadsetFlag, BaseBridgeCommandContraband]
   id: ClothingHeadsetBridgeEnsign
-  name: Bridge Ensign's Headset
+  name: Bridge Ensign Headset
   description: Headset used by Bridge Ensigns.
   components:
   - type: ContainerFill
@@ -134,11 +134,159 @@
     sprite: _Flagship/Clothing/Ears/Headsets/bridgecommand.rsi
 
 # Military Police
+- type: entity
+  parent: [ClothingHeadsetFlag, BaseMilitaryPoliceContraband]
+  id: ClothingHeadsetMilitaryPolice
+  name: Military Police headset
+  description: Headset used by grunts of the Military Police.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyMilitaryPolice
+  - type: Sprite
+    sprite: _Flagship/Clothing/Ears/Headsets/militarypolice.rsi
+  - type: Clothing
+    sprite: _Flagship/Clothing/Ears/Headsets/militarypolice.rsi
 
-# Science
+- type: entity
+  parent: [ClothingHeadsetFlag, BaseMilitaryPoliceContraband]
+  id: ClothingHeadsetMilitaryPoliceMedic
+  name: Military Police medic headset
+  description: Headset used by medics of the Military Police.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyMilitaryPolice
+      - EncryptionKeyFlagMedical
+  - type: Sprite
+    sprite: _Flagship/Clothing/Ears/Headsets/militarypolicemedic.rsi
+  - type: Clothing
+    sprite: _Flagship/Clothing/Ears/Headsets/militarypolicemedic.rsi
+
+# Maintenance
+- type: entity
+  parent: [ClothingHeadsetFlag, BaseMaintenanceContraband]
+  id: ClothingHeadsetMaintenance
+  name: Maintenance headset
+  description: Headset used by grunts of the Maintenance department.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyMaintenance
+  - type: Sprite
+    sprite: _Flagship/Clothing/Ears/Headsets/maintenance.rsi
+  - type: Clothing
+    sprite: _Flagship/Clothing/Ears/Headsets/maintenance.rsi
+
+- type: entity
+  parent: [ClothingHeadsetFlag, BaseMaintenanceContraband]
+  id: ClothingHeadsetLifeSupportSpecialist
+  name: Life Support Specialist headset
+  description: Headset used by Life Support Specialists of the Maintenance department.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyMaintenance
+  - type: Sprite
+    sprite: _Flagship/Clothing/Ears/Headsets/lifesupportspecialist.rsi
+  - type: Clothing
+    sprite: _Flagship/Clothing/Ears/Headsets/lifesupportspecialist.rsi
 
 # Supply
+- type: entity
+  parent: [ClothingHeadsetFlag, BaseSupplyContraband]
+  id: ClothingHeadsetArtillerySpecialist
+  name: Artillery Specialist headset
+  description: Headset used by Artillery Specialists.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeySupplies
+      - EncryptionKeyTactical
+  - type: Sprite
+    sprite: _Flagship/Clothing/Ears/Headsets/supplycrew.rsi
+  - type: Clothing
+    sprite: _Flagship/Clothing/Ears/Headsets/supplycrew.rsi
+
+- type: entity
+  parent: [ClothingHeadsetFlag, BaseSupplyContraband]
+  id: ClothingHeadsetSupplies
+  name: Supplies headset
+  description: Headset used by workers of the Supplies department.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeySupplies
+  - type: Sprite
+    sprite: _Flagship/Clothing/Ears/Headsets/supplycrew.rsi
+  - type: Clothing
+    sprite: _Flagship/Clothing/Ears/Headsets/supplycrew.rsi
 
 # Medical
+- type: entity
+  parent: [ClothingHeadsetFlag, BaseMedicalContraband]
+  id: ClothingHeadsetFlagMedical
+  name: Medical headset
+  description: Headset used by doctors of the Medical department.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyFlagMedical
+  - type: Sprite
+    sprite: _Flagship/Clothing/Ears/Headsets/medical.rsi
+  - type: Clothing
+    sprite: _Flagship/Clothing/Ears/Headsets/medical.rsi
+
+# Science
+- type: entity
+  parent: [ClothingHeadsetFlag, BaseFlagScienceContraband]
+  id: ClothingHeadsetFlagScience
+  name: Science headset
+  description: Headset used by doctors of the Medical department.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyFlagScience
+  - type: Sprite
+    sprite: _Flagship/Clothing/Ears/Headsets/science.rsi
+  - type: Clothing
+    sprite: _Flagship/Clothing/Ears/Headsets/science.rsi
 
 # Service
+- type: entity
+  parent: ClothingHeadsetFlag
+  id: ClothingHeadsetFlagService
+  name: Service headset
+  description: Headset used by workers of the Service department.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyFlagService
+  - type: Sprite
+    sprite: _Flagship/Clothing/Ears/Headsets/service.rsi
+  - type: Clothing
+    sprite: _Flagship/Clothing/Ears/Headsets/service.rsi
+
+- type: entity
+  parent: ClothingHeadsetFlag
+  id: ClothingHeadsetFlagShip
+  name: Ship headset
+  description: Headset used by people who are not on duty.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyShip
+  - type: Sprite
+    sprite: Clothing/Ears/Headsets/base.rsi
+  - type: Clothing
+    sprite: Clothing/Ears/Headsets/base.rsi

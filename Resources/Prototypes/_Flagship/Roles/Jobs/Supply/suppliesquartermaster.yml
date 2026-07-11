@@ -19,15 +19,18 @@
   - Command
   - AllAccess
 
+# Flagship
+# PLEASE RESPECT THE EQUIPMENT ORDER OR I WILL STEAL YOUR NOSE
+# equipment: id, head, eyes, ears, mask, neck, outerClothing, jumpsuit, gloves, back, belt, shoes
 - type: startingGear
   id: SuppliesQuartermasterGear
   equipment:
-    jumpsuit: ClothingUniformJumpsuitCaptain
-    shoes: ClothingShoesBootsCombatFilled
-    head: ClothingHeadHatBeretCommand
-    eyes: ClothingEyesGlassesCommand
-    gloves: ClothingHandsGlovesCaptain
+    id: SuppliesQuartermasterPDA
+    head: ClothingHeadHatBeretSuppliesQuartermaster
+    eyes: ClothingEyesGlassesSunglasses
+    ears: ClothingHeadsetAltSupplies
+    jumpsuit: ClothingUniformJumpsuitSuppliesCrewman
+    gloves: ClothingHandsGlovesColorBlack
     back: ClothingBackpackSatchelLeather
-    id: CommandingOfficerPDA
-    ears: ClothingHeadsetCommandingOfficer
-    belt: ClothingBeltHolster
+    belt: ClothingBeltUtilityFilled
+    shoes: ClothingShoesBootsJack

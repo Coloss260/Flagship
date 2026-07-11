@@ -1,0 +1,27 @@
+- type: entity
+  parent: [ ClothingShoesBase, BaseServiceContraband ]
+  id: ClothingShoesFlagGaloshes
+  name: galoshes
+  description: Specialised non-slip rubber boots, designed to reduce janitorial workplace accidents; a tider's treasure.
+  components:
+  - type: Sprite
+    sprite: _Flagship/Clothing/Shoes/Specific/galoshes.rsi
+  - type: Clothing
+    sprite: _Flagship/Clothing/Shoes/Specific/galoshes.rsi
+  - type: NoSlip
+  - type: SlowedOverSlippery
+    slowdownModifier: 0.7
+  - type: SpeedModifierContactCapClothing
+    maxContactSprintSlowdown: 0.7
+    maxContactWalkSlowdown: 0.7
+
+- type: entity
+  parent: ClothingShoesBaseButcherable
+  id: ClothingShoesMessChef
+  name: mess chef shoes
+  description: Sturdy shoes that minimize injury from falling objects or knives.
+  components:
+  - type: Sprite
+    sprite: _Flagship/Clothing/Shoes/Specific/chef.rsi
+  - type: Clothing
+    sprite: _Flagship/Clothing/Shoes/Specific/chef.rsi

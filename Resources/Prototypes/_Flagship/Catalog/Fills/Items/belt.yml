@@ -1,0 +1,51 @@
+- type: entityTable
+  id: BeltMilitaryPoliceEntityTable
+  table: !type:AllSelector
+    children:
+    - id: WeaponPistolN1984
+    - id: MagazineMagnum
+      amount: 2
+    - id: Stunbaton
+    - id: Handcuffs
+    - id: HoloprojectorSecurity
+
+- type: entityTable
+  id: BeltMilitaryPoliceMedicEntityTable
+  table: !type:AllSelector
+    children:
+    - id: WeaponPistolN1984
+    - id: MagazineMagnum
+      amount: 2
+    - id: MedkitCombatFilled
+    - id: Bloodpack
+    - id: Gauze
+
+- type: entity
+  id: ClothingBeltMilitaryPoliceFilled
+  parent: ClothingBeltMilitaryPolice
+  suffix: Filled
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: BeltMilitaryPoliceEntityTable
+
+- type: entity
+  id: ClothingBeltMilitaryPoliceWebbingFilled
+  parent: ClothingBeltMilitaryPoliceWebbing
+  suffix: Filled
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: BeltMilitaryPoliceEntityTable
+
+- type: entity
+  parent: ClothingBeltMilitaryPoliceMedic
+  id: ClothingBeltMilitaryPoliceMedicFilled
+  suffix: Filled
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: BeltMilitaryPoliceMedicEntityTable

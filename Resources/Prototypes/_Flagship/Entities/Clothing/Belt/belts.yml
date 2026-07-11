@@ -1,0 +1,37 @@
+# Webbing
+- type: entity
+  parent: ClothingBeltMilitaryPolice
+  id: ClothingBeltMilitaryPoliceWebbing
+  name: Military Police carrier
+  description: Unique and versatile chest rig, can hold military police gear.
+  components:
+  - type: Sprite
+    sprite: _Flagship/Clothing/Belt/militarypolicewebbing.rsi
+  - type: Clothing
+    sprite: _Flagship/Clothing/Belt/militarypolicewebbing.rsi
+  - type: ExplosionResistance
+    damageCoefficient: 0.9
+  - type: Storage
+    whitelist:
+      tags:
+      - CigPack
+      - Taser
+      - SecBeltEquip
+      - Radio
+      - Sidearm
+      - MagazinePistol
+      - MagazineMagnum
+      - CombatKnife
+      - Truncheon
+      - HandGrenade
+      components:
+      - Stunbaton
+      - FlashOnTrigger
+      - SmokeOnTrigger
+      - Flash
+      - Handcuff
+      - BallisticAmmoProvider
+      - CartridgeAmmo
+      - DoorRemote
+      - Whistle
+      - BalloonPopper

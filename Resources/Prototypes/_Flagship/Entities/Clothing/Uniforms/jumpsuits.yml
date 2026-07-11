@@ -1,7 +1,8 @@
+# Bridge Command
 - type: entity
-  parent: ClothingUniformBase
+  parent: [ClothingUniformBase, BaseGrandTheftContraband]
   id: ClothingUniformJumpsuitCommandingOfficer
-  name: Commanding Officer's Uniform
+  name: Commanding Officer service uniform
   description: A stylish yet simple uniform made specifically to be worn by Commanding Officers of Nanotrasen's Naval Corps.
   components:
   - type: Sprite
@@ -10,9 +11,9 @@
     sprite: _Flagship/Clothing/Uniforms/Jumpsuit/commandingofficer.rsi
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: [ClothingUniformBase, BaseBridgeCommandContraband]
   id: ClothingUniformJumpsuitExecutiveOfficer
-  name: Executive Officer's Uniform
+  name: Executive Officer service uniform
   description: A stylish yet simple uniform made specifically to be worn by Executive Officers of Nanotrasen's Naval Corps.
   components:
   - type: Sprite
@@ -21,9 +22,9 @@
     sprite: _Flagship/Clothing/Uniforms/Jumpsuit/executiveofficer.rsi
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: [ClothingUniformBase, BaseBridgeCommandContraband]
   id: ClothingUniformJumpsuitTacticalOfficer
-  name: Tactical Officer's Uniform
+  name: Tactical Officer service uniform
   description: A stylish yet simple uniform made specifically to be worn by Tactical Officers of Nanotrasen's Naval Corps.
   components:
   - type: Sprite
@@ -32,9 +33,9 @@
     sprite: _Flagship/Clothing/Uniforms/Jumpsuit/tactical.rsi
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: [ClothingUniformBase, BaseBridgeCommandContraband]
   id: ClothingUniformJumpsuitOperationsOfficer
-  name: Operations Officer's Uniform
+  name: Operations Officer service uniform
   description: A stylish yet simple uniform made specifically to be worn by Operations Officers of Nanotrasen's Naval Corps.
   components:
   - type: Sprite
@@ -43,12 +44,133 @@
     sprite: _Flagship/Clothing/Uniforms/Jumpsuit/operations.rsi
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: [ClothingUniformBase, BaseBridgeCommandContraband]
   id: ClothingUniformJumpsuitBridgeCommand
-  name: Bridge Officer's Uniform
+  name: Bridge Officer service uniform
   description: A stylish yet simple uniform made specifically to be worn by Bridge Officers of Nanotrasen's Naval Corps.
   components:
   - type: Sprite
     sprite: _Flagship/Clothing/Uniforms/Jumpsuit/bridgecommand.rsi
   - type: Clothing
     sprite: _Flagship/Clothing/Uniforms/Jumpsuit/bridgecommand.rsi
+
+# Military Police
+- type: entity
+  parent: [ClothingUniformBase, BaseMilitaryPoliceContraband]
+  id: ClothingUniformJumpsuitMilitaryPoliceOfficer
+  name: Military Police Officer service uniform
+  description: A stylish yet simple uniform made specifically to be worn by Military Police Officers of Nanotrasen's Naval Corps.
+  components:
+  - type: Sprite
+    sprite: _Flagship/Clothing/Uniforms/Jumpsuit/militarypolice.rsi
+  - type: Clothing
+    sprite: _Flagship/Clothing/Uniforms/Jumpsuit/militarypolice.rsi
+
+# Maintenance
+- type: entity
+  parent: [ClothingUniformBase, BaseMaintenanceContraband]
+  id: ClothingUniformJumpsuitMaintenanceTechnician
+  name: Maintenance Technician service uniform
+  description: A stylish yet simple uniform made specifically to be worn by Maintenance Technicians of Nanotrasen's Naval Corps.
+  components:
+  - type: Sprite
+    sprite: _Flagship/Clothing/Uniforms/Jumpsuit/maintenance.rsi
+  - type: Clothing
+    sprite: _Flagship/Clothing/Uniforms/Jumpsuit/maintenance.rsi
+
+- type: entity
+  parent: [ClothingUniformBase, BaseMaintenanceContraband]
+  id: ClothingUniformJumpsuitLifeSupportSpecialist
+  name: Life Support Specialist service uniform
+  description: A stylish yet simple uniform made specifically to be work by Life Support Specialists of Nanotrasen's Naval Corps.
+  components:
+  - type: Sprite
+    sprite: _Flagship/Clothing/Uniforms/Jumpsuit/lifesupportspecialist.rsi
+  - type: Clothing
+    sprite: _Flagship/Clothing/Uniforms/Jumpsuit/lifesupportspecialist.rsi
+
+# Supplies
+- type: entity
+  parent: [ClothingUniformBase, BaseSupplyContraband]
+  id: ClothingUniformJumpsuitSuppliesCrewman
+  name: Supplies Crewman service uniform
+  description: A stylish yet simple uniform made specifically to be worn by Supplies Crewmen of Nanotrasen's Naval Corps.
+  components:
+  - type: Sprite
+    sprite: _Flagship/Clothing/Uniforms/Jumpsuit/supplies.rsi
+  - type: Clothing
+    sprite: _Flagship/Clothing/Uniforms/Jumpsuit/supplies.rsi
+
+- type: entity
+  parent: [ClothingUniformBase, BaseSupplyContraband]
+  id: ClothingUniformJumpsuitArtillerySpecialist
+  name: Artillery Specialist service uniform
+  description: A stylish yet simple uniform made specifically to be worn by Artillery Specialists of Nanotrasen's Naval Corps.
+  components:
+  - type: Sprite
+    sprite: _Flagship/Clothing/Uniforms/Jumpsuit/artilleryspecialist.rsi
+  - type: Clothing
+    sprite: _Flagship/Clothing/Uniforms/Jumpsuit/artilleryspecialist.rsi
+
+# Science
+- type: entity
+  parent: [ClothingUniformBase, BaseFlagScienceContraband]
+  id: ClothingUniformJumpsuitFlagScientist
+  name: Scientist service uniform
+  description: A stylish yet simple uniform made specifically to be worn by Scientists of Nanotrasen's Naval Corps.
+  components:
+  - type: Sprite
+    sprite: _Flagship/Clothing/Uniforms/Jumpsuit/science.rsi
+  - type: Clothing
+    sprite: _Flagship/Clothing/Uniforms/Jumpsuit/science.rsi
+
+# Medical
+- type: entity
+  parent: [ClothingUniformBase, BaseMedicalContraband]
+  id: ClothingUniformJumpsuitFlagMedicalDoctor
+  name: Medical Doctor's service uniform
+  description: A stylish yet simple uniform made specifically to be worn by Medical Doctors of Nanotrasen's Naval Corps.
+  components:
+  - type: Sprite
+    sprite: _Flagship/Clothing/Uniforms/Jumpsuit/medical.rsi
+  - type: Clothing
+    sprite: _Flagship/Clothing/Uniforms/Jumpsuit/medical.rsi
+
+# Service
+- type: entity
+  parent: [ClothingUniformBase, ClothingUniformFoldableBase]
+  id: ClothingUniformJumpsuitFlagBartender
+  name: bartender's uniform
+  description: A nice and tidy uniform. Shame about the bar though.
+  components:
+  - type: Sprite
+    sprite: _Flagship/Clothing/Uniforms/Jumpsuit/bartender.rsi
+
+- type: entity
+  parent: [ClothingUniformBase, ClothingUniformFoldableBase]
+  id: ClothingUniformJumpsuitCustodian
+  name: custodian jumpsuit
+  description: The jumpsuit for the poor sop with a mop.
+  components:
+  - type: Sprite
+    sprite: _Flagship/Clothing/Uniforms/Jumpsuit/janitor.rsi
+
+- type: entity
+  parent: [ClothingUniformBase, ClothingUniformFoldableBase]
+  id: ClothingUniformJumpsuitHydroponicsBiologist
+  name: hydroponics biologist jumpsuit
+  description: Has a strong earthy smell to it. Hopefully it's merely dirty as opposed to soiled.
+  components:
+  - type: Sprite
+    sprite: _Flagship/Clothing/Uniforms/Jumpsuit/hydro.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitMessChef
+  name: mess chef uniform
+  description: Can't cook without this.
+  components:
+  - type: Sprite
+    sprite: _Flagship/Clothing/Uniforms/Jumpsuit/chef.rsi
+  - type: Clothing
+    sprite: _Flagship/Clothing/Uniforms/Jumpsuit/chef.rsi
