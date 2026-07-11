@@ -30,7 +30,8 @@ public sealed partial class ModularShieldSystem
 
     private void UpdateEnergyStorageDisplay(Entity<ModularShieldEnergyStorageComponent> ent, AppearanceComponent? appComp = null, StorageFillVisualizerComponent? visualizerComponent = null)
     {
-        if (!Resolve(ent.Owner, ref appComp, ref visualizerComponent))
+        // Don't log if failing to resolve as the storage doesn't necessarily have to have a visualiser (The debug shield core one currently doesn't.)
+        if (!Resolve(ent.Owner, ref appComp, ref visualizerComponent, false))
             return;
 
         var fillLevel = (int)Math.Ceiling(ent.Comp.EnergyStored / ent.Comp.EnergyCapacity * visualizerComponent.MaxFillLevels);
