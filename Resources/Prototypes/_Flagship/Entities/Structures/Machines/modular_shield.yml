@@ -79,6 +79,18 @@
     fluxDestructionRateMaximum: 20000
 
 
+  
+- type: entity
+  parent: ModularShieldBase
+  id: ModularShieldCasing
+  name: Modular Shield Casing
+  description: Does nothing more than connect modular shield parts together.
+  components:
+  - type: Sprite
+    sprite: Structures/Power/Generation/ame.rsi
+    state: shield_0
+
+
 
 - type: entity
   parent: ModularShieldBase
