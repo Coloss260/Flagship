@@ -19,7 +19,6 @@
   equipment:
     id: PassengerPDA
     ears: ClothingHeadsetFlag
-    outerClothing:
     jumpsuit: ClothingUniformJumpsuitColorGrey
     back: ClothingBackpack
     shoes: ClothingShoesColorBlack
