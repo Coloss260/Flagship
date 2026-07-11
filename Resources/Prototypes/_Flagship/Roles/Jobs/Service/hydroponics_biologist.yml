@@ -24,7 +24,6 @@
 - type: startingGear
   id: HydroponicsBiologistGear
   equipment:
-  equipment:
     id: BotanistPDA
     head: ClothingHeadBandBotany
     ears: ClothingHeadsetFlagService

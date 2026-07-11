@@ -17,7 +17,6 @@
 - type: startingGear
   id: OffDutyCrewGear
   equipment:
-  equipment:
     id: PassengerPDA
     ears: ClothingHeadsetFlag
     outerClothing:
