@@ -23,7 +23,7 @@
     id: MessChefPDA # Flagship
     head: ClothingHeadHatFlagChef # Flagship
     ears: ClothingHeadsetFlagService # Flagship
-    outerClothing: ClothingOuterApronChef
+    outerClothing: ClothingOuterApronMessChef
     jumpsuit: ClothingUniformJumpsuitMessChef # Flagship
     back: ClothingBackpack
     belt: ClothingBeltChef

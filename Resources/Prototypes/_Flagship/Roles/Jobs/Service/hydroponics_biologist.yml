@@ -27,8 +27,8 @@
     id: HydroponicsBiologistPDA # Flagship
     head: ClothingHeadBandFlagBotany # Flagship
     ears: ClothingHeadsetFlagService # Flagship
-    outerClothing: ClothingOuterApronBotanist
-    jumpsuit: ClothingUniformJumpsuitHydroponicsBiologist
+    outerClothing: ClothingOuterApronHydroponicsBiologist # Flagship
+    jumpsuit: ClothingUniformJumpsuitHydroponicsBiologist # Flagship
     gloves: ClothingHandsGlovesLeather
     back: ClothingBackpack
     belt: ClothingBeltPlant
