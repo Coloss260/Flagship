@@ -28,7 +28,7 @@
     head: ClothingHeadHatFlagTophat # Flagship
     eyes: ClothingEyesGlassesFlagCheapSunglasses # Flagship
     ears: ClothingHeadsetFlagService # Flagship
-    jumpsuit: ClothingUniformJumpsuitBartender
+    jumpsuit: ClothingUniformJumpsuitFlagBartender # Flagship
     gloves: ClothingHandsGlovesColorWhite
     back: ClothingBackpackSatchelLeather
     shoes: ClothingShoesBootsLaceup

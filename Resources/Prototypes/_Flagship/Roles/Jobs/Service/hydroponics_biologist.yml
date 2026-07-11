@@ -28,7 +28,7 @@
     head: ClothingHeadBandFlagBotany # Flagship
     ears: ClothingHeadsetFlagService # Flagship
     outerClothing: ClothingOuterApronBotanist
-    jumpsuit: ClothingUniformJumpsuitHydroponics
+    jumpsuit: ClothingUniformJumpsuitHydroponicsBiologist
     gloves: ClothingHandsGlovesLeather
     back: ClothingBackpack
     belt: ClothingBeltPlant

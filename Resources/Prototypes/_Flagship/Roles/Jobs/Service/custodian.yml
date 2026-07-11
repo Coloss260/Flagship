@@ -24,7 +24,7 @@
     id: CustodianPDA # Flagship
     head: ClothingHeadHatPurpleCap # Flagship
     ears: ClothingHeadsetFlagService # Flagship
-    jumpsuit: ClothingUniformJumpsuitJanitor
+    jumpsuit: ClothingUniformJumpsuitCustodian # Flagship
     gloves: ClothingHandsGlovesJanitor
     back: ClothingBackpack
     belt: ClothingBeltJanitor
