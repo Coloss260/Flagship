@@ -1,0 +1,27 @@
+- type: entity
+  parent: ClothingHandsGlovesSyntheticBase
+  id: ClothingHandsGlovesFlagColorWhite
+  name: white gloves
+  description: Regular white gloves that do not keep you from frying.
+  components:
+  - type: Sprite
+    sprite: _Flagship/Clothing/Hands/Gloves/Color/color.rsi
+    layers:
+    - state: icon
+      color: "#EAE8E8"
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+        color: "#EAE8E8"
+      right:
+      - state: inhand-right
+        color: "#EAE8E8"
+  - type: Clothing
+    sprite: _Flagship/Clothing/Hands/Gloves/Color/color.rsi
+    clothingVisuals:
+      gloves:
+      - state: equipped-HAND
+        color: "#EAE8E8"
+  - type: Fiber
+    fiberColor: fibers-white

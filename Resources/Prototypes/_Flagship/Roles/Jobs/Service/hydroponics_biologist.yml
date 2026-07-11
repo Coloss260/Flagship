@@ -29,7 +29,7 @@
     ears: ClothingHeadsetFlagService # Flagship
     outerClothing: ClothingOuterApronHydroponicsBiologist # Flagship
     jumpsuit: ClothingUniformJumpsuitHydroponicsBiologist # Flagship
-    gloves: ClothingHandsGlovesLeather
+    gloves: ClothingHandsGlovesFlagLeather # Flagship
     back: ClothingBackpack
     belt: ClothingBeltPlant
     shoes: ClothingShoesColorBlack

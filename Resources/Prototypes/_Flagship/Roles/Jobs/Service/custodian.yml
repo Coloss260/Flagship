@@ -25,7 +25,7 @@
     head: ClothingHeadHatPurpleCap # Flagship
     ears: ClothingHeadsetFlagService # Flagship
     jumpsuit: ClothingUniformJumpsuitCustodian # Flagship
-    gloves: ClothingHandsGlovesJanitor
+    gloves: ClothingHandsGlovesCustodian # Flagship
     back: ClothingBackpack
     belt: ClothingBeltJanitor
     shoes: ClothingShoesGaloshes

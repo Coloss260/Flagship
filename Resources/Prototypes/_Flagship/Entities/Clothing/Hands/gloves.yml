@@ -39,3 +39,38 @@
   - type: Fiber
     fiberMaterial: fibers-latex
   - type: FingerprintMask
+
+- type: entity
+  parent: ClothingHandsButcherable
+  id: ClothingHandsGlovesFlagLeather
+  name: hydroponics biologist's leather gloves
+  description: These leather gloves protect against thorns, barbs, prickles, spikes and other harmful objects of floral origin. They're also quite warm.
+  components:
+  - type: Sprite
+    sprite: _Flagship/Clothing/Hands/Gloves/leather.rsi
+  - type: Clothing
+    sprite: _Flagship/Clothing/Hands/Gloves/leather.rsi
+  - type: Fiber
+    fiberMaterial: fibers-leather
+    fiberColor: fibers-brown
+  - type: FingerprintMask
+  - type: DamageOnInteractProtection
+    damageProtection:
+      flatReductions:
+        Heat: 10
+        Caustic: 5
+
+- type: entity
+  parent: ClothingHandsBase
+  id: ClothingHandsGlovesCustodian
+  name: rubber gloves
+  description: High-quality rubber gloves, squeaky to do some cleaning!
+  components:
+  - type: Sprite
+    sprite: _Flagship/Clothing/Hands/Gloves/janitor.rsi
+  - type: Clothing
+    sprite: _Flagship/Clothing/Hands/Gloves/janitor.rsi
+  - type: Fiber
+    fiberMaterial: fibers-rubber
+    fiberColor: fibers-yellow
+  - type: FingerprintMask

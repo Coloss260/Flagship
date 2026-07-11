@@ -29,6 +29,6 @@
     eyes: ClothingEyesGlassesFlagCheapSunglasses # Flagship
     ears: ClothingHeadsetFlagService # Flagship
     jumpsuit: ClothingUniformJumpsuitFlagBartender # Flagship
-    gloves: ClothingHandsGlovesColorWhite
+    gloves: ClothingHandsGlovesFlagColorWhite # Flagship
     back: ClothingBackpackSatchelLeather
     shoes: ClothingShoesBootsLaceup
