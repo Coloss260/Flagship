@@ -784,3 +784,127 @@
   - type: Icon
     state: pda-internsci
 # End of Science
+
+# Service
+- type: entity
+  parent: [BaseFlagPDA, BaseFlagServiceContraband]
+  id: FlagBartenderPDA
+  name: Bartender PDA
+  description: Surprisingly no different from your PDA.
+  components:
+  - type: Pda
+    id: FlagBartenderIDCard
+    penSlot:
+      startingItem: PenCap
+      priority: -1
+      whitelist:
+        tags:
+        - Write
+  - type: Appearance
+    appearanceDataInit:
+     enum.PdaVisuals.PdaType:
+       !type:String
+       pda-bartender
+  - type: PdaBorderColor
+    borderColor: "#333333"
+  - type: Icon
+    state: pda-bartender
+
+- type: entity
+  parent: [BaseFlagPDA, BaseFlagServiceContraband]
+  id: CustodianPDA
+  name: Custodian PDA
+  description: Surprisingly no different from your PDA.
+  components:
+  - type: Pda
+    id: CustodianIDCard
+    penSlot:
+      startingItem: PenCap
+      priority: -1
+      whitelist:
+        tags:
+        - Write
+  - type: Appearance
+    appearanceDataInit:
+     enum.PdaVisuals.PdaType:
+       !type:String
+       pda-custodian
+  - type: PdaBorderColor
+    borderColor: "#933ea8"
+  - type: Icon
+    state: pda-custodian
+
+- type: entity
+  parent: [BaseFlagPDA, BaseFlagServiceContraband]
+  id: HydroponicsBiologistPDA
+  name: Hydroponics Biologist PDA
+  description: Surprisingly no different from your PDA.
+  components:
+  - type: Pda
+    id: HydroponicsBiologistIDCard
+    penSlot:
+      startingItem: PenCap
+      priority: -1
+      whitelist:
+        tags:
+        - Write
+  - type: Appearance
+    appearanceDataInit:
+     enum.PdaVisuals.PdaType:
+       !type:String
+       pda-hydroponicsbiologist
+  - type: PdaBorderColor
+    borderColor: "#44843c"
+  - type: Icon
+    state: pda-hydroponicsbiologist
+
+- type: entity
+  parent: [BaseFlagPDA, BaseFlagServiceContraband]
+  id: MessChefPDA
+  name: Mess Chef PDA
+  description: Surprisingly no different from your PDA.
+  components:
+  - type: Pda
+    id: MessChefIDCard
+    penSlot:
+      startingItem: PenCap
+      priority: -1
+      whitelist:
+        tags:
+        - Write
+  - type: Appearance
+    appearanceDataInit:
+     enum.PdaVisuals.PdaType:
+       !type:String
+       pda-messchef
+  - type: PdaBorderColor
+    borderColor: "#e2e2e2"
+  - type: Icon
+    state: pda-messchef
+# End of Service
+
+# Other
+- type: entity
+  parent: BaseFlagPDA
+  id: OffDutyCrewPDA
+  name: Off-Duty Crew PDA
+  description: Surprisingly no different from your PDA.
+  components:
+  - type: Pda
+    id: OffDutyCrewIDCard
+    penSlot:
+      startingItem: PenCap
+      priority: -1
+      whitelist:
+        tags:
+        - Write
+  - type: Appearance
+    appearanceDataInit:
+     enum.PdaVisuals.PdaType:
+       !type:String
+       pda
+  - type: PdaBorderColor
+    borderColor: "#999875"
+  - type: Icon
+    state: pda
+# End of Other

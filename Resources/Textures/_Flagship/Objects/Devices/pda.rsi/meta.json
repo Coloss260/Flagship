@@ -73,6 +73,18 @@
             "name": "pda-internsci"
         },
         {
+            "name": "pda-bartender"
+        },
+        {
+            "name": "pda-custodian"
+        },
+        {
+            "name": "pda-messchef"
+        },
+        {
+            "name": "pda-hydroponicsbiologist"
+        },
+        {
             "name": "pda"
         }
     ]

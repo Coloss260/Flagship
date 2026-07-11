@@ -17,8 +17,8 @@
 - type: startingGear
   id: OffDutyCrewGear
   equipment:
-    id: PassengerPDA
-    ears: ClothingHeadsetFlagShip
+    id: OffDutyCrewPDA # Flagship
+    ears: ClothingHeadsetFlagShip # Flagship
     jumpsuit: ClothingUniformJumpsuitColorGrey
     back: ClothingBackpack
     shoes: ClothingShoesColorBlack

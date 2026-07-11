@@ -20,9 +20,9 @@
 - type: startingGear
   id: MessChefGear
   equipment:
-    id: ChefPDA
+    id: MessChefPDA # Flagship
     head: ClothingHeadHatChef
-    ears: ClothingHeadsetFlagService
+    ears: ClothingHeadsetFlagService # Flagship
     outerClothing: ClothingOuterApronChef
     jumpsuit: ClothingUniformJumpsuitChef
     back: ClothingBackpack

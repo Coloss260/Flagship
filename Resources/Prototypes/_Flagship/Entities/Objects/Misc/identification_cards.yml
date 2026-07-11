@@ -733,3 +733,134 @@
     - WhitelistChameleon
     - WhitelistChameleonIdCard
 # End of Science
+
+# Service
+- type: entity
+  parent: [IDCardFlagship, BaseFlagServiceContraband]
+  id: FlagBartenderIDCard
+  name: Bartender ID Card
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+    - state: stripe_top
+      color: "#333333"
+    - state: stripe_bottom
+      color: "#232323"
+    - sprite: /Textures/_Flagship/Interface/Misc/job_icons.rsi
+      offset: -0.09375, 0.0625
+      state: Bartender
+  - type: Item
+    heldPrefix: default
+  - type: PresetIdCard
+    job: FlagBartender
+  - type: Tag
+    tags:
+    - DoorBumpOpener
+    - WhitelistChameleon
+    - WhitelistChameleonIdCard
+
+- type: entity
+  parent: [IDCardFlagship, BaseFlagServiceContraband]
+  id: CustodianIDCard
+  name: Custodian ID Card
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+    - state: stripe_top
+      color: "#933ea8"
+    - state: stripe_bottom
+      color: "#753186"
+    - sprite: /Textures/_Flagship/Interface/Misc/job_icons.rsi
+      offset: -0.09375, 0.0625
+      state: Custodian
+  - type: Item
+    heldPrefix: default
+  - type: PresetIdCard
+    job: Custodian
+  - type: Tag
+    tags:
+    - DoorBumpOpener
+    - WhitelistChameleon
+    - WhitelistChameleonIdCard
+
+- type: entity
+  parent: [IDCardFlagship, BaseFlagServiceContraband]
+  id: HydroponicsBiologistIDCard
+  name: Hydroponics Biologist ID Card
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+    - state: stripe_top
+      color: "#44843c"
+    - state: stripe_bottom
+      color: "#3c6137"
+    - sprite: /Textures/_Flagship/Interface/Misc/job_icons.rsi
+      offset: -0.09375, 0.0625
+      state: HydroponicsBiologist
+  - type: Item
+    heldPrefix: default
+  - type: PresetIdCard
+    job: HydroponicsBiologist
+  - type: Tag
+    tags:
+    - DoorBumpOpener
+    - WhitelistChameleon
+    - WhitelistChameleonIdCard
+
+- type: entity
+  parent: [IDCardFlagship, BaseFlagServiceContraband]
+  id: MessChefIDCard
+  name: Mess Chef ID Card
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+    - state: stripe_top
+      color: "#e2e2e2"
+    - state: stripe_bottom
+      color: "#333333"
+    - sprite: /Textures/_Flagship/Interface/Misc/job_icons.rsi
+      offset: -0.09375, 0.0625
+      state: MessChef
+  - type: Item
+    heldPrefix: default
+  - type: PresetIdCard
+    job: MessChef
+  - type: Tag
+    tags:
+    - DoorBumpOpener
+    - WhitelistChameleon
+    - WhitelistChameleonIdCard
+
+# End of Service
+
+# Other
+- type: entity
+  parent: IDCardFlagship
+  id: OffDutyCrewIDCard
+  name: Off-Duty Crew ID Card
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+    - state: stripe_top
+      color: "#999875"
+    - state: stripe_bottom
+      color: "#7b7a5b"
+    - sprite: /Textures/_Flagship/Interface/Misc/job_icons.rsi
+      offset: -0.09375, 0.0625
+      state: OffDutyCrew
+  - type: Item
+    heldPrefix: default
+  - type: PresetIdCard
+    job: OffDutyCrew
+  - type: Tag
+    tags:
+    - DoorBumpOpener
+    - WhitelistChameleon
+    - WhitelistChameleonIdCard
+
+# End of Other

@@ -24,7 +24,7 @@
 - type: startingGear
   id: FlagBartenderGear
   equipment:
-    id: BartenderPDA
+    id: FlagBartenderPDA # Flagship
     head: ClothingHeadHatTophat
     eyes: ClothingEyesGlassesCheapSunglasses
     ears: ClothingHeadsetFlagService # Flagship
