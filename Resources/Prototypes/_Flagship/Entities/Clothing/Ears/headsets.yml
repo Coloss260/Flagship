@@ -272,9 +272,9 @@
       key_slots:
       - EncryptionKeyFlagService
   - type: Sprite
-    sprite: _Flagship/Clothing/Ears/Headsets/militarypolicemedic.rsi
+    sprite: _Flagship/Clothing/Ears/Headsets/service.rsi
   - type: Clothing
-    sprite: _Flagship/Clothing/Ears/Headsets/militarypolicemedic.rsi
+    sprite: _Flagship/Clothing/Ears/Headsets/service.rsi
 
 - type: entity
   parent: ClothingHeadsetFlag
