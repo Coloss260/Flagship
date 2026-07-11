@@ -203,3 +203,56 @@
     - Recyclable
     - HamsterWearable
     - WhitelistChameleon
+
+# Service
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatFlagTophat
+  name: tophat
+  description: A stylish black tophat.
+  components:
+  - type: Sprite
+    sprite: _Flagship/Clothing/Head/Hats/tophat.rsi
+  - type: Clothing
+    sprite: _Flagship/Clothing/Head/Hats/tophat.rsi
+  - type: Tag
+    tags:
+    - PetWearable
+    - CorgiWearable
+    - ClothMade
+    - Recyclable
+    - HamsterWearable
+    - WhitelistChameleon
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatFlagChef
+  name: mess chef's hat
+  description: A hat used by chefs to keep their hair out of your food. Judging by the food in the mess, they don't work.
+  components:
+  - type: Sprite
+    sprite: _Flagship/Clothing/Head/Hats/chefhat.rsi
+  - type: Clothing
+    sprite: _Flagship/Clothing/Head/Hats/chefhat.rsi
+  - type: Storage
+    grid:
+    - 0,0,0,0
+  - type: UserInterface
+    interfaces:
+      enum.StorageUiKey.Key:
+        type: StorageBoundUserInterface
+  - type: ContainerContainer
+    containers:
+      storagebase: !type:Container
+  - type: PilotedClothing
+    pilotWhitelist:
+      tags:
+        - ChefPilot
+  - type: Tag
+    tags:
+    - PetWearable
+    - CorgiWearable
+    - ClothMade
+    - Recyclable
+    - HamsterWearable
+    - WhitelistChameleon

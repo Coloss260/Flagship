@@ -22,7 +22,7 @@
   id: CustodianGear
   equipment:
     id: CustodianPDA # Flagship
-    head: ClothingHeadHatPurplesoft
+    head: ClothingHeadHatPurpleCap # Flagship
     ears: ClothingHeadsetFlagService # Flagship
     jumpsuit: ClothingUniformJumpsuitJanitor
     gloves: ClothingHandsGlovesJanitor
