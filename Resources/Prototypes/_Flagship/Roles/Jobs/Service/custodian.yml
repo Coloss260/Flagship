@@ -28,4 +28,4 @@
     gloves: ClothingHandsGlovesCustodian # Flagship
     back: ClothingBackpackFlag # Flagship
     belt: ClothingBeltCustodian # Flagship
-    shoes: ClothingShoesGaloshes
+    shoes: ClothingShoesFlagGaloshes # Flagship

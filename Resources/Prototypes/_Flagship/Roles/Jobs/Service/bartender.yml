@@ -31,4 +31,4 @@
     jumpsuit: ClothingUniformJumpsuitFlagBartender # Flagship
     gloves: ClothingHandsGlovesFlagColorWhite # Flagship
     back: ClothingBackpackSatchelFlagLeather # Flagship
-    shoes: ClothingShoesBootsLaceup
+    shoes: ClothingShoesBootsFlagLaceup # Flagship

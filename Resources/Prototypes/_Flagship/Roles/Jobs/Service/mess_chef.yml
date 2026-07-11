@@ -27,4 +27,4 @@
     jumpsuit: ClothingUniformJumpsuitMessChef # Flagship
     back: ClothingBackpackFlag # Flagship
     belt: ClothingBeltMessChef # Flagship
-    shoes: ClothingShoesChef
+    shoes: ClothingShoesMessChef # Flagship

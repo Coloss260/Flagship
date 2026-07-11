@@ -21,4 +21,4 @@
     ears: ClothingHeadsetFlagShip # Flagship
     jumpsuit: ClothingUniformJumpsuitFlagColorGrey # Flagship
     back: ClothingBackpackFlag # Flagship
-    shoes: ClothingShoesColorBlack
+    shoes: ClothingShoesFlagColorBlack # Flagship

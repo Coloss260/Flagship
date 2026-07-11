@@ -1,3 +1,4 @@
+# White Shoes
 - type: entity
   parent: ClothingShoesBaseButcherable
   id: ClothingShoesFlagColorWhite
@@ -25,3 +26,34 @@
       - state: equipped-FEET
         color: "#EAE8E8"
       - state: contrastedsoles-equipped-FEET
+
+# Black Shoes
+- type: entity
+  parent: ClothingShoesBaseButcherable
+  id: ClothingShoesFlagColorBlack
+  name: black shoes
+  description: Stylish black shoes.
+  components:
+  - type: Sprite
+    sprite: _Flagship/Clothing/Shoes/color.rsi
+    layers:
+    - state: icon
+      color: "#3f3f3f" #Different from the worn state for contrast reasons.
+    - state: soles-icon
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+        color: "#3f3f3f"
+      - state: soles-inhand-left
+      right:
+      - state: inhand-right
+        color: "#3f3f3f"
+      - state: soles-inhand-right
+  - type: Clothing
+    sprite: _Flagship/Clothing/Shoes/color.rsi
+    clothingVisuals:
+      shoes:
+      - state: equipped-FEET
+        color: "#1d1d1d"
+      - state: soles-equipped-FEET

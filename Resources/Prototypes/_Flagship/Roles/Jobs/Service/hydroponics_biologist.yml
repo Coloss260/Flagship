@@ -32,4 +32,4 @@
     gloves: ClothingHandsGlovesFlagLeather # Flagship
     back: ClothingBackpackFlag # Flagship
     belt: ClothingBeltHydroponicsBiologist # Flagship
-    shoes: ClothingShoesColorBlack
+    shoes: ClothingShoesFlagColorBlack # Flagship
