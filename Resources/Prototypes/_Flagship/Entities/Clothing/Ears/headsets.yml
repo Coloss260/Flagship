@@ -11,7 +11,7 @@
   - type: ContainerFill
     containers:
       key_slots:
-      - EncryptionKeyShip
+      - EncryptionKeyCommon
   - type: Headset
   - type: EncryptionKeyHolder
     keySlots: 4
@@ -275,3 +275,18 @@
     sprite: _Flagship/Clothing/Ears/Headsets/militarypolicemedic.rsi
   - type: Clothing
     sprite: _Flagship/Clothing/Ears/Headsets/militarypolicemedic.rsi
+
+- type: entity
+  parent: ClothingHeadsetFlag
+  id: ClothingHeadsetFlagShip
+  name: Ship headset
+  description: Headset used by people who are not on duty.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyShip
+  - type: Sprite
+    sprite: Clothing/Ears/Headsets/base.rsi
+  - type: Clothing
+    sprite: Clothing/Ears/Headsets/base.rsi
