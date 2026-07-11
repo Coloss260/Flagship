@@ -84,7 +84,6 @@
       types:
         Structural: 1000
         Heat: 500
-      armorPenetration: 1
     penetrationThreshold: 1000
   - type: Sprite
     sprite: _Flagship/Objects/SpaceArtillery/turbolaser_shot.rsi
