@@ -1,6 +1,6 @@
 using Robust.Shared.GameStates;
 
-namespace Content.FlagShip.Common.Damage.Components;
+namespace Content.FlagShip.Shared.Damage.Components;
 
 /// <summary>
 /// Prevent the object from getting hit by projectiles and hitscans if the shooter was on the same grid.

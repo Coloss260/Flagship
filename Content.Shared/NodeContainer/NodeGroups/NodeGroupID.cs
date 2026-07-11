@@ -18,9 +18,10 @@ public enum NodeGroupID : byte
     Teg,
     ExCable,
 
+    // <Flagship>
     /// <summary>
-    /// Flagship.
     /// Group used by the modular shield.
     /// </summary>
     ModularShield
+    // </Flagship>
 }

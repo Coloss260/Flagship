@@ -21,7 +21,6 @@ public sealed partial class ModularShieldNodeGroup : BaseNodeGroup
     /// <summary>
     /// The core of the modular shield system in control of this node group.
     /// </summary>
-    [ViewVariables]
     private EntityUid? _masterShieldCore;
 
     public EntityUid? MasterShieldCore => _masterShieldCore;

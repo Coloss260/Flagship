@@ -14,7 +14,7 @@ public sealed partial class ModularShieldCoreComponent : Component
     /// <summary>
     /// Whether this modular shield core is the master core in control of the node group.
     /// </summary>
-    public bool IsMasterShieldCore = false;
+    public bool IsMasterShieldCore;
 
     /// <summary>
     /// Whether the modular shield core is trying (but possibly not able) to project it's shield at the moment.
@@ -24,27 +24,27 @@ public sealed partial class ModularShieldCoreComponent : Component
     /// <summary>
     /// The shield entity this modular shield core is currently projecting.
     /// </summary>
-    public EntityUid? ShieldProjected = null;
+    public EntityUid? ShieldProjected;
 
     /// <summary>
     /// The entity that this shield core's shield is projected around.
     /// </summary>
-    public EntityUid? ShieldedEntity = null;
+    public EntityUid? ShieldedEntity;
 
     /// <summary>
     /// The cooldown on toggling the shield projection on/off.
     /// </summary>
-    public TimeSpan? ShieldProjectionToggleCooldown = null;
+    public TimeSpan? ShieldProjectionToggleCooldown;
 
     /// <summary>
     /// The amount of flux that has overflown the flux capacity of the system.
     /// </summary>
-    public float FluxOverflow = 0;
+    public float FluxOverflow;
 
     /// <summary>
     /// The time at which the current overflow buffer will end and the system with overload if flux is still overflowing.
     /// </summary>
-    public TimeSpan? FluxOverflowBufferEnd = default;
+    public TimeSpan? FluxOverflowBufferEnd;
 
     /// <summary>
     /// The audio entity for the looping flux overflow buffer sound, used to stop the sound when overloading.
@@ -54,7 +54,7 @@ public sealed partial class ModularShieldCoreComponent : Component
     /// <summary>
     /// The time at which the current overload will end and the system returns to normal operation.
     /// </summary>
-    public TimeSpan? FluxOverloadEnd = default;
+    public TimeSpan? FluxOverloadEnd;
 
     /// <summary>
     /// The color of the projected shield.
@@ -111,7 +111,7 @@ public sealed partial class ModularShieldCoreComponent : Component
     /// Amount of energy drained per tick while the shield is projected.
     /// </summary>
     [DataField]
-    public int ShieldProjectionPassiveEnergyDrain = 0;
+    public int ShieldProjectionPassiveEnergyDrain;
 
     /// <summary>
     /// The amount of time that flux can overflow the flux capacity of the system before it overloads.
@@ -134,13 +134,13 @@ public sealed partial class ModularShieldCoreComponent : Component
     /// Whether or not overflowing flux is allowed to be destroyed by flux destroyers (thus preventing the shield from overloading if destroyed below max capacity).
     /// </summary>
     [DataField]
-    public bool FluxOverflowFluxDestructionAllowed = false;
+    public bool FluxOverflowFluxDestructionAllowed;
 
     /// <summary>
     /// If disabled, flux generated during flux overflow buffer is forced into the overflow buffer regardless of remaining flux capacity in the system.
     /// </summary>
     [DataField]
-    public bool FluxOverflowAllowUsingNormalStorageDuringOverflow = false;
+    public bool FluxOverflowAllowUsingNormalStorageDuringOverflow;
 
     /// <summary>
     /// How long the shield will be overloaded for if flux overflows capacity for enough time.
@@ -202,7 +202,7 @@ public sealed partial class ModularShieldCoreComponent : Component
     public float AbsorbedDamageSoundScalingMinimumVolume = -8f;
 
     [DataField]
-    public float AbsorbedDamageSoundScalingMaximumVolume = 0f;
+    public float AbsorbedDamageSoundScalingMaximumVolume;
 
     [DataField]
     public float AbsorbedDamageSoundScalingMinimumPitch = 0.5f;

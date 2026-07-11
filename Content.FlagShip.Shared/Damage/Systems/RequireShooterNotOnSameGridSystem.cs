@@ -1,9 +1,9 @@
-using Content.FlagShip.Common.Damage.Components;
-using Content.FlagShip.Common.Projectiles.Components;
 using Content.FlagShip.Common.Weapons.Hitscan.Events;
+using Content.FlagShip.Shared.Damage.Components;
+using Content.FlagShip.Shared.Projectiles.Components;
 using Robust.Shared.Physics.Events;
 
-namespace Content.FlagShip.Common.Damage.Systems;
+namespace Content.FlagShip.Shared.Damage.Systems;
 
 public sealed partial class RequireShooterNotOnSameGridSystem : EntitySystem
 {

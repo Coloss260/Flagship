@@ -1,9 +1,10 @@
-using Content.FlagShip.Common.Projectiles.Components;
+using Content.FlagShip.Shared.Projectiles.Components;
+using Content.FlagShip.Shared.Projectiles.Events;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Content.FlagShip.Common.Projectiles.Systems;
+namespace Content.FlagShip.Shared.Projectiles.Systems;
 
 public sealed partial class ShooterDataCacheSystem : EntitySystem
 {
@@ -15,11 +16,5 @@ public sealed partial class ShooterDataCacheSystem : EntitySystem
     private void OnShooterUpdated(Entity<ShooterDataCacheComponent> ent, ref ShooterUpdatedEvent args)
     {
         ent.Comp.ShooterGridUid = Transform(args.Shooter).GridUid;
-    }
-
-    [ByRefEvent]
-    public record struct ShooterUpdatedEvent(EntityUid Shooter, bool willShooterEntityBeDeletedSoon = false)
-    {
-
     }
 }

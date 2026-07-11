@@ -1,6 +1,7 @@
-﻿using Content.Shared.Trigger.Components.Triggers;
+using Content.Shared.Trigger.Components.Triggers;
 using Content.Shared.StepTrigger.Systems;
 using Robust.Shared.Physics.Events;
+using Content.FlagShip.Common.Trigger;
 
 namespace Content.Shared.Trigger.Systems;
 
@@ -31,6 +32,16 @@ public sealed partial class TriggerSystem
                 if (ent.Comp.MaxTriggers <= 0)
                     RemCompDeferred<TriggerOnCollideComponent>(ent);
             }
+
+            // <Flagship>
+            // Used for the modular shield to absorb projectiles without activating them.
+            // e.g. If an EMP grenade hits the shield close to the ship, the EMP AOE could go through the shield and hit the ship if it triggered.
+            var triggerAttemptEvent = new TriggerOnCollideActivationAttemptEvent(ent);
+            RaiseLocalEvent(args.OtherEntity, ref triggerAttemptEvent);
+            if (triggerAttemptEvent.Cancelled == true)
+                return;
+            // </Flagship>
+
             Trigger(ent.Owner, args.OtherEntity, ent.Comp.KeyOut);
         }
     }

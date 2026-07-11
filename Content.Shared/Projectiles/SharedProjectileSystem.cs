@@ -14,7 +14,9 @@ using Robust.Shared.Physics.Events;
 using Robust.Shared.Physics.Systems;
 using Robust.Shared.Serialization;
 using Robust.Shared.Utility;
-using static Content.FlagShip.Common.Projectiles.Systems.ShooterDataCacheSystem; // Flagship
+// <Flagship>
+using Content.FlagShip.Shared.Projectiles.Events;
+// </Flagship>
 
 namespace Content.Shared.Projectiles;
 
@@ -216,10 +218,11 @@ public abstract partial class SharedProjectileSystem : EntitySystem
         component.Shooter = shooterId;
         Dirty(id, component);
 
-        // Flagship.
+        // <Flagship>
         // Raising event to store shooter information at time of firing. Used for modular shields.
         var shooterEvent = new ShooterUpdatedEvent(shooterId);
         RaiseLocalEvent(id, ref shooterEvent);
+        // </Flagship>
     }
 
     [Serializable, NetSerializable]

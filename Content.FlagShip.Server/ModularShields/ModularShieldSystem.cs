@@ -1,3 +1,4 @@
+using Content.FlagShip.Common.Explosion.Events;
 using Content.FlagShip.Shared.ModularShields.Components;
 using Content.Server.Explosion.EntitySystems;
 using Content.Server.Power.EntitySystems;
@@ -386,13 +387,13 @@ public sealed partial class ModularShieldSystem : EntitySystem
         if (TryComp<EmpOnTriggerComponent>(args.AbsorbedProjectile, out var emp))
         {
             calculatedDamage += emp.EnergyConsumption * component.EmpDamageToNormalDamageMultiplier;
-            _trigger.Trigger(args.AbsorbedProjectile);
         }
 
-        if (TryComp<ExplosiveComponent>(args.AbsorbedProjectile, out var exp) && _prototypeManager.TryIndex(exp.ExplosionType, out var type))
+        var defuseEvent = new DefuseExplosiveEvent();
+        RaiseLocalEvent(args.AbsorbedProjectile, ref defuseEvent);
+        if (defuseEvent.Defused && TryComp<ExplosiveComponent>(args.AbsorbedProjectile, out var exp) && _prototypeManager.TryIndex(exp.ExplosionType, out var type))
         {
             calculatedDamage += exp.TotalIntensity * (float)type.DamagePerIntensity.GetTotal() * component.ExplosionDamageToNormalDamageMultiplier;
-            _explosion.DefuseExplosive(args.AbsorbedProjectile, exp);
         }
 
         calculatedDamage += (float)args.Projectile.Damage.GetTotal();

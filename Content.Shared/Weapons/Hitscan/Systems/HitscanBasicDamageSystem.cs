@@ -23,7 +23,7 @@ public sealed partial class HitscanBasicDamageSystem : EntitySystem
 
         var dmg = ent.Comp.Damage * _damage.UniversalHitscanDamageModifier;
 
-        // Flagship
+        // <Flagship>
         // Aded HitscanDamageAttempt event call and cancel check.
         var beforeDamageTakenEvent = new HitscanDamageAttemptEvent
         {
@@ -34,6 +34,7 @@ public sealed partial class HitscanBasicDamageSystem : EntitySystem
 
         if (beforeDamageTakenEvent.Cancelled)
             return;
+        // </Flagship>
 
         if (!_damage.TryChangeDamage(args.Data.HitEntity.Value, dmg, out var damageDealt, origin: args.Data.Gun))
             return;

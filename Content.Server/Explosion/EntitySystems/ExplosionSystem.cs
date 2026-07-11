@@ -32,6 +32,9 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Timing;
 using Robust.Shared.Utility;
+// <Flagship>
+using Content.FlagShip.Common.Explosion.Events;
+// </Flagship>
 
 namespace Content.Server.Explosion.EntitySystems;
 
@@ -105,6 +108,11 @@ public sealed partial class ExplosionSystem : SharedExplosionSystem
         InitVisuals();
 
         _prototypeManager.PrototypesReloaded += ReloadExplosionPrototypes;
+
+        // <Flagship>
+        // Needed in this system because ExplosiveComponent has limited access to this system.
+        SubscribeLocalEvent<ExplosiveComponent, DefuseExplosiveEvent>(OnDefuseExplosive);
+        // </Flagship>
     }
 
     private void OnReset(RoundRestartCleanupEvent ev)
@@ -173,14 +181,19 @@ public sealed partial class ExplosionSystem : SharedExplosionSystem
             QueueDel(uid);
     }
 
-    /// <inheritdoc/>
-    public override void DefuseExplosive(EntityUid uid, ExplosiveComponent? explosive = null, bool delete = true)
-    {
-        if (!Resolve(uid, ref explosive, logMissing: false))
-            return;
+    // <Flagship>
+    /// <summary>
+    /// Given an entity with an explosive component, mark it as exploded without actually exploding it
+    /// </summary>
 
-        explosive.Exploded = true;
+    private void OnDefuseExplosive(Entity<ExplosiveComponent> ent, ref DefuseExplosiveEvent args)
+    {
+        if (ent.Comp.Exploded) return;
+
+        ent.Comp.Exploded = true;
+        args.Defused = true;
     }
+    // </Flagship>
 
     /// <summary>
     ///     Find the strength needed to generate an explosion of a given radius. More useful for radii larger then 4, when the explosion becomes less "blocky".

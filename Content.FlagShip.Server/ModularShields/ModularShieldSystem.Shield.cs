@@ -1,3 +1,4 @@
+using Content.FlagShip.Common.Trigger;
 using Content.FlagShip.Common.Weapons.Hitscan.Events;
 using Content.FlagShip.Shared.ModularShields.Components;
 using Content.Shared.Damage;
@@ -38,6 +39,7 @@ public partial class ModularShieldSystem
     {
         SubscribeLocalEvent<ModularShieldShieldComponent, PreventCollideEvent>(OnPreventCollide);
         SubscribeLocalEvent<ModularShieldShieldComponent, HitscanDamageAttemptEvent>(OnHitscanDamageAttemptEvent);
+        SubscribeLocalEvent<ModularShieldShieldComponent, TriggerOnCollideActivationAttemptEvent>(OnTriggerOnCollideActivationAttempt);
     }
 
 
@@ -201,9 +203,16 @@ public partial class ModularShieldSystem
         if (ent.Comp.ModularShieldCoreSource != null)
         {
             var ev = new ModularShieldAbsorbedDamageEvent(args.DamageToTake);
-            RaiseLocalEvent((EntityUid)ent.Comp.ModularShieldCoreSource, ref ev);
+            RaiseLocalEvent(ent.Comp.ModularShieldCoreSource.Value, ref ev);
 
             args.Cancelled = true;
         }
+    }
+
+    private void OnTriggerOnCollideActivationAttempt(Entity<ModularShieldShieldComponent> ent, ref TriggerOnCollideActivationAttemptEvent args)
+    {
+        // Cancel all trigger activations on projectiles that hit the shield.
+        // This is to prevent AOEs from penetrating through the shield.
+        args.Cancelled = true;
     }
 }

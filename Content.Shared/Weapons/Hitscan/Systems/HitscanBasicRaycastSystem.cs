@@ -45,18 +45,20 @@ public sealed partial class HitscanBasicRaycastSystem : EntitySystem
         //  2.) Hit the first entity that doesn't require you to aim at it specifically to be hit.
         var result = _container.IsEntityOrParentInContainer(shooter)
             ? rayCastResults.FirstOrNull()
+            // <Flagship>
+            // Converted lambda to lambda block in order to raise HitscanHitAttemptEvent and allow for RequireShooterNotOnSameGrid to cancel hitting a target.
+            // Used for modular shields to not block hitscans from the same grid.
             : rayCastResults.FirstOrNull(hit =>
             {
-                // Flagship
-                // Converted lambda to lambda block in order to raise HitscanHitAttemptEvent and allow for RequireShooterNotOnSameGrid to cancel hitting a target.
-                // Used for modular shields to not block hitscans from the same grid.
-                var hitscanEvent = new HitscanHitAttemptEvent(hit.HitEntity);
+                var hitscanEvent = new HitscanHitAttemptEvent(shooter);
                 RaiseLocalEvent(hit.HitEntity, ref hitscanEvent);
 
                 return (hit.HitEntity == target
                         || CompOrNull<RequireProjectileTargetComponent>(hit.HitEntity)?.Active != true)
                         && !hitscanEvent.Cancelled;
             });
+        // </Flagship>
+
         var distanceTried = result?.Distance ?? ent.Comp.MaxDistance;
 
         // Do visuals without an event. They should always happen and putting it on the attempt event is weird!

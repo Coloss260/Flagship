@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Content.FlagShip.Common.Projectiles.Components;
+namespace Content.FlagShip.Shared.Projectiles.Components;
 
 /// <summary>
 /// A class for storing data about a projectile's shooter at the time of shooting, in the instance that the shooter is deleted as the projectile is shot.
