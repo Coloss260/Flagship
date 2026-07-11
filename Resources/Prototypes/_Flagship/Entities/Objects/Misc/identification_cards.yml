@@ -736,7 +736,7 @@
 
 # Service
 - type: entity
-  parent: [IDCardFlagship, BaseFlagServiceContraband]
+  parent: [IDCardFlagship, BaseServiceContraband]
   id: FlagBartenderIDCard
   name: Bartender ID Card
   components:
@@ -761,7 +761,7 @@
     - WhitelistChameleonIdCard
 
 - type: entity
-  parent: [IDCardFlagship, BaseFlagServiceContraband]
+  parent: [IDCardFlagship, BaseServiceContraband]
   id: CustodianIDCard
   name: Custodian ID Card
   components:
@@ -786,7 +786,7 @@
     - WhitelistChameleonIdCard
 
 - type: entity
-  parent: [IDCardFlagship, BaseFlagServiceContraband]
+  parent: [IDCardFlagship, BaseServiceContraband]
   id: HydroponicsBiologistIDCard
   name: Hydroponics Biologist ID Card
   components:
@@ -811,7 +811,7 @@
     - WhitelistChameleonIdCard
 
 - type: entity
-  parent: [IDCardFlagship, BaseFlagServiceContraband]
+  parent: [IDCardFlagship, BaseServiceContraband]
   id: MessChefIDCard
   name: Mess Chef ID Card
   components:

@@ -787,7 +787,7 @@
 
 # Service
 - type: entity
-  parent: [BaseFlagPDA, BaseFlagServiceContraband]
+  parent: [BaseFlagPDA, BaseServiceContraband]
   id: FlagBartenderPDA
   name: Bartender PDA
   description: Surprisingly no different from your PDA.
@@ -811,7 +811,7 @@
     state: pda-bartender
 
 - type: entity
-  parent: [BaseFlagPDA, BaseFlagServiceContraband]
+  parent: [BaseFlagPDA, BaseServiceContraband]
   id: CustodianPDA
   name: Custodian PDA
   description: Surprisingly no different from your PDA.
@@ -835,7 +835,7 @@
     state: pda-custodian
 
 - type: entity
-  parent: [BaseFlagPDA, BaseFlagServiceContraband]
+  parent: [BaseFlagPDA, BaseServiceContraband]
   id: HydroponicsBiologistPDA
   name: Hydroponics Biologist PDA
   description: Surprisingly no different from your PDA.
@@ -859,7 +859,7 @@
     state: pda-hydroponicsbiologist
 
 - type: entity
-  parent: [BaseFlagPDA, BaseFlagServiceContraband]
+  parent: [BaseFlagPDA, BaseServiceContraband]
   id: MessChefPDA
   name: Mess Chef PDA
   description: Surprisingly no different from your PDA.
