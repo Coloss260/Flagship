@@ -14,10 +14,18 @@
   accessGroups:
   - Command
 
+# Flagship
+# PLEASE RESPECT THE EQUIPMENT ORDER OR I WILL STEAL YOUR NOSE
+# equipment: id, head, eyes, ears, mask, neck, outerClothing, jumpsuit, gloves, back, belt, shoes
 - type: startingGear
   id: MessChefGear
   equipment:
-    shoes: ClothingShoesColorBlack
+  equipment:
     id: ChefPDA
-    ears: ClothingHeadsetService
-    belt: ClothingBeltChefFilled
+    head: ClothingHeadHatChef
+    ears: ClothingHeadsetFlagService
+    outerClothing: ClothingOuterApronChef
+    jumpsuit: ClothingUniformJumpsuitChef
+    back: ClothingBackpack
+    belt: ClothingBeltChef
+    shoes: ClothingShoesChef

@@ -18,24 +18,17 @@
   - Kitchen
   - Hydroponics
 
+# Flagship
+# PLEASE RESPECT THE EQUIPMENT ORDER OR I WILL STEAL YOUR NOSE
+# equipment: id, head, eyes, ears, mask, neck, outerClothing, jumpsuit, gloves, back, belt, shoes
 - type: startingGear
   id: FlagBartenderGear
   equipment:
-    shoes: ClothingShoesColorBlack
     id: BartenderPDA
-    ears: ClothingHeadsetService
-  #storage:
-    #back:
-    #- Stuff
-
-- type: chameleonOutfit
-  id: FlagBartenderChameleonOutfit
-  job: FlagBartender
-  equipment:
     head: ClothingHeadHatTophat
-    eyes: ClothingEyesGlassesSunglasses
-    mask: ClothingMaskBreath
-    neck: ClothingNeckScarfStripedBlack
-    outerClothing: ClothingOuterArmorBasicSlim
-    gloves: ClothingHandsGlovesColorBlack
-
+    eyes: ClothingEyesGlassesCheapSunglasses
+    ears: ClothingHeadsetFlagService # Flagship
+    jumpsuit: ClothingUniformJumpsuitBartender
+    gloves: ClothingHandsGlovesColorWhite
+    back: ClothingBackpackSatchelLeather
+    shoes: ClothingShoesBootsLaceup
