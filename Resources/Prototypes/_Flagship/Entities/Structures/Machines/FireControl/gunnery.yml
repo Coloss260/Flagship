@@ -79,7 +79,7 @@
   - type: FireControlServer
     processingPower: 14
   - type: ApcPowerReceiver
-    powerLoad: 1250
+    powerLoad: 100
   - type: PowerCharge
     windowTitle: gunnery-server-window-title-medium
     idlePower: 100
@@ -96,7 +96,7 @@
   - type: FireControlServer
     processingPower: 20
   - type: ApcPowerReceiver
-    powerLoad: 2500
+    powerLoad: 500
   - type: PowerCharge
     windowTitle: gunnery-server-window-title-high
     idlePower: 500
@@ -113,7 +113,7 @@
   - type: FireControlServer
     processingPower: 30
   - type: ApcPowerReceiver
-    powerLoad: 5000
+    powerLoad: 1000
   - type: PowerCharge
     windowTitle: gunnery-server-window-title-ultra
     idlePower: 1000
