@@ -1,8 +1,6 @@
 name: Send Test Discord Commit Message
 
-# on: [push]
-on:
-  workflow_dispatch:
+on: [push]
 
 jobs:
   discord_notify_empty:
