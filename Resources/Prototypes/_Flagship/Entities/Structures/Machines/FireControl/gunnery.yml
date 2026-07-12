@@ -52,7 +52,7 @@
   - type: WiresPanel
   # Low power stats by default
   - type: ApcPowerReceiver
-    powerLoad: 500
+    powerLoad: 50
   - type: PowerCharge
     windowTitle: gravity-generator-window-title
     idlePower: 50
@@ -79,7 +79,7 @@
   - type: FireControlServer
     processingPower: 14
   - type: ApcPowerReceiver
-    powerLoad: 1250
+    powerLoad: 100
   - type: PowerCharge
     idlePower: 100
     activePower: 1250
@@ -95,7 +95,7 @@
   - type: FireControlServer
     processingPower: 20
   - type: ApcPowerReceiver
-    powerLoad: 2500
+    powerLoad: 500
   - type: PowerCharge
     idlePower: 500
     activePower: 2500
@@ -111,7 +111,7 @@
   - type: FireControlServer
     processingPower: 30
   - type: ApcPowerReceiver
-    powerLoad: 5000
+    powerLoad: 1000
   - type: PowerCharge
     windowTitle: gravity-generator-window-title
     idlePower: 1000
