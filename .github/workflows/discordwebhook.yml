@@ -21,6 +21,7 @@ jobs:
           embed-footer-icon-url: "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
           embed-footer-timestamp: "true"
           show-commit-message: "true"
+          show-changed-files: "true"
           show-commit-branch: "true"
           show-commit-author: "true"
           show-commit-link: "true"
