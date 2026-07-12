@@ -53,10 +53,10 @@
   # Low power stats by default
   - type: ApcPowerReceiver
     powerLoad: 50
-  - type: PowerCharge
+  - type: PowerState
     windowTitle: gravity-generator-window-title
-    idlePower: 50
-    activePower: 500
+    idlePowerDraw: 50
+    workingPowerDraw: 500
     chargeRate: 0.05 # 20 seconds, just to save from power flickering
 
 - type: entity
@@ -80,9 +80,9 @@
     processingPower: 14
   - type: ApcPowerReceiver
     powerLoad: 100
-  - type: PowerCharge
-    idlePower: 100
-    activePower: 1250
+  - type: PowerState
+    idlePowerDraw: 100
+    workingPowerDraw: 1250
     chargeRate: 0.025 # 40 seconds
 
 - type: entity
@@ -96,9 +96,9 @@
     processingPower: 20
   - type: ApcPowerReceiver
     powerLoad: 500
-  - type: PowerCharge
-    idlePower: 500
-    activePower: 2500
+  - type: PowerState
+    idlePowerDraw: 500
+    workingPowerDraw: 2500
     chargeRate: 0.016 # ~1 minute
 
 - type: entity
@@ -112,10 +112,10 @@
     processingPower: 30
   - type: ApcPowerReceiver
     powerLoad: 1000
-  - type: PowerCharge
+  - type: PowerState
     windowTitle: gravity-generator-window-title
-    idlePower: 1000
-    activePower: 5000
+    idlePowerDraw: 1000
+    workingPowerDraw: 5000
     chargeRate: 0.008 # ~2 minutes
 
 # Monolith : Gunnery Computer
