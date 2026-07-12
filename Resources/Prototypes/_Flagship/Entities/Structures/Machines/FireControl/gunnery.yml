@@ -54,7 +54,7 @@
   - type: ApcPowerReceiver
     powerLoad: 50
   - type: PowerCharge
-    windowTitle: gravity-generator-window-title
+    windowTitle: gunnery-server-window-title-low
     idlePowerUse: 50
     activePowerUse: 500
     chargeRate: 0.05 # 20 seconds, just to save from power flickering
@@ -62,7 +62,7 @@
 - type: entity
   id: GunneryServerLow
   parent: GunneryServerBase
-  name: low-power gunnery control server
+  name: low-capacity gunnery control server
   components:
   - type: Machine
     board: MachineGCSLowCircuitboard
@@ -72,7 +72,7 @@
 - type: entity
   id: GunneryServerMedium
   parent: GunneryServerBase
-  name: medium-power gunnery control server
+  name: medium-capacity gunnery control server
   components:
   - type: Machine
     board: MachineGCSMediumCircuitboard
@@ -81,6 +81,7 @@
   - type: ApcPowerReceiver
     powerLoad: 100
   - type: PowerCharge
+    windowTitle: gunnery-server-window-title-medium
     idlePowerUse: 100
     activePowerUse: 1250
     chargeRate: 0.025 # 40 seconds
@@ -88,7 +89,7 @@
 - type: entity
   id: GunneryServerHigh
   parent: GunneryServerBase
-  name: high-power gunnery control server
+  name: high-capacity gunnery control server
   components:
   - type: Machine
     board: MachineGCSHighCircuitboard
@@ -97,6 +98,7 @@
   - type: ApcPowerReceiver
     powerLoad: 500
   - type: PowerCharge
+    windowTitle: gunnery-server-window-title-high
     idlePowerUse: 500
     activePowerUse: 2500
     chargeRate: 0.016 # ~1 minute
@@ -104,7 +106,7 @@
 - type: entity
   id: GunneryServerUltra
   parent: [GunneryServerBase]
-  name: ultra-high-power gunnery control server
+  name: ultra-high-capacity gunnery control server
   components:
   - type: Machine
     board: MachineGCSUltraCircuitboard
@@ -113,7 +115,7 @@
   - type: ApcPowerReceiver
     powerLoad: 1000
   - type: PowerCharge
-    windowTitle: gravity-generator-window-title
+    windowTitle: gunnery-server-window-title-ultra
     idlePowerUse: 1000
     activePowerDraw: 5000
     chargeRate: 0.008 # ~2 minutes

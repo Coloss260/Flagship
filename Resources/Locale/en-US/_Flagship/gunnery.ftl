@@ -12,3 +12,8 @@ gunnery-select-energy = Energy
 gunnery-select-missiles = Missiles
 gunnery-select-mining = Mining
 gunner-console-display-label = Display
+
+gunnery-server-window-title-low = Low-Capacity Gunnery Control Server
+gunnery-server-window-title-medium = Medium-Capacity Gunnery Control Server
+gunnery-server-window-title-high = High-Capacity Gunnery Control Server
+gunnery-server-window-title-ultra = Ultra-High-Capacity Gunnery Control Server
