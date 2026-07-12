@@ -55,8 +55,8 @@
     powerLoad: 500
   - type: PowerCharge
     windowTitle: gunnery-server-window-title-low
-    idlePowerUse: 50
-    activePowerUse: 500
+    idlePower: 50
+    activePower: 500
     chargeRate: 0.05 # 20 seconds, just to save from power flickering
 
 - type: entity
@@ -82,8 +82,8 @@
     powerLoad: 1250
   - type: PowerCharge
     windowTitle: gunnery-server-window-title-medium
-    idlePowerUse: 100
-    activePowerUse: 1250
+    idlePower: 100
+    activePower: 1250
     chargeRate: 0.025 # 40 seconds
 
 - type: entity
@@ -99,8 +99,8 @@
     powerLoad: 2500
   - type: PowerCharge
     windowTitle: gunnery-server-window-title-high
-    idlePowerUse: 500
-    activePowerUse: 2500
+    idlePower: 500
+    activePower: 2500
     chargeRate: 0.016 # ~1 minute
 
 - type: entity
@@ -116,8 +116,8 @@
     powerLoad: 5000
   - type: PowerCharge
     windowTitle: gunnery-server-window-title-ultra
-    idlePowerUse: 1000
-    activePowerDraw: 5000
+    idlePower: 1000
+    activePower: 5000
     chargeRate: 0.008 # ~2 minutes
 
 # Monolith : Gunnery Computer
@@ -130,7 +130,7 @@
     mode: SnapgridCenter
   components:
   - type: ApcPowerReceiver
-    powerLoad: 200
+    powerLoad: 50
   - type: ExtensionCableReceiver
   - type: ActivatableUIRequiresPower
   - type: Sprite
