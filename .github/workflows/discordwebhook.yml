@@ -11,7 +11,7 @@ jobs:
       - uses: tristanbudd/discord-commit-github-action@master
         with:
           webhook-url: ${{ secrets.DISCORD_WEBHOOK }}
-          github-token: ${{ secrets.GIT_TOKEN }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
 
           embed-title: "New Flagship Commit"
           embed-colour: "#7289DA"
@@ -21,7 +21,6 @@ jobs:
           embed-footer-icon-url: "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
           embed-footer-timestamp: "true"
           show-commit-message: "true"
-          colour-changes: "true"
           show-commit-branch: "true"
           show-commit-author: "true"
           show-commit-link: "true"
