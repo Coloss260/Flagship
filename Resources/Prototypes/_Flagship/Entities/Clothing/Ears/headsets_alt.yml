@@ -12,7 +12,7 @@
 
 # Bridge Command
 - type: entity
-  parent: ClothingHeadsetAltFlag
+  parent: [ClothingHeadsetAltFlag, BaseBridgeCommandContraband]
   id: ClothingHeadsetAltCommandingOfficer
   name: Commanding Officer's over-ear Headset
   description: Headset used by Commanding Officers.
@@ -27,7 +27,7 @@
     sprite: _Flagship/Clothing/Ears/Headsets/bridgecommand.rsi
 
 - type: entity
-  parent: ClothingHeadsetAltFlag
+  parent: [ClothingHeadsetAltFlag, BaseBridgeCommandContraband]
   id: ClothingHeadsetAltExecutiveOfficer
   name: Executive Officer's over-ear Headset
   description: Headset used by Executive Officers.
@@ -42,7 +42,7 @@
     sprite: _Flagship/Clothing/Ears/Headsets/bridgecommand.rsi
 
 - type: entity
-  parent: ClothingHeadsetAltFlag
+  parent: [ClothingHeadsetAltFlag, BaseBridgeCommandContraband]
   id: ClothingHeadsetAltTacticalOfficer
   name: Tactical Officer's over-ear Headset
   description: Headset used by Tactical Officers.
@@ -57,7 +57,7 @@
     sprite: _Flagship/Clothing/Ears/Headsets/bridgecommand.rsi
 
 - type: entity
-  parent: ClothingHeadsetAltFlag
+  parent: [ClothingHeadsetAltFlag, BaseBridgeCommandContraband]
   id: ClothingHeadsetAltOperationsOfficer
   name: Operations Officer's over-ear Headset
   description: Headset used by Operations Officers.
@@ -72,7 +72,7 @@
     sprite: _Flagship/Clothing/Ears/Headsets/bridgecommand.rsi
 
 - type: entity
-  parent: ClothingHeadsetAltFlag
+  parent: [ClothingHeadsetAltFlag, BaseBridgeCommandContraband]
   id: ClothingHeadsetAltCommunicationsOfficer
   name: Communications Officer's over-ear Headset
   description: Headset used by Communications Officers.
@@ -87,7 +87,7 @@
     sprite: _Flagship/Clothing/Ears/Headsets/bridgecommand.rsi
 
 - type: entity
-  parent: ClothingHeadsetAltFlag
+  parent: [ClothingHeadsetAltFlag, BaseBridgeCommandContraband]
   id: ClothingHeadsetAltFlightControlOfficer
   name: Flight Control Officer's over-ear Headset
   description: Headset used by Flight Control Officers.
@@ -102,7 +102,7 @@
     sprite: _Flagship/Clothing/Ears/Headsets/bridgecommand.rsi
 
 - type: entity
-  parent: ClothingHeadsetAltFlag
+  parent: [ClothingHeadsetAltFlag, BaseBridgeCommandContraband]
   id: ClothingHeadsetAltBridgeEnsign
   name: Bridge Ensign's Headset
   description: Headset used by Bridge Ensigns.
@@ -117,11 +117,89 @@
     sprite: _Flagship/Clothing/Ears/Headsets/bridgecommand.rsi
 
 # Military Police
+- type: entity
+  parent: [ClothingHeadsetAltFlag, BaseMilitaryPoliceContraband]
+  id: ClothingHeadsetAltMilitaryPolice
+  name: Military Police Chief's Headset
+  description: Headset used by Military Police Chiefs.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyTactical
+      - EncryptionKeyMilitaryPolice
+  - type: Sprite
+    sprite: _Flagship/Clothing/Ears/Headsets/militarypolice.rsi
+  - type: Clothing
+    sprite: _Flagship/Clothing/Ears/Headsets/militarypolice.rsi
 
-# Science
+# Maintenance
+- type: entity
+  parent: [ClothingHeadsetAltFlag, BaseMaintenanceContraband]
+  id: ClothingHeadsetAltMaintenance
+  name: Chief of Maintenance over-ear headset
+  description: Headset used by Chiefs of Maintenance.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyMaintenance
+      - EncryptionKeyTactical
+  - type: Sprite
+    sprite: _Flagship/Clothing/Ears/Headsets/maintenance.rsi
+  - type: Clothing
+    sprite: _Flagship/Clothing/Ears/Headsets/maintenance.rsi
 
 # Supply
+- type: entity
+  parent: [ClothingHeadsetAltFlag, BaseSupplyContraband]
+  id: ClothingHeadsetAltSupplies
+  name: Supplies Quartermaster over-ear headset
+  description: Headset used by Supplies Quartermasters.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeySupplies
+      - EncryptionKeyTactical
+  - type: Sprite
+    sprite: _Flagship/Clothing/Ears/Headsets/supplycrew.rsi
+  - type: Clothing
+    sprite: _Flagship/Clothing/Ears/Headsets/supplycrew.rsi
 
 # Medical
+- type: entity
+  parent: [ClothingHeadsetAltFlag, BaseMedicalContraband]
+  id: ClothingHeadsetAltFlagMedical
+  name: Chief of Medical over-ear headset
+  description: Headset used by Chiefs of Medical.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyFlagMedical
+      - EncryptionKeyOperations
+  - type: Sprite
+    sprite: _Flagship/Clothing/Ears/Headsets/medical.rsi
+  - type: Clothing
+    sprite: _Flagship/Clothing/Ears/Headsets/medical.rsi
+
+ # Science
+- type: entity
+  parent: [ClothingHeadsetAltFlag, BaseFlagScienceContraband]
+  id: ClothingHeadsetAltFlagScience
+  name: Science Supervisor over-ear headset
+  description: Headset used by Science Supervisors.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyFlagScience
+      - EncryptionKeyOperations
+  - type: Sprite
+    sprite: _Flagship/Clothing/Ears/Headsets/science.rsi
+  - type: Clothing
+    sprite: _Flagship/Clothing/Ears/Headsets/science.rsi
+
 
 # Service

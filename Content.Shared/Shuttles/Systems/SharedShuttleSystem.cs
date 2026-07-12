@@ -1,3 +1,4 @@
+using Content.FlagShip.Common.FTLDrive;
 using Content.Shared.Containers.ItemSlots;
 using Content.Shared.Shuttles.BUIStates;
 using Content.Shared.Shuttles.Components;
@@ -166,7 +167,16 @@ public abstract partial class SharedShuttleSystem : EntitySystem
         return HasComp<MapComponent>(coordinates.EntityId);
     }
 
-    public float GetFTLRange(EntityUid shuttleUid) => FTLRange;
+    public float GetFTLRange(EntityUid shuttleUid)
+    {
+        // <FlagShip>
+        var ev = new GetFTLDriveRangeEvent();
+
+        RaiseLocalEvent(shuttleUid, ref ev);
+
+        return ev.Range;
+        // </FlagShip>
+    }
 
     public float GetFTLBufferRange(EntityUid shuttleUid, MapGridComponent? grid = null)
     {
@@ -200,7 +210,7 @@ public abstract partial class SharedShuttleSystem : EntitySystem
         var targetPosition = mapCoordinates.Position;
 
         // Check range even if it's cross-map.
-        if ((targetPosition - ourPos).Length() > FTLRange)
+        if ((targetPosition - ourPos).Length() > GetFTLRange(shuttleUid)) // FlagShip - use GetFTLRange()
         {
             return false;
         }

@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Sprited by ItsAbby For Far Horizons",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "broken"
+    },
+    {
+      "name": "deny-unshaded",
+      "delays": [
+        [
+          0.1,
+          0.1
+        ]
+      ]
+    },
+    {
+      "name": "eject-unshaded",
+      "delays": [
+        [
+          0.1,
+          0.4,
+          0.2,
+          0.4,
+          0.1
+        ]
+      ]
+    },
+    {
+      "name": "normal-unshaded",
+      "delays": [
+        [
+          2.0,
+          0.05,
+          2.0,
+          2.0,
+          0.05
+        ]
+      ]
+    },
+    {
+      "name": "off"
+    },
+    {
+      "name": "panel"
+    }
+  ]
+}

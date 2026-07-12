@@ -15,13 +15,22 @@
   accessGroups:
   - Command
 
+# Flagship
+# PLEASE RESPECT THE EQUIPMENT ORDER OR I WILL STEAL YOUR NOSE
+# equipment: id, head, eyes, ears, mask, neck, outerClothing, jumpsuit, gloves, back, belt, shoes
 - type: startingGear
   id: ChiefOfMaintenanceGear
   equipment:
-    id: CEPDA
-    eyes: ClothingEyesGlassesMeson
-    ears: ClothingHeadsetCE
+    id: ChiefOfMaintenancePDA
+    head: ClothingHeadHatBeretChiefOfMaintenance
+    eyes: ClothingEyesGlassesMaintenanceMeson
+    ears: ClothingHeadsetAltMaintenance
+    outerClothing: ClothingOuterVestHazard
+    jumpsuit: ClothingUniformJumpsuitMaintenanceTechnician
+    gloves: ClothingHandsGlovesColorYellow
+    back: ClothingBackpackMaintenance
     belt: ClothingBeltUtilityEngineering
+    shoes: ClothingShoesMaintenanceBootsWork
   storage:
     back:
     - Flash

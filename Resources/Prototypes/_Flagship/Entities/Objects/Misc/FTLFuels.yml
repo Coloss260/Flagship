@@ -1,0 +1,8 @@
+- type: entity
+  parent: PowerCageSmall
+  id: FuelCellBasic
+  components:
+  - type: Modifier
+    modifiers:
+    - FTLRangeIncreaseMinor
+  - type: AddModifierOnInserted

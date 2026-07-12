@@ -13,3 +13,47 @@
   parent: [ ClothingHeadHeadHatBaseFlipped, ClothingHeadHatBridgeEnsignSoft ]
   id: ClothingHeadHatBridgeEnsignSoftFlipped
   name: Bridge Ensign cap
+
+- type: entity
+  parent: ClothingHeadHeadHatBaseFlippable
+  id: ClothingHeadHatMilitaryPoliceTrainee
+  name: Military Police Trainee cap
+  description: A baseball cap colored to match military polices' uniforms.
+  components:
+  - type: Sprite
+    sprite: _Flagship/Clothing/Head/Soft/militarypolicetrainee.rsi
+  - type: Clothing
+    sprite: _Flagship/Clothing/Head/Soft/militarypolicetrainee.rsi
+
+- type: entity
+  parent: ClothingHeadHeadHatBaseFlippable
+  id: ClothingHeadHatSuppliesCrewman
+  name: Supplies Crewman cap
+  description: A baseball cap colored to match supplies' uniforms.
+  components:
+  - type: Sprite
+    sprite: _Flagship/Clothing/Head/Soft/suppliescrewmencap.rsi
+  - type: Clothing
+    sprite: _Flagship/Clothing/Head/Soft/suppliescrewmencap.rsi
+
+- type: entity
+  parent: ClothingHeadHeadHatBaseFlippable
+  id: ClothingHeadHatWhiteCap
+  name: White cap
+  description: A baseball cap colored in white.
+  components:
+  - type: Sprite
+    sprite: _Flagship/Clothing/Head/Soft/whitecap.rsi
+  - type: Clothing
+    sprite: _Flagship/Clothing/Head/Soft/whitecap.rsi
+
+- type: entity
+  parent: ClothingHeadHeadHatBaseFlippable
+  id: ClothingHeadHatPurpleCap
+  name: Purple cap
+  description: A baseball cap colored in purple.
+  components:
+  - type: Sprite
+    sprite: _Flagship/Clothing/Head/Soft/purplecap.rsi
+  - type: Clothing
+    sprite: _Flagship/Clothing/Head/Soft/purplecap.rsi

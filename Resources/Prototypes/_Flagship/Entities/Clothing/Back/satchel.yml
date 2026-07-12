@@ -1,8 +1,33 @@
 - type: entity
-  parent: ClothingBackpackSatchel
+  parent: ClothingBackpackFlag
+  id: ClothingBackpackFlagSatchel
+  name: satchel
+  description: A trendy looking satchel.
+  components:
+  - type: Sprite
+    sprite: _Flagship/Clothing/Back/Satchels/satchel.rsi
+  - type: Storage
+    grid:
+    - 0,0,1,3
+    - 3,0,6,3
+    - 8,0,9,3
+
+# Bridge Command
+- type: entity
+  parent: ClothingBackpackFlagSatchel
   id: ClothingBackpackSatchelBridgeCommand
   name: Bridge Command Satchel
   description: A trend-setting satchel from a bygone era.
   components:
   - type: Sprite
     sprite: _Flagship/Clothing/Back/Satchels/bridgecommand.rsi
+
+# Service
+- type: entity
+  parent: ClothingBackpackFlagSatchel
+  id: ClothingBackpackSatchelFlagLeather
+  name: leather satchel
+  description: A trend-setting satchel from a bygone era.
+  components:
+  - type: Sprite
+    sprite: _Flagship/Clothing/Back/Satchels/leather.rsi

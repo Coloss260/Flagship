@@ -1,0 +1,5 @@
+- type: modifier
+  id: FTLRangeIncreaseMinor
+  modifier: 1.5
+  aspect: FTLDriveRange
+  modifierType: Multiplication

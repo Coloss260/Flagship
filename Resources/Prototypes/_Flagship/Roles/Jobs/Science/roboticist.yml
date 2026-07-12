@@ -15,11 +15,18 @@
   accessGroups:
   - Research
 
+# Flagship
+# PLEASE RESPECT THE EQUIPMENT ORDER OR I WILL STEAL YOUR NOSE
+# equipment: id, head, eyes, ears, mask, neck, outerClothing, jumpsuit, gloves, back, belt, shoes
 - type: startingGear
   id: FlagRoboticistGear
   equipment:
-    shoes: ClothingShoesBootsJack
-    id: HoSPDA
-    ears: ClothingHeadsetCommandingOfficer
-    belt: ClothingBeltSecurity
-    uniform: ClothingUniformJumpsuitSec
+    id: FlagRoboticistPDA
+    ears: ClothingHeadsetFlagScience
+    neck: ClothingNeckTieFlagSci
+    outerClothing: ClothingOuterCoatFlagRoboOpened
+    jumpsuit: ClothingUniformJumpsuitFlagScientist
+    gloves: ClothingHandsGlovesColorBlack
+    back: ClothingBackpackFlagScience
+    belt: ClothingBeltUtilityFilled
+    shoes: ClothingShoesBootsFlagLaceup

@@ -30,14 +30,19 @@
      components:
        - type: CommandStaff
 
+
+# Flagship
+# PLEASE RESPECT THE EQUIPMENT ORDER OR I WILL STEAL YOUR NOSE
+# equipment: id, head, eyes, ears, mask, neck, outerClothing, jumpsuit, gloves, back, belt, shoes
 - type: startingGear
   id: CommandingOfficerGear
   equipment:
-    jumpsuit: ClothingUniformJumpsuitCommandingOfficer
-    shoes: ClothingShoesBootsJack
+    id: CommandingOfficerPDA
     head: ClothingHeadHatCommandingOfficer
     eyes: ClothingEyesGlassesCommand
+    ears: ClothingHeadsetAltCommandingOfficer
+    jumpsuit: ClothingUniformJumpsuitCommandingOfficer
     gloves: ClothingHandsGlovesNavyOfficer
     back: ClothingBackpackSatchelBridgeCommand
-    id: CommandingOfficerPDA
-    ears: ClothingHeadsetAltCommandingOfficer
+    shoes: ClothingShoesBootsJack
+

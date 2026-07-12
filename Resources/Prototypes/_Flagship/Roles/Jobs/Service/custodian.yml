@@ -15,10 +15,17 @@
     holiday: GarbageDay
     prototype: WeaponRevolverInspector
 
+# Flagship
+# PLEASE RESPECT THE EQUIPMENT ORDER OR I WILL STEAL YOUR NOSE
+# equipment: id, head, eyes, ears, mask, neck, outerClothing, jumpsuit, gloves, back, belt, shoes
 - type: startingGear
   id: CustodianGear
   equipment:
-    shoes: ClothingShoesGaloshes
-    id: JanitorPDA
-    ears: ClothingHeadsetService
-    belt: ClothingBeltJanitorFilled
+    id: CustodianPDA # Flagship
+    head: ClothingHeadHatPurpleCap # Flagship
+    ears: ClothingHeadsetFlagService # Flagship
+    jumpsuit: ClothingUniformJumpsuitCustodian # Flagship
+    gloves: ClothingHandsGlovesCustodian # Flagship
+    back: ClothingBackpackFlag # Flagship
+    belt: ClothingBeltCustodian # Flagship
+    shoes: ClothingShoesFlagGaloshes # Flagship

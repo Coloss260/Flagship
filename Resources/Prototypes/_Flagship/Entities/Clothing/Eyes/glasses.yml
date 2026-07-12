@@ -1,0 +1,116 @@
+# Military Police
+- type: entity
+  parent: [ClothingEyesBase, ShowSecurityIcons, BaseSecurityContraband]
+  id: ClothingEyesGlassesMilitaryPolice
+  name: Military Police glasses
+  description: Upgraded sunglasses that provide flash immunity and a Military Police HUD.
+  components:
+  - type: Sprite
+    sprite: _Flagship/Clothing/Eyes/Glasses/militarypoliceglasses.rsi
+  - type: Clothing
+    sprite: _Flagship/Clothing/Eyes/Glasses/militarypoliceglasses.rsi
+  - type: FlashImmunity
+  - type: EyeProtection
+    protectionTime: 5
+  - type: Construction
+    graph: GlassesSecHUD
+    node: glassesSec
+  - type: Tag
+    tags:
+    - HamsterWearable
+    - PetWearable
+    - WhitelistChameleon
+  - type: GuideHelp
+    guides:
+    - Security
+    - Antagonists
+  - type: IdentityBlocker
+    coverage: EYES
+
+# Military Police Medic
+- type: entity
+  parent: [ClothingEyesBase, ShowSecurityIcons, ShowMedicalIcons, BaseSecurityContraband]
+  id: ClothingEyesGlassesMilitaryPoliceMedic
+  name: Military Police Medic glasses
+  description: Upgraded sunglasses that provide flash immunity, along with a mix of Military Police and Medical HUD.
+  components:
+  - type: Sprite
+    sprite: _Flagship/Clothing/Eyes/Glasses/militarypolicemedicglasses.rsi
+  - type: Clothing
+    sprite: _Flagship/Clothing/Eyes/Glasses/militarypolicemedicglasses.rsi
+  - type: FlashImmunity
+  - type: EyeProtection
+    protectionTime: 5
+  - type: ShowHealthBars
+  - type: ShowHealthIcons
+  - type: Construction
+    graph: GlassesSecHUD
+    node: glassesSec
+  - type: Tag
+    tags:
+    - HamsterWearable
+    - PetWearable
+    - WhitelistChameleon
+  - type: GuideHelp
+    guides:
+    - Security
+    - Antagonists
+  - type: IdentityBlocker
+    coverage: EYES
+
+# Maintenance
+- type: entity
+  parent: [ClothingEyesBase, BaseEngineeringContraband]
+  id: ClothingEyesGlassesMaintenanceMeson
+  name: Maintenance goggles #less confusion
+  description: Green-tinted goggles using a proprietary polymer that provides protection from eye damage of all types.
+  components:
+  - type: Sprite
+    sprite: _Flagship/Clothing/Eyes/Glasses/maintenancemeson.rsi
+  - type: Clothing
+    sprite: _Flagship/Clothing/Eyes/Glasses/maintenancemeson.rsi
+  - type: EyeProtection
+  - type: IdentityBlocker
+    coverage: EYES
+  - type: Tag
+    tags:
+    - PetWearable
+    - WhitelistChameleon
+
+# Medical
+- type: entity
+  parent: ClothingEyesBase
+  id: ClothingEyesFlagGlassesChemical
+  name: chemical analysis goggles
+  description: Goggles that can scan the chemical composition of a solution.
+  components:
+    - type: Sprite
+      sprite: _Flagship/Clothing/Eyes/Glasses/science.rsi
+    - type: Clothing
+      sprite: _Flagship/Clothing/Eyes/Glasses/science.rsi
+    - type: SolutionScanner
+    - type: IdentityBlocker
+      coverage: EYES
+    - type: Tag
+      tags:
+      - PetWearable
+      - WhitelistChameleon
+
+# Other
+- type: entity
+  parent: ClothingEyesBase
+  id: ClothingEyesGlassesFlagCheapSunglasses
+  name: cheap sunglasses
+  description: A pair of black sunglasses. Doesn't block light well, more of an accessory than something useful.
+  components:
+  - type: Sprite
+    sprite: _Flagship/Clothing/Eyes/Glasses/sunglasses.rsi
+  - type: Clothing
+    sprite: _Flagship/Clothing/Eyes/Glasses/sunglasses.rsi
+  - type: Tag
+    tags:
+    - HamsterWearable
+    - PetWearable
+    - WhitelistChameleon
+  - type: IdentityBlocker
+    coverage: EYES

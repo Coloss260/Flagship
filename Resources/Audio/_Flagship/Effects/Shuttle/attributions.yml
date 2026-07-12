@@ -1,0 +1,34 @@
+- files: ["FTL_Jump.ogg"]
+  license: "CC-BY-SA-3.0"
+  copyright: "Taken from NSV13"
+  source: "https://github.com/BeeStation/NSV13/tree/ff23bf114d6c3675661add8d0e4904d6ac0002c8/nsv13/sound/effects/ship"
+
+- files: ["FTL_loop.ogg"]
+  license: "CC-BY-SA-3.0"
+  copyright: "Taken from NSV13"
+  source: "https://github.com/BeeStation/NSV13/tree/ff23bf114d6c3675661add8d0e4904d6ac0002c8/nsv13/sound/effects/ship"
+
+- files: ["FTL_stop.ogg"]
+  license: "CC-BY-SA-3.0"
+  copyright: "Taken from NSV13"
+  source: "https://github.com/BeeStation/NSV13/tree/ff23bf114d6c3675661add8d0e4904d6ac0002c8/nsv13/sound/effects/ship"
+
+- files: ["main_drive_loop.ogg"]
+  license: "CC-BY-SA-3.0"
+  copyright: "Taken from NSV13"
+  source: "https://github.com/BeeStation/NSV13/tree/ff23bf114d6c3675661add8d0e4904d6ac0002c8/nsv13/sound/machines/FTL"
+
+- files: ["main_drive_spooldown.ogg"]
+  license: "CC-BY-SA-3.0"
+  copyright: "Taken from NSV13"
+  source: "https://github.com/BeeStation/NSV13/tree/ff23bf114d6c3675661add8d0e4904d6ac0002c8/nsv13/sound/machines/FTL"
+
+- files: ["main_drive_spoolup.ogg"]
+  license: "CC-BY-SA-3.0"
+  copyright: "Taken from NSV13"
+  source: "https://github.com/BeeStation/NSV13/tree/ff23bf114d6c3675661add8d0e4904d6ac0002c8/nsv13/sound/machines/FTL"
+
+- files: ["FTL_drive_hum.ogg"]
+  license: "CC-BY-SA-3.0"
+  copyright: "Taken from gravity_gen_hum.ogg"
+  source: "https://github.com/space-wizards/space-station-14/blob/e25f9167d8afabba5b6042ed6ef77126a19d36a8/Resources/Audio/Ambience/Objects/gravity_gen_hum.ogg"

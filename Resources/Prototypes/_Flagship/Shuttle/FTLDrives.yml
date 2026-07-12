@@ -1,0 +1,88 @@
+- type: entity
+  abstract: true
+  parent: BaseMachinePowered
+  id: FTLDriveBase
+  name: Warp Drive NT-2126
+  description: A revolutionary ship hyperdrive system manufactured by Nanotrasen that allows for faster than light travel within a sector.
+  components:
+  - type: Sprite
+    sprite: _Flagship/Structures/Machines/FTL_Drive.rsi
+    layers:
+    - state: core_idle
+    - state: core_active
+      visible: False
+      map: [ "core_active" ]
+    - state: screen
+      visible: False
+      map: [ "enum.PowerDeviceVisualLayers.Powered" ]
+  - type: Modifiable
+    allowedAspects:
+    - FTLDriveRange
+  - type: ItemSlots
+    slots:
+      fuel_slot:
+        name: drive-fuel-cell-slot-name
+  - type: ContainerContainer
+    containers:
+      fuel_slot: !type:ContainerSlot { }
+  - type: Appearance
+  - type: FTLDrive
+    fTLComponents:
+    - type: GravityWell
+      maxRange: 4
+      baseRadialAcceleration: 20
+      baseTangentialAcceleration: 0
+    - type: SingularityDistortion
+      intensity: 10
+      falloffPower: 1
+    engagedComponents:
+    - type: PointLight
+      radius: 5.5
+      energy: 10
+      color: "#2bc4bd"
+  - type: AmbientOnPowered
+  - type: AmbientSound
+    enabled: false
+    volume: 15
+    range: 7
+    sound:
+      path: /Audio/_Flagship/Effects/Shuttle/FTL_drive_hum.ogg
+  - type: ApcPowerReceiver
+    powerLoad: 50
+  - type: PowerState
+    idlePowerDraw: 50
+    workingPowerDraw: 5000
+  - type: ActivatableUI
+    key: enum.FTLDriveUiKey.Key
+  - type: ActivatableUIRequiresPower
+  - type: UserInterface
+    interfaces:
+      enum.FTLDriveUiKey.Key:
+        type: FTLDriveBoundUserInterface
+  - type: GenericVisualizer
+    visuals:
+      enum.PowerDeviceVisuals.Powered:
+        enum.PowerDeviceVisualLayers.Powered:
+          True: { visible: true }
+          False: { visible: false }
+      enum.FTLDriveVisuals.Active:
+        core_active:
+          True: { visible: true }
+          False: { visible: false }
+  - type: Anchorable
+    delay: 30
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-2.3, -1.3, 2.3, 2.2"
+        density: 190
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+
+- type: entity
+  parent: FTLDriveBase
+  id: FTLDriveNanotrasen

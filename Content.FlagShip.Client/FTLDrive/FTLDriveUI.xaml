@@ -1,0 +1,67 @@
+<controls:FancyWindow
+    xmlns="https://spacestation14.io"
+    xmlns:controls="using:Content.Client.UserInterface.Controls"
+    Title="{Loc 'ftl-menu-title'}" MinSize="1000 600" Resizable="True">
+    <BoxContainer Orientation="Vertical" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+        <BoxContainer Orientation="Vertical" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+            <controls:StripeBack Margin="1 0 1 0">
+                <BoxContainer Orientation="Vertical" Align="Center">
+                    <RichTextLabel Access="Public" Name="StatusText" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="15" Text="{Loc 'ftl-menu-status'}"></RichTextLabel>
+                </BoxContainer>
+            </controls:StripeBack>
+        </BoxContainer>
+    </BoxContainer>
+
+    <!-- Pannel -->
+    <BoxContainer Orientation="Vertical" Margin="10 75 10 100">
+        <PanelContainer VerticalExpand="True" HorizontalExpand="True" StyleClasses="PanelDark">
+            <controls:StripeBack MinHeight="50" MaxHeight="50" VerticalAlignment="Top" Margin="0 -5 0 0" Modulate="#FF5C5C"></controls:StripeBack>
+            <controls:StripeBack MinHeight="50" MaxHeight="50" VerticalAlignment="Bottom" Margin="0 0 0 -5" Modulate="#FF5C5C"></controls:StripeBack>
+
+            <!-- Drive Info -->
+            <BoxContainer Orientation="Vertical" Margin="5 50 5 50">
+                <RichTextLabel Margin="0 0 0 20" Text="{Loc 'ftl-menu-stats-title'}"></RichTextLabel>
+                <RichTextLabel Access="Public" Name="StatsRange" Text="{Loc 'ftl-menu-range'}"></RichTextLabel>
+                <RichTextLabel Access="Public" Name="StatsCooldown" Text="{Loc 'ftl-menu-cooldown'}"></RichTextLabel>
+                <RichTextLabel Access="Public" Name="StatsStartup" Text="{Loc 'ftl-menu-startup'}"></RichTextLabel>
+                <RichTextLabel Access="Public" Name="StatsStableTime" Text="{Loc 'ftl-menu-stable'}"></RichTextLabel>
+            </BoxContainer>
+
+            <controls:HLine Color="#404040" Thickness="2" MaxHeight="2" Margin="0 30 30 0"/>
+
+            <!-- Some info  -->
+            <BoxContainer Orientation="Horizontal" Margin="5 0 5 30" VerticalAlignment="Bottom">
+                <BoxContainer Orientation="Vertical">
+                    <RichTextLabel Access="Public" Name="CoolDownTimeLeft" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="0 0 0 10" Text="{Loc 'ftl-menu-cooldown-time'}"></RichTextLabel>
+                    <RichTextLabel Access="Public" Name="TimeTillCoolFailure" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="0 0 0 10" Text="{Loc 'ftl-menu-cooling-failure'}"></RichTextLabel>
+                    <RichTextLabel Access="Public" Name="CurrentPowerDraw" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="0 0 0 20" Text="{Loc 'ftl-menu-power-draw'}"></RichTextLabel>
+                </BoxContainer>
+            </BoxContainer>
+
+        </PanelContainer>
+    </BoxContainer>
+
+    <!-- Bottom left -->
+    <BoxContainer Orientation="Vertical" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="15">
+
+    </BoxContainer>
+
+    <!-- Bottom Right -->
+    <BoxContainer Orientation="Vertical" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0 0 20 30">
+        <BoxContainer Orientation="Horizontal">
+            <Button Access="Public" Name="StartDriveButton" MinSize="300 50" Text="TOGGLE DRIVE"></Button>
+        </BoxContainer>
+    </BoxContainer>
+
+    <!-- Footer -->
+    <BoxContainer Name="Footer" Orientation="Vertical" VerticalAlignment="Bottom">
+        <PanelContainer StyleClasses="LowDivider" />
+        <BoxContainer Orientation="Horizontal" Margin="10 2 5 0" VerticalAlignment="Bottom">
+            <Label Text="{Loc 'ftl-menu-footer-left'}" StyleClasses="WindowFooterText" />
+            <Label Text="{Loc 'ftl-menu-footer-right'}" StyleClasses="WindowFooterText"
+                   HorizontalAlignment="Right" HorizontalExpand="True" Margin="0 0 5 0" />
+            <TextureRect StyleClasses="NTLogoDark" Stretch="KeepAspectCentered"
+                         VerticalAlignment="Center" HorizontalAlignment="Right" SetSize="19 19" />
+        </BoxContainer>
+    </BoxContainer>
+</controls:FancyWindow>

@@ -1,0 +1,22 @@
+- type: entity
+  parent: ClothingShoesBaseButcherable
+  id: ClothingShoesMaintenanceBootsWork
+  name: workboots
+  description: Maintenance lace-up work boots for the especially blue-collar.
+  components:
+  - type: Sprite
+    sprite: _Flagship/Clothing/Shoes/Boots/maintenanceworkboots.rsi
+  - type: Clothing
+    sprite: _Flagship/Clothing/Shoes/Boots/maintenanceworkboots.rsi
+  - type: Matchbox
+
+- type: entity
+  parent: ClothingShoesBaseButcherable
+  id: ClothingShoesBootsFlagLaceup
+  name: laceup shoes
+  description: The height of fashion, and they're pre-polished!
+  components:
+  - type: Sprite
+    sprite: _Flagship/Clothing/Shoes/Boots/laceups.rsi
+  - type: Clothing
+    sprite: _Flagship/Clothing/Shoes/Boots/laceups.rsi

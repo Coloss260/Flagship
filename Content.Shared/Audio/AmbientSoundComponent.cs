@@ -9,7 +9,7 @@ namespace Content.Shared.Audio;
 
 [RegisterComponent]
 [NetworkedComponent]
-[Access(typeof(SharedAmbientSoundSystem))]
+// [Access(typeof(SharedAmbientSoundSystem))] - FlagShip Removed Access
 public sealed partial class AmbientSoundComponent : Component, IComponentTreeEntry<AmbientSoundComponent>
 {
     [DataField("enabled", readOnly: true)]

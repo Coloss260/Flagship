@@ -18,18 +18,20 @@
   - Command
   - AllAccess
 
+# Flagship
+# PLEASE RESPECT THE EQUIPMENT ORDER OR I WILL STEAL YOUR NOSE
+# equipment: id, head, eyes, ears, mask, neck, outerClothing, jumpsuit, gloves, back, belt, shoes
 - type: startingGear
   id: FlagChemistGear
   equipment:
-    id: ChemistryPDA
-    ears: ClothingHeadsetCommandingOfficer
-
-- type: chameleonOutfit
-  id: FlagChemistChameleonOutfit
-  job: FlagChemist
-  equipment:
-    head: ClothingHeadHatBeretMedic
-    mask: ClothingMaskSterile
-    neck: ClothingNeckStethoscope
-    outerClothing: ClothingOuterCoatLabChem
-    gloves: ClothingHandsGlovesLatex
+    id: FlagChemistPDA
+    head: ClothingHeadHatWhiteCap
+    eyes: ClothingEyesFlagGlassesChemical
+    ears: ClothingHeadsetFlagMedical
+    mask: ClothingMaskFlagSterile
+    jumpsuit: ClothingUniformJumpsuitFlagMedicalDoctor
+    outerClothing: ClothingOuterCoatFlagLabChemOpened
+    gloves: ClothingHandsGlovesFlagNitrile
+    back: ClothingBackpackFlagChemistry
+    belt: ClothingBeltFlagMedical
+    shoes: ClothingShoesFlagColorWhite

@@ -18,10 +18,19 @@
   - Command
   setPreference: true
 
+# Flagship
+# PLEASE RESPECT THE EQUIPMENT ORDER OR I WILL STEAL YOUR NOSE
+# equipment: id, head, eyes, ears, mask, neck, outerClothing, jumpsuit, gloves, back, belt, shoes
 - type: startingGear
   id: MaintenanceInternGear
   equipment:
-    shoes: ClothingShoesBootsWork
-    id: TechnicalAssistantPDA
-    ears: ClothingHeadsetEngineering
-    pocket2: BookEngineersHandbook
+    id: MaintenanceInternPDA
+    head: ClothingHeadHatOrangesoft
+    eyes: ClothingEyesGlassesMaintenanceMeson
+    ears: ClothingHeadsetMaintenance
+    outerClothing: ClothingOuterVestHazard
+    jumpsuit: ClothingUniformJumpsuitMaintenanceTechnician
+    gloves: ClothingHandsGlovesColorYellow
+    back: ClothingBackpackMaintenance
+    belt: ClothingBeltUtilityEngineering
+    shoes: ClothingShoesMaintenanceBootsWork

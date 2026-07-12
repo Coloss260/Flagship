@@ -8,7 +8,7 @@
             "name": "Client",
             "type": "coreclr",
             "request": "launch",
-            "program": "${workspaceFolder}/bin/Content.Client/Content.Client.dll",
+            "program": "${workspaceFolder}/bin/Content.Client/Content.FlagShip.Client.dll",
             "args": [],
             "console": "internalConsole",
             "stopAtEntry": false
@@ -17,7 +17,7 @@
             "name": "Client (Compatibility renderer)",
             "type": "coreclr",
             "request": "launch",
-            "program": "${workspaceFolder}/bin/Content.Client/Content.Client.dll",
+            "program": "${workspaceFolder}/bin/Content.Client/Content.FlagShip.Client.dll",
             "args": "--cvar display.compat=true",
             "console": "internalConsole",
             "stopAtEntry": false
@@ -26,7 +26,7 @@
             "name": "Server",
             "type": "coreclr",
             "request": "launch",
-            "program": "${workspaceFolder}/bin/Content.Server/Content.Server.dll",
+            "program": "${workspaceFolder}/bin/Content.Server/Content.FlagShip.Server.dll",
             "args": [],
             "console": "integratedTerminal",
             "stopAtEntry": false

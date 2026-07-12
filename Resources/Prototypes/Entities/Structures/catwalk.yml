@@ -12,10 +12,10 @@
   - type: Rotatable
   - type: Clickable
   - type: Sprite
-    sprite: Structures/catwalk.rsi
+    sprite: _Flagship/Structures/catwalk.rsi # Flagship
     drawdepth: FloorTiles
   - type: Icon
-    sprite: Structures/catwalk.rsi
+    sprite: _Flagship/Structures/catwalk.rsi # Flagship
     state: catwalk_preview
   - type: Transform
     anchored: true

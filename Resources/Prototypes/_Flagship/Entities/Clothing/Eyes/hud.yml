@@ -1,0 +1,15 @@
+- type: entity
+  parent: [ClothingEyesHudBase, ShowMedicalIcons, BaseMedicalContraband]
+  id: ClothingEyesFlagHudMedical
+  name: medical hud
+  description: A heads-up display that scans the humanoids in view and provides accurate data about their health status.
+  components:
+  - type: Sprite
+    sprite: _Flagship/Clothing/Eyes/Hud/med.rsi
+  - type: Clothing
+    sprite: _Flagship/Clothing/Eyes/Hud/med.rsi
+  - type: Tag
+    tags:
+    - HudMedical
+    - PetWearable
+    - WhitelistChameleon

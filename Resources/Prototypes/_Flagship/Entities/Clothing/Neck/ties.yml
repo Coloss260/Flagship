@@ -1,0 +1,20 @@
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckTieFlagSci
+  name: scientist's tie
+  description: Why do we all have to wear these ridiculous ties?
+  components:
+  - type: Sprite
+    sprite: _Flagship/Clothing/Neck/Ties/scitie.rsi
+  - type: Clothing
+    sprite: _Flagship/Clothing/Neck/Ties/scitie.rsi
+  - type: Item
+    storedSprite:
+      state: storage
+      sprite: _Flagship/Clothing/Neck/Ties/scitie.rsi
+  - type: Tag
+    tags:
+    - ClothMade
+    - Recyclable
+    - HamsterWearable
+    - WhitelistChameleon

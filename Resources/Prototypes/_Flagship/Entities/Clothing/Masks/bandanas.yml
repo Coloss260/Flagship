@@ -1,0 +1,16 @@
+# Service
+- type: entity
+  parent: ClothingMaskBandanaBase
+  id: ClothingMaskBandFlagBotany
+  name: botany bandana
+  description: A botany bandana to make you look cool, made from natural fibers.
+  components:
+  - type: Sprite
+    sprite: _Flagship/Clothing/Head/Bandanas/botany.rsi
+  - type: Clothing
+    sprite: _Flagship/Clothing/Head/Bandanas/botany.rsi
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+    - ClothMade
+    - Recyclable
