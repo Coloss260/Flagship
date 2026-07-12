@@ -52,7 +52,7 @@
   - type: WiresPanel
   # Low power stats by default
   - type: ApcPowerReceiver
-    powerLoad: 500
+    powerLoad: 50
   - type: PowerCharge
     windowTitle: gunnery-server-window-title-low
     idlePower: 50

@@ -7,7 +7,7 @@
   description: A rapid-fire swarm missile pod manufactured by Aetherion Dynamics. Can be remotely activated, or linked up to a GCS.
   components:
   - type: ApcPowerReceiver
-    powerLoad: 950
+    powerLoad: 750
   - type: StaticPrice
     price: 2000
   - type: Sprite
@@ -56,7 +56,7 @@
   description: ASM-501 Smerchs heavy torpedo launcher. Can be remotely activated, or linked up to a GCS.
   components:
   - type: ApcPowerReceiver
-    powerLoad: 450
+    powerLoad: 200
   - type: StaticPrice
     price: 7500
   - type: Sprite
@@ -104,7 +104,7 @@
   description: ASM-302 Vanyk basic guided missile pod. Can be remotely activated, or linked up to a GCS.
   components:
   - type: ApcPowerReceiver
-    powerLoad: 950
+    powerLoad: 600
   - type: StaticPrice
     price: 5000
   - type: Sprite
@@ -170,7 +170,7 @@
   description: A hybrid EMP missile pod manufactured by Aetherion Dynamics. Deals both physical and EMP damage. Can be remotely activated, or linked up to a GCS.
   components:
   - type: ApcPowerReceiver
-    powerLoad: 3000
+    powerLoad: 2500
   - type: StaticPrice
     price: 10000
   - type: Sprite
