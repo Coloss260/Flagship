@@ -1,14 +1,29 @@
-name: Discord Webhook
+name: Send Test Discord Commit Message
 
-on: [push]
+# on: [push]
+on:
+  workflow_dispatch:
 
 jobs:
-  git:
+  discord_notify_empty:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
-      - name: Run Discord Webhook
-        uses: johnnyhuy/actions-discord-git-webhook@main
+      - uses: tristanbudd/discord-commit-github-action@master
         with:
-          webhook_url: ${{ secrets.DISCORD_WEBHOOK }}
+          webhook-url: ${{ secrets.DISCORD_WEBHOOK }}
+          github-token: ${{ secrets.GIT_TOKEN }}
+
+          embed-title: "New Flagship Commit"
+          embed-colour: "#7289DA"
+          embed-author-name: "GitHub Action Bot"
+          embed-author-icon-url: "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+          embed-footer-text: "Powered by GitHub Actions"
+          embed-footer-icon-url: "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+          embed-footer-timestamp: "true"
+          show-commit-message: "true"
+          colour-changes: "true"
+          show-commit-branch: "true"
+          show-commit-author: "true"
+          show-commit-link: "true"
