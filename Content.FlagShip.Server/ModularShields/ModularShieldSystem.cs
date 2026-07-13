@@ -92,10 +92,11 @@ public sealed partial class ModularShieldSystem : EntitySystem
         if (!_power.IsPowered(shieldCoreUid))
             return;
 
-        // Exit early if we're not the master shield core, performing minor tasks that don't require.
+        // Exit early if we're not the master shield core, performing minor tasks that don't involve the rest of the system.
         if (!shieldCore.IsMasterShieldCore)
         {
             UpdateShieldCoreDisplay((shieldCoreUid, shieldCore));
+            // If we're not a master shield core, we shouldn't be projecting a shield.
             StopModularShieldProjection((shieldCoreUid, shieldCore));
             return;
         }
