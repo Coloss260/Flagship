@@ -96,7 +96,7 @@ public sealed partial class ModularShieldSystem : EntitySystem
         if (!shieldCore.IsMasterShieldCore)
         {
             UpdateShieldCoreDisplay((shieldCoreUid, shieldCore));
-            // If we're not a master shield core, we shouldn't be projecting a shield.
+            // Non-master shield cores should never be projecting a shield.
             StopModularShieldProjection((shieldCoreUid, shieldCore));
             return;
         }
