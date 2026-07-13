@@ -3,6 +3,7 @@ using Content.FlagShip.Shared.ModularShields.Components;
 using Content.Server.Explosion.EntitySystems;
 using Content.Server.Power.EntitySystems;
 using Content.Server.Station.Systems;
+using Content.Shared.Destructible;
 using Content.Shared.EntityEffects.Effects.StatusEffects;
 using Content.Shared.Examine;
 using Content.Shared.Explosion.Components;
@@ -48,6 +49,7 @@ public sealed partial class ModularShieldSystem : EntitySystem
 
         SubscribeLocalEvent<ModularShieldCoreComponent, ModularShieldAbsorbedProjectileEvent>(OnModularShieldProjectileAbsorbed);
         SubscribeLocalEvent<ModularShieldCoreComponent, ModularShieldAbsorbedDamageEvent>(OnModularShieldDamageAbsorbed);
+        SubscribeLocalEvent<ModularShieldCoreComponent, DestructionEventArgs>(OnModularShieldCoreDestroyed);
         SubscribeLocalEvent<ModularShieldCoreComponent, ComponentShutdown>(OnModularShieldCoreShutdown);
         SubscribeLocalEvent<ModularShieldCoreComponent, ActivateInWorldEvent>(OnShieldCoreActivateInWorld);
 
@@ -228,7 +230,7 @@ public sealed partial class ModularShieldSystem : EntitySystem
             shieldCoreComponent.MinimumEnergyStoredToProjectShield <= energyStorageStats.EnergyStored &&
             shieldCoreComponent.MinimumEnergyStoredToProjectShieldPercent <= (energyStorageStats.EnergyStored / energyStorageStats.EnergyCapacity))
         {
-            success = StartModularShieldProjection(shieldCoreUid, shieldCoreComponent);
+            success = StartModularShieldProjection((shieldCoreUid, shieldCoreComponent));
         }
 
         return success;
@@ -285,41 +287,51 @@ public sealed partial class ModularShieldSystem : EntitySystem
 
 
 
-    private void OnModularShieldCoreShutdown(EntityUid uid, ModularShieldCoreComponent component, ComponentShutdown args)
+    private void OnModularShieldCoreDestroyed(Entity<ModularShieldCoreComponent> ent, ref DestructionEventArgs args)
     {
-        if (component.ShieldProjected != null && component.ShieldedEntity != null)
+        if (ent.Comp.ShieldProjected != null && ent.Comp.ShieldedEntity != null)
         {
-            StopModularShieldProjection((uid, component), true);
+            StopModularShieldProjection(ent, violent: true);
         }
     }
 
 
 
-    private bool StartModularShieldProjection(EntityUid uid, ModularShieldCoreComponent component)
+    private void OnModularShieldCoreShutdown(EntityUid uid, ModularShieldCoreComponent component, ComponentShutdown args)
     {
-        if (component.ShieldedEntity != null || component.ShieldProjected != null)
+        if (component.ShieldProjected != null && component.ShieldedEntity != null)
+        {
+            StopModularShieldProjection((uid, component), silent: true);
+        }
+    }
+
+
+
+    private bool StartModularShieldProjection(Entity<ModularShieldCoreComponent> ent)
+    {
+        if (ent.Comp.ShieldedEntity != null || ent.Comp.ShieldProjected != null)
             return false;
 
         bool success = false;
-        var parentGridEntityUid = Transform(uid).GridUid;
+        var parentGridEntityUid = Transform(ent.Owner).GridUid;
 
         if (parentGridEntityUid != null)
         {
-            EntityUid shieldEntityUid = ShieldEntity((EntityUid)parentGridEntityUid, uid);
+            EntityUid shieldEntityUid = ShieldEntity((EntityUid)parentGridEntityUid, ent.Owner);
             if (shieldEntityUid != EntityUid.Invalid)
             {
                 success = true;
-                component.ShieldProjected = shieldEntityUid;
-                component.ShieldedEntity = parentGridEntityUid;
+                ent.Comp.ShieldProjected = shieldEntityUid;
+                ent.Comp.ShieldedEntity = parentGridEntityUid;
 
-                _audio.PlayGlobal(component.ProjectionStartSound, GetShieldSoundPlayerFilter((uid, component)), true, component.ProjectionStartSound.Params);
+                _audio.PlayGlobal(ent.Comp.ProjectionStartSound, GetShieldSoundPlayerFilter(ent), true, ent.Comp.ProjectionStartSound.Params);
             }
         }
 
         return success;
     }
 
-    private bool StopModularShieldProjection(Entity<ModularShieldCoreComponent> shieldCore, bool violent = false)
+    private bool StopModularShieldProjection(Entity<ModularShieldCoreComponent> shieldCore, bool violent = false, bool silent = false)
     {
         if (shieldCore.Comp.ShieldedEntity == null || shieldCore.Comp.ShieldProjected == null)
             return false;
@@ -327,8 +339,11 @@ public sealed partial class ModularShieldSystem : EntitySystem
         bool success = UnshieldEntity((EntityUid)shieldCore.Comp.ShieldedEntity);
 
         // Shield core may be terminating at this point so don't use it.
-
-        if (violent)
+        if (silent)
+        {
+            // Test will fail if we create an audio entity when the shield core is deleted.
+        }
+        else if (violent)
         {
             _audio.PlayGlobal(shieldCore.Comp.ProjectionEndViolentSound, GetShieldSoundPlayerFilter(shieldCore), true, shieldCore.Comp.ProjectionEndViolentSound.Params);
         }
