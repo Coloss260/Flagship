@@ -1,0 +1,66 @@
+- type: accessLevel
+  id: BridgeCommand
+  name: id-card-access-level-bridgecommand
+
+- type: accessLevel
+  id: CommandingOfficer
+  name: id-card-access-level-commandingofficer
+
+- type: accessLevel
+  id: ExecutiveOfficer
+  name: id-card-access-level-executiveofficer
+
+- type: accessLevel
+  id: TacticalOfficer
+  name: id-card-access-level-TacticalOfficer
+
+- type: accessLevel
+  id: OperationsOfficer
+  name: id-card-access-level-operationsofficer
+
+- type: accessLevel
+  id: CommunicationsOfficer
+  name: id-card-access-level-communicationsofficer
+
+- type: accessLevel
+  id: FlightControlOfficer
+  name: id-card-access-level-flightcontrolofficer
+
+- type: accessLevel
+  id: BridgeEnsign
+  name: id-card-access-level-bridgeensign
+
+- type: accessGroup
+  id: ShipCommander
+  tags:
+  - CommandingOfficer
+  - ExecutiveOfficer
+  - TacticalOfficer
+  - OperationsOfficer
+  - CommunicationsOfficer
+  - FlightControlOfficer
+  - BridgeEnsign
+  - BridgeCommand
+  - ChiefOfMaintenance
+  - ChiefOfMedical
+  - MilitaryPoliceChief
+  - SuppliesQuartermaster
+  - ScienceSupervisor
+  - Cryogenics
+
+- type: accessGroup
+  id: SeniorOfficer
+  tags:
+  - ExecutiveOfficer
+  - TacticalOfficer
+  - OperationsOfficer
+  - CommunicationsOfficer
+  - FlightControlOfficer
+  - BridgeEnsign
+  - BridgeCommand
+  - ChiefOfMaintenance
+  - ChiefOfMedical
+  - MilitaryPoliceChief
+  - SuppliesQuartermaster
+  - ScienceSupervisor
+  - Cryogenics
