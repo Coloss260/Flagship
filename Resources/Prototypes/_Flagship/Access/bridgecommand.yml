@@ -47,6 +47,31 @@
   - SuppliesQuartermaster
   - ScienceSupervisor
   - Cryogenics
+  - EmergencyShuttleRepealAll
+  - Security
+  - Detective
+  - Armory
+  - Brig
+  - Lawyer
+  - Engineering
+  - Medical
+  - Quartermaster
+  - Salvage
+  - Cargo
+  - Research
+  - Service
+  - Maintenance
+  - External
+  - Janitor
+  - Theatre
+  - Bar
+  - Chemistry
+  - Kitchen
+  - Chapel
+  - Hydroponics
+  - Atmospherics
+  - GenpopEnter
+  - GenpopLeave
 
 - type: accessGroup
   id: SeniorOfficer
@@ -64,3 +89,85 @@
   - SuppliesQuartermaster
   - ScienceSupervisor
   - Cryogenics
+  - EmergencyShuttleRepealAll
+  - Security
+  - Detective
+  - Armory
+  - Brig
+  - Lawyer
+  - Engineering
+  - Medical
+  - Quartermaster
+  - Salvage
+  - Cargo
+  - Research
+  - Service
+  - Maintenance
+  - External
+  - Janitor
+  - Theatre
+  - Bar
+  - Chemistry
+  - Kitchen
+  - Chapel
+  - Hydroponics
+  - Atmospherics
+  - GenpopEnter
+  - GenpopLeave
+
+- type: accessGroup
+  id: TacticalCommand
+  tags:
+  - TacticalOfficer
+  - BridgeEnsign
+  - BridgeCommand
+  - ChiefOfMaintenance
+  - MilitaryPoliceChief
+  - SuppliesQuartermaster
+  - Cryogenics
+  - EmergencyShuttleRepealAll
+  - Security
+  - Detective
+  - Armory
+  - Brig
+  - Lawyer
+  - Engineering
+  - Quartermaster
+  - Salvage
+  - Cargo
+  - Maintenance
+  - External
+  - Atmospherics
+  - GenpopEnter
+  - GenpopLeave
+
+- type: accessGroup
+  id: OperationsCommand
+  tags:
+  - OperationsOfficer
+  - BridgeCommand
+  - ChiefOfMedical
+  - ScienceSupervisor
+  - Cryogenics
+  - EmergencyShuttleRepealAll
+  - Medical
+  - Research
+  - Service
+  - Maintenance
+  - External
+  - Janitor
+  - Theatre
+  - Bar
+  - Chemistry
+  - Kitchen
+  - Chapel
+  - Hydroponics
+
+- type: accessGroup
+  id: BridgeOfficer
+  tags:
+  - BridgeCommand
+  - Cryogenics
+  - EmergencyShuttleRepealAll
+  - Maintenance
+  - External

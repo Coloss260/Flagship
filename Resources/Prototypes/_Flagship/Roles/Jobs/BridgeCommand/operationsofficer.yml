@@ -19,10 +19,8 @@
   displayWeight: 70
   startingGear: OperationsOfficerGear
   icon: "JobIconOperationsOfficer"
-  access:
-  - Captain
   accessGroups:
-  - Command
+  - OperationsCommand
   special:
   - !type:AddImplantSpecial
      implants: [ MindShieldImplant ]

@@ -22,7 +22,7 @@
   access:
   - Captain
   accessGroups:
-  - Command
+  - BridgeOfficer
   special:
   - !type:AddImplantSpecial
      implants: [ MindShieldImplant ]

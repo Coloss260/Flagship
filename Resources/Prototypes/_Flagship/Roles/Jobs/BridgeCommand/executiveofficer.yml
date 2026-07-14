@@ -20,10 +20,9 @@
   startingGear: ExecutiveOfficerGear
   icon: "JobIconExecutiveOfficer"
   access:
-  - Captain
+  - ExecutiveOfficer
   accessGroups:
-  - Command
-  - AllAccess
+  - SeniorOfficer
   special:
   - !type:AddImplantSpecial
      implants: [ MindShieldImplant ]

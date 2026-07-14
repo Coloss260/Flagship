@@ -20,9 +20,10 @@
   startingGear: CommandingOfficerGear
   icon: "JobIconCommandingOfficer"
   joinNotifyCrew: true
+  access:
+  - CommandingOfficer
   accessGroups:
-  - Command
-  - AllAccess
+  - ShipCommander
   special:
   - !type:AddImplantSpecial
      implants: [ MindShieldImplant ]

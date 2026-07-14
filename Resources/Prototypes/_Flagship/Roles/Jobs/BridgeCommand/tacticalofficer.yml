@@ -19,11 +19,8 @@
   displayWeight: 80
   startingGear: TacticalOfficerGear
   icon: "JobIconTacticalOfficer"
-  access:
-  - Captain
   accessGroups:
-  - Command
-  - AllAccess
+  - TacticalCommand
   special:
   - !type:AddImplantSpecial
      implants: [ MindShieldImplant ]
