@@ -8,7 +8,7 @@
   requireAdminNotify: true
   requirements:
     - !type:DepartmentTimeRequirement
-      department: Supply
+      department: Cargo
       time: 54000 # 15 hours
   displayWeight: 100
   startingGear: SuppliesQuartermasterGear

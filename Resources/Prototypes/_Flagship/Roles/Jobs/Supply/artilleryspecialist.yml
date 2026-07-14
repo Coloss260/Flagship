@@ -7,7 +7,7 @@
   supervisors: job-supervisors-sq
   requirements:
     - !type:DepartmentTimeRequirement
-      department: Supply
+      department: Cargo
       time: 36000 # 10 hours
   displayWeight: 80
   startingGear: ArtillerySpecialistGear
