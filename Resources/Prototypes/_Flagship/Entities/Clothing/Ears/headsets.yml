@@ -29,7 +29,7 @@
 
 # Bridge Command
 - type: entity
-  parent: [ClothingHeadsetFlag, BaseBridgeCommandContraband]
+  parent: [ClothingHeadsetFlag, BaseCommandContraband]
   id: ClothingHeadsetCommandingOfficer
   name: Commanding Officer's Headset
   description: Headset used by Commanding Officers.
@@ -44,7 +44,7 @@
     sprite: _Flagship/Clothing/Ears/Headsets/bridgecommand.rsi
 
 - type: entity
-  parent: [ClothingHeadsetFlag, BaseBridgeCommandContraband]
+  parent: [ClothingHeadsetFlag, BaseCommandContraband]
   id: ClothingHeadsetExecutiveOfficer
   name: Executive Officer's Headset
   description: Headset used by Executive Officers.
@@ -59,7 +59,7 @@
     sprite: _Flagship/Clothing/Ears/Headsets/bridgecommand.rsi
 
 - type: entity
-  parent: [ClothingHeadsetFlag, BaseBridgeCommandContraband]
+  parent: [ClothingHeadsetFlag, BaseCommandContraband]
   id: ClothingHeadsetTacticalOfficer
   name: Tactical Officer Headset
   description: Headset used by Tactical Officers.
@@ -74,7 +74,7 @@
     sprite: _Flagship/Clothing/Ears/Headsets/bridgecommand.rsi
 
 - type: entity
-  parent: [ClothingHeadsetFlag, BaseBridgeCommandContraband]
+  parent: [ClothingHeadsetFlag, BaseCommandContraband]
   id: ClothingHeadsetOperationsOfficer
   name: Operations Officer Headset
   description: Headset used by Operations Officers.
@@ -89,7 +89,7 @@
     sprite: _Flagship/Clothing/Ears/Headsets/bridgecommand.rsi
 
 - type: entity
-  parent: [ClothingHeadsetFlag, BaseBridgeCommandContraband]
+  parent: [ClothingHeadsetFlag, BaseCommandContraband]
   id: ClothingHeadsetCommunicationsOfficer
   name: Communications Officer Headset
   description: Headset used by Communications Officers.
@@ -104,7 +104,7 @@
     sprite: _Flagship/Clothing/Ears/Headsets/bridgecommand.rsi
 
 - type: entity
-  parent: [ClothingHeadsetFlag, BaseBridgeCommandContraband]
+  parent: [ClothingHeadsetFlag, BaseCommandContraband]
   id: ClothingHeadsetFlightControlOfficer
   name: Flight Control Officer Headset
   description: Headset used by Flight Control Officers.
@@ -119,7 +119,7 @@
     sprite: _Flagship/Clothing/Ears/Headsets/bridgecommand.rsi
 
 - type: entity
-  parent: [ClothingHeadsetFlag, BaseBridgeCommandContraband]
+  parent: [ClothingHeadsetFlag, BaseCommandContraband]
   id: ClothingHeadsetBridgeEnsign
   name: Bridge Ensign Headset
   description: Headset used by Bridge Ensigns.
@@ -135,7 +135,7 @@
 
 # Military Police
 - type: entity
-  parent: [ClothingHeadsetFlag, BaseMilitaryPoliceContraband]
+  parent: [ClothingHeadsetFlag, BaseSecurityContraband]
   id: ClothingHeadsetMilitaryPolice
   name: Military Police headset
   description: Headset used by grunts of the Military Police.
@@ -150,7 +150,7 @@
     sprite: _Flagship/Clothing/Ears/Headsets/militarypolice.rsi
 
 - type: entity
-  parent: [ClothingHeadsetFlag, BaseMilitaryPoliceContraband]
+  parent: [ClothingHeadsetFlag, BaseSecurityContraband]
   id: ClothingHeadsetMilitaryPoliceMedic
   name: Military Police medic headset
   description: Headset used by medics of the Military Police.
@@ -167,7 +167,7 @@
 
 # Maintenance
 - type: entity
-  parent: [ClothingHeadsetFlag, BaseMaintenanceContraband]
+  parent: [ClothingHeadsetFlag, BaseEngineeringContraband]
   id: ClothingHeadsetMaintenance
   name: Maintenance headset
   description: Headset used by grunts of the Maintenance department.
@@ -182,7 +182,7 @@
     sprite: _Flagship/Clothing/Ears/Headsets/maintenance.rsi
 
 - type: entity
-  parent: [ClothingHeadsetFlag, BaseMaintenanceContraband]
+  parent: [ClothingHeadsetFlag, BaseEngineeringContraband]
   id: ClothingHeadsetLifeSupportSpecialist
   name: Life Support Specialist headset
   description: Headset used by Life Support Specialists of the Maintenance department.
@@ -198,7 +198,7 @@
 
 # Supply
 - type: entity
-  parent: [ClothingHeadsetFlag, BaseSupplyContraband]
+  parent: [ClothingHeadsetFlag, BaseCargoContraband]
   id: ClothingHeadsetArtillerySpecialist
   name: Artillery Specialist headset
   description: Headset used by Artillery Specialists.
@@ -214,7 +214,7 @@
     sprite: _Flagship/Clothing/Ears/Headsets/supplycrew.rsi
 
 - type: entity
-  parent: [ClothingHeadsetFlag, BaseSupplyContraband]
+  parent: [ClothingHeadsetFlag, BaseCargoContraband]
   id: ClothingHeadsetSupplies
   name: Supplies headset
   description: Headset used by workers of the Supplies department.
@@ -246,7 +246,7 @@
 
 # Science
 - type: entity
-  parent: [ClothingHeadsetFlag, BaseFlagScienceContraband]
+  parent: [ClothingHeadsetFlag, BaseScienceContraband]
   id: ClothingHeadsetFlagScience
   name: Science headset
   description: Headset used by doctors of the Medical department.

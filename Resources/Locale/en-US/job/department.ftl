@@ -1,10 +1,10 @@
-department-Cargo = Cargo
-department-Civilian = Civilian
-department-Command = Command
+department-Cargo = Supplies
+department-Civilian = Service
+department-Command = Bridge Command
 department-CentralCommand = Central Command
-department-Engineering = Engineering
+department-Engineering = Maintenance
 department-Medical = Medical
-department-Security = Security
+department-Security = Military Police
 department-Science = Science
 department-Silicon = Silicon
 department-Specific = Station specific

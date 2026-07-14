@@ -6,7 +6,7 @@
   setPreference: true
   requirements:
     - !type:DepartmentTimeRequirement
-      department: FlagMedical
+      department: Medical
       time: 36000 #10 hrs
   displayWeight: 60
   startingGear: FlagChemistGear

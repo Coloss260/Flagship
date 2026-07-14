@@ -1,5 +1,5 @@
 - type: entity
-  parent: [ ClothingShoesBase, BaseServiceContraband ]
+  parent: [ ClothingShoesBase, BaseCivilianContraband ]
   id: ClothingShoesFlagGaloshes
   name: galoshes
   description: Specialised non-slip rubber boots, designed to reduce janitorial workplace accidents; a tider's treasure.

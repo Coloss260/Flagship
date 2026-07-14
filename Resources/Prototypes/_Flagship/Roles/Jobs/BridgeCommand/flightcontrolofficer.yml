@@ -8,13 +8,13 @@
   requireAdminNotify: true
   requirements:
     - !type:DepartmentTimeRequirement
-      department: Maintenance
+      department: Engineering
       time: 54000 # 15 hours
     - !type:DepartmentTimeRequirement
       department: Medical
       time: 54000 # 15 hours
     - !type:DepartmentTimeRequirement
-      department: MilitaryPolice
+      department: Security
       time: 54000 # 15 hours
   displayWeight: 50
   startingGear: FlightControlOfficerGear
