@@ -14,11 +14,9 @@
   supervisors: job-supervisors-oo
   access:
   - Medical
-  - Command
   - Maintenance
   - Chemistry
-  - ChiefMedicalOfficer
-  - Brig
+  - ChiefMedicalOfficer # Chief of Medical
   - Cryogenics
   special:
   - !type:AddImplantSpecial

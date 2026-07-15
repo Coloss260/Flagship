@@ -1,14 +1,14 @@
 - type: accessLevel
   id: ChiefEngineer
-  name: id-card-access-level-chief-engineer
+  name: id-card-access-level-chief-of-maintenance # Flagship
 
 - type: accessLevel
   id: Engineering
-  name: id-card-access-level-engineering
+  name: id-card-access-level-maintenance-technician # Flagship
 
 - type: accessLevel
   id: Atmospherics
-  name: id-card-access-level-atmospherics
+  name: id-card-access-level-life-support-specialist # Flagship
 
 - type: accessGroup
   id: Engineering

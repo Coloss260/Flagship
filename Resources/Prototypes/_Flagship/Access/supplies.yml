@@ -1,0 +1,10 @@
+- type: accessLevel
+  id: ArtillerySpecialist
+  name: id-card-access-level-artillery-specialist
+
+- type: accessGroup
+  id: SuppliesDepartment
+  tags:
+  - Quartermaster
+  - ArtillerySpecialist
+  - Cargo

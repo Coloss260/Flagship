@@ -1,10 +1,10 @@
 - type: accessLevel
   id: Quartermaster
-  name: id-card-access-level-quartermaster
+  name: id-card-access-level-supplies-quartermaster # Flagship
 
 - type: accessLevel
   id: Cargo
-  name: id-card-access-level-cargo
+  name: id-card-access-level-supplies # Flagship
 
 - type: accessLevel
   id: Salvage

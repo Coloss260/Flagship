@@ -20,7 +20,7 @@
   startingGear: FlightControlOfficerGear
   icon: "JobIconFlightControlOfficer"
   access:
-  - Captain
+  - Command
   accessGroups:
   - BridgeOfficer
   special:

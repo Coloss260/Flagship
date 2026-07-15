@@ -13,10 +13,10 @@
   icon: "JobIconFlagChemist"
   supervisors: job-supervisors-chom
   access:
-  - Captain
-  accessGroups:
-  - Command
-  - AllAccess
+  - Medical
+  - Maintenance
+  - Chemistry
+  - Cryogenics
 
 # Flagship
 # PLEASE RESPECT THE EQUIPMENT ORDER OR I WILL STEAL YOUR NOSE

@@ -21,7 +21,7 @@
   icon: "JobIconCommandingOfficer"
   joinNotifyCrew: true
   access:
-  - CommandingOfficer
+  - Captain
   accessGroups:
   - ShipCommander
   special:

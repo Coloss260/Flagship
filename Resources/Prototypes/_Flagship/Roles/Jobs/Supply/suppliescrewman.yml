@@ -13,10 +13,10 @@
   startingGear: SuppliesCrewmanGear
   icon: "JobIconSuppliesCrewman"
   access:
-  - Captain
-  accessGroups:
-  - Command
-  - AllAccess
+  - Cargo # Supplies
+  - Maintenance
+  - External
+  - Cryogenics
 
 # Flagship
 # PLEASE RESPECT THE EQUIPMENT ORDER OR I WILL STEAL YOUR NOSE

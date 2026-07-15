@@ -11,8 +11,12 @@
   startingGear: LifeSupportSpecialistGear
   icon: "JobIconLifeSupportSpecialist"
   supervisors: job-supervisors-com
-  accessGroups:
-  - Command
+  access :
+  - Engineering # Maintenance Department
+  - Atmospherics # Life Support Specialist
+  - Maintenance
+  - External
+  - Cryogenics
   special:
   - !type:GiveItemOnHolidaySpecial
     holiday: FirefighterDay

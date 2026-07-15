@@ -19,6 +19,8 @@
   displayWeight: 70
   startingGear: OperationsOfficerGear
   icon: "JobIconOperationsOfficer"
+  access:
+  - OperationsOfficer
   accessGroups:
   - OperationsCommand
   special:

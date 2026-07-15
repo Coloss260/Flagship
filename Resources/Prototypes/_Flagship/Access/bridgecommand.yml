@@ -1,75 +1,48 @@
 - type: accessLevel
-  id: BridgeCommand
-  name: id-card-access-level-bridgecommand
-
-- type: accessLevel
-  id: CommandingOfficer
-  name: id-card-access-level-commandingofficer
-
-- type: accessLevel
   id: ExecutiveOfficer
-  name: id-card-access-level-executiveofficer
+  name: id-card-access-level-executive-officer
 
 - type: accessLevel
   id: TacticalOfficer
-  name: id-card-access-level-TacticalOfficer
+  name: id-card-access-level-tactical-officer
 
 - type: accessLevel
   id: OperationsOfficer
-  name: id-card-access-level-operationsofficer
-
-- type: accessLevel
-  id: CommunicationsOfficer
-  name: id-card-access-level-communicationsofficer
-
-- type: accessLevel
-  id: FlightControlOfficer
-  name: id-card-access-level-flightcontrolofficer
-
-- type: accessLevel
-  id: BridgeEnsign
-  name: id-card-access-level-bridgeensign
+  name: id-card-access-level-operations-officer
 
 - type: accessGroup
   id: ShipCommander
   tags:
-  - CommandingOfficer
+  - Captain # Commanding Officer
   - ExecutiveOfficer
   - TacticalOfficer
   - OperationsOfficer
-  - CommunicationsOfficer
-  - FlightControlOfficer
-  - BridgeEnsign
-  - BridgeCommand
-  - ChiefOfMaintenance
-  - ChiefOfMedical
-  - MilitaryPoliceChief
-  - SuppliesQuartermaster
-  - ScienceSupervisor
+  - Command # Bridge Command
+  - ChiefEngineer # Chief of Maintenance
+  - ChiefMedicalOfficer # Chief of Medical
+  - HeadOfSecurity # Military Police Chief
+  - Quartermaster # Supplies Quartermaster
+  - ResearchDirector # Science Supervisor
   - Cryogenics
   - EmergencyShuttleRepealAll
-  - Security
-  - Detective
+  - Security # Military Police
   - Armory
+  - ArtillerySpecialist
   - Brig
-  - Lawyer
-  - Engineering
+  - Engineering # Maintenance Technician
   - Medical
-  - Quartermaster
-  - Salvage
-  - Cargo
+  - Cargo # Supplies
   - Research
   - Service
   - Maintenance
   - External
-  - Janitor
-  - Theatre
+  - Janitor # Custodian
   - Bar
   - Chemistry
-  - Kitchen
+  - Kitchen # Mess Hall
   - Chapel
   - Hydroponics
-  - Atmospherics
+  - Atmospherics # Life Support Specialist
   - GenpopEnter
   - GenpopLeave
 
@@ -79,39 +52,32 @@
   - ExecutiveOfficer
   - TacticalOfficer
   - OperationsOfficer
-  - CommunicationsOfficer
-  - FlightControlOfficer
-  - BridgeEnsign
-  - BridgeCommand
-  - ChiefOfMaintenance
-  - ChiefOfMedical
-  - MilitaryPoliceChief
-  - SuppliesQuartermaster
-  - ScienceSupervisor
+  - Command # Bridge Command
+  - ChiefEngineer # Chief of Maintenance
+  - ChiefMedicalOfficer # Chief of Medical
+  - HeadOfSecurity # Military Police Chief
+  - Quartermaster # Supplies Quartermaster
+  - ResearchDirector # Science Supervisor
   - Cryogenics
   - EmergencyShuttleRepealAll
-  - Security
-  - Detective
+  - Security # Military Police
   - Armory
+  - ArtillerySpecialist
   - Brig
-  - Lawyer
-  - Engineering
+  - Engineering # Maintenance Technician
   - Medical
-  - Quartermaster
-  - Salvage
-  - Cargo
+  - Cargo # Supplies
   - Research
   - Service
   - Maintenance
   - External
-  - Janitor
-  - Theatre
+  - Janitor # Custodian
   - Bar
   - Chemistry
-  - Kitchen
+  - Kitchen # Mess Hall
   - Chapel
   - Hydroponics
-  - Atmospherics
+  - Atmospherics # Life Support Specialist
   - GenpopEnter
   - GenpopLeave
 
@@ -119,25 +85,21 @@
   id: TacticalCommand
   tags:
   - TacticalOfficer
-  - BridgeEnsign
-  - BridgeCommand
-  - ChiefOfMaintenance
-  - MilitaryPoliceChief
-  - SuppliesQuartermaster
+  - Command # Bridge Command
+  - ChiefEngineer # Chief of Maintenance
+  - HeadOfSecurity # Military Police Chief
+  - Quartermaster # Supplies Quartermaster
   - Cryogenics
   - EmergencyShuttleRepealAll
-  - Security
-  - Detective
+  - Security # Military Police
   - Armory
+  - ArtillerySpecialist
   - Brig
-  - Lawyer
-  - Engineering
-  - Quartermaster
-  - Salvage
-  - Cargo
+  - Engineering # Maintenance Technician
+  - Cargo # Supplies
   - Maintenance
   - External
-  - Atmospherics
+  - Atmospherics # Life Support Specialist
   - GenpopEnter
   - GenpopLeave
 
@@ -145,9 +107,9 @@
   id: OperationsCommand
   tags:
   - OperationsOfficer
-  - BridgeCommand
-  - ChiefOfMedical
-  - ScienceSupervisor
+  - Command # Bridge Command
+  - ChiefMedicalOfficer # Chief of Medical
+  - ResearchDirector # Science Supervisor
   - Cryogenics
   - EmergencyShuttleRepealAll
   - Medical
@@ -155,18 +117,19 @@
   - Service
   - Maintenance
   - External
-  - Janitor
-  - Theatre
+  - Janitor # Custodian
   - Bar
   - Chemistry
-  - Kitchen
+  - Kitchen # Mess Hall
   - Chapel
   - Hydroponics
+  - GenpopEnter
+  - GenpopLeave
 
 - type: accessGroup
   id: BridgeOfficer
   tags:
-  - BridgeCommand
+  - Command
   - Cryogenics
   - EmergencyShuttleRepealAll
   - Maintenance

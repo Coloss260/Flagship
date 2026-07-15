@@ -15,6 +15,7 @@
   access:
   - Medical
   - Maintenance
+  - Cryogenics
   extendedAccess:
   - Chemistry
   special:

@@ -1,6 +1,6 @@
 - type: accessLevel
   id: ChiefMedicalOfficer
-  name: id-card-access-level-chief-medical-officer
+  name: id-card-access-level-chief-of-medical # Flagship
 
 - type: accessLevel
   id: Medical
@@ -9,7 +9,7 @@
 - type: accessLevel
   id: Chemistry
   name: id-card-access-level-chemistry
-  
+
 - type: accessLevel
   id: Paramedic
   name: id-card-access-level-paramedic

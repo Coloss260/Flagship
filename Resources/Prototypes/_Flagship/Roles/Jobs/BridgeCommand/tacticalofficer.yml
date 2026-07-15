@@ -19,6 +19,8 @@
   displayWeight: 80
   startingGear: TacticalOfficerGear
   icon: "JobIconTacticalOfficer"
+  access:
+  - TacticalOfficer
   accessGroups:
   - TacticalCommand
   special:

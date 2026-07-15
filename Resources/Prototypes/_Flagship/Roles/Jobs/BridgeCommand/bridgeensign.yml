@@ -20,7 +20,7 @@
   startingGear: BridgeEnsignGear
   icon: "JobIconBridgeEnsign"
   access:
-  - Captain
+  - Command
   accessGroups:
   - BridgeOfficer
   special:

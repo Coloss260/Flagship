@@ -14,10 +14,12 @@
   startingGear: SuppliesQuartermasterGear
   icon: "JobIconSuppliesQuartermaster"
   access:
-  - Captain
-  accessGroups:
-  - Command
-  - AllAccess
+  - Cargo # Supplies
+  - ArtillerySpecialist
+  - Quartermaster # Supplies Quartermaster
+  - Maintenance
+  - External
+  - Cryogenics
 
 # Flagship
 # PLEASE RESPECT THE EQUIPMENT ORDER OR I WILL STEAL YOUR NOSE

@@ -20,7 +20,7 @@
   startingGear: CommunicationsOfficerGear
   icon: "JobIconCommunicationsOfficer"
   access:
-  - Captain
+  - Command
   accessGroups:
   - BridgeOfficer
   special:

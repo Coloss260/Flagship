@@ -1,0 +1,10 @@
+- type: accessGroup
+  id: MilitaryPolice
+  tags:
+  - HeadOfSecurity
+  - Security
+  - Armory
+  - Brig
+  - Cryogenics
+  - GenpopEnter
+  - GenpopLeave

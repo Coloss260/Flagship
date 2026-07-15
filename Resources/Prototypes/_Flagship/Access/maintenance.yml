@@ -1,0 +1,6 @@
+- type: accessGroup
+  id: MaintenanceDepartment
+  tags:
+  - ChiefEngineer
+  - Engineering
+  - Atmospherics
