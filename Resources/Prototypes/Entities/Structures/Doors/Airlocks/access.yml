@@ -114,7 +114,7 @@
 - type: entity
   parent: AirlockExternal
   id: AirlockExternalEngineeringLocked
-  suffix: External, MaintenanceTechnician, Locked # Flagship
+  suffix: External, ShipMaintenance, Locked # Flagship
   components:
   - type: ContainerFill
     containers:
@@ -207,7 +207,7 @@
 - type: entity
   parent: AirlockEngineering
   id: AirlockEngineeringLocked
-  suffix: MaintenanceTechnician, Locked # Flagship
+  suffix: ShipMaintenance, Locked # Flagship
   components:
   - type: ContainerFill
     containers:
@@ -552,7 +552,7 @@
 - type: entity
   parent: AirlockExternalGlass
   id: AirlockExternalGlassEngineeringLocked
-  suffix: External, Glass, MaintenanceTechnician, Locked # Flagship
+  suffix: External, Glass, ShipMaintenance, Locked # Flagship
   components:
   - type: ContainerFill
     containers:
@@ -621,7 +621,7 @@
 - type: entity
   parent: AirlockEngineeringGlass
   id: AirlockEngineeringGlassLocked
-  suffix: MaintenanceTechnician, Locked # Flagship
+  suffix: ShipMaintenance, Locked # Flagship
   components:
   - type: ContainerFill
     containers:

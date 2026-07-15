@@ -84,19 +84,19 @@
 - type: entity
   parent: AirlockAssembly
   id: AirlockAssemblyEngineering
-  suffix: MaintenanceTechnician # Flagship
+  suffix: ShipMaintenance # Flagship
   components:
   - type: Sprite
-    sprite: Structures/Doors/Airlocks/Standard/engineering.rsi
+    sprite: Structures/Doors/Airlocks/Standard/shipmaintenance.rsi
     state: "assembly"
 
 - type: entity
   parent: AirlockAssembly
   id: AirlockAssemblyEngineeringGlass
-  suffix: MaintenanceTechnician, Glass # Flagship
+  suffix: ShipMaintenance, Glass # Flagship
   components:
   - type: Sprite
-    sprite: Structures/Doors/Airlocks/Glass/engineering.rsi
+    sprite: Structures/Doors/Airlocks/Glass/shipmaintenance.rsi
     state: "assembly"
 
 #External

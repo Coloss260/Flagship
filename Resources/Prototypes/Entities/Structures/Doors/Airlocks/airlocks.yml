@@ -11,10 +11,10 @@
 - type: entity
   parent: Airlock
   id: AirlockEngineering
-  suffix: MaintenanceTechnician # Flagship
+  suffix: ShipMaintenance # Flagship
   components:
   - type: Sprite
-    sprite: _Flagship/Structures/Doors/Airlocks/Standard/engineering.rsi # Flagship
+    sprite: _Flagship/Structures/Doors/Airlocks/Standard/shipmaintenance.rsi # Flagship
   - type: Wires
     layoutId: AirlockEngineering
 
@@ -193,10 +193,10 @@
 - type: entity
   parent: AirlockGlass
   id: AirlockEngineeringGlass
-  suffix: MaintenanceTechnician # Flagship
+  suffix: ShipMaintenance # Flagship
   components:
   - type: Sprite
-    sprite: _Flagship/Structures/Doors/Airlocks/Glass/engineering.rsi # Flagship
+    sprite: _Flagship/Structures/Doors/Airlocks/Glass/shipmaintenance.rsi # Flagship
   - type: Wires
     layoutId: AirlockEngineering
 
