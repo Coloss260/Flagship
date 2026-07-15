@@ -240,7 +240,7 @@
   suffix: MilitaryPolice # Flagship
   components:
   - type: Sprite
-    sprite: Structures/Doors/Airlocks/Standard/security.rsi
+    sprite: _Flagship/Structures/Doors/Airlocks/Standard/militarypolice.rsi
     state: "assembly"
 
 - type: entity
@@ -249,7 +249,7 @@
   suffix: MilitaryPolice, Glass # Flagship
   components:
   - type: Sprite
-    sprite: Structures/Doors/Airlocks/Glass/security.rsi
+    sprite: _Flagship/Structures/Doors/Airlocks/Glass/militarypolice.rsi
     state: "assembly"
 
 #Shuttle

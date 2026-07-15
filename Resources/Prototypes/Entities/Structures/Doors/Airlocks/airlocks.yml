@@ -110,7 +110,7 @@
   suffix: MilitaryPolice # Flagship
   components:
   - type: Sprite
-    sprite: _Flagship/Structures/Doors/Airlocks/Standard/security.rsi # Flagship
+    sprite: _Flagship/Structures/Doors/Airlocks/Standard/militarypolice.rsi # Flagship
   - type: Wires
     layoutId: AirlockSecurity
 
@@ -300,7 +300,7 @@
   suffix: MilitaryPolice # Flagship
   components:
   - type: Sprite
-    sprite: _Flagship/Structures/Doors/Airlocks/Glass/security.rsi # Flagship
+    sprite: _Flagship/Structures/Doors/Airlocks/Glass/militarypolice.rsi # Flagship
   - type: Wires
     layoutId: AirlockSecurity
 
