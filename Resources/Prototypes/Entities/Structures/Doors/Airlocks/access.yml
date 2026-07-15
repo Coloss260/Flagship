@@ -232,6 +232,15 @@
       board: [ DoorElectronicsCargo ]
 
 - type: entity
+  parent: AirlockArtillery # Flagship
+  id: AirlockArtilleryLocked # Flagship
+  suffix: ArtillerySpecialist, Locked # Flagship
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsArtillery ] # Flagship
+
+- type: entity
   parent: AirlockSalvage
   id: AirlockSalvageLocked
   suffix: Salvage, Locked
@@ -646,6 +655,15 @@
       board: [ DoorElectronicsCargo ]
 
 - type: entity
+  parent: AirlockArtilleryGlass # Flagship
+  id: AirlockArtilleryGlassLocked # Flagship
+  suffix: ArtillerySpecialist, Locked # Flagship
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsArtillery ] # Flagship
+
+- type: entity
   parent: AirlockSalvageGlass
   id: AirlockSalvageGlassLocked
   suffix: Salvage, Locked
@@ -908,6 +926,13 @@
 - type: entity
   parent: AirlockCargoLocked
   id: AirlockMaintCargoLocked
+  components:
+  - type: Sprite
+    sprite: Structures/Doors/Airlocks/Standard/maint.rsi
+
+- type: entity
+  parent: AirlockArtilleryLocked # Flagship
+  id: AirlockMaintArtilleryLocked # Flagship
   components:
   - type: Sprite
     sprite: Structures/Doors/Airlocks/Standard/maint.rsi

@@ -137,6 +137,14 @@
   - type: AccessReader
     access: [["Cargo"]]
 
+- type: entity
+  parent: DoorElectronics
+  id: DoorElectronicsArtillery # Flagship
+  suffix: ArtillerySpecialist, Locked # Flagship
+  components:
+  - type: AccessReader
+    access: [["ArtillerySpecialist"]] # Flagship
+
 # Engineering
 - type: entity
   parent: DoorElectronics

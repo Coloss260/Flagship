@@ -38,6 +38,16 @@
 
 - type: entity
   parent: Airlock
+  id: AirlockArtillery # Flagship
+  suffix: ArtillerySpecialist # Flagship
+  components:
+  - type: Sprite
+    sprite: _Flagship/Structures/Doors/Airlocks/Standard/supplies.rsi # Flagship
+  - type: Wires
+    layoutId: AirlockCargo
+
+- type: entity
+  parent: Airlock
   id: AirlockSalvage
   suffix: Salvage
   components:
@@ -220,6 +230,16 @@
   parent: AirlockGlass
   id: AirlockCargoGlass
   suffix: Supplies # Flagship
+  components:
+  - type: Sprite
+    sprite: _Flagship/Structures/Doors/Airlocks/Glass/supplies.rsi # Flagship
+  - type: Wires
+    layoutId: AirlockCargo
+
+- type: entity
+  parent: AirlockGlass
+  id: AirlockArtilleryGlass # Flagship
+  suffix: ArtillerySpecialist # Flagship
   components:
   - type: Sprite
     sprite: _Flagship/Structures/Doors/Airlocks/Glass/supplies.rsi # Flagship
