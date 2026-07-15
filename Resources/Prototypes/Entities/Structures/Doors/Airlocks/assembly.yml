@@ -87,7 +87,7 @@
   suffix: ShipMaintenance # Flagship
   components:
   - type: Sprite
-    sprite: Structures/Doors/Airlocks/Standard/shipmaintenance.rsi
+    sprite: _Flagship/Structures/Doors/Airlocks/Standard/shipmaintenance.rsi
     state: "assembly"
 
 - type: entity
@@ -96,7 +96,7 @@
   suffix: ShipMaintenance, Glass # Flagship
   components:
   - type: Sprite
-    sprite: Structures/Doors/Airlocks/Glass/shipmaintenance.rsi
+    sprite: _Flagship/Structures/Doors/Airlocks/Glass/shipmaintenance.rsi
     state: "assembly"
 
 #External
