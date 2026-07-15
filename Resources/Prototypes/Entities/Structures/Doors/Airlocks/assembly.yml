@@ -33,7 +33,7 @@
   suffix: Supplies, Glass # Flagship
   components:
   - type: Sprite
-    sprite: Structures/Doors/Airlocks/Glass/supplies.rsi
+    sprite: _Flagship/Structures/Doors/Airlocks/Glass/supplies.rsi
     state: "assembly"
 
 #Clockwork
