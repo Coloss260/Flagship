@@ -11,7 +11,7 @@
 - type: entity
   parent: Airlock
   id: AirlockEngineering
-  suffix: Engineering
+  suffix: MaintenanceTechnician # Flagship
   components:
   - type: Sprite
     sprite: _Flagship/Structures/Doors/Airlocks/Standard/engineering.rsi # Flagship
@@ -21,7 +21,7 @@
 - type: entity
   parent: AirlockEngineering
   id: AirlockAtmospherics
-  suffix: Atmospherics
+  suffix: LifeSupport # Flagship
   components:
   - type: Sprite
     sprite: _Flagship/Structures/Doors/Airlocks/Standard/atmospherics.rsi # Flagship
@@ -29,7 +29,7 @@
 - type: entity
   parent: Airlock
   id: AirlockCargo
-  suffix: Cargo
+  suffix: Supplies # Flagship
   components:
   - type: Sprite
     sprite: _Flagship/Structures/Doors/Airlocks/Standard/cargo.rsi # Flagship
@@ -95,7 +95,7 @@
 - type: entity
   parent: Airlock
   id: AirlockCommand
-  suffix: Command
+  suffix: BridgeCommand # Flagship
   components:
   - type: Sprite
     sprite: _Flagship/Structures/Doors/Airlocks/Standard/command.rsi # Flagship
@@ -107,7 +107,7 @@
 - type: entity
   parent: Airlock
   id: AirlockSecurity
-  suffix: Security
+  suffix: MilitaryPolice # Flagship
   components:
   - type: Sprite
     sprite: _Flagship/Structures/Doors/Airlocks/Standard/security.rsi # Flagship
@@ -193,7 +193,7 @@
 - type: entity
   parent: AirlockGlass
   id: AirlockEngineeringGlass
-  suffix: Engineering
+  suffix: MaintenanceTechnician # Flagship
   components:
   - type: Sprite
     sprite: _Flagship/Structures/Doors/Airlocks/Glass/engineering.rsi # Flagship
@@ -211,7 +211,7 @@
 - type: entity
   parent: AirlockEngineeringGlass
   id: AirlockAtmosphericsGlass
-  suffix: Atmospherics
+  suffix: LifeSupport # Flagship
   components:
   - type: Sprite
     sprite: _Flagship/Structures/Doors/Airlocks/Glass/atmospherics.rsi # Flagship
@@ -219,7 +219,7 @@
 - type: entity
   parent: AirlockGlass
   id: AirlockCargoGlass
-  suffix: Cargo
+  suffix: Supplies # Flagship
   components:
   - type: Sprite
     sprite: _Flagship/Structures/Doors/Airlocks/Glass/cargo.rsi # Flagship
@@ -285,7 +285,7 @@
 - type: entity
   parent: AirlockGlass
   id: AirlockCommandGlass
-  suffix: Command
+  suffix: BridgeCommand # Flagship
   components:
   - type: Sprite
     sprite: _Flagship/Structures/Doors/Airlocks/Glass/command.rsi # Flagship
@@ -297,7 +297,7 @@
 - type: entity
   parent: AirlockGlass
   id: AirlockSecurityGlass
-  suffix: Security
+  suffix: MilitaryPolice # Flagship
   components:
   - type: Sprite
     sprite: _Flagship/Structures/Doors/Airlocks/Glass/security.rsi # Flagship

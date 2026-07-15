@@ -54,7 +54,7 @@
 - type: entity
   id: BlastDoorBridge
   parent: BlastDoor
-  suffix: Autolink, Bridge
+  suffix: Autolink, BridgeCommand # Flagship
   components:
   - type: AccessReader
     access: [["Command"]]
@@ -64,7 +64,7 @@
 - type: entity
   id: BlastDoorBridgeOpen
   parent: BlastDoorOpen
-  suffix: Open, Autolink, Bridge
+  suffix: Open, Autolink, BridgeCommand # Flagship
   components:
   - type: AccessReader
     access: [["Command"]]
@@ -74,7 +74,7 @@
 - type: entity
   id: BlastDoorEngineering
   parent: BlastDoor
-  suffix: Autolink, Engineering
+  suffix: Autolink, MaintenanceTechnician # Flagship
   components:
   - type: AccessReader
     access: [["Command"], ["Engineering"]]
@@ -84,7 +84,7 @@
 - type: entity
   id: BlastDoorEngineeringOpen
   parent: BlastDoorOpen
-  suffix: Open, Autolink, Engineering
+  suffix: Open, Autolink, MaintenanceTechnician # Flagship
   components:
   - type: AccessReader
     access: [["Command"], ["Engineering"]]
