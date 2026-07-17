@@ -412,11 +412,11 @@
     appearanceDataInit:
      enum.PdaVisuals.PdaType:
        !type:String
-       pda-supplies
+       pda-qm
   - type: PdaBorderColor
-    borderColor: "#2d6122"
+    borderColor: "#A46106"
   - type: Icon
-    state: pda-supplies
+    state: pda-qm
 
 - type: entity
   parent: [BaseFlagPDA, BaseCargoContraband]
@@ -436,11 +436,11 @@
     appearanceDataInit:
      enum.PdaVisuals.PdaType:
        !type:String
-       pda-artilleryspecialist
+       pda-supplies
   - type: PdaBorderColor
-    borderColor: "#22351f"
+    borderColor: "#A46106"
   - type: Icon
-    state: pda-artilleryspecialist
+    state: pda-supplies
 
 - type: entity
   parent: [BaseFlagPDA, BaseCargoContraband]
@@ -462,7 +462,7 @@
        !type:String
        pda-supplies
   - type: PdaBorderColor
-    borderColor: "#102e46"
+    borderColor: "#A46106"
   - type: Icon
     state: pda-supplies
 # End of Supply

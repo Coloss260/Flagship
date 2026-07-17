@@ -108,9 +108,9 @@
   description: A stylish yet simple uniform made specifically to be worn by Artillery Specialists of Nanotrasen's Naval Corps.
   components:
   - type: Sprite
-    sprite: _Flagship/Clothing/Uniforms/Jumpsuit/artilleryspecialist.rsi
+    sprite: _Flagship/Clothing/Uniforms/Jumpsuit/supplies.rsi
   - type: Clothing
-    sprite: _Flagship/Clothing/Uniforms/Jumpsuit/artilleryspecialist.rsi
+    sprite: _Flagship/Clothing/Uniforms/Jumpsuit/supplies.rsi
 
 # Science
 - type: entity

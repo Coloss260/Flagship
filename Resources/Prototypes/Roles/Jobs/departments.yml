@@ -2,7 +2,7 @@
   id: Cargo
   name: department-Cargo
   description: department-Cargo-description
-  color: "#6aa84f" # Flagship
+  color: "#A46106" # Flagship
   weight: 160 # Flagship
   roles:
   - SuppliesQuartermaster # Flagship
