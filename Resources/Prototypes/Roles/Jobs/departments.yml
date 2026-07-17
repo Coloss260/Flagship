@@ -1,7 +1,7 @@
 - type: department
   id: Cargo
-  name: department-Supply # Flagship
-  description: department-Supply-description # Flagship
+  name: department-Cargo
+  description: department-Cargo-description
   color: "#6aa84f" # Flagship
   weight: 160 # Flagship
   roles:
@@ -11,8 +11,8 @@
 
 - type: department
   id: Civilian
-  name: department-Service # Flagship
-  description: department-Service-description # Flagship
+  name: department-Civilian # Flagship
+  description: department-Civilian-description # Flagship
   color: "#c1ff72" # Flagship
   weight: -10 # Flagship
   roles:
@@ -42,8 +42,8 @@
 
 - type: department
   id: Command
-  name: department-BridgeCommand # Flagship
-  description: department-BridgeCommand-description
+  name: department-Command # Flagship
+  description: department-Command-description
   color: "#2b72ee" # Flagship
   roles:
   - CommandingOfficer # Flagship
@@ -67,8 +67,8 @@
 
 - type: department
   id: Engineering
-  name: department-Maintenance # Flagship
-  description: department-Maintenance-description # Flagship
+  name: department-Engineering # Flagship
+  description: department-Engineering-description # Flagship
   color: "#EFB341"
   weight: 140 # Flagship
   roles:
@@ -80,7 +80,7 @@
 - type: department
   id: Medical
   name: department-Medical
-  description: department-FlagMedical-description # Flagship
+  description: department-Medical-description # Flagship
   color: "#a4d8ef" # Flagship
   weight: 100 # Flagship
   roles:
@@ -105,7 +105,7 @@
 - type: department
   id: Science
   name: department-Science
-  description: department-FlagScience-description # Flagship
+  description: department-Science-description # Flagship
   color: "#cd7ccd" # Flagship
   weight: 120 # Flagship
   roles:
