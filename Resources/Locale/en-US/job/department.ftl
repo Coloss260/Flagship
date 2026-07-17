@@ -1,10 +1,12 @@
-department-Cargo = Supplies
-department-Civilian = Service
-department-Command = Bridge Command
+# Commented out department names have been modified in _Flagship/job/department.ftl
+
+# department-Cargo = Cargo
+# department-Civilian = Civilian
+# department-Command = Command
 department-CentralCommand = Central Command
-department-Engineering = Maintenance
+# department-Engineering = Engineering
 department-Medical = Medical
-department-Security = Military Police
+# department-Security = Security
 department-Science = Science
 department-Silicon = Silicon
 department-Specific = Station specific

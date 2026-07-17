@@ -1,10 +1,10 @@
 - type: accessLevel
   id: HeadOfSecurity
-  name: id-card-access-level-military-police-chief # Flagship
+  name: id-card-access-level-head-of-security
 
 - type: accessLevel
   id: Security
-  name: id-card-access-level-military-police # Flagship
+  name: id-card-access-level-security
 
 - type: accessLevel
   id: Armory

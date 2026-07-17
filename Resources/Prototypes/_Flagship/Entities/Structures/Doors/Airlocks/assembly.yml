@@ -1,0 +1,17 @@
+- type: entity
+  parent: AirlockAssembly
+  id: AirlockAssemblyArtillery
+  suffix: ArtillerySpecialist
+  components:
+  - type: Sprite
+    sprite: _Flagship/Structures/Doors/Airlocks/Standard/supplies.rsi
+    state: "assembly"
+
+- type: entity
+  parent: AirlockAssembly
+  id: AirlockAssemblyArtilleryGlass
+  suffix: ArtillerySpecialist, Glass
+  components:
+  - type: Sprite
+    sprite: _Flagship/Structures/Doors/Airlocks/Glass/supplies.rsi
+    state: "assembly"

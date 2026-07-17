@@ -1,6 +1,6 @@
 - type: accessLevel
   id: ChiefMedicalOfficer
-  name: id-card-access-level-chief-of-medical # Flagship
+  name: id-card-access-level-chief-medical-officer
 
 - type: accessLevel
   id: Medical

@@ -1,0 +1,23 @@
+- type: entity
+  parent: DoorElectronics
+  id: DoorElectronicsTacticalOfficer
+  suffix: TacticalOfficer, Locked
+  components:
+  - type: AccessReader
+    access: [["TacticalOfficer"]]
+
+- type: entity
+  parent: DoorElectronics
+  id: DoorElectronicsOperationsOfficer
+  suffix: OperationsOfficer, Locked
+  components:
+  - type: AccessReader
+    access: [["OperationsOfficer"]]
+
+- type: entity
+  parent: DoorElectronics
+  id: DoorElectronicsArtillery
+  suffix: ArtillerySpecialist, Locked
+  components:
+  - type: AccessReader
+    access: [["ArtillerySpecialist"]]

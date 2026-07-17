@@ -1,0 +1,19 @@
+- type: entity
+  parent: Airlock
+  id: AirlockArtillery
+  suffix: ArtillerySpecialist
+  components:
+  - type: Sprite
+    sprite: _Flagship/Structures/Doors/Airlocks/Standard/supplies.rsi
+  - type: Wires
+    layoutId: AirlockCargo
+
+- type: entity
+  parent: AirlockGlass
+  id: AirlockArtilleryGlass
+  suffix: ArtillerySpecialist
+  components:
+  - type: Sprite
+    sprite: _Flagship/Structures/Doors/Airlocks/Glass/supplies.rsi
+  - type: Wires
+    layoutId: AirlockCargo

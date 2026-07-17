@@ -4,7 +4,7 @@
 
 - type: accessLevel
   id: Kitchen
-  name: id-card-access-level-mess-hall # Flagship
+  name: id-card-access-level-kitchen
 
 - type: accessLevel
   id: Hydroponics
@@ -16,7 +16,7 @@
 
 - type: accessLevel
   id: Janitor
-  name: id-card-access-level-custodian # Flagship
+  name: id-card-access-level-janitor
 
 - type: accessLevel
   id: Theatre

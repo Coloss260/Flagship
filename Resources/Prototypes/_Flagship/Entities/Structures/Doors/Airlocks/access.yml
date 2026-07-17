@@ -1,0 +1,24 @@
+- type: entity
+  parent: AirlockArtillery
+  id: AirlockArtilleryLocked
+  suffix: ArtillerySpecialist, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsArtillery ]
+
+- type: entity
+  parent: AirlockArtilleryGlass
+  id: AirlockArtilleryGlassLocked
+  suffix: ArtillerySpecialist, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsArtillery ]
+
+- type: entity
+  parent: AirlockArtilleryLocked
+  id: AirlockMaintArtilleryLocked
+  components:
+  - type: Sprite
+    sprite: Structures/Doors/Airlocks/Standard/maint.rsi

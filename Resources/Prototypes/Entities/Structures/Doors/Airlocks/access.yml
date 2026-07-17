@@ -232,15 +232,6 @@
       board: [ DoorElectronicsCargo ]
 
 - type: entity
-  parent: AirlockArtillery # Flagship
-  id: AirlockArtilleryLocked # Flagship
-  suffix: ArtillerySpecialist, Locked # Flagship
-  components:
-  - type: ContainerFill
-    containers:
-      board: [ DoorElectronicsArtillery ] # Flagship
-
-- type: entity
   parent: AirlockSalvage
   id: AirlockSalvageLocked
   suffix: Salvage, Locked
@@ -383,6 +374,24 @@
   - type: ContainerFill
     containers:
       board: [ DoorElectronicsHeadOfPersonnel ]
+
+- type: entity
+  parent: AirlockCommand
+  id: AirlockTacticalOfficerLocked # Flagship
+  suffix: TacticalOfficer, Locked # Flagship
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsTacticalOfficer ] # Flagship
+
+- type: entity
+  parent: AirlockCommand
+  id: AirlockOperationsOfficerLocked # Flagship
+  suffix: OperationsOfficer, Locked # Flagship
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsOperationsOfficer ] # Flagship
 
 - type: entity
   parent: AirlockCommand
@@ -655,15 +664,6 @@
       board: [ DoorElectronicsCargo ]
 
 - type: entity
-  parent: AirlockArtilleryGlass # Flagship
-  id: AirlockArtilleryGlassLocked # Flagship
-  suffix: ArtillerySpecialist, Locked # Flagship
-  components:
-  - type: ContainerFill
-    containers:
-      board: [ DoorElectronicsArtillery ] # Flagship
-
-- type: entity
   parent: AirlockSalvageGlass
   id: AirlockSalvageGlassLocked
   suffix: Salvage, Locked
@@ -809,6 +809,24 @@
 
 - type: entity
   parent: AirlockCommandGlass
+  id: AirlockTacticalOfficerGlassLocked
+  suffix: TacticalOfficer, Locked # Flagship
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsTacticalOfficer ]
+
+- type: entity
+  parent: AirlockCommandGlass
+  id: AirlockOperationsOfficerGlassLocked
+  suffix: OperationsOfficer, Locked # Flagship
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsOperationsOfficer ]
+
+- type: entity
+  parent: AirlockCommandGlass
   id: AirlockQuartermasterGlassLocked
   suffix: SuppliesQuartermaster, Locked # Flagship
   components:
@@ -926,13 +944,6 @@
 - type: entity
   parent: AirlockCargoLocked
   id: AirlockMaintCargoLocked
-  components:
-  - type: Sprite
-    sprite: Structures/Doors/Airlocks/Standard/maint.rsi
-
-- type: entity
-  parent: AirlockArtilleryLocked # Flagship
-  id: AirlockMaintArtilleryLocked # Flagship
   components:
   - type: Sprite
     sprite: Structures/Doors/Airlocks/Standard/maint.rsi
@@ -1087,6 +1098,20 @@
 - type: entity
   parent: AirlockHeadOfPersonnelLocked
   id: AirlockMaintHOPLocked
+  components:
+  - type: Sprite
+    sprite: Structures/Doors/Airlocks/Standard/maint.rsi
+
+- type: entity
+  parent: AirlockTacticalOfficerLocked # Flagship
+  id: AirlockMaintTacticalOfficerLocked # Flagship
+  components:
+  - type: Sprite
+    sprite: Structures/Doors/Airlocks/Standard/maint.rsi
+
+- type: entity
+  parent: AirlockOperationsOfficerLocked # Flagship
+  id: AirlockMaintOperationsOfficerLocked # Flagship
   components:
   - type: Sprite
     sprite: Structures/Doors/Airlocks/Standard/maint.rsi
