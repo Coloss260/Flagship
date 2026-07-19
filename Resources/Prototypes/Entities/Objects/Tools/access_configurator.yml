@@ -36,16 +36,19 @@
       - External
       - GenpopEnter
       - GenpopLeave
+      - HeadOfPersonnel
       - HeadOfSecurity
       - Hydroponics
       - Janitor
       - Kitchen
+      - Lawyer
       - Maintenance
       - Medical
       - OperationsOfficer # Flagship
       - Quartermaster
       - Research
       - ResearchDirector
+      - Salvage
       - Security
       - Service
       - TacticalOfficer # Flagship
