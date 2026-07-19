@@ -1,0 +1,65 @@
+
+- type: gameMap
+  id: Harmonic
+  mapName: 'Harmonic'
+  mapPath: /Maps/_Flagship/harmonic.yml
+  minPlayers: 7
+  maxPlayers: 35
+  stations:
+    Harmonic:
+      stationProto: StandardNanotrasenStation
+      components:
+      - type: StationNameSetup
+        mapNameTemplate: '{0} Harmonic {1}'
+        nameGenerator:
+          !type:NanotrasenNameGenerator
+          prefixCreator: '14'
+      - type: StationEmergencyShuttle
+        emergencyShuttlePath: /Maps/Shuttles/emergency_crimson.yml
+      - type: StationJobs
+        availableJobs:
+          # Bridge Command (7)
+          CommandingOfficer: [ 1, 1 ]
+          ExecutiveOfficer: [ 1, 1 ]
+          TacticalOfficer: [ 1, 1 ]
+          OperationsOfficer: [ 1, 1 ]
+          CommunicationsOfficer: [ 1, 1 ]
+          FlightControlOfficer: [ 1, 1 ]
+          BridgeEnsign: [ 1, 1 ]
+          
+          # Service (4-7)
+          MessChef: [ 1, 2 ]
+          Custodian: [1, 2]
+          HydroponicsBiologist: [1,2]
+          FlagBartender: [1, 1]
+          OffDutyCrew: [-1, -1] # infinite
+          
+          # Maintenance (5-6)
+          ChiefOfMaintenance: [1, 1]
+          LifeSupportSpecialist: [ 1, 1]
+          MaintenanceTechnician: [ 2, 2 ]
+          MaintenanceIntern: [ 1, 2 ] #intern, not counted
+          
+          # Medical (5-7)
+          ChiefOfMedical: [1, 1]
+          FlagChemist: [ 1, 1 ]
+          ParamedicalSpecialist: [1, 1]
+          FlagMedicalDoctor: [ 1, 2 ]
+          FlagMedicalIntern: [ 1, 2 ] #intern, not counted
+          
+          # Science (4-6)
+          ScienceSupervisor: [1, 1]
+          FlagScientist: [ 2, 4 ]
+          FlagRoboticist: [1, 1]
+          FlagResearchAssistant: [ 2, 2 ] #intern, not counted
+          
+          # Military Police (6)
+          MPChief: [ 1, 1 ]
+          MPOfficer: [ 3, 4 ]
+          MPMedic: [ 1, 1 ]
+          MPTrainee: [ 1, 2 ] #intern, not counted
+          
+          # Supplies (4-6)
+          SuppliesQuartermaster: [ 1, 1 ]
+          ArtillerySpecialist: [ 1, 2 ]
+          SuppliesCrewman: [2, 3]
