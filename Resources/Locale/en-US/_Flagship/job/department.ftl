@@ -1,5 +1,5 @@
-department-Cargo = Supplies
-department-Civilian = Service
-department-Command = Bridge Command
-department-Engineering = Ship Maintenance
-department-Security = Military Police
+flagship-department-Cargo = Supplies
+flagship-department-Civilian = Service
+flagship-department-Command = Bridge Command
+flagship-department-Engineering = Ship Maintenance
+flagship-department-Security = Military Police
