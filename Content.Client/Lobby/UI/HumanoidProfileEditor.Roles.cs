@@ -6,6 +6,7 @@ using Content.Shared.Clothing;
 using Content.Shared.Preferences;
 using Content.Shared.Preferences.Loadouts;
 using Content.Shared.Roles;
+using Content.Shared.Roles.Ranks;
 using Robust.Client.Graphics;
 using Robust.Client.UserInterface;
 using Robust.Client.UserInterface.Controls;
@@ -25,6 +26,7 @@ public sealed partial class HumanoidProfileEditor
     private LoadoutWindow? _loadoutWindow;
 
     private List<(string, RequirementsSelector)> _jobPriorities = new();
+    private List<(string JobId, OptionButton Button, List<ProtoId<RankPrototype>?> RankIds)> _rankPriorities = new();
 
     private readonly Dictionary<string, BoxContainer> _jobCategories;
 
@@ -37,6 +39,29 @@ public sealed partial class HumanoidProfileEditor
         {
             var priority = Profile?.JobPriorities.GetValueOrDefault(jobId, JobPriority.Never) ?? JobPriority.Never;
             prioritySelector.Select((int)priority);
+        }
+    }
+
+    private void UpdateRankPreferenceControls()
+    {
+        foreach (var (jobId, button, rankIds) in _rankPriorities)
+        {
+            // <FlagShip>
+            if (rankIds.Count <= 2)
+            {
+                button.SelectId(0);
+                continue;
+            }
+            // </FlagShip>
+
+            ProtoId<RankPrototype>? preferredRank = null;
+            Profile?.RankPreferences.TryGetValue(jobId, out preferredRank);
+
+            var selectedIndex = rankIds.IndexOf(preferredRank);
+            if (selectedIndex < 0)
+                selectedIndex = 0;
+
+            button.SelectId(selectedIndex);
         }
     }
 
@@ -115,6 +140,7 @@ public sealed partial class HumanoidProfileEditor
         JobList.RemoveAllChildren();
         _jobCategories.Clear();
         _jobPriorities.Clear();
+        _rankPriorities.Clear();
         var firstCategory = true;
 
         // Get all displayed departments
@@ -284,14 +310,73 @@ public sealed partial class HumanoidProfileEditor
                     };
                 }
 
+                var rankOptions = new TooltipOptionButton()
+                {
+                    Name = "RankOptionsButton",
+                    HorizontalAlignment = HAlignment.Right,
+                    VerticalAlignment = VAlignment.Center,
+                    Margin = new Thickness(3f, 3f, 0f, 0f),
+                };
+
+                var rankProtoIds = new List<ProtoId<RankPrototype>?> { null };
+
+                if (job.Ranks != null && job.SetRankPreference)
+                {
+                    rankOptions.AddItem(Loc.GetString("humanoid-profile-editor-rank-auto"));
+
+                    foreach (var (rankId, requirements) in job.Ranks)
+                    {
+                        if (!_prototypeManager.TryIndex(rankId, out RankPrototype? rankPrototype))
+                            continue;
+
+                        rankOptions.AddItem(rankPrototype.Name);
+                        rankProtoIds.Add(rankId);
+
+                        if (requirements != null &&
+                            !_requirements.CheckRoleRequirements(requirements, Profile, out var rankReason))
+                        {
+                            rankOptions.SetItemDisabled(rankOptions.ItemCount - 1, true);
+                            rankOptions.SetItemToolTip(rankOptions.ItemCount - 1, rankReason.ToString());
+                        }
+                    }
+
+                    rankOptions.SelectId(0); // - FlagShip
+
+                    if (rankProtoIds.Count <= 2)
+                        rankOptions.Disabled = true;
+
+                    rankOptions.OnItemSelected += args =>
+                    {
+                        rankOptions.SelectId(args.Id);
+                        SetRankPreference(job.ID, rankProtoIds[args.Id]);
+                    };
+                }
+                else
+                {
+                    rankOptions.Visible = false;
+                }
+
                 _jobPriorities.Add((job.ID, selector));
+
+                // Only track buttons that actually have rank items; jobs without
+                // ranks get an empty, hidden button that must not be SelectId()'d.
+                if (rankOptions.ItemCount > 0)
+                    _rankPriorities.Add((job.ID, rankOptions, rankProtoIds));
                 jobContainer.AddChild(selector);
                 jobContainer.AddChild(loadoutWindowBtn);
+                jobContainer.AddChild(rankOptions);
                 category.AddChild(jobContainer);
             }
         }
 
         UpdateJobPriorities();
+        UpdateRankPreferenceControls();
+    }
+
+    private void SetRankPreference(string jobId, ProtoId<RankPrototype>? rankId)
+    {
+        Profile = Profile?.WithRankPreference(jobId, rankId);
+        SetDirty();
     }
 
     public void RefreshAntags()

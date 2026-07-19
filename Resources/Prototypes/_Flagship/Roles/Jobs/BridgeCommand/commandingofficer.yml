@@ -4,6 +4,7 @@
   description: job-description-commandingofficer
   playTimeTracker: JobCommandingOfficer
   setPreference: true
+  setRankPreference: true
   supervisors: job-supervisors-hc
   requireAdminNotify: true
   requirements:
@@ -16,6 +17,12 @@
     - !type:DepartmentTimeRequirement
       department: MilitaryPolice
       time: 54000 # 15 hours
+  ranks:
+    Captain:
+    - !type:RoleTimeRequirement
+      role: JobCommandingOfficer
+      time: 252000 # 70 hours
+    Commander: []
   displayWeight: 100
   startingGear: CommandingOfficerGear
   icon: "JobIconCommandingOfficer"

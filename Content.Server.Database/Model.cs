@@ -51,6 +51,7 @@ namespace Content.Server.Database
         public DbSet<IPIntelCache> IPIntelCache { get; set; } = null!;
         public DbSet<CustomVoteLog> CustomVoteLog { get; set; } = null!;
         public DbSet<CustomVoteLogOption> CustomVoteLogOption { get; set; } = null!;
+        public DbSet<Rank> Rank { get; set; } = null!;
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -68,6 +69,13 @@ namespace Content.Server.Database
 
             modelBuilder.Entity<Trait>()
                 .HasIndex(p => new {HumanoidProfileId = p.ProfileId, p.TraitName})
+                .IsUnique();
+
+            modelBuilder.Entity<Rank>()
+                .HasIndex(r => r.ProfileId);
+
+            modelBuilder.Entity<Rank>()
+                .HasIndex(r => new { r.ProfileId, r.JobName })
                 .IsUnique();
 
             modelBuilder.Entity<ProfileRoleLoadout>()
@@ -346,6 +354,7 @@ namespace Content.Server.Database
         public List<Job> Jobs { get; } = new();
         public List<Antag> Antags { get; } = new();
         public List<Trait> Traits { get; } = new();
+        public List<Rank> Ranks { get; } = new();
 
         public List<ProfileRoleLoadout> Loadouts { get; } = new();
 
@@ -390,6 +399,16 @@ namespace Content.Server.Database
         public int ProfileId { get; set; }
 
         public string TraitName { get; set; } = null!;
+    }
+
+    public class Rank
+    {
+        public int Id { get; set; }
+        public Profile Profile { get; set; } = null!;
+        public int ProfileId { get; set; }
+
+        public string JobName { get; set; } = null!;
+        public string RankName { get; set; } = null!;
     }
 
     #region Loadouts

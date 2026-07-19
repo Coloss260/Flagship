@@ -1,0 +1,121 @@
+- type: rank
+  id: NTDirector
+  name: NT Director
+  prefix: NTD.
+
+- type: rank
+  id: FleetAdmiral
+  name: Fleet Admiral
+  prefix: FADM.
+
+- type: rank
+  id: Admiral
+  name: Admiral
+  prefix: ADM.
+
+- type: rank
+  id: ViceAdmiral
+  name: Vice Admiral
+  prefix: VADM.
+
+- type: rank
+  id: RearAdmiral
+  name: Rear Admiral
+  prefix: RADM.
+
+- type: rank
+  id: Captain
+  name: Captain
+  prefix: CAPT.
+  paygrade: flagship-rank-paygrade-o6
+
+- type: rank
+  id: Commander
+  name: Commander
+  prefix: CDR.
+  paygrade: flagship-rank-paygrade-o5
+
+- type: rank
+  id: LieutenantCommander
+  name: Lieutenant Commander
+  prefix: LCDR.
+  paygrade: flagship-rank-paygrade-o4
+
+- type: rank
+  id: Lieutenant
+  name: Lieutenant
+  prefix: LT.
+  paygrade: flagship-rank-paygrade-o3
+
+- type: rank
+  id: JuniorLieutenant
+  name: Junior Lieutenant
+  prefix: JLT.
+  paygrade: flagship-rank-paygrade-o2
+
+- type: rank
+  id: Ensign
+  name: Ensign
+  prefix: ENS.
+  paygrade: flagship-rank-paygrade-o1
+
+- type: rank
+  id: MasterChiefPettyOfficer
+  name: Master Chief Petty Officer
+  prefix: MCPO.
+  paygrade: flagship-rank-paygrade-e9
+
+- type: rank
+  id: SeniorChiefPettyOfficer
+  name: Senior Chief Petty Officer
+  prefix: SCPO.
+  paygrade: flagship-rank-paygrade-e8
+
+- type: rank
+  id: ChiefPettyOfficer
+  name: Chief Petty Officer
+  prefix: CPO.
+  paygrade: flagship-rank-paygrade-e7
+
+- type: rank
+  id: PettyOfficerFirstClass
+  name: Petty Officer First Class
+  prefix: PO1.
+  paygrade: flagship-rank-paygrade-e6
+
+- type: rank
+  id: PettyOfficerSecondClass
+  name: Petty Officer Second Class
+  prefix: PO2.
+  paygrade: flagship-rank-paygrade-e5
+
+- type: rank
+  id: PettyOfficerThirdClass
+  name: Petty Officer Third Class
+  prefix: PO3.
+  paygrade: flagship-rank-paygrade-e4
+
+- type: rank
+  id: Crewman
+  name: Crewman
+  prefix: CN.
+  paygrade: flagship-rank-paygrade-e3
+
+- type: rank
+  id: CrewmanApprentice
+  name: Crewman Apprentice
+  prefix: CA.
+  paygrade: flagship-rank-paygrade-e2
+
+- type: rank
+  id: Recruit
+  name: Recruit
+  prefix: CR.
+  paygrade: flagship-rank-paygrade-e1
+
+- type: rank
+  id: Civilian
+  name: Civilian
+  prefix: Civ.
+  malePrefix: Mr.
+  femalePrefix: Ms.

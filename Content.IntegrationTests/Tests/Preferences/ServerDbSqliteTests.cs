@@ -7,7 +7,10 @@ using Content.Shared.Body;
 using Content.Shared.Humanoid;
 using Content.Shared.Humanoid.Markings;
 using Content.Shared.Humanoid.Prototypes;
+using Content.Shared.Players.PlayTimeTracking;
 using Content.Shared.Preferences;
+using Content.Shared.Roles;
+using Content.Shared.Roles.Ranks;
 using Microsoft.Data.Sqlite;
 using Microsoft.EntityFrameworkCore;
 using Robust.Shared.Configuration;
@@ -38,7 +41,29 @@ namespace Content.IntegrationTests.Tests.Preferences
 - type: dataset
   id: sqlite_test_names_last
   values:
-  - Ackerley";
+  - Ackerley
+
+- type: playTimeTracker
+  id: TestRankedPlayTimeTracker
+
+- type: rank
+  id: TestRankCadet
+  name: Test Cadet
+  prefix: CDT
+
+- type: rank
+  id: TestRankOfficer
+  name: Test Officer
+  prefix: OFF
+
+- type: job
+  id: TestRankedJob
+  name: test-ranked-job
+  playTimeTracker: TestRankedPlayTimeTracker
+  setRankPreference: true
+  ranks:
+    TestRankOfficer: []
+    TestRankCadet: []";
 
         private static HumanoidCharacterProfile CharlieCharlieson()
         {
@@ -122,6 +147,47 @@ namespace Content.IntegrationTests.Tests.Preferences
             var prefs = await db.GetPlayerPreferencesAsync(username);
             var profile = preferences.ConvertProfiles(prefs!.Profiles.Find(p => p.Slot == slot));
             Assert.That(profile.MemberwiseEquals(originalProfile));
+        }
+
+        [Test]
+        public void TestWithRankPreferenceAddReplaceRemove()
+        {
+            var jobId = new ProtoId<JobPrototype>("TestRankedJob");
+            var cadet = new ProtoId<RankPrototype>("TestRankCadet");
+            var officer = new ProtoId<RankPrototype>("TestRankOfficer");
+
+            var original = CharlieCharlieson();
+            var added = original.WithRankPreference(jobId, cadet);
+            var replaced = added.WithRankPreference(jobId, officer);
+            var removed = replaced.WithRankPreference(jobId, null);
+
+            Assert.That(original.RankPreferences.ContainsKey(jobId), Is.False);
+            Assert.That(added.RankPreferences[jobId], Is.EqualTo(cadet));
+            Assert.That(replaced.RankPreferences[jobId], Is.EqualTo(officer));
+            Assert.That(added.MemberwiseEquals(replaced), Is.False);
+            Assert.That(added.GetHashCode(), Is.Not.EqualTo(replaced.GetHashCode()));
+            Assert.That(removed.RankPreferences.ContainsKey(jobId), Is.False);
+        }
+
+        [Test]
+        public async Task TestRankPreferenceRoundTrip()
+        {
+            var pair = Pair;
+            var db = GetDb(pair.Server);
+            var preferences = (ServerPreferencesManager)pair.Server.ResolveDependency<IServerPreferencesManager>();
+            var username = NewUserId();
+            var jobId = new ProtoId<JobPrototype>("TestRankedJob");
+            var rankId = new ProtoId<RankPrototype>("TestRankOfficer");
+
+            var originalProfile = CharlieCharlieson().WithRankPreference(jobId, rankId);
+
+            await db.InitPrefsAsync(username, originalProfile);
+            var prefs = await db.GetPlayerPreferencesAsync(username);
+            var profile = preferences.ConvertProfiles(prefs!.Profiles.Find(p => p.Slot == 0));
+
+            Assert.That(profile.MemberwiseEquals(originalProfile), Is.True);
+            Assert.That(profile.RankPreferences.TryGetValue(jobId, out var loadedRank), Is.True);
+            Assert.That(loadedRank, Is.EqualTo(rankId));
         }
 
         [Test]

@@ -7,6 +7,7 @@ using Content.Shared.Humanoid;
 using Content.Shared.Humanoid.Prototypes;
 using Content.Shared.Preferences.Loadouts;
 using Content.Shared.Roles;
+using Content.Shared.Roles.Ranks; // - FlagShip
 using Content.Shared.Traits;
 using Robust.Shared.Collections;
 using Robust.Shared.Configuration;
@@ -56,6 +57,14 @@ namespace Content.Shared.Preferences
         /// </summary>
         [DataField]
         private HashSet<ProtoId<TraitPrototype>> _traitPreferences = new();
+
+        // <FlagShip>
+        /// <summary>
+        /// Preferred rank to use for each ranked job when requirements permit it.
+        /// </summary>
+        [DataField]
+        private Dictionary<ProtoId<JobPrototype>, ProtoId<RankPrototype>?> _rankPreferences = new();
+        // </FlagShip>
 
         /// <summary>
         /// <see cref="_loadouts"/>
@@ -116,6 +125,13 @@ namespace Content.Shared.Preferences
         /// </summary>
         public IReadOnlySet<ProtoId<TraitPrototype>> TraitPreferences => _traitPreferences;
 
+        // <FlagShip>
+        /// <summary>
+        /// <see cref="_rankPreferences"/>
+        /// </summary>
+        public IReadOnlyDictionary<ProtoId<JobPrototype>, ProtoId<RankPrototype>?> RankPreferences => _rankPreferences;
+        // </FlagShip>
+
         /// <summary>
         /// If we're unable to get one of our preferred jobs do we spawn as a fallback job or do we stay in lobby.
         /// </summary>
@@ -132,6 +148,7 @@ namespace Content.Shared.Preferences
             Gender gender,
             HumanoidCharacterAppearance appearance,
             SpawnPriorityPreference spawnPriority,
+            Dictionary<ProtoId<JobPrototype>, ProtoId<RankPrototype>?> rankPreferences, // - FlagShip
             Dictionary<ProtoId<JobPrototype>, JobPriority> jobPriorities,
             PreferenceUnavailableMode preferenceUnavailable,
             HashSet<ProtoId<AntagPrototype>> antagPreferences,
@@ -146,6 +163,7 @@ namespace Content.Shared.Preferences
             Gender = gender;
             Appearance = appearance;
             SpawnPriority = spawnPriority;
+            _rankPreferences = rankPreferences; // - FlagShip
             _jobPriorities = jobPriorities;
             PreferenceUnavailable = preferenceUnavailable;
             _antagPreferences = antagPreferences;
@@ -177,6 +195,7 @@ namespace Content.Shared.Preferences
                 other.Gender,
                 other.Appearance.Clone(),
                 other.SpawnPriority,
+                new Dictionary<ProtoId<JobPrototype>, ProtoId<RankPrototype>?>(other.RankPreferences), // - FlagShip
                 new Dictionary<ProtoId<JobPrototype>, JobPriority>(other.JobPriorities),
                 other.PreferenceUnavailable,
                 new HashSet<ProtoId<AntagPrototype>>(other.AntagPreferences),
@@ -308,6 +327,23 @@ namespace Content.Shared.Preferences
         {
             return new(this) { SpawnPriority = spawnPriority };
         }
+
+        // <FlagShip>
+        public HumanoidCharacterProfile WithRankPreference(ProtoId<JobPrototype> jobId, ProtoId<RankPrototype>? rankId)
+        {
+            var dictionary = new Dictionary<ProtoId<JobPrototype>, ProtoId<RankPrototype>?>(_rankPreferences);
+
+            if (rankId == null)
+                dictionary.Remove(jobId);
+            else
+                dictionary[jobId] = rankId;
+
+            return new(this)
+            {
+                _rankPreferences = dictionary,
+            };
+        }
+        // </FlagShip>
 
         public HumanoidCharacterProfile WithJobPriorities(IEnumerable<KeyValuePair<ProtoId<JobPrototype>, JobPriority>> jobPriorities)
         {
@@ -469,6 +505,7 @@ namespace Content.Shared.Preferences
             if (Species != other.Species) return false;
             if (PreferenceUnavailable != other.PreferenceUnavailable) return false;
             if (SpawnPriority != other.SpawnPriority) return false;
+            if (!_rankPreferences.SequenceEqual(other._rankPreferences)) return false; // - FlagShip
             if (!_jobPriorities.SequenceEqual(other._jobPriorities)) return false;
             if (!_antagPreferences.SequenceEqual(other._antagPreferences)) return false;
             if (!_traitPreferences.SequenceEqual(other._traitPreferences)) return false;
@@ -593,6 +630,18 @@ namespace Content.Shared.Preferences
                 hasHighPrio = true;
             }
 
+            // <FlagShip>
+            var ranks = new Dictionary<ProtoId<JobPrototype>, ProtoId<RankPrototype>?>(RankPreferences
+                .Where(p =>
+                    p.Value != null &&
+                    prototypeManager.TryIndex<JobPrototype>(p.Key, out var job) &&
+                    job.SetRankPreference &&
+                    job.Ranks != null &&
+                    job.Ranks.Count > 1 &&
+                    job.Ranks.ContainsKey(p.Value.Value) &&
+                    prototypeManager.HasIndex(p.Value.Value)));
+            // </FlagShip>
+
             var antags = AntagPreferences
                 .Where(id => prototypeManager.TryIndex(id, out var antag) && antag.SetPreference)
                 .ToList();
@@ -608,6 +657,15 @@ namespace Content.Shared.Preferences
             Gender = gender;
             Appearance = appearance;
             SpawnPriority = spawnPriority;
+
+            // <FlagShip>
+            _rankPreferences.Clear();
+
+            foreach (var (job, rank) in ranks)
+            {
+                _rankPreferences.Add(job, rank);
+            }
+            // </FlagShip>
 
             _jobPriorities.Clear();
 
@@ -728,6 +786,7 @@ namespace Content.Shared.Preferences
             hashCode.Add((int)Gender);
             hashCode.Add(Appearance);
             hashCode.Add((int)SpawnPriority);
+            hashCode.Add(_rankPreferences); // - FlagShip
             hashCode.Add((int)PreferenceUnavailable);
             return hashCode.ToHashCode();
         }
