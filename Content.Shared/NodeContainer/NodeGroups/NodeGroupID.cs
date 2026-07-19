@@ -17,4 +17,11 @@ public enum NodeGroupID : byte
     /// <seealso cref="Content.Server.Power.Generation.Teg.TegNodeGroup"/>
     Teg,
     ExCable,
+
+    // <Flagship>
+    /// <summary>
+    /// Group used by the modular shield.
+    /// </summary>
+    ModularShield
+    // </Flagship>
 }

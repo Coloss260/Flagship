@@ -1,0 +1,192 @@
+- type: entity
+  abstract: true
+  parent: BaseMachine
+  id: ModularShieldBase
+  components:
+  - type: NodeContainer
+    examinable: true
+    nodes:
+      modularShield:
+        !type:AdjacentNode
+        nodeGroupID: ModularShield
+
+
+
+- type: entity
+  parent: ModularShieldBase
+  id: ModularShieldCore
+  name: Modular Shield Core
+  description: It's the core of a modular shield system.
+  components:
+  - type: ModularShieldCore
+    projectionStartSound: !type:SoundPathSpecifier
+      path: "/Audio/Effects/teleport_arrival.ogg"
+      params:
+        pitch: 0.5
+    projectionEndCalmSound: !type:SoundPathSpecifier
+      path: "/Audio/Items/Medical/jet_injector.ogg"
+      params:
+        pitch: 0.5
+    projectionEndViolentSound: !type:SoundPathSpecifier
+      path: "/Audio/Effects/guardian_warn.ogg"
+      params:
+        pitch: 0.5
+    overflowBufferStartSound: !type:SoundPathSpecifier
+      ## Needs to loop, or longer than the length of the overflow buffer.
+      path: "/Audio/Effects/Grenades/Supermatter/supermatter_loop.ogg"
+      params:
+        pitch: 1
+    absorbedDamageSound: !type:SoundPathSpecifier
+      path: "/Audio/Weapons/Guns/Hits/laser_sear_wall.ogg"
+      params:
+        pitch: 1
+        volume: 0
+        variation: 0.1
+    absorbedDamageSoundScalingMinimumDamage: 20
+    absorbedDamageSoundScalingMaximumDamage: 200
+    absorbedDamageSoundScalingMinimumVolume: -8
+    absorbedDamageSoundScalingMaximumVolume: 0
+    absorbedDamageSoundScalingMinimumPitch: 0.5
+    absorbedDamageSoundScalingMaximumPitch: 1.5
+  - type: Sprite
+    snapCardinals: true
+    sprite: Structures/Power/Generation/ame.rsi
+    state: control
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.ModularShieldCoreVisuals.DisplayState:
+        display:
+          Off: { visible: false }
+          UnableToProject: { state: control_warning, visible: true }
+          Projecting: { state: control_on, visible: true }
+          FluxOverflow: { state: control_fuck, visible: true }
+          FluxOverload: { state: control_critical, visible: true }
+
+- type: entity
+  parent: ModularShieldCore
+  id: ModularShieldCoreDebug
+  name: Modular Shield Debug Core
+  description: It's an all-in-one modular shield system with absurd stats.
+  components:
+  - type: ModularShieldEnergyGeneration
+    energyGenerationRateMaximum: 20000
+  - type: ModularShieldEnergyStorage
+    energyCapacity: 20000
+  - type: ModularShieldFluxStorage
+    fluxCapacity: 20000
+  - type: ModularShieldFluxDestruction
+    fluxDestructionRateMaximum: 20000
+
+
+  
+- type: entity
+  parent: ModularShieldBase
+  id: ModularShieldCasing
+  name: Modular Shield Casing
+  description: Does nothing more than connect modular shield parts together.
+  components:
+  - type: Sprite
+    sprite: Structures/Power/Generation/ame.rsi
+    state: shield_0
+
+
+
+- type: entity
+  parent: ModularShieldBase
+  id: ModularShieldEnergyGeneratorSimple
+  name: Modular Shield Electrical Generator
+  description: It uses the ship's electrical grid to generate a small amount of energy per second.
+  components:
+  - type: ModularShieldEnergyGeneration
+  - type: ApcPowerReceiver
+    powerLoad: 1000
+  - type: ExtensionCableReceiver
+  - type: LightningTarget
+    priority: 1
+  - type: Sprite
+    snapCardinals: true
+    sprite: Structures/Power/Generation/portable_generator.rsi
+    state: portgen0
+
+
+
+
+- type: entity
+  parent: ModularShieldBase
+  id: ModularShieldEnergyStorageMedium
+  name: Modular Shield Medium Energy Storage
+  description: It stores a decent amount of energy for the modular shield system.
+  components:
+  - type: ModularShieldEnergyStorage
+  - type: Sprite
+    snapCardinals: true
+    sprite: Structures/Storage/tanks.rsi
+    layers:
+      - state: highwatertank-2
+      - state: highwatertank-2-0
+        map: ["enum.StorageFillLayers.Fill"]
+        color: LightBlue
+        visible: true
+  - type: Appearance
+  - type: StorageFillVisualizer
+    maxFillLevels: 7
+    fillBaseName: highwatertank-2
+
+
+
+
+- type: entity
+  parent: ModularShieldBase
+  id: ModularShieldFluxStorageMedium
+  name: Modular Shield Medium Flux Storage
+  description: It stores a decent amount of flux from the modular shield system.
+  components:
+  - type: ModularShieldFluxStorage
+  - type: Sprite
+    snapCardinals: true
+    sprite: Structures/Storage/tanks.rsi
+    layers:
+      - state: highfueltank-2
+      - state: highfueltank-2-0
+        map: ["enum.StorageFillLayers.Fill"]
+        color: Purple
+        visible: true
+  - type: Appearance
+  - type: StorageFillVisualizer
+    maxFillLevels: 7
+    fillBaseName: highfueltank-2
+
+
+
+
+- type: entity
+  parent: ModularShieldBase
+  id: ModularShieldFluxDestructorSimple
+  name: Modular Shield Electrical Flux Dissipator
+  description: It uses electricity to dissipate a small amount of flux from the modular shield system per second.
+  components:
+  - type: ModularShieldFluxDestruction
+  - type: ApcPowerReceiver
+    powerLoad: 1000
+  - type: ExtensionCableReceiver
+  - type: LightningTarget
+    priority: 1
+  - type: Sprite
+    snapCardinals: true
+    sprite: Structures/Power/Generation/portable_generator.rsi
+    state: portgen1
+
+
+
+
+- type: entity
+  id: ModularShieldShield
+  name: ship shield
+  description: The projected shield of a modular shield system.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: ModularShieldShield
+  - type: ModularShieldShieldVisuals
+  - type: RequireShooterNotOnSameGrid
+

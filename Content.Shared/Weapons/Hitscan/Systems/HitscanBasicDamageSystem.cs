@@ -1,3 +1,4 @@
+using Content.FlagShip.Common.Weapons.Hitscan.Events; // Flagship
 using Content.Shared.Damage.Systems;
 using Content.Shared.Weapons.Hitscan.Components;
 using Content.Shared.Weapons.Hitscan.Events;
@@ -22,7 +23,20 @@ public sealed partial class HitscanBasicDamageSystem : EntitySystem
 
         var dmg = ent.Comp.Damage * _damage.UniversalHitscanDamageModifier;
 
-        if(!_damage.TryChangeDamage(args.Data.HitEntity.Value, dmg, out var damageDealt, origin: args.Data.Gun))
+        // <Flagship>
+        // Aded HitscanDamageAttempt event call and cancel check.
+        var beforeDamageTakenEvent = new HitscanDamageAttemptEvent
+        {
+            Origin = args.Data.Gun,
+            DamageToTake = (float)dmg.GetTotal(),
+        };
+        RaiseLocalEvent(args.Data.HitEntity.Value, ref beforeDamageTakenEvent);
+
+        if (beforeDamageTakenEvent.Cancelled)
+            return;
+        // </Flagship>
+
+        if (!_damage.TryChangeDamage(args.Data.HitEntity.Value, dmg, out var damageDealt, origin: args.Data.Gun))
             return;
 
         var damageEvent = new HitscanDamageDealtEvent

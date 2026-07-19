@@ -91,6 +91,10 @@
         Piercing: 14
     soundHit:
       path: /Audio/Weapons/Guns/Hits/bullet_hit.ogg
+  # <Flagship>
+  # Used to store information about the shooter at time of firing. Needed for Modular Shields.
+  - type: ShooterDataCache
+  # </Flagship>
   - type: TimedDespawn
     lifetime: 10
 
