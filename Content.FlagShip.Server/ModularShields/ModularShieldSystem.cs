@@ -302,7 +302,7 @@ public sealed partial class ModularShieldSystem : EntitySystem
     {
         if (component.ShieldProjected != null && component.ShieldedEntity != null)
         {
-            StopModularShieldProjection((uid, component), silent: true);
+            StopModularShieldProjection((uid, component));
         }
     }
 
@@ -332,19 +332,21 @@ public sealed partial class ModularShieldSystem : EntitySystem
         return success;
     }
 
-    private bool StopModularShieldProjection(Entity<ModularShieldCoreComponent> shieldCore, bool violent = false, bool silent = false)
+    private bool StopModularShieldProjection(Entity<ModularShieldCoreComponent> shieldCore, bool violent = false)
     {
         if (shieldCore.Comp.ShieldedEntity == null || shieldCore.Comp.ShieldProjected == null)
             return false;
 
         bool success = UnshieldEntity((EntityUid)shieldCore.Comp.ShieldedEntity);
+        shieldCore.Comp.ShieldProjected = null;
+        shieldCore.Comp.ShieldedEntity = null;
 
-        // Shield core may be terminating at this point so don't use it.
-        if (silent)
-        {
-            // Test will fail if we create an audio entity when the shield core is deleted.
-        }
-        else if (violent)
+        // StopModularShieldProjection is run when the shield core is deleted to clean up the projected shield.
+        // Don't play create an audio entity or we'll have a test fail.
+        if (TerminatingOrDeleted(shieldCore))
+            return success;
+
+        if (violent)
         {
             _audio.PlayGlobal(shieldCore.Comp.ProjectionEndViolentSound, GetShieldSoundPlayerFilter(shieldCore), true, shieldCore.Comp.ProjectionEndViolentSound.Params);
         }
@@ -352,10 +354,6 @@ public sealed partial class ModularShieldSystem : EntitySystem
         {
             _audio.PlayGlobal(shieldCore.Comp.ProjectionEndCalmSound, GetShieldSoundPlayerFilter(shieldCore), true, shieldCore.Comp.ProjectionEndCalmSound.Params);
         }
-
-
-        shieldCore.Comp.ShieldProjected = null;
-        shieldCore.Comp.ShieldedEntity = null;
 
         return success;
     }
