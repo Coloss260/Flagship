@@ -1,6 +1,4 @@
-﻿# Commented out department descriptions have been modified in _Flagship/job/department-desc.ftl
-
-department-Cargo-description = Complete bounties, earn Spessos, and order useful supplies for the crew.
+﻿department-Cargo-description = Complete bounties, earn Spessos, and order useful supplies for the crew.
 department-Civilian-description = Perform small helpful tasks to keep the station sane and well catered.
 department-Command-description = Manage the crew and keep them working efficiently.
 department-CentralCommand-description = Manage the crew and keep them working efficiently.
