@@ -8,8 +8,8 @@
   supervisors: job-supervisors-oo
   icon: "JobIconOffDutyCrew"
   displayWeight: 10
-  accessGroups:
-  - Command
+  access:
+  - Maintenance
 
 # Flagship
 # PLEASE RESPECT THE EQUIPMENT ORDER OR I WILL STEAL YOUR NOSE

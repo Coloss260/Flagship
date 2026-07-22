@@ -37,7 +37,7 @@
 
 # Military Police
 - type: entity
-  parent: [ClothingBackpackFlag, BaseMilitaryPoliceContraband]
+  parent: [ClothingBackpackFlag, BaseSecurityContraband]
   id: ClothingBackpackMilitaryPolice
   name: Military Police backpack
   description: It's a very robust backpack.
@@ -47,7 +47,7 @@
 
 # Maintenance
 - type: entity
-  parent: [ClothingBackpackFlag, BaseMaintenanceContraband]
+  parent: [ClothingBackpackFlag, BaseEngineeringContraband]
   id: ClothingBackpackMaintenance
   name: Maintenance backpack
   description: It's a very robust backpack.
@@ -56,7 +56,7 @@
     sprite: _Flagship/Clothing/Back/Backpacks/maintenance.rsi
 
 - type: entity
-  parent: [ClothingBackpackFlag, BaseMaintenanceContraband]
+  parent: [ClothingBackpackFlag, BaseEngineeringContraband]
   id: ClothingBackpackLifeSupportSpecialist
   name: Life Support Specialist backpack
   description: It's a very robust backpack.
@@ -84,7 +84,7 @@
     sprite: _Flagship/Clothing/Back/Backpacks/chemistry.rsi
 
 - type: entity
-  parent: [ClothingBackpackFlag, BaseFlagScienceContraband]
+  parent: [ClothingBackpackFlag, BaseScienceContraband]
   id: ClothingBackpackFlagScience
   name: Science backpack
   description: It's a colourful backpack for sure.

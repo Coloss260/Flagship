@@ -61,7 +61,7 @@
   name: chemist lab coat
 
 - type: entity
-  parent: [ClothingOuterStorageFoldableBase, BaseFlagScienceContraband]
+  parent: [ClothingOuterStorageFoldableBase, BaseScienceContraband]
   id: ClothingOuterCoatFlagScience
   name: Scientist lab coat
   description: A suit that protects against minor chemical spills. Has a purple stripe on the shoulder.
@@ -76,12 +76,12 @@
         Caustic: 0.75
 
 - type: entity
-  parent: [ClothingOuterStorageFoldableBaseOpened, ClothingOuterCoatFlagScience, BaseFlagScienceContraband]
+  parent: [ClothingOuterStorageFoldableBaseOpened, ClothingOuterCoatFlagScience, BaseScienceContraband]
   id: ClothingOuterCoatFlagSciOpened
   name: scientist lab coat
 
 - type: entity
-  parent: [ClothingOuterStorageFoldableBase, BaseFlagScienceContraband]
+  parent: [ClothingOuterStorageFoldableBase, BaseScienceContraband]
   id: ClothingOuterCoatFlagRobo
   name: Roboticist lab coat
   description: More like an eccentric coat than a labcoat. Helps pass off bloodstains as part of the aesthetic. Comes with red shoulder pads.
@@ -96,12 +96,12 @@
         Caustic: 0.75
 
 - type: entity
-  parent: [ClothingOuterStorageFoldableBaseOpened, ClothingOuterCoatFlagRobo, BaseFlagScienceContraband]
+  parent: [ClothingOuterStorageFoldableBaseOpened, ClothingOuterCoatFlagRobo, BaseScienceContraband]
   id: ClothingOuterCoatFlagRoboOpened
   name: roboticist lab coat
 
 - type: entity
-  parent: [ClothingOuterStorageFoldableBase, BaseFlagScienceContraband]
+  parent: [ClothingOuterStorageFoldableBase, BaseScienceContraband]
   id: ClothingOuterCoatScienceSupervisor
   name: Science Supervisor lab coat
   description: Woven with top of the line technology, this labcoat helps protect against radiation in similar way to the experimental hardsuit.
@@ -117,6 +117,6 @@
         Radiation: 0.9
 
 - type: entity
-  parent: [ClothingOuterStorageFoldableBaseOpened, ClothingOuterCoatScienceSupervisor, BaseFlagScienceContraband]
+  parent: [ClothingOuterStorageFoldableBaseOpened, ClothingOuterCoatScienceSupervisor, BaseScienceContraband]
   id: ClothingOuterCoatScienceSupervisorOpened
   name: Science Supervisor lab coat

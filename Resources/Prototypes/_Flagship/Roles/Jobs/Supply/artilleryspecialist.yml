@@ -7,16 +7,17 @@
   supervisors: job-supervisors-sq
   requirements:
     - !type:DepartmentTimeRequirement
-      department: Supply
+      department: Cargo
       time: 36000 # 10 hours
   displayWeight: 80
   startingGear: ArtillerySpecialistGear
   icon: "JobIconArtillerySpecialist"
   access:
-  - Captain
-  accessGroups:
-  - Command
-  - AllAccess
+  - Cargo # Supplies
+  - ArtillerySpecialist
+  - Maintenance
+  - External
+  - Cryogenics
 
 # Flagship
 # PLEASE RESPECT THE EQUIPMENT ORDER OR I WILL STEAL YOUR NOSE

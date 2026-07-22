@@ -7,16 +7,16 @@
   supervisors: job-supervisors-sq
   requirements:
   - !type:DepartmentTimeRequirement
-    department: Supply
+    department: Cargo
     time: 54000 # 15 hours
   displayWeight: 60
   startingGear: SuppliesCrewmanGear
   icon: "JobIconSuppliesCrewman"
   access:
-  - Captain
-  accessGroups:
-  - Command
-  - AllAccess
+  - Cargo # Supplies
+  - Maintenance
+  - External
+  - Cryogenics
 
 # Flagship
 # PLEASE RESPECT THE EQUIPMENT ORDER OR I WILL STEAL YOUR NOSE

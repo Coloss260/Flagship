@@ -6,7 +6,7 @@
   setPreference: true
   requirements:
     - !type:DepartmentTimeRequirement
-      department: FlagMedical
+      department: Medical
       time: 54000 #15 hrs
   displayWeight: 100
   startingGear: ChiefOfMedicalGear
@@ -14,11 +14,9 @@
   supervisors: job-supervisors-oo
   access:
   - Medical
-  - Command
   - Maintenance
   - Chemistry
-  - ChiefMedicalOfficer
-  - Brig
+  - ChiefMedicalOfficer # Chief of Medical
   - Cryogenics
   special:
   - !type:AddImplantSpecial

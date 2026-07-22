@@ -8,22 +8,21 @@
   requireAdminNotify: true
   requirements:
     - !type:DepartmentTimeRequirement
-      department: Maintenance
+      department: Engineering
       time: 54000 # 15 hours
     - !type:DepartmentTimeRequirement
       department: Medical
       time: 54000 # 15 hours
     - !type:DepartmentTimeRequirement
-      department: MilitaryPolice
+      department: Security
       time: 54000 # 15 hours
   displayWeight: 90
   startingGear: ExecutiveOfficerGear
   icon: "JobIconExecutiveOfficer"
   access:
-  - Captain
+  - ExecutiveOfficer
   accessGroups:
-  - Command
-  - AllAccess
+  - SeniorOfficer
   special:
   - !type:AddImplantSpecial
      implants: [ MindShieldImplant ]

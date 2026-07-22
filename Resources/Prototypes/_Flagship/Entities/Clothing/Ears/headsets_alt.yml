@@ -12,7 +12,7 @@
 
 # Bridge Command
 - type: entity
-  parent: [ClothingHeadsetAltFlag, BaseBridgeCommandContraband]
+  parent: [ClothingHeadsetAltFlag, BaseCommandContraband]
   id: ClothingHeadsetAltCommandingOfficer
   name: Commanding Officer's over-ear Headset
   description: Headset used by Commanding Officers.
@@ -27,7 +27,7 @@
     sprite: _Flagship/Clothing/Ears/Headsets/bridgecommand.rsi
 
 - type: entity
-  parent: [ClothingHeadsetAltFlag, BaseBridgeCommandContraband]
+  parent: [ClothingHeadsetAltFlag, BaseCommandContraband]
   id: ClothingHeadsetAltExecutiveOfficer
   name: Executive Officer's over-ear Headset
   description: Headset used by Executive Officers.
@@ -42,7 +42,7 @@
     sprite: _Flagship/Clothing/Ears/Headsets/bridgecommand.rsi
 
 - type: entity
-  parent: [ClothingHeadsetAltFlag, BaseBridgeCommandContraband]
+  parent: [ClothingHeadsetAltFlag, BaseCommandContraband]
   id: ClothingHeadsetAltTacticalOfficer
   name: Tactical Officer's over-ear Headset
   description: Headset used by Tactical Officers.
@@ -57,7 +57,7 @@
     sprite: _Flagship/Clothing/Ears/Headsets/bridgecommand.rsi
 
 - type: entity
-  parent: [ClothingHeadsetAltFlag, BaseBridgeCommandContraband]
+  parent: [ClothingHeadsetAltFlag, BaseCommandContraband]
   id: ClothingHeadsetAltOperationsOfficer
   name: Operations Officer's over-ear Headset
   description: Headset used by Operations Officers.
@@ -72,7 +72,7 @@
     sprite: _Flagship/Clothing/Ears/Headsets/bridgecommand.rsi
 
 - type: entity
-  parent: [ClothingHeadsetAltFlag, BaseBridgeCommandContraband]
+  parent: [ClothingHeadsetAltFlag, BaseCommandContraband]
   id: ClothingHeadsetAltCommunicationsOfficer
   name: Communications Officer's over-ear Headset
   description: Headset used by Communications Officers.
@@ -87,7 +87,7 @@
     sprite: _Flagship/Clothing/Ears/Headsets/bridgecommand.rsi
 
 - type: entity
-  parent: [ClothingHeadsetAltFlag, BaseBridgeCommandContraband]
+  parent: [ClothingHeadsetAltFlag, BaseCommandContraband]
   id: ClothingHeadsetAltFlightControlOfficer
   name: Flight Control Officer's over-ear Headset
   description: Headset used by Flight Control Officers.
@@ -102,7 +102,7 @@
     sprite: _Flagship/Clothing/Ears/Headsets/bridgecommand.rsi
 
 - type: entity
-  parent: [ClothingHeadsetAltFlag, BaseBridgeCommandContraband]
+  parent: [ClothingHeadsetAltFlag, BaseCommandContraband]
   id: ClothingHeadsetAltBridgeEnsign
   name: Bridge Ensign's Headset
   description: Headset used by Bridge Ensigns.
@@ -118,7 +118,7 @@
 
 # Military Police
 - type: entity
-  parent: [ClothingHeadsetAltFlag, BaseMilitaryPoliceContraband]
+  parent: [ClothingHeadsetAltFlag, BaseSecurityContraband]
   id: ClothingHeadsetAltMilitaryPolice
   name: Military Police Chief's Headset
   description: Headset used by Military Police Chiefs.
@@ -135,7 +135,7 @@
 
 # Maintenance
 - type: entity
-  parent: [ClothingHeadsetAltFlag, BaseMaintenanceContraband]
+  parent: [ClothingHeadsetAltFlag, BaseEngineeringContraband]
   id: ClothingHeadsetAltMaintenance
   name: Chief of Maintenance over-ear headset
   description: Headset used by Chiefs of Maintenance.
@@ -152,7 +152,7 @@
 
 # Supply
 - type: entity
-  parent: [ClothingHeadsetAltFlag, BaseSupplyContraband]
+  parent: [ClothingHeadsetAltFlag, BaseCargoContraband]
   id: ClothingHeadsetAltSupplies
   name: Supplies Quartermaster over-ear headset
   description: Headset used by Supplies Quartermasters.
@@ -186,7 +186,7 @@
 
  # Science
 - type: entity
-  parent: [ClothingHeadsetAltFlag, BaseFlagScienceContraband]
+  parent: [ClothingHeadsetAltFlag, BaseScienceContraband]
   id: ClothingHeadsetAltFlagScience
   name: Science Supervisor over-ear headset
   description: Headset used by Science Supervisors.

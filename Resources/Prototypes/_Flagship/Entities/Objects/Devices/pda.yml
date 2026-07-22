@@ -151,7 +151,7 @@
     state: pda-commandingofficer
 
 - type: entity
-  parent: [BaseFlagPDA, BaseBridgeCommandContraband]
+  parent: [BaseFlagPDA, BaseCommandContraband]
   id: ExecutiveOfficerPDA
   name: Executive Officer's PDA
   description: Surprisingly no different from your PDA.
@@ -175,7 +175,7 @@
     state: pda-bridgecommand
 
 - type: entity
-  parent: [BaseFlagPDA, BaseBridgeCommandContraband]
+  parent: [BaseFlagPDA, BaseCommandContraband]
   id: TacticalOfficerPDA
   name: Tactical Officer's PDA
   description: Surprisingly no different from your PDA.
@@ -199,7 +199,7 @@
     state: pda-bridgecommand
 
 - type: entity
-  parent: [BaseFlagPDA, BaseBridgeCommandContraband]
+  parent: [BaseFlagPDA, BaseCommandContraband]
   id: OperationsOfficerPDA
   name: Operations Officer's PDA
   description: Surprisingly no different from your PDA.
@@ -223,7 +223,7 @@
     state: pda-bridgecommand
 
 - type: entity
-  parent: [BaseFlagPDA, BaseBridgeCommandContraband]
+  parent: [BaseFlagPDA, BaseCommandContraband]
   id: CommunicationsOfficerPDA
   name: Communications Officer's PDA
   description: Surprisingly no different from your PDA.
@@ -247,7 +247,7 @@
     state: pda-bridgecommand
 
 - type: entity
-  parent: [BaseFlagPDA, BaseBridgeCommandContraband]
+  parent: [BaseFlagPDA, BaseCommandContraband]
   id: FlightControlOfficerPDA
   name: Flight Control Officer's PDA
   description: Surprisingly no different from your PDA.
@@ -271,7 +271,7 @@
     state: pda-bridgecommand
 
 - type: entity
-  parent: [BaseFlagPDA, BaseBridgeCommandContraband]
+  parent: [BaseFlagPDA, BaseCommandContraband]
   id: BridgeEnsignPDA
   name: Bridge Ensign's PDA
   description: Surprisingly no different from your PDA.
@@ -297,7 +297,7 @@
 
 # Military Police
 - type: entity
-  parent: [BaseFlagPDA, BaseMilitaryPoliceContraband]
+  parent: [BaseFlagPDA, BaseSecurityContraband]
   id: MilitaryPoliceChiefPDA
   name: Military Police Chief's PDA
   description: Surprisingly no different from your PDA.
@@ -321,7 +321,7 @@
     state: pda-militarypolice
 
 - type: entity
-  parent: [BaseFlagPDA, BaseMilitaryPoliceContraband]
+  parent: [BaseFlagPDA, BaseSecurityContraband]
   id: MilitaryPoliceMedicPDA
   name: Military Police Medic's PDA
   description: Surprisingly no different from your PDA.
@@ -345,7 +345,7 @@
     state: pda-militarypolice
 
 - type: entity
-  parent: [BaseFlagPDA, BaseMilitaryPoliceContraband]
+  parent: [BaseFlagPDA, BaseSecurityContraband]
   id: MilitaryPoliceOfficerPDA
   name: Military Police Officer's PDA
   description: Surprisingly no different from your PDA.
@@ -369,7 +369,7 @@
     state: pda-militarypolice
 
 - type: entity
-  parent: [BaseFlagPDA, BaseMilitaryPoliceContraband]
+  parent: [BaseFlagPDA, BaseSecurityContraband]
   id: MilitaryPoliceTraineePDA
   name: Military Police Trainee's PDA
   description: Surprisingly no different from your PDA.
@@ -395,7 +395,7 @@
 
 # Supply
 - type: entity
-  parent: [BaseFlagPDA, BaseSupplyContraband]
+  parent: [BaseFlagPDA, BaseCargoContraband]
   id: SuppliesQuartermasterPDA
   name: Supplies Quartermaster PDA
   description: Surprisingly no different from your PDA.
@@ -412,14 +412,14 @@
     appearanceDataInit:
      enum.PdaVisuals.PdaType:
        !type:String
-       pda-supplies
+       pda-qm
   - type: PdaBorderColor
-    borderColor: "#2d6122"
+    borderColor: "#A46106"
   - type: Icon
-    state: pda-supplies
+    state: pda-qm
 
 - type: entity
-  parent: [BaseFlagPDA, BaseSupplyContraband]
+  parent: [BaseFlagPDA, BaseCargoContraband]
   id: ArtillerySpecialistPDA
   name: Artillery Specialist PDA
   description: Surprisingly no different from your PDA.
@@ -436,14 +436,14 @@
     appearanceDataInit:
      enum.PdaVisuals.PdaType:
        !type:String
-       pda-artilleryspecialist
+       pda-supplies
   - type: PdaBorderColor
-    borderColor: "#22351f"
+    borderColor: "#A46106"
   - type: Icon
-    state: pda-artilleryspecialist
+    state: pda-supplies
 
 - type: entity
-  parent: [BaseFlagPDA, BaseSupplyContraband]
+  parent: [BaseFlagPDA, BaseCargoContraband]
   id: SuppliesCrewmanPDA
   name: Supplies Crewman PDA
   description: Surprisingly no different from your PDA.
@@ -462,14 +462,14 @@
        !type:String
        pda-supplies
   - type: PdaBorderColor
-    borderColor: "#102e46"
+    borderColor: "#A46106"
   - type: Icon
     state: pda-supplies
 # End of Supply
 
 # Maintenance
 - type: entity
-  parent: [BaseFlagPDA, BaseMaintenanceContraband]
+  parent: [BaseFlagPDA, BaseEngineeringContraband]
   id: ChiefOfMaintenancePDA
   name: Chief Of Maintenance PDA
   description: Surprisingly no different from your PDA.
@@ -493,7 +493,7 @@
     state: pda-maintenance
 
 - type: entity
-  parent: [BaseFlagPDA, BaseMaintenanceContraband]
+  parent: [BaseFlagPDA, BaseEngineeringContraband]
   id: LifeSupportSpecialistPDA
   name: Life Support Specialist PDA
   description: Surprisingly no different from your PDA.
@@ -517,7 +517,7 @@
     state: pda-lifesupportspecialist
 
 - type: entity
-  parent: [BaseFlagPDA, BaseMaintenanceContraband]
+  parent: [BaseFlagPDA, BaseEngineeringContraband]
   id: MaintenanceTechnicianPDA
   name: Maintenance Technician PDA
   description: Surprisingly no different from your PDA.
@@ -541,7 +541,7 @@
     state: pda-maintenance
 
 - type: entity
-  parent: [BaseFlagPDA, BaseMaintenanceContraband]
+  parent: [BaseFlagPDA, BaseEngineeringContraband]
   id: MaintenanceInternPDA
   name: Maintenance Intern PDA
   description: Surprisingly no different from your PDA.
@@ -689,7 +689,7 @@
 
 # Science
 - type: entity
-  parent: [BaseFlagPDA, BaseFlagScienceContraband]
+  parent: [BaseFlagPDA, BaseScienceContraband]
   id: ScienceSupervisorPDA
   name: Science Supervisor PDA
   description: Surprisingly no different from your PDA.
@@ -713,7 +713,7 @@
     state: pda-sciencesupervisor
 
 - type: entity
-  parent: [BaseFlagPDA, BaseFlagScienceContraband]
+  parent: [BaseFlagPDA, BaseScienceContraband]
   id: FlagRoboticistPDA
   name: Roboticist PDA
   description: Surprisingly no different from your PDA.
@@ -737,7 +737,7 @@
     state: pda-roboticist
 
 - type: entity
-  parent: [BaseFlagPDA, BaseFlagScienceContraband]
+  parent: [BaseFlagPDA, BaseScienceContraband]
   id: FlagScientistPDA
   name: Scientist PDA
   description: Surprisingly no different from your PDA.
@@ -761,7 +761,7 @@
     state: pda-science
 
 - type: entity
-  parent: [BaseFlagPDA, BaseFlagScienceContraband]
+  parent: [BaseFlagPDA, BaseScienceContraband]
   id: FlagResearchAssistantPDA
   name: Research Assistant PDA
   description: Surprisingly no different from your PDA.
@@ -787,7 +787,7 @@
 
 # Service
 - type: entity
-  parent: [BaseFlagPDA, BaseServiceContraband]
+  parent: [BaseFlagPDA, BaseCivilianContraband]
   id: FlagBartenderPDA
   name: Bartender PDA
   description: Surprisingly no different from your PDA.
@@ -811,7 +811,7 @@
     state: pda-bartender
 
 - type: entity
-  parent: [BaseFlagPDA, BaseServiceContraband]
+  parent: [BaseFlagPDA, BaseCivilianContraband]
   id: CustodianPDA
   name: Custodian PDA
   description: Surprisingly no different from your PDA.
@@ -835,7 +835,7 @@
     state: pda-custodian
 
 - type: entity
-  parent: [BaseFlagPDA, BaseServiceContraband]
+  parent: [BaseFlagPDA, BaseCivilianContraband]
   id: HydroponicsBiologistPDA
   name: Hydroponics Biologist PDA
   description: Surprisingly no different from your PDA.
@@ -859,7 +859,7 @@
     state: pda-hydroponicsbiologist
 
 - type: entity
-  parent: [BaseFlagPDA, BaseServiceContraband]
+  parent: [BaseFlagPDA, BaseCivilianContraband]
   id: MessChefPDA
   name: Mess Chef PDA
   description: Surprisingly no different from your PDA.

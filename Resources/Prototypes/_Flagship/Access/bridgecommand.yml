@@ -1,0 +1,136 @@
+- type: accessLevel
+  id: ExecutiveOfficer
+  name: id-card-access-level-executive-officer
+
+- type: accessLevel
+  id: TacticalOfficer
+  name: id-card-access-level-tactical-officer
+
+- type: accessLevel
+  id: OperationsOfficer
+  name: id-card-access-level-operations-officer
+
+- type: accessGroup
+  id: ShipCommander
+  tags:
+  - Captain # Commanding Officer
+  - ExecutiveOfficer
+  - TacticalOfficer
+  - OperationsOfficer
+  - Command # Bridge Command
+  - ChiefEngineer # Chief of Maintenance
+  - ChiefMedicalOfficer # Chief of Medical
+  - HeadOfSecurity # Military Police Chief
+  - Quartermaster # Supplies Quartermaster
+  - ResearchDirector # Science Supervisor
+  - Cryogenics
+  - EmergencyShuttleRepealAll
+  - Security # Military Police
+  - Armory
+  - ArtillerySpecialist
+  - Brig
+  - Engineering # Maintenance Technician
+  - Medical
+  - Cargo # Supplies
+  - Research
+  - Service
+  - Maintenance
+  - External
+  - Janitor # Custodian
+  - Bar
+  - Chemistry
+  - Kitchen # Mess Hall
+  - Chapel
+  - Hydroponics
+  - Atmospherics # Life Support Specialist
+  - GenpopEnter
+  - GenpopLeave
+
+- type: accessGroup
+  id: SeniorOfficer
+  tags:
+  - ExecutiveOfficer
+  - TacticalOfficer
+  - OperationsOfficer
+  - Command # Bridge Command
+  - ChiefEngineer # Chief of Maintenance
+  - ChiefMedicalOfficer # Chief of Medical
+  - HeadOfSecurity # Military Police Chief
+  - Quartermaster # Supplies Quartermaster
+  - ResearchDirector # Science Supervisor
+  - Cryogenics
+  - EmergencyShuttleRepealAll
+  - Security # Military Police
+  - Armory
+  - ArtillerySpecialist
+  - Brig
+  - Engineering # Maintenance Technician
+  - Medical
+  - Cargo # Supplies
+  - Research
+  - Service
+  - Maintenance
+  - External
+  - Janitor # Custodian
+  - Bar
+  - Chemistry
+  - Kitchen # Mess Hall
+  - Chapel
+  - Hydroponics
+  - Atmospherics # Life Support Specialist
+  - GenpopEnter
+  - GenpopLeave
+
+- type: accessGroup
+  id: TacticalCommand
+  tags:
+  - TacticalOfficer
+  - Command # Bridge Command
+  - ChiefEngineer # Chief of Maintenance
+  - HeadOfSecurity # Military Police Chief
+  - Quartermaster # Supplies Quartermaster
+  - Cryogenics
+  - EmergencyShuttleRepealAll
+  - Security # Military Police
+  - Armory
+  - ArtillerySpecialist
+  - Brig
+  - Engineering # Maintenance Technician
+  - Cargo # Supplies
+  - Maintenance
+  - External
+  - Atmospherics # Life Support Specialist
+  - GenpopEnter
+  - GenpopLeave
+
+- type: accessGroup
+  id: OperationsCommand
+  tags:
+  - OperationsOfficer
+  - Command # Bridge Command
+  - ChiefMedicalOfficer # Chief of Medical
+  - ResearchDirector # Science Supervisor
+  - Cryogenics
+  - EmergencyShuttleRepealAll
+  - Medical
+  - Research
+  - Service
+  - Maintenance
+  - External
+  - Janitor # Custodian
+  - Bar
+  - Chemistry
+  - Kitchen # Mess Hall
+  - Chapel
+  - Hydroponics
+  - GenpopEnter
+  - GenpopLeave
+
+- type: accessGroup
+  id: BridgeOfficer
+  tags:
+  - Command
+  - Cryogenics
+  - EmergencyShuttleRepealAll
+  - Maintenance
+  - External

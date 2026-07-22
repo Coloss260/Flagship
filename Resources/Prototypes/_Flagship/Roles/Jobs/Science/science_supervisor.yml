@@ -9,11 +9,14 @@
   supervisors: job-supervisors-oo
   requirements:
     - !type:DepartmentTimeRequirement
-      department: FlagScience
+      department: Science
       time: 54000 # 15 hours
   displayWeight: 100
-  accessGroups:
+  access:
   - Research
+  - Maintenance
+  - ResearchDirector # Science Supervisor
+  - Cryogenics
 
 # Flagship
 # PLEASE RESPECT THE EQUIPMENT ORDER OR I WILL STEAL YOUR NOSE

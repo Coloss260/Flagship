@@ -20,10 +20,10 @@
     - type: AccessOverrider
       accessLevels:
       - Armory
+      - ArtillerySpecialist # Flagship
       - Atmospherics
       - Bar
       - Brig
-      - Detective
       - Captain
       - Cargo
       - Chapel
@@ -32,7 +32,10 @@
       - ChiefMedicalOfficer
       - Command
       - Engineering
+      - ExecutiveOfficer # Flagship
       - External
+      - GenpopEnter
+      - GenpopLeave
       - HeadOfPersonnel
       - HeadOfSecurity
       - Hydroponics
@@ -41,15 +44,14 @@
       - Lawyer
       - Maintenance
       - Medical
+      - OperationsOfficer # Flagship
       - Quartermaster
       - Research
       - ResearchDirector
       - Salvage
       - Security
       - Service
-      - Theatre
-      - GenpopEnter
-      - GenpopLeave
+      - TacticalOfficer # Flagship
       privilegedIdSlot:
         name: id-card-console-privileged-id
         ejectSound: /Audio/Machines/id_swipe.ogg
@@ -91,12 +93,12 @@
   - type: AccessOverrider
     accessLevels:
     - Armory
+    - ArtillerySpecialist # Flagship
     - Atmospherics
     - Bar
     - BasicSilicon
     - Borg
     - Brig
-    - Detective
     - Captain
     - Cargo
     - Chapel
@@ -105,6 +107,7 @@
     - ChiefMedicalOfficer
     - Command
     - Cryogenics
+    - Detective
     - EmergencyShuttleRepealAll
     - Engineering
     - External
@@ -116,6 +119,7 @@
     - Lawyer
     - Maintenance
     - Medical
+    - OperationsOfficer
     - Quartermaster
     - Research
     - ResearchDirector
@@ -127,6 +131,7 @@
     - CentralCommand
     - NuclearOperative
     - SyndicateAgent
+    - TacticalOfficer
     - Wizard
     - Xenoborg
     - GenpopEnter

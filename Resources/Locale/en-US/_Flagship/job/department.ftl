@@ -1,7 +1,5 @@
-department-BridgeCommand = Bridge Command
-department-Maintenance = Maintenance
-department-MilitaryPolice = Military Police
-department-FlagScience = Science
-department-FlagMedical = Medical
-department-Supply = Supplies
-department-Service = Service
+flagship-department-Cargo = Supplies
+flagship-department-Civilian = Service
+flagship-department-Command = Bridge Command
+flagship-department-Engineering = Ship Maintenance
+flagship-department-Security = Military Police

@@ -14,9 +14,11 @@
   startingGear: MaintenanceInternGear
   icon: "JobIconMaintenanceIntern"
   supervisors: job-supervisors-com
-  accessGroups:
-  - Command
-  setPreference: true
+  access :
+  - Engineering # Maintenance Department
+  - Maintenance
+  - External
+  - Cryogenics
 
 # Flagship
 # PLEASE RESPECT THE EQUIPMENT ORDER OR I WILL STEAL YOUR NOSE

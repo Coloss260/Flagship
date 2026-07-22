@@ -5,7 +5,7 @@
   playTimeTracker: JobFlagBartender
   requirements:
     - !type:DepartmentTimeRequirement
-      department: Service
+      department: Civilian
       time: 0.5h
   startingGear: FlagBartenderGear
   icon: "JobIconFlagBartender"
@@ -15,7 +15,7 @@
   - Maintenance
   - Bar
   extendedAccess:
-  - Kitchen
+  - Kitchen # Mess Hall
   - Hydroponics
 
 # Flagship

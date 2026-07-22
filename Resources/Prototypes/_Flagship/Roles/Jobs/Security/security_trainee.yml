@@ -9,11 +9,18 @@
   supervisors: job-supervisors-sc
   requirements:
     - !type:DepartmentTimeRequirement
-      department: MilitaryPolice
+      department: Security
       time: 54000 # 15 hours
   displayWeight: 40
-  accessGroups:
-  - Command
+  access:
+  - Brig
+  - Security # Military Police
+  - Armory
+  - Maintenance
+  - External
+  - Cryogenics
+  - GenpopEnter
+  - GenpopLeave
   special:
   - !type:AddImplantSpecial
      implants: [ MindShieldImplant ]

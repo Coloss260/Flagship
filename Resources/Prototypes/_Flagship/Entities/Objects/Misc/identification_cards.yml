@@ -56,7 +56,7 @@
     stealGroup: CaptainIDCard
 
 - type: entity
-  parent: [IDCardFlagship, BaseBridgeCommandContraband]
+  parent: [IDCardFlagship, BaseCommandContraband]
   id: ExecutiveOfficerIDCard
   name: Executive Officer's ID Card
   components:
@@ -84,7 +84,7 @@
     stealGroup: CaptainIDCard
 
 - type: entity
-  parent: [IDCardFlagship, BaseBridgeCommandContraband]
+  parent: [IDCardFlagship, BaseCommandContraband]
   id: TacticalOfficerIDCard
   name: Tactical Officer's ID Card
   components:
@@ -112,7 +112,7 @@
     stealGroup: CaptainIDCard
 
 - type: entity
-  parent: [IDCardFlagship, BaseBridgeCommandContraband]
+  parent: [IDCardFlagship, BaseCommandContraband]
   id: OperationsOfficerIDCard
   name: Operations Officer's ID Card
   components:
@@ -140,7 +140,7 @@
     stealGroup: CaptainIDCard
 
 - type: entity
-  parent: [IDCardFlagship, BaseBridgeCommandContraband]
+  parent: [IDCardFlagship, BaseCommandContraband]
   id: CommunicationsOfficerIDCard
   name: Communications Officer's ID Card
   components:
@@ -168,7 +168,7 @@
     stealGroup: CaptainIDCard
 
 - type: entity
-  parent: [IDCardFlagship, BaseBridgeCommandContraband]
+  parent: [IDCardFlagship, BaseCommandContraband]
   id: FlightControlOfficerIDCard
   name: Flight Control Officer's ID Card
   components:
@@ -196,7 +196,7 @@
     stealGroup: CaptainIDCard
 
 - type: entity
-  parent: [IDCardFlagship, BaseBridgeCommandContraband]
+  parent: [IDCardFlagship, BaseCommandContraband]
   id: BridgeEnsignIDCard
   name: Bridge Ensign's ID Card
   components:
@@ -226,7 +226,7 @@
 
 # Military Police
 - type: entity
-  parent: [IDCardFlagship, BaseMilitaryPoliceContraband]
+  parent: [IDCardFlagship, BaseSecurityContraband]
   id: MilitaryPoliceChiefIDCard
   name: Military Police Chief's ID Card
   components:
@@ -251,7 +251,7 @@
     - WhitelistChameleonIdCard
 
 - type: entity
-  parent: [IDCardFlagship, BaseMilitaryPoliceContraband]
+  parent: [IDCardFlagship, BaseSecurityContraband]
   id: MilitaryPoliceMedicIDCard
   name: Military Police Medic's ID Card
   components:
@@ -276,7 +276,7 @@
     - WhitelistChameleonIdCard
 
 - type: entity
-  parent: [IDCardFlagship, BaseMilitaryPoliceContraband]
+  parent: [IDCardFlagship, BaseSecurityContraband]
   id: MilitaryPoliceOfficerIDCard
   name: Military Police Officer's ID Card
   components:
@@ -301,7 +301,7 @@
     - WhitelistChameleonIdCard
 
 - type: entity
-  parent: [IDCardFlagship, BaseMilitaryPoliceContraband]
+  parent: [IDCardFlagship, BaseSecurityContraband]
   id: MilitaryPoliceTraineeIDCard
   name: Military Police Trainee's ID Card
   components:
@@ -328,7 +328,7 @@
 
 # Maintenance
 - type: entity
-  parent: [IDCardFlagship, BaseMaintenanceContraband]
+  parent: [IDCardFlagship, BaseEngineeringContraband]
   id: ChiefOfMaintenanceIDCard
   name: Chief of Maintenance ID Card
   components:
@@ -353,7 +353,7 @@
     - WhitelistChameleonIdCard
 
 - type: entity
-  parent: [IDCardFlagship, BaseMaintenanceContraband]
+  parent: [IDCardFlagship, BaseEngineeringContraband]
   id: LifeSupportSpecialistIDCard
   name: Life Support Specialist ID Card
   components:
@@ -378,7 +378,7 @@
     - WhitelistChameleonIdCard
 
 - type: entity
-  parent: [IDCardFlagship, BaseMaintenanceContraband]
+  parent: [IDCardFlagship, BaseEngineeringContraband]
   id: MaintenanceTechnicianIDCard
   name: Maintenance Technician ID Card
   components:
@@ -403,7 +403,7 @@
     - WhitelistChameleonIdCard
 
 - type: entity
-  parent: [IDCardFlagship, BaseMaintenanceContraband]
+  parent: [IDCardFlagship, BaseEngineeringContraband]
   id: MaintenanceInternIDCard
   name: Maintenance Intern ID Card
   components:
@@ -430,7 +430,7 @@
 
 # Supply
 - type: entity
-  parent: [IDCardFlagship, BaseSupplyContraband]
+  parent: [IDCardFlagship, BaseCargoContraband]
   id: SuppliesQuartermasterIDCard
   name: Supplies Quartermaster ID Card
   components:
@@ -455,7 +455,7 @@
     - WhitelistChameleonIdCard
 
 - type: entity
-  parent: [IDCardFlagship, BaseSupplyContraband]
+  parent: [IDCardFlagship, BaseCargoContraband]
   id: ArtillerySpecialistIDCard
   name: Artillery Specialist ID Card
   components:
@@ -480,7 +480,7 @@
     - WhitelistChameleonIdCard
 
 - type: entity
-  parent: [IDCardFlagship, BaseSupplyContraband]
+  parent: [IDCardFlagship, BaseCargoContraband]
   id: SuppliesCrewmanIDCard
   name: Supplies Crewman ID Card
   components:
@@ -549,7 +549,7 @@
   - type: Item
     heldPrefix: default
   - type: PresetIdCard
-    job: Chemist
+    job: FlagChemist
   - type: Tag
     tags:
     - DoorBumpOpener
@@ -634,7 +634,7 @@
 
 # Science
 - type: entity
-  parent: [IDCardFlagship, BaseFlagScienceContraband]
+  parent: [IDCardFlagship, BaseScienceContraband]
   id: ScienceSupervisorIDCard
   name: Science Supervisor ID Card
   components:
@@ -659,7 +659,7 @@
     - WhitelistChameleonIdCard
 
 - type: entity
-  parent: [IDCardFlagship, BaseFlagScienceContraband]
+  parent: [IDCardFlagship, BaseScienceContraband]
   id: FlagRoboticistIDCard
   name: Roboticist ID Card
   components:
@@ -684,7 +684,7 @@
     - WhitelistChameleonIdCard
 
 - type: entity
-  parent: [IDCardFlagship, BaseFlagScienceContraband]
+  parent: [IDCardFlagship, BaseScienceContraband]
   id: FlagScientistIDCard
   name: Scientist ID Card
   components:
@@ -709,7 +709,7 @@
     - WhitelistChameleonIdCard
 
 - type: entity
-  parent: [IDCardFlagship, BaseFlagScienceContraband]
+  parent: [IDCardFlagship, BaseScienceContraband]
   id: FlagResearchAssistantIDCard
   name: Research Assistant ID Card
   components:
@@ -736,7 +736,7 @@
 
 # Service
 - type: entity
-  parent: [IDCardFlagship, BaseServiceContraband]
+  parent: [IDCardFlagship, BaseCivilianContraband]
   id: FlagBartenderIDCard
   name: Bartender ID Card
   components:
@@ -761,7 +761,7 @@
     - WhitelistChameleonIdCard
 
 - type: entity
-  parent: [IDCardFlagship, BaseServiceContraband]
+  parent: [IDCardFlagship, BaseCivilianContraband]
   id: CustodianIDCard
   name: Custodian ID Card
   components:
@@ -786,7 +786,7 @@
     - WhitelistChameleonIdCard
 
 - type: entity
-  parent: [IDCardFlagship, BaseServiceContraband]
+  parent: [IDCardFlagship, BaseCivilianContraband]
   id: HydroponicsBiologistIDCard
   name: Hydroponics Biologist ID Card
   components:
@@ -811,7 +811,7 @@
     - WhitelistChameleonIdCard
 
 - type: entity
-  parent: [IDCardFlagship, BaseServiceContraband]
+  parent: [IDCardFlagship, BaseCivilianContraband]
   id: MessChefIDCard
   name: Mess Chef ID Card
   components:

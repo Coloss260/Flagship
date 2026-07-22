@@ -11,8 +11,13 @@
   icon: "JobIconMessChef"
   supervisors: job-supervisors-oo
   displayWeight: 80
-  accessGroups:
-  - Command
+  access:
+  - Service
+  - Maintenance
+  - Kitchen
+  extendedAccess:
+  - Hydroponics
+  - Bar
 
 # Flagship
 # PLEASE RESPECT THE EQUIPMENT ORDER OR I WILL STEAL YOUR NOSE

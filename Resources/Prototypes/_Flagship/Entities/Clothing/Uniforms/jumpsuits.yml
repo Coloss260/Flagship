@@ -11,7 +11,7 @@
     sprite: _Flagship/Clothing/Uniforms/Jumpsuit/commandingofficer.rsi
 
 - type: entity
-  parent: [ClothingUniformBase, BaseBridgeCommandContraband]
+  parent: [ClothingUniformBase, BaseCommandContraband]
   id: ClothingUniformJumpsuitExecutiveOfficer
   name: Executive Officer service uniform
   description: A stylish yet simple uniform made specifically to be worn by Executive Officers of Nanotrasen's Naval Corps.
@@ -22,7 +22,7 @@
     sprite: _Flagship/Clothing/Uniforms/Jumpsuit/executiveofficer.rsi
 
 - type: entity
-  parent: [ClothingUniformBase, BaseBridgeCommandContraband]
+  parent: [ClothingUniformBase, BaseCommandContraband]
   id: ClothingUniformJumpsuitTacticalOfficer
   name: Tactical Officer service uniform
   description: A stylish yet simple uniform made specifically to be worn by Tactical Officers of Nanotrasen's Naval Corps.
@@ -33,7 +33,7 @@
     sprite: _Flagship/Clothing/Uniforms/Jumpsuit/tactical.rsi
 
 - type: entity
-  parent: [ClothingUniformBase, BaseBridgeCommandContraband]
+  parent: [ClothingUniformBase, BaseCommandContraband]
   id: ClothingUniformJumpsuitOperationsOfficer
   name: Operations Officer service uniform
   description: A stylish yet simple uniform made specifically to be worn by Operations Officers of Nanotrasen's Naval Corps.
@@ -44,7 +44,7 @@
     sprite: _Flagship/Clothing/Uniforms/Jumpsuit/operations.rsi
 
 - type: entity
-  parent: [ClothingUniformBase, BaseBridgeCommandContraband]
+  parent: [ClothingUniformBase, BaseCommandContraband]
   id: ClothingUniformJumpsuitBridgeCommand
   name: Bridge Officer service uniform
   description: A stylish yet simple uniform made specifically to be worn by Bridge Officers of Nanotrasen's Naval Corps.
@@ -56,7 +56,7 @@
 
 # Military Police
 - type: entity
-  parent: [ClothingUniformBase, BaseMilitaryPoliceContraband]
+  parent: [ClothingUniformBase, BaseSecurityContraband]
   id: ClothingUniformJumpsuitMilitaryPoliceOfficer
   name: Military Police Officer service uniform
   description: A stylish yet simple uniform made specifically to be worn by Military Police Officers of Nanotrasen's Naval Corps.
@@ -68,7 +68,7 @@
 
 # Maintenance
 - type: entity
-  parent: [ClothingUniformBase, BaseMaintenanceContraband]
+  parent: [ClothingUniformBase, BaseEngineeringContraband]
   id: ClothingUniformJumpsuitMaintenanceTechnician
   name: Maintenance Technician service uniform
   description: A stylish yet simple uniform made specifically to be worn by Maintenance Technicians of Nanotrasen's Naval Corps.
@@ -79,7 +79,7 @@
     sprite: _Flagship/Clothing/Uniforms/Jumpsuit/maintenance.rsi
 
 - type: entity
-  parent: [ClothingUniformBase, BaseMaintenanceContraband]
+  parent: [ClothingUniformBase, BaseEngineeringContraband]
   id: ClothingUniformJumpsuitLifeSupportSpecialist
   name: Life Support Specialist service uniform
   description: A stylish yet simple uniform made specifically to be work by Life Support Specialists of Nanotrasen's Naval Corps.
@@ -91,7 +91,7 @@
 
 # Supplies
 - type: entity
-  parent: [ClothingUniformBase, BaseSupplyContraband]
+  parent: [ClothingUniformBase, BaseCargoContraband]
   id: ClothingUniformJumpsuitSuppliesCrewman
   name: Supplies Crewman service uniform
   description: A stylish yet simple uniform made specifically to be worn by Supplies Crewmen of Nanotrasen's Naval Corps.
@@ -102,19 +102,19 @@
     sprite: _Flagship/Clothing/Uniforms/Jumpsuit/supplies.rsi
 
 - type: entity
-  parent: [ClothingUniformBase, BaseSupplyContraband]
+  parent: [ClothingUniformBase, BaseCargoContraband]
   id: ClothingUniformJumpsuitArtillerySpecialist
   name: Artillery Specialist service uniform
   description: A stylish yet simple uniform made specifically to be worn by Artillery Specialists of Nanotrasen's Naval Corps.
   components:
   - type: Sprite
-    sprite: _Flagship/Clothing/Uniforms/Jumpsuit/artilleryspecialist.rsi
+    sprite: _Flagship/Clothing/Uniforms/Jumpsuit/supplies.rsi
   - type: Clothing
-    sprite: _Flagship/Clothing/Uniforms/Jumpsuit/artilleryspecialist.rsi
+    sprite: _Flagship/Clothing/Uniforms/Jumpsuit/supplies.rsi
 
 # Science
 - type: entity
-  parent: [ClothingUniformBase, BaseFlagScienceContraband]
+  parent: [ClothingUniformBase, BaseScienceContraband]
   id: ClothingUniformJumpsuitFlagScientist
   name: Scientist service uniform
   description: A stylish yet simple uniform made specifically to be worn by Scientists of Nanotrasen's Naval Corps.

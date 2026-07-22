@@ -8,22 +8,21 @@
   requireAdminNotify: true
   requirements:
     - !type:DepartmentTimeRequirement
-      department: Maintenance
+      department: Engineering
       time: 54000 # 15 hours
     - !type:DepartmentTimeRequirement
       department: Medical
       time: 54000 # 15 hours
     - !type:DepartmentTimeRequirement
-      department: MilitaryPolice
+      department: Security
       time: 54000 # 15 hours
   displayWeight: 80
   startingGear: TacticalOfficerGear
   icon: "JobIconTacticalOfficer"
   access:
-  - Captain
+  - TacticalOfficer
   accessGroups:
-  - Command
-  - AllAccess
+  - TacticalCommand
   special:
   - !type:AddImplantSpecial
      implants: [ MindShieldImplant ]

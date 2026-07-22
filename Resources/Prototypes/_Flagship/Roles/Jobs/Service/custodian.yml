@@ -8,8 +8,10 @@
   icon: "JobIconCustodian"
   supervisors: job-supervisors-oo
   displayWeight: 100
-  accessGroups:
-  - Command
+  access:
+  - Service
+  - Janitor
+  - Maintenance
   special:
   - !type:GiveItemOnHolidaySpecial
     holiday: GarbageDay

@@ -2,7 +2,7 @@
 - type: entity
   parent: AirlockAssembly
   id: AirlockAssemblyAtmospherics
-  suffix: Atmospherics
+  suffix: LifeSupport # Flagship
   components:
   - type: Sprite
     sprite: Structures/Doors/Airlocks/Standard/atmospherics.rsi
@@ -11,7 +11,7 @@
 - type: entity
   parent: AirlockAssembly
   id: AirlockAssemblyAtmosphericsGlass
-  suffix: Atmospherics, Glass
+  suffix: LifeSupport, Glass # Flagship
   components:
   - type: Sprite
     sprite: Structures/Doors/Airlocks/Glass/atmospherics.rsi
@@ -21,19 +21,19 @@
 - type: entity
   parent: AirlockAssembly
   id: AirlockAssemblyCargo
-  suffix: Cargo
+  suffix: Supplies # Flagship
   components:
   - type: Sprite
-    sprite: Structures/Doors/Airlocks/Standard/cargo.rsi
+    sprite: _Flagship/Structures/Doors/Airlocks/Standard/cargo.rsi
     state: "assembly"
 
 - type: entity
   parent: AirlockAssembly
   id: AirlockAssemblyCargoGlass
-  suffix: Cargo, Glass
+  suffix: Supplies, Glass # Flagship
   components:
   - type: Sprite
-    sprite: Structures/Doors/Airlocks/Glass/cargo.rsi
+    sprite: _Flagship/Structures/Doors/Airlocks/Glass/cargo.rsi
     state: "assembly"
 
 #Clockwork
@@ -65,7 +65,7 @@
 - type: entity
   parent: AirlockAssembly
   id: AirlockAssemblyCommand
-  suffix: Command
+  suffix: BridgeCommand # Flagship
   components:
   - type: Sprite
     sprite: Structures/Doors/Airlocks/Standard/command.rsi
@@ -74,7 +74,7 @@
 - type: entity
   parent: AirlockAssembly
   id: AirlockAssemblyCommandGlass
-  suffix: Command, Glass
+  suffix: BridgeCommand, Glass # Flagship
   components:
   - type: Sprite
     sprite: Structures/Doors/Airlocks/Glass/command.rsi
@@ -84,19 +84,19 @@
 - type: entity
   parent: AirlockAssembly
   id: AirlockAssemblyEngineering
-  suffix: Engineering
+  suffix: ShipMaintenance # Flagship
   components:
   - type: Sprite
-    sprite: Structures/Doors/Airlocks/Standard/engineering.rsi
+    sprite: _Flagship/Structures/Doors/Airlocks/Standard/shipmaintenance.rsi
     state: "assembly"
 
 - type: entity
   parent: AirlockAssembly
   id: AirlockAssemblyEngineeringGlass
-  suffix: Engineering, Glass
+  suffix: ShipMaintenance, Glass # Flagship
   components:
   - type: Sprite
-    sprite: Structures/Doors/Airlocks/Glass/engineering.rsi
+    sprite: _Flagship/Structures/Doors/Airlocks/Glass/shipmaintenance.rsi
     state: "assembly"
 
 #External
@@ -237,19 +237,19 @@
 - type: entity
   parent: AirlockAssembly
   id: AirlockAssemblySecurity
-  suffix: Security
+  suffix: MilitaryPolice # Flagship
   components:
   - type: Sprite
-    sprite: Structures/Doors/Airlocks/Standard/security.rsi
+    sprite: _Flagship/Structures/Doors/Airlocks/Standard/militarypolice.rsi
     state: "assembly"
 
 - type: entity
   parent: AirlockAssembly
   id: AirlockAssemblySecurityGlass
-  suffix: Security, Glass
+  suffix: MilitaryPolice, Glass # Flagship
   components:
   - type: Sprite
-    sprite: Structures/Doors/Airlocks/Glass/security.rsi
+    sprite: _Flagship/Structures/Doors/Airlocks/Glass/militarypolice.rsi
     state: "assembly"
 
 #Shuttle

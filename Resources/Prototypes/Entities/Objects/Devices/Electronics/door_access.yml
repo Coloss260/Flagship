@@ -2,7 +2,7 @@
 - type: entity
   parent: DoorElectronics
   id: DoorElectronicsCaptain
-  suffix: Captain, Locked
+  suffix: CommandingOfficer, Locked # Flagship
   components:
   - type: AccessReader
     access: [["Captain"]]
@@ -10,15 +10,15 @@
 - type: entity
   parent: DoorElectronics
   id: DoorElectronicsHeadOfPersonnel
-  suffix: HeadOfPersonnel, Locked
+  suffix: ExecutiveOfficer, Locked # Flagship
   components:
   - type: AccessReader
-    access: [["HeadOfPersonnel"]]
+    access: [["ExecutiveOfficer"]] # Flagship
 
 - type: entity
   parent: DoorElectronics
   id: DoorElectronicsCommand
-  suffix: Command, Locked
+  suffix: BridgeCommand, Locked # Flagship
   components:
   - type: AccessReader
     access: [["Command"]]
@@ -67,7 +67,7 @@
 - type: entity
   parent: DoorElectronics
   id: DoorElectronicsKitchen
-  suffix: Kitchen, Locked
+  suffix: MessHall, Locked # Flagship
   components:
   - type: AccessReader
     access: [["Kitchen"]]
@@ -75,7 +75,7 @@
 - type: entity
   parent: DoorElectronics
   id: DoorElectronicsKitchenHydroponics
-  suffix: Kitchen/Hydroponics, Locked
+  suffix: MessHall/Hydroponics, Locked # Flagship
   components:
   - type: AccessReader
     access: [["Kitchen"], ["Hydroponics"]]
@@ -83,7 +83,7 @@
 - type: entity
   parent: DoorElectronics
   id: DoorElectronicsJanitor
-  suffix: Janitor, Locked
+  suffix: Custodian, Locked # Flagship
   components:
   - type: AccessReader
     access: [["Janitor"]]
@@ -116,7 +116,7 @@
 - type: entity
   parent: DoorElectronics
   id: DoorElectronicsQuartermaster
-  suffix: Quartermaster, Locked
+  suffix: SuppliesQuartermaster, Locked # Flagship
   components:
   - type: AccessReader
     access: [["Quartermaster"]]
@@ -132,7 +132,7 @@
 - type: entity
   parent: DoorElectronics
   id: DoorElectronicsCargo
-  suffix: Cargo, Locked
+  suffix: Supplies, Locked # Flagship
   components:
   - type: AccessReader
     access: [["Cargo"]]
@@ -141,7 +141,7 @@
 - type: entity
   parent: DoorElectronics
   id: DoorElectronicsChiefEngineer
-  suffix: ChiefEngineer, Locked
+  suffix: ChiefOfMaintenance, Locked # Flagship
   components:
   - type: AccessReader
     access: [["ChiefEngineer"]]
@@ -149,7 +149,7 @@
 - type: entity
   parent: DoorElectronics
   id: DoorElectronicsAtmospherics
-  suffix: Atmospherics, Locked
+  suffix: LifeSupport, Locked # Flagship
   components:
   - type: AccessReader
     access: [["Atmospherics"]]
@@ -157,7 +157,7 @@
 - type: entity
   parent: DoorElectronics
   id: DoorElectronicsEngineering
-  suffix: Engineering, Locked
+  suffix: MaintenanceTechnician, Locked # Flagship
   components:
   - type: AccessReader
     access: [["Engineering"]]
@@ -174,7 +174,7 @@
 - type: entity
   parent: DoorElectronics
   id: DoorElectronicsResearchDirector
-  suffix: ResearchDirector, Locked
+  suffix: ScienceSupervisor, Locked # Flagship
   components:
   - type: AccessReader
     access: [["ResearchDirector"]]
@@ -199,7 +199,7 @@
 - type: entity
   parent: DoorElectronics
   id: DoorElectronicsHeadOfSecurity
-  suffix: HeadOfSecurity, Locked
+  suffix: MilitaryPoliceChief, Locked # Flagship
   components:
   - type: AccessReader
     access: [["HeadOfSecurity"]]
@@ -223,7 +223,7 @@
 - type: entity
   parent: DoorElectronics
   id: DoorElectronicsSecurity
-  suffix: Security, Locked
+  suffix: MilitaryPolice, Locked # Flagship
   components:
   - type: AccessReader
     access: [["Security"]]
@@ -231,7 +231,7 @@
 - type: entity
   parent: DoorElectronics
   id: DoorElectronicsSecurityLawyer
-  suffix: Security/Lawyer, Locked
+  suffix: MilitaryPolice/Lawyer, Locked # Flagship
   components:
   - type: AccessReader
     access: [["Security"], ["Lawyer"]]
@@ -248,7 +248,7 @@
 - type: entity
   parent: DoorElectronics
   id: DoorElectronicsChiefMedicalOfficer
-  suffix: ChiefMedicalOfficer, Locked
+  suffix: ChiefOfMedical, Locked # Flagship
   components:
   - type: AccessReader
     access: [["ChiefMedicalOfficer"]]

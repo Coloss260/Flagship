@@ -8,16 +8,18 @@
   requireAdminNotify: true
   requirements:
     - !type:DepartmentTimeRequirement
-      department: Supply
+      department: Cargo
       time: 54000 # 15 hours
   displayWeight: 100
   startingGear: SuppliesQuartermasterGear
   icon: "JobIconSuppliesQuartermaster"
   access:
-  - Captain
-  accessGroups:
-  - Command
-  - AllAccess
+  - Cargo # Supplies
+  - ArtillerySpecialist
+  - Quartermaster # Supplies Quartermaster
+  - Maintenance
+  - External
+  - Cryogenics
 
 # Flagship
 # PLEASE RESPECT THE EQUIPMENT ORDER OR I WILL STEAL YOUR NOSE

@@ -1,37 +1,26 @@
 - type: department
   id: Cargo
-  name: department-Cargo
-  description: department-Cargo-description
-  color: "#A46106"
+  name: flagship-department-Cargo
+  description: flagship-department-Cargo-description
+  color: "#A46106" # Flagship
+  weight: 160 # Flagship
   roles:
-  - CargoTechnician
-  - Quartermaster
-  - SalvageSpecialist
-  editorHidden: true # Flagship
+  - SuppliesQuartermaster # Flagship
+  - ArtillerySpecialist # Flagship
+  - SuppliesCrewman # Flagship
 
 - type: department
   id: Civilian
-  name: department-Civilian
-  description: department-Civilian-description
-  color: "#9FED58"
-  weight: -10
+  name: flagship-department-Civilian # Flagship
+  description: flagship-department-Civilian-description # Flagship
+  color: "#c1ff72" # Flagship
+  weight: -10 # Flagship
   roles:
-  - Bartender
-  - Botanist
-  - Chaplain
-  - Chef
-  - Clown
-  - HeadOfPersonnel
-  - Janitor
-  - Lawyer
-  - Librarian
-  - Mime
-  - Musician
-  - Passenger
-  - Reporter
-  - Visitor
-  - ServiceWorker
-  editorHidden: true # Flagship
+  - FlagBartender # Flagship
+  - HydroponicsBiologist # Flagship
+  - MessChef # Flagship
+  - Custodian # Flagship
+  - OffDutyCrew # Flagship
 
 - type: department
   id: CentralCommand
@@ -53,17 +42,17 @@
 
 - type: department
   id: Command
-  name: department-Command
-  description: department-Command-description
-  color: "#334E6D"
+  name: flagship-department-Command # Flagship
+  description: flagship-department-Command-description
+  color: "#2b72ee" # Flagship
   roles:
-  - Captain
-  - ChiefEngineer
-  - ChiefMedicalOfficer
-  - HeadOfPersonnel
-  - HeadOfSecurity
-  - ResearchDirector
-  - Quartermaster
+  - CommandingOfficer # Flagship
+  - ExecutiveOfficer # Flagship
+  - TacticalOfficer # Flagship
+  - OperationsOfficer # Flagship
+  - CommunicationsOfficer # Flagship
+  - FlightControlOfficer # Flagship
+  - BridgeEnsign # Flagship
   - CentralCommandOfficial
   - CBURN
   - ERTLeader
@@ -73,60 +62,57 @@
   - ERTSecurity
   - ERTEngineer
   - DeathSquad
-  editorHidden: true # Flagship
   primary: false
-  weight: 100
+  weight: 200 # Flagship
 
 - type: department
   id: Engineering
-  name: department-Engineering
-  description: department-Engineering-description
+  name: flagship-department-Engineering # Flagship
+  description: flagship-department-Engineering-description # Flagship
   color: "#EFB341"
+  weight: 140 # Flagship
   roles:
-  - AtmosphericTechnician
-  - ChiefEngineer
-  - StationEngineer
-  - TechnicalAssistant
-  editorHidden: true # Flagship
+  - ChiefOfMaintenance # Flagship
+  - MaintenanceTechnician # Flagship
+  - LifeSupportSpecialist # Flagship
+  - MaintenanceIntern # Flagship
 
 - type: department
   id: Medical
   name: department-Medical
-  description: department-Medical-description
-  color: "#52B4E9"
+  description: flagship-department-Medical-description # Flagship
+  color: "#a4d8ef" # Flagship
+  weight: 100 # Flagship
   roles:
-  - Chemist
-  - ChiefMedicalOfficer
-  - MedicalDoctor
-  - MedicalIntern
-  - Psychologist
-  - Paramedic
-  editorHidden: true # Flagship
+  - ChiefOfMedical # Flagship
+  - FlagMedicalDoctor # Flagship
+  - FlagChemist # Flagship
+  - ParamedicalSpecialist # Flagship
+  - FlagMedicalIntern # Flagship
 
 - type: department
   id: Security
-  name: department-Security
-  description: department-Security-description
-  color: "#DE3A3A"
-  weight: 20
+  name: flagship-department-Security
+  description: flagship-department-Security-description
+  color: "#2b72ee" # Flagship
+  weight: 180 # Flagship
   roles:
-  - HeadOfSecurity
-  - SecurityCadet
-  - SecurityOfficer
-  - Detective
-  - Warden
-  editorHidden: true # Flagship
+  - MPChief # Flagship
+  - MPMedic # Flagship
+  - MPOfficer # Flagship
+  - MPTrainee # Flagship
 
 - type: department
   id: Science
   name: department-Science
-  description: department-Science-description
-  color: "#D381C9"
+  description: flagship-department-Science-description # Flagship
+  color: "#cd7ccd" # Flagship
+  weight: 120 # Flagship
   roles:
-  - ResearchDirector
-  - Scientist
-  - ResearchAssistant
-  editorHidden: true # Flagship
+  - ScienceSupervisor # Flagship
+  - FlagRoboticist # Flagship
+  - FlagScientist # Flagship
+  - FlagResearchAssistant # Flagship
 
 - type: department
   id: Silicon

@@ -186,7 +186,7 @@
 
 # Science
 - type: entity
-  parent: [ClothingHeadBase, BaseFlagScienceContraband]
+  parent: [ClothingHeadBase, BaseScienceContraband]
   id: ClothingHeadHatBeretSci
   name: Science beret
   description: A purple beret often worn by scientists.

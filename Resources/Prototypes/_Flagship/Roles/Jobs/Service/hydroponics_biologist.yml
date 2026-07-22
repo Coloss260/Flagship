@@ -11,8 +11,10 @@
   icon: "JobIconHydroponicsBiologist"
   supervisors: job-supervisors-oo
   displayWeight: 90
-  accessGroups:
-  - Command
+  access:
+  - Service
+  - Maintenance
+  - Hydroponics
   special:
   - !type:GiveItemOnHolidaySpecial
     holiday: FourTwenty

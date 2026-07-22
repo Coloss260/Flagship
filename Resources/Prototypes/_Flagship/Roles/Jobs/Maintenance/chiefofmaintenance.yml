@@ -12,8 +12,13 @@
   startingGear: ChiefOfMaintenanceGear
   icon: "JobIconChiefOfMaintenance"
   supervisors: job-supervisors-to
-  accessGroups:
-  - Command
+  access:
+  - ChiefEngineer # Chief Of Maintenance
+  - Engineering # Maintenance Department
+  - Atmospherics # Life Support Specialist
+  - Maintenance
+  - External
+  - Cryogenics
 
 # Flagship
 # PLEASE RESPECT THE EQUIPMENT ORDER OR I WILL STEAL YOUR NOSE
